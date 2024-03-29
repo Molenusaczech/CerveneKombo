@@ -122,7 +122,7 @@ export default function Page() {
       {/*<h1> Home </h1>
       <h1> Home </h1>
   <h1> Home </h1>*/}
-      <Card data={exampleData} />
+      <Card data={exampleData} width={320}/>
       <Card data={exampleData2} />
     </div>
   )
