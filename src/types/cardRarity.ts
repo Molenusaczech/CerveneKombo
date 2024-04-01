@@ -12,7 +12,7 @@ type heroRarity = {
     primaryHealth: number,
     secondaryHealth: number,
     energy: bonus[],
-    bonuses: bonus[],
+    bonuses: (bonus | null)[],
 }
 
 export type { heroRarity, bonus};

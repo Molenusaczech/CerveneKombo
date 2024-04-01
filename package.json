@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "getData": "node src/tools/getAllCardData.js",
+    "downloadImages": "node src/tools/imageLink.js"
   },
   "dependencies": {
     "react": "^18",

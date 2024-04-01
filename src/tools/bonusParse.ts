@@ -1,25 +1,17 @@
 import { bonus } from "@/types/cardRarity";
+import { effectName } from "@/types/effects";
 
-function parseBonuses(bonuses: bonus[], effectCounts: number[]) {
+function parseBonuses(bonuses: bonus[], effectCounts: (effectName | null)[]) {
     let bonusArray: bonus[] = [];
     
     for (let i = 0; i < bonuses.length; i++) {
-        if (i % 2 == 1 && effectCounts[Math.floor(i / 2)] == 1) {
-            bonusArray.push({
-                value: 9,
-                isUpgraded: false
-            });
-
-        }
-
-        bonusArray.push(bonuses[i]);
-    }
-
-    if (effectCounts[3] == 1) {
-        bonusArray.push({
-            value: 9,
-            isUpgraded: false
-        });
+        let bonus = bonuses[i];
+        let effect = effectCounts[i];
+        if (effect == null) bonus = {
+            value: 0,
+            isUpgraded: false,
+        };
+        bonusArray.push(bonus);
     }
 
     //console.log(bonusArray);
