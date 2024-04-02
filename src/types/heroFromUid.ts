@@ -8,6 +8,7 @@ type heroFromUid = {
         xp: number,
     }
     card: heroRarity,
+    upgradedCard?: heroRarity,
 }
 
 export type { heroFromUid };

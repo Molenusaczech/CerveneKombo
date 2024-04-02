@@ -1,3 +1,4 @@
+"use strict";
 import Image from "next/image";
 
 type labelSize = "small" | "medium" | "large";
@@ -34,6 +35,10 @@ function Label(props: {
 }) {
 
     if (props.value == null) return (<></>);
+
+    if (typeof props.value == "number" && isNaN(props.value)) return (<></>);
+
+    //console.log(props.value);
 
     let isInverted = props.isInverted ?? false;
     let isUpgraded = props.isUpgraded ?? false;
@@ -94,7 +99,9 @@ function Label(props: {
 
 // Positioning based of https://gitlab.com/OndrejSkalicka/scratch-wars-online/-/blob/master/swo/render/hero.py?ref_type=heads
 
-export default function Card(props: { data: heroRarity, width?: number, height?: number }) {
+export default function Card(props: { data: heroRarity | undefined, width?: number, height?: number }) {
+
+    if (props.data == undefined) return (<></>);
 
     let type: heroType = heroTypeData[props.data.cid];
 
@@ -113,8 +120,8 @@ export default function Card(props: { data: heroRarity, width?: number, height?:
     //console.log(props.data.bonuses);
     //console.log(bonuses[6]);
 
-    console.log(type.effects);
-    console.log(isInverted("night-attack"));
+    //console.log(type.effects);
+    //console.log(isInverted("night-attack"));
 
     let scale = 1;
 
