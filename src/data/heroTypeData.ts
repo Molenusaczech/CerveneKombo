@@ -38,7 +38,7 @@ const heroTypeData: heroTypes = {
         "rarity": 1,
         "cname": {
             "CS": "Opičí kouzelník",
-            "DE": "Affen–Zauberer",
+            "DE": "Affen-Zauberer",
             "EN": "Ape Sorcerer",
             "IT": "Stregone Scimmione",
             "FR": "Magicien simien",
@@ -564,7 +564,7 @@ const heroTypeData: heroTypes = {
         "rarity": 2,
         "cname": {
             "CS": "Zkušený horník",
-            "DE": "Zwergen–Geologe",
+            "DE": "Zwergen-Geologe",
             "EN": "Expert Miner",
             "IT": "Esperto Minatore",
             "FR": "Mineur expert",
@@ -682,7 +682,7 @@ const heroTypeData: heroTypes = {
         "rarity": 1,
         "cname": {
             "CS": "Ohnivý imp",
-            "DE": "Feuer–Kobold",
+            "DE": "Feuer-Kobold",
             "EN": "Fire Imp",
             "IT": "Diavoletto Ardente",
             "FR": "Lutin de feu",
@@ -939,7 +939,7 @@ const heroTypeData: heroTypes = {
         "rarity": 2,
         "cname": {
             "CS": "Kapradinová víla",
-            "DE": "Wald–Fee",
+            "DE": "Wald-Fee",
             "EN": "Forest Fairy",
             "IT": "Spirito dell'Edera",
             "FR": "Fée des fougères",
@@ -999,7 +999,7 @@ const heroTypeData: heroTypes = {
         "cname": {
             "CS": "Potulný rytíř",
             "DE": "Herold",
-            "EN": "Knight–Errant",
+            "EN": "Knight-Errant",
             "IT": "Cavaliere Errante",
             "FR": "Chevalier errant",
             "PL": "Błędny rycerz"
@@ -1018,7 +1018,7 @@ const heroTypeData: heroTypes = {
             "add-energy",
             "combo"
         ],
-        "imgUrl": "/heroes/knight–errant-cz.jpg"
+        "imgUrl": "/heroes/knight-errant-cz.jpg"
     },
     "Castor": {
         "gender": "male",
@@ -1223,7 +1223,7 @@ const heroTypeData: heroTypes = {
         "rarity": 4,
         "cname": {
             "CS": "Naftový rytíř",
-            "DE": "Öl–Ritter",
+            "DE": "Öl-Ritter",
             "EN": "Oil Knight",
             "IT": "Cavaliere dell'Olio",
             "FR": "Chevalier du pétrole",
@@ -1339,7 +1339,7 @@ const heroTypeData: heroTypes = {
         "rarity": 2,
         "cname": {
             "CS": "Nosorohý mlátič",
-            "DE": "Nashorn–Kämpfer",
+            "DE": "Nashorn-Kämpfer",
             "EN": "Rhino Fighter",
             "IT": "Rinoceronte Rissoso",
             "FR": "Rhino batteur",
@@ -1368,7 +1368,7 @@ const heroTypeData: heroTypes = {
         "rarity": 3,
         "cname": {
             "CS": "Bojový robot",
-            "DE": "Roboter–Krieger",
+            "DE": "Roboter-Krieger",
             "EN": "Robot Battler",
             "IT": "Lottatore Robotico",
             "FR": "Robot lutteur",
@@ -1423,7 +1423,8 @@ const heroTypeData: heroTypes = {
         "cid": "Sabertooth",
         "rarity": 3,
         "cname": {
-            "CS": "Šavlozubý tygr"
+            "CS": "Šavlozubý tygr",
+            "EN": "Sabertooth tiger"
         },
         "weapon_prof": [
             "axe",
@@ -1440,7 +1441,7 @@ const heroTypeData: heroTypes = {
             "all",
             "hit-weapon"
         ],
-        "imgUrl": "blank.jpg"
+        "imgUrl": "/heroes/saber-toothed-tiger-cz.jpg"
     },
     "Junky": {
         "gender": "male",
@@ -1478,7 +1479,7 @@ const heroTypeData: heroTypes = {
         "rarity": 2,
         "cname": {
             "CS": "Inženýr chapadelník",
-            "DE": "Okto–Ingenieur",
+            "DE": "Okto-Ingenieur",
             "EN": "Slimeball Engineer",
             "IT": "Ingegnere Viscido",
             "FR": "Ingénieur tentacules",
@@ -1562,7 +1563,7 @@ const heroTypeData: heroTypes = {
         "rarity": 3,
         "cname": {
             "CS": "Mechomůrek",
-            "DE": "Pilz–Schamane",
+            "DE": "Pilz-Schamane",
             "EN": "Toadstool Shaman",
             "IT": "Sciamano Muscario",
             "FR": "Chaman des champignons",
@@ -1591,7 +1592,7 @@ const heroTypeData: heroTypes = {
         "rarity": 1,
         "cname": {
             "CS": "Sloní kolos",
-            "DE": "Elefanten–Koloss",
+            "DE": "Elefanten-Koloss",
             "EN": "Tusked Colossus",
             "IT": "Colosso Zannuto",
             "FR": "Colosse éléphant",
@@ -1869,7 +1870,7 @@ const heroTypeData: heroTypes = {
         "rarity": 1,
         "cname": {
             "CS": "Mamutí chuligán",
-            "DE": "Mammut–Randalierer",
+            "DE": "Mammut-Randalierer",
             "EN": "Woolly Hooligan",
             "IT": "Vandalo Peloso",
             "FR": "Hooligan mammouth",
@@ -1900,7 +1901,7 @@ const heroTypeData: heroTypes = {
             "DE": "Kühner Flegel",
             "EN": "Fearless Rascal",
             "IT": "Malandrino Impavido",
-            "FR": "Vaurien sans–peur",
+            "FR": "Vaurien sans-peur",
             "PL": "Nieustraszony łobuz"
         },
         "weapon_prof": [
@@ -2942,7 +2943,7 @@ const heroTypeData: heroTypes = {
             "trap",
             "combo"
         ],
-        "imgUrl": "blank.jpg"
+        "imgUrl": "/heroes/blank.jpg"
     },
     "Guvnor": {
         "gender": "male",

@@ -1,0 +1,119 @@
+'xRXK5uyJer3XjIi',  // Antique Automaton OK
+'oKY02EsX5XflkKs',  // Ape Sorcerer OK
+'cTTrQtPSkVKSSJ0',  // Axemaiden OK
+'6LDBOfq34hskcOlTiVFfqevz',  // Beach Shaman OK
+'z1qe88M0u12v12F',  // Bloody Dentist OK
+'zA86Y5sA4Havt3U',  // Boneater Dwarf OK
+'J3SxHDtfKJNTCfF',  // Bonekicker Dwarf OK
+'sBeOoEwPw5VnW3z',  // Boneshaker Dwarf OK
+'Gipn32ndKBXPOWu',  // Cannibal Chef OK
+'vB8sL6hNLFFPTNg',  // Cannibal Clown OK
+'LJbfHisc7vEzQqS',  // Clan Shaman OK
+'yrvxVMGhZlN73hG',  // Coffin Bot OK
+'3m3zZy46G7h3O0E',  // Cute Executioner OK
+'TzTTWVCNcgPbL562exnx0a25',  // Dandy Swordsman OK
+'wo8p2eoU4kczXNK',  // Divine Puppet OK
+'JTifKmyVJ7Rd2Aw',  // Dogbone OK
+'dYuckAhTAe2lGxl',  // Dragon King OK
+'dx1Ts9fELzTfA8b',  // Dwarven Shepherd OK
+'jlSNDCdLnUEG1yv',  // Elvish Hunter fixed
+'zONMc79R12DVnNz',  // Elvish Turncoat OK
+'qeVUttnRhY5xuVA',  // Expert Miner OK
+'zwczCbYBSAPGFZF',  // Fabled Veteran Fixed
+'lAbltJ3OOgHYtGP',  // Fearless Explorer OK
+'BBWQtxnUxIHyEzF',  // Feathered Wanderer OK
+'eOPDSG9hiJOegUw',  // Flaming Imp Fixed
+'dEcEbBop1q49Ta6',  // Floral Imp Fixed
+'rXkorU3jqkG8duk',  // Furry Avenger OK
+'m2W7PMCF8JIwXV0',  // Ghostly Girl OK
+'zZsMfoV2Njw0JVh',  // Gnome Engineer OK
+'h5D5ZNpI6ZeTBYi',  // Green Troll OK
+'wlhtp6AIycpJ87h',  // Grouchy Viking OK
+'yfYd3LSqKitgv8B',  // Heir Apparent OK
+'PXE5zGBWgCGGM2P',  // Henhouse King OK
+'VIt4SowKnq5EKKU',  // Ivy Sprite Fixed
+'OkBJkJqc4dTXezt',  // Jungle Runner OK
+'YvBIzOEv8LxdvcI',  // Knight-Errant OK
+'nacDCUCmFVO7AmL',  // Lion Hotshot fixed
+'FOVmj1Kpg9gKnp5',  // Lone Gunslinger OK
+'ZhHITD94NvkfjxF',  // Maestro Morti OK
+'msnaWtyH0M73l7F',  // Marsh Warrior OK
+'kYiGSxV1qJx9H9T',  // Masked Vigilante OK
+'IGaUjgXwn4RqMlb',  // Miss Vampiria OK
+'rOTsZVFrb1271wq',  // Mysterious Golem OK
+'bpMkMN6gvxks2g5',  // Oil Knight OK
+'us0x5kUGOwEx5kg',  // Pixel Mage Fixed
+'kmg2pJEldEeSkhb',  // Pixie Queen OK
+'YR9A5z5zhB76JR3',  // Revered Paladin OK
+'tdDaI7PfiXFV34S',  // Rhino Fighter OK
+'rOllNnIQzA4rVKo',  // Robotic Battler OK
+'qpDA1bmMHCLSDpI',  // Rough Housewife OK
+'lf7EkmmfProa5KY',  // Saber-toothed Tiger Fixed
+'s5X9l37m9pnQDPB',  // Salvager Boss Fixed
+'ehZMW1HHrRpYEwB',  // Slimy Engineer OK
+'043Izl84uovIzoE',  // The Heretic OK
+'iXcpVivBOzW1lFR',  // the Lionhearted OK
+'Tzoswz1WzwFHyNw',  // Toadstool Shaman OK
+'J37N8grq75rcPq2',  // Tusked Colossus OK
+'Xv4RwujK1re82e7',  // Vampire Bunny OK
+'HIzZr7DhclAacRC',  // Vampire Hunter OK
+'InMpeQCLEYCULEV',  // Vampire Prince OK
+'zqeXbeakRxoAj4b',  // Vengeful Vulture OK
+'xEn5DKrMM8ZOrwJ',  // Village Squire OK
+'vkGlpJH0lGshd5w',  // Voltaic Ninja OK
+'wNgZnAVQcssdIOG',  // von Darkenstein OK
+'d5HqJRvluFoxQym',  // Woodcutter OK
+'JExuJUuFWYlHDtp',  // Woodland Brawler OK
+'JSVWqzOWRha7qrJ',  // Woolly Conqueror OK
+'zIl1sCEicqmJ6JL',  // Young Hero Fixed
+
+// zepplandia
+'oUWVwFCdeewABUz',  // Balloonbot Fixed
+'pvfm0mJ9zUPuoch',  // Boilerman OK
+'vph3Fx3OvmQuaZ1',  // Cleverbot OK
+'qPZhVggtAobM3dU',  // Cloud Walker OK
+'HmNNu0dBKi3AEje',  // Crimebot OK
+'SqIXyyg2Jt3HlKx',  // Crow Murderer OK
+'UHVci9eH9PdHkeq',  // de Mongolfier OK
+'IwvzKvap32Cdu3f',  // Gnome Warrior Variants
+'2b4r6SAq8DBSRQP',  // Helmsman OK
+'jBdPmIySLi1O9vO',  // Lady Zepplin Variants
+'TjmtdZ1oPj0DEfE',  // Pidgeon Courier OK
+'vKHjmoXdPIgbEOm',  // Rocket Penguin Variants
+'Ny4qWlidy3LILat',  // Sheep Patrol OK
+'21KsPCt1JToslG6',  // Trophy Hunter OK
+'V38qMQ6bgZxnNjF',  // von Zepplin OK
+
+// middlemyst - virtual cards might disappear, comment out or replace in case of failed test
+'9DC2wJzfZlcj2Ol',  // Fighter of Alzahrad OK
+'SXf3rBWoNI2zjiA',  // Lord of Biotechlandia OK
+'PiP9wO3GKJp7UiH',  // Lord of Canbalandia OK
+'lm8nxAa1gN5aphu',  // Lord of Vampiria OK
+'d2qGrKazx2EtlHg',  // Lord of Zepplandia OK
+'zgtU3hnFa0ACyokFpwGgVVUC',  // Apple Hunter 404
+'qStewuyv8Uva5fs',  // Reward Hunter Fixed
+'IzGRNA8jOyTMnNe',  // Arena Sweeper OK
+'PYnylWDa9DBOozq',  // Esterminator OK
+'NMcS2IKL8QML3lcStEpz3Mzg',  // Wedryknight OK
+'4E1H48YGAVrvGjK',  // Battle Ferda OK
+'m2TY1VAtMTH6jduzZinRJnfm',  // Red Overgamer OK
+'oYtenkABOn3beMddxMlg2rJ5',  // Young adventurer 404
+'amvUDu0LMIGxGABvDOiqOcQl',  // Monkey Magician 404
+'WjGAlChfT2OHzqe6AYthXYvt',  // Purple Punk Potato 404
+'RhR4mrOhIkryrl5crb7hdUJf',  // Touchy Troll 404
+'lViORW5reHizTAq3TS4eOap4',  // Evil Explorer 404
+'PN4Sd8IW1ptVW8gOdAKEi9Gd',  // Bo-Woman OK
+'kUMW0X59LFK8earHwOVqDsdG',  // Brave teacher 404
+'s5sPS1T4J2jnAfFt23HsMiYy',  // Ruler from textbook OK
+'1yQ98CzhLG3N8KlnExyi6BOl',  // Valiant hoplite 404
+'YUOV20bTJyE8rl3CAYk5EJ2H',  // Hungarian hussar 404
+'FXYEEfmJE7PdqpeE8FWI2rF2M',  // Xmas Freak-fir 404
+// @TODO '',  // Star Engineer
+
+// spinbay
+'a4JFGwvCEvnMxJI',  // Governor of Spinbay OK
+'DHRn6akHcOU5bwp',  // Dock Worker OK
+'0PikUyqw1BXfGS8',  // Port Innkeeper OK
+'FhQDit9pAzElz6y',  // RoboExchange OK
+'4HXGjYWK9chGdnx',  // Spinbay Dancer OK
+'OhrYeVM06mAu5lY',  // Mysterious Bedouin OK
