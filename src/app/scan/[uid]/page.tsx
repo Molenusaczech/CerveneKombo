@@ -4,8 +4,12 @@ import Card from "@/components/card";
 import { heroRarity } from "@/types/cardRarity";
 import { getCardByUid } from "@/tools/getCardByUid";
 
+import { useState } from "react";
+
+import UidLookup from "@/components/uidLookup";
 
 export default async function Scan({ params }: { params: { uid: string } }) {
+  "use server";
   // create state
 
   const data = await getCardByUid(params.uid)
@@ -14,14 +18,9 @@ export default async function Scan({ params }: { params: { uid: string } }) {
 
   return (
     <div>
-      {/*<h1> Home </h1>
-      <h1> Home </h1>
-  <h1> Home </h1>*/}
-      <Card data={data.card} />
+      <UidLookup params={{ data: data }} />
 
-      <Card data={data.upgradedCard} />
-
-      {JSON.stringify(data)}
+      {/*JSON.stringify(data)*/}
 
     </div>
   )

@@ -1,6 +1,8 @@
+"use server";
 import { heroFromUid } from "@/types/heroFromUid";
 
 async function getCardByUid(uid: string) {
+    "use server";
     let req = await fetch("https://www.scratchwars.cloud/public/api/card/" + uid);
 
     if (req.status != 200) {
