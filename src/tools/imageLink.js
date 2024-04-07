@@ -1,5 +1,8 @@
-import fs from 'fs';
-import https from 'https';
+//import fs from 'fs';
+//import https from 'https';
+
+const fs = require('fs');
+const https = require('https');
 
 // Copy this into the console on https://scratchwars-online.cz/cs/account/collection/34 to get all image links
 /*
@@ -14,7 +17,7 @@ document.querySelectorAll('.card-overlay .base').forEach(card => {
 console.log(links);*/
 
 let result = [
-    "/static/swo/img/heroes/family-cs/crimebot.a9c2b2fdac5d.jpg",
+    /*"/static/swo/img/heroes/family-cs/crimebot.a9c2b2fdac5d.jpg",
     "/static/swo/img/heroes/family-cs/balloonbot-red.42bf642b7b41.jpg",
     "/static/swo/img/heroes/family-cs/lord-of-biotechlandia.f4b8e037b811.jpg",
     "/static/swo/img/heroes/family-cs/fighter-of-alzahrad.b459a2b59927.jpg",
@@ -116,8 +119,8 @@ let result = [
     "/static/swo/img/heroes/family-cs/wedryknight.1a8b63139c64.jpg",
     "/static/swo/img/heroes/family-cs/green-troll.810c7c22ba7c.jpg",
     "/static/swo/img/heroes/family-cs/lord-of-zepplandia.813854e31bf9.jpg",
-    "/static/swo/img/heroes/family-cs/expert-miner.2cddac7551eb.jpg",
-    /*"/static/swo/img/weapons/family-cs/battle-corkscrew.509aa3cc9c24.jpg",
+    "/static/swo/img/heroes/family-cs/expert-miner.2cddac7551eb.jpg",*/
+    "/static/swo/img/weapons/family-cs/battle-corkscrew.509aa3cc9c24.jpg",
     "/static/swo/img/weapons/family-cs/saber-of-bubbles.4fb7798e65b0.jpg",
     "/static/swo/img/weapons/family-cs/blade-of-life.b016936b1530.jpg",
     "/static/swo/img/weapons/family-cs/dinofang.dffaee5c1150.jpg",
@@ -270,11 +273,11 @@ let result = [
     "/static/swo/img/weapons/family-cs/the-death-knell.5703c7ad51d2.jpg",
     "/static/swo/img/weapons/family-cs/propeller.22df91eb1376.jpg",
     "/static/swo/img/weapons/family-cs/opal-half-wand.e408d3eaab4e.jpg",
-    "/static/swo/img/weapons/family-cs/pyromancer-s-staff.b272a49045a1.jpg"*/
+    "/static/swo/img/weapons/family-cs/pyromancer-s-staff.b272a49045a1.jpg"
 ]
 
 
-async function downloadImages() {
+async function downloaHeroImages() {
 
     result.forEach(url => {
         const name = url.split('/').pop().split('.')[0];
@@ -290,4 +293,20 @@ async function downloadImages() {
     });
 }
 
-downloadImages();
+async function downloadWeaponImages() {
+    result.forEach(url => {
+        const name = url.split('/').pop().split('.')[0];
+        const path = `public/weapons/${name}-cz.jpg`;
+
+        if (!fs.existsSync(path)) {
+            const file = fs.createWriteStream(path);
+            console.log(`Downloading ${url}`);
+            const request = https.get(`https://scratchwars-online.cz${url}`, function (response) {
+                response.pipe(file);
+            });
+        }
+    });
+}
+
+//downloaHeroImages();
+downloadWeaponImages();

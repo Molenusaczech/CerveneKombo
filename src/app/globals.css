@@ -6,6 +6,10 @@
   font-family: 'ScratchChizz';
   src: url('/ScratchChizz.otf') format('opentype');
 }
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Roboto.otf') format('truetype');
+}
 
 :root {
   --text: #07130e;

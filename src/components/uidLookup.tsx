@@ -1,7 +1,7 @@
 "use client";
 
 import { heroFromUid } from "@/types/heroFromUid";
-import Card from "@/components/card";
+import HeroCard from "@/components/hero";
 
 import { useState } from "react";
 
@@ -12,7 +12,10 @@ import LabeledVal from "./labeledVal";
 
 import LevelBar from "./levelBar";
 
-export default function UidLookup(props: { data: heroFromUid }) {
+import Card from "./card";
+import { weaponFromUid } from "@/types/weaponFromUid";
+
+export default function UidLookup(props: { data: heroFromUid | weaponFromUid }) {
     "use client";
 
     const [isUpgraded, setIsUpgraded] = useState(false);
@@ -37,7 +40,7 @@ export default function UidLookup(props: { data: heroFromUid }) {
             {/*<h1> Home </h1>
         <h1> Home </h1>
     <h1> Home </h1>*/}
-            <Card data={cardData} height={700} />
+            <Card data={cardData} />
             <ToggleButtonGroup
                 value={isUpgraded ? "upgraded" : "physical"}
                 exclusive
@@ -51,9 +54,14 @@ export default function UidLookup(props: { data: heroFromUid }) {
                     Vylepšená Karta
                 </ToggleButton>
             </ToggleButtonGroup>
-            <LabeledVal topText="Vlastník karty" botText={data.owner} color="#4fc487" />
 
-            <LevelBar xp={data.experience.xp} />
+            {data.owner &&<LabeledVal
+                topText="Vlastník karty"
+                botText={data.owner}
+                color="#4fc487"
+            />}
+
+            {data.t == "hero" &&<LevelBar xp={data.experience.xp} />}
 
             <br></br>
 

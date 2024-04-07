@@ -6,6 +6,7 @@ type bonus = {
 }
 
 type heroRarity = {
+    t: "hero",
     name: string,
     cid: heroCid,
     isFoil: boolean,

@@ -117,3 +117,163 @@
 'FhQDit9pAzElz6y',  // RoboExchange OK
 '4HXGjYWK9chGdnx',  // Spinbay Dancer OK
 'OhrYeVM06mAu5lY',  // Mysterious Bedouin OK
+
+
+'unatgvQXhdJDoVf',  // Bamboo Bow OK
+ 'gpeGHpFX8Xk2Npc',  // Battle Corkscrew OK
+ 'WVAEqjiGh5ukWpp',  // Biting Bow OK
+ 'HwpBUG3XsPA6LnL',  // Black Candelabra OK
+ 'zCq1VYKbYrnB1Qi',  // Blade of Life OK
+ 'mNrFI50fp7kb16p',  // Blade of Silver Fixed
+ 'oU7DcKi6J0NebwJ',  // Bloody Ladle OK
+ 'CMumrpfzQ2bypqH',  // Bonebreaker Axe OK
+ 'hyKYg3cUJCGQBg9',  // Bony Mace OK
+ 'aCRUNRRsBQ5FBCT',  // Bow of Spine OK
+ 'UQGNyN473w3s61Q',  // Bow of Swiftness OK
+ 'h8Q0siO8K1qXMy7',  // Brilliax Fixed
+ 'LvECWWI3bPrSMIY',  // Broadaxe OK
+ 'akNtpmtpckor3OA',  // Cancerbane OK
+ 'O5e4rOQZ3xzqr6J',  // Carnivore Stick OK
+ 'taz5WTITksh7cLr',  // Carrotwood Bow OK
+ 'vPrFzRTGbKvg4Ut',  // Chainsaw OK
+ 'F6T2cwsNuSyw9nf',  // Clockwork Gearbow OK
+ '6zpGvx9HCLzuDI8',  // Composable Bow Fixed
+ 'srDUCG45aDZR6BS',  // Crymestal Staff Fixed
+ 'nyvZR3sFuQkmcWh',  // Dark Sword OK
+ 'ednmFqTCOsupmOn',  // Death Scythe OK
+ 'qpNeTFUUSf8pHsx',  // Deepwood Club OK
+ 'Zoeb3x0OqQhbOyb',  // Dinofang OK
+ 'OndD9i4SVqMKxCy',  // Dragonbow of Fire OK
+ 'eMmbxEci2JkvAog',  // Dragonfang OK
+ 'hT93UqBztuTWolK',  // Dragonwand OK
+ 'zj7BIDHw1XjZ1r5',  // Dual Blades OK
+ 'nZU0X4DjtmDe0KJ',  // Duelling Pistol OK
+ 'mFLiYgw97aTYDiW',  // Dwarfax Fixed
+ '9dkoZoHuXSwWXSE',  // Dwarven Shortsword OK
+ 'ucSlfRcVJLgxhui',  // Elder Dragonbow OK
+ 'DJ27QpajHU1LMvv',  // Electric Bow OK
+ 'LEyABV1000CSWSX',  // Electrum Staff OK
+ '8arVL64J8mFJIAk',  // Emerald Greatsword OK
+ 'zYW8vjT5sIePpFr',  // Executioner Axe OK
+ 'xLTkJoiGa6OE7Q7',  // Floral Elvenbow OK
+ '5nuURcmahM1408Z',  // Fluffy Bow OK
+ 'pQdAK6UnqkXnDNK',  // Frog Bow OK
+ 'Cbgc1cBN3g3Cpcr',  // Girder OK
+ 'uXUbEPswdqj4qYu',  // Grassword OK
+ '7iwFELw5KcW18jb',  // Greatsword of Sun Fixed
+ 'y2OkIRo2bBDGKbg',  // Halapartana OK
+ 'Qf5goCaiLbjLAjW',  // Hardstone Bow OK
+ 'Jkxtnu4DUoVBKPy',  // Heavy Hammer OK
+ 'eCbjgkCgUbZ96tI',  // Hit-and-stomp OK
+ 'oyvE263LCwpIYQr',  // Hockey Stick OK
+ 'Z9QMShLc8qKbTNE',  // Hunter´s Bow Fixed
+ 'VbQpYEPdoT8Xtdv',  // King's Axe Fixed
+ 'MMiGfD4E6m3xxHa',  // Knucklebow OK
+ 'ZzKy4O2JJ8P9q3z',  // Leftovers Sword OK
+ 'shfCZiAjcsyt3MC',  // Limbtrimmer OK
+ 'yJ3KklPxiUHlAd0',  // Living Death Sword OK
+ '0aYLacZAlIMKQ4w',  // Lollipop of Moore OK
+ 'xKfytrKOlq9jAmk',  // Longbow OK
+ 'Np0WyHNHkjpco57',  // Longhammer OK
+ 'Np2Hbfq5xHHuxIC',  // Long Silversword OK
+ 'g0acAt2AYlFXCwD',  // Madame Wand OK
+ 'lgB5dLwi9jNAF6T',  // Magical Pinkbow OK
+ 'oLl2n74PAzisyID',  // Magic Brew Ladle OK
+ 'TwmyoUC9Cnox9k5',  // Magic Splatter OK
+ 'ThfgH7BSzvGawLz',  // Magika Magnetika OK
+ 'VMQkWck6wKCIcJt',  // Mamba Bow OK
+ 'dqqFxyOuQ8pDFwz',  // Match Log OK
+ 'rTpsQlW8KYCZx32',  // Megamelon Bow OK
+ 'iB5V8nJ1iS6QX9R',  // Mystic Hammer OK
+ 'uOkjd81TCC2bVgK',  // Needle OK
+ 'f69TEYknIiPMH2m',  // Nimble Sword OK
+ '2EqSv7Rtm7Vw3kT',  // Octostaff OK
+ 'sNAeHW3w8W1dyJ7',  // Oilry Megasword Fixed
+ 'hD03CtdtM06r8ni',  // Opal Half-wand OK
+ 'YC0GaUmJSKrbFdJ',  // Palmwood Piercer OK
+ 'PNJ9qPbmZxkr8Vv',  // Pepper Wand OK
+ 'ZOziILGsDYDm63F',  // Pyromancer´s Staff OK
+ '6M09ATUpygfgNDQ',  // Rainaxe OK
+ 'nmt1Q7HlLqPTnd0',  // Rolling Pin OK
+ '750t3AyXd8Jiddf',  // Ruby Wand OK
+ 'wG4DAjiZtX0d9QH',  // Runed Saber Fixed
+ 'LQNUfSmwUOpQFk0',  // Rusted Bow OK
+ 'xpjVeTbmYicRkt5',  // Saber OK
+ 'treAbfKXjZ4YnTh',  // Sharp Teeth Fixed
+ 'j072zkodAJhrXkB',  // Short Sword OK
+ 'Ou5Y7krF9D6QV3D',  // Silver Crossbow OK
+ 'sn5S5uNu49MECdR',  // Silver Elvenbow OK
+ 'uhXEe6jIjqJTd5M',  // Silverfish Bow OK
+ 's7hKSLWYftiz5ic',  // Skeleton Sword OK
+ 'bgkjmWZi06BhJ1u',  // Skewer Needle OK
+ 'sVtlyi3DoPkqV0G',  // Sküth Fixed
+ 'FnEYNl9MmtJ2iZo',  // Staff of Emerald Fern OK
+ 'O9WeuIwkYxqbyv6',  // Staff of Fire OK
+ 'GqCIRd2fLTzpzqk',  // Staff of Frost and Ice Fixed
+ '7vJ7Bucewpi3eYz',  // Staff of Living Wood OK
+ 'w8oSWB1daSejCRp',  // Staff of Souls OK
+ 'yzbVd5UtVzZrkf3',  // Staff of Storms OK
+ '6IzgU33AN26fryi',  // Sunlight Firebow OK
+ 'YleQCkMPjnrBhxH',  // Swift Axe OK
+ 'gRMhwevnKDaBG2V',  // Sword oxf Fate OK
+ 'pINP1SQWx7UEZs1',  // Symphonia OK
+ 'mfjA1T4xkG1NxG5',  // Syringe Rapier OK
+ '1ieOLVKQ1BkjddH',  // Tenderhammer OK
+ 'L7NR6gFduXoxD66',  // The Curious Axe OK
+ 'C1Fw8oDOVOoHXbW',  // The Death Knell OK
+ '8l1k4dmb92Thexp',  // The Hydra OK
+ 'cKy0ZeZvkPC2g1q',  // The Lumberjack OK
+ 'z3oqTux5YQ6PeRr',  // The Ultrahammer OK
+ 'StgNQKOCBXOe0Ph',  // Thornstaff OK
+ 'sVbdkC7IfMXIr0t',  // Two-handed Sword OK
+ '3zsl2ijVkUMJ6XM',  // Ultimate Techbow OK
+ 'QmAhA14lDJCLck5',  // Unicorn Horn OK
+ 'bX5YVTV70lcDMOr',  // Vacuum Wand OK
+ 'y7AEYJR1wKGuoph',  // Vampire Bow OK
+ 'RXwP1dZeZXVraff',  // Venomous Sword OK
+ 'ijSaTL9DEc37c1G',  // Wand of Diamonds OK
+ 'QPbxdVSmvyhFKb3',  // Wand of Healing OK
+ 'gm2VQHwMmRWCRbc',  // Wand of Ice OK
+ '0kJXBQbuax2pg4h',  // Wand of Many OK
+ '8PfaKMBEk45z9qn',  // Wand of Shocking OK
+ 'y6qirhhEbopqb7d',  // Wooden Club OK
+ 'kQqweLbDQ7t0lhu',  // Wooden Hammer OK
+ 'Vz3qMrEHtWuQovy',  // Wooden Sta OK
+ // zepplandia
+ 'bHPtLznXj7qK0a7',  // Anchorslash OK
+ 'dR8EnjZiSgS7R91',  // Birdie OK
+ 'HLA1q2T9kgxdibv',  // Dagger Magna OK
+ 'p9w8pH4JnqwzRv4',  // Gourmet Gun OK
+ 'NZJEBMsPfcyY3Ys',  // Imbuser OK
+ 'sHPmU7c0MvirvMr',  // Lighthouse Staff OK
+ '4MyBL3PrkGpqqMS',  // Mazebow OK
+ 'aHaRWccmoFoUeSi',  // Minute Sword OK
+ 'Pm4Qu4vV8iFzFAz',  // Post–Stick Fixed
+ 'iIMjsUw4IO0KChD',  // Propeller OK
+ '82RlQ6ESey6m57G',  // Ruler Blade OK
+ 'YZYoHR8OfqktBbv',  // Saber of Bubbles OK
+ 'yJcJnnOYIl7wwQM',  // Scoping Staff OK
+ 'w1xLwR1wV4Xt06p',  // Spindlesword OK
+ 'gQDVFRpvvwrrz0j',  // Steam Superbow OK
+ 'qcXvqk2P71BjF7C',  // Tapwater Bow OK
+ 'YBUNBbRH1gSEoRs',  // The Grand Mama OK
+ 'eucBcPWpWoKsXWH',  // Wand of Nine Colors OK
+ 'pO9H3nbHhaPIRAd',  // Weather Wand OK
+ 'iMR4Xd8gdIEsShp',  // Wrench Gadg OK
+ // spinbay
+ 'Ttj6tw5M4EpiKu0',  // Bio Wand OK
+ 'FKzbYDeSalNEk6l',  // Cannonhammer OK
+ 'sDZrCmrR33eUVs9',  // Luxury Styck OK
+ 'hOwMngXL8ZZR1w9',  // Latest Fashion Sword OK
+ 'JjwQkfTrZY3GUpg',  // Sword of Relics OK
+ 'GV0aFJSWcb3rnf6',  // Hand Cannon OK
+ 'QSoNK5ZyYJUcSWd',  // Signboard Axe OK
+ '8MQla0NO5TkPDV7',  // Brand Bow OK
+ '4Xltg9ip9yCLFr9',  // Mermaid Wand OK
+ 'XPtJLZqyQk32ke2',  // Card Dagger OK
+ '2qx5y5ptSr7WGU8',  // Rubber Band Gun OK
+ 'QgYNCSile4yle6D',  // Smoky Flintlock OK
+ '18mhKfDmfAHSiqq',  // Timer Sword OK
+ 'SfDgiZdQJaDIOki',  // Pretzel Stick OK
+ 'gKLDB3L9XDpmRS3',  // Boatyard Axe OK
+ 'qyERqdkXAOdSy0i',  // Axe of Killoth OK

@@ -2,7 +2,7 @@ import { effectName } from "./effects"
 
 import { weaponProf } from "./weaponProf"
 
-type heroType = {
+type heroCardType = {
     gender: string,
     origin: string,
     cid: string,
@@ -22,7 +22,7 @@ type heroType = {
 }
 
 type heroTypes = {
-    [key: string]: heroType
+    [key: string]: heroCardType
 }
 
-export type { heroType, heroTypes }
+export type { heroCardType, heroTypes }

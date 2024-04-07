@@ -1,6 +1,7 @@
 import { heroRarity } from "./cardRarity"
 
 type heroFromUid = {
+    t: "hero",
     owner: string,
     iid: string,
     experience: {
