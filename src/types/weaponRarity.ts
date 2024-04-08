@@ -6,7 +6,6 @@ type effect = {
 
 type weaponRarity = {
     t: "weapon",
-    iid: string,
     cid: string,
     name: string,
     durability: number,

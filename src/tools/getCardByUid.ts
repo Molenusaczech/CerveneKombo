@@ -88,7 +88,6 @@ async function getCardByUid(uid: string): Promise<heroFromUid | weaponFromUid | 
                 t: "weapon",
                 name: data.response.iname,
                 cid: data.response.cid,
-                iid: data.response.iid,
                 durability: data.response.dur,
                 effects: data.response.effects.map((effect: any) => {
                     return {
@@ -102,7 +101,6 @@ async function getCardByUid(uid: string): Promise<heroFromUid | weaponFromUid | 
                 t: "weapon",
                 name: data.response.iname,
                 cid: data.response.cid,
-                iid: data.response.iid,
                 durability: data.response.dur,
                 effects: data.response.effects.map((effect: any) => {
 

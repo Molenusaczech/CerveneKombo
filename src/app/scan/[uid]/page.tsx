@@ -1,10 +1,6 @@
-import Image from "next/image";
 
-import Card from "@/components/hero";
-import { heroRarity } from "@/types/cardRarity";
 import { getCardByUid } from "@/tools/getCardByUid";
 
-import { useState } from "react";
 
 import UidLookup from "@/components/uidLookup";
 

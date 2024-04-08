@@ -14,6 +14,8 @@ export default function Page() {
   <h1> Home </h1>*/}
       <UidForm />
       <Link href="/scan/k6Q23TmaGYSRSr9">scan</Link>
+      <br></br>
+      <Link href="/stats/VampPrince/Mole">stats</Link>
     </div>
   )
 }
