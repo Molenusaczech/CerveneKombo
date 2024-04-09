@@ -5,6 +5,7 @@ import { heroRarity } from "@/types/cardRarity";
 import Link from "next/link";
 
 import UidForm from "@/components/uidForm";
+import StatsForm from "@/components/statsForm";
 
 export default function Page() {
   return (
@@ -16,6 +17,8 @@ export default function Page() {
       <Link href="/scan/k6Q23TmaGYSRSr9">scan</Link>
       <br></br>
       <Link href="/stats/VampPrince/Mole">stats</Link>
+
+      <StatsForm />
     </div>
   )
 }
