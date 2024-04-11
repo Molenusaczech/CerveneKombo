@@ -1,4 +1,5 @@
 import Card from "@/components/card";
+import CardStats from "@/components/stats";
 import { getCardStats } from "@/tools/getCardStats";
 
 export default async function Stats({ params }: { params: { cid: string, name: string } }) {
@@ -13,8 +14,10 @@ export default async function Stats({ params }: { params: { cid: string, name: s
         <div>
 
             <Card data={data.card} />
+
+            <CardStats better={data.better} worse={data.worse} same={data.same} delta={data.delta}/>
             
-            {JSON.stringify(data)}
+            {/*JSON.stringify(data)*/}
 
     
         </div>

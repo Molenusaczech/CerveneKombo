@@ -14,13 +14,16 @@ import LevelBar from "./levelBar";
 
 import Card from "./card";
 import { weaponFromUid } from "@/types/weaponFromUid";
+import CardStats from "@/components/stats";
+import { cardStats } from "@/types/cardStats";
 
-export default function UidLookup(props: { data: heroFromUid | weaponFromUid }) {
+export default function UidLookup(props: { data: heroFromUid | weaponFromUid, stats: cardStats }) {
     "use client";
 
     const [isUpgraded, setIsUpgraded] = useState(false);
 
     const data = props.data;
+    const stats = props.stats;
 
     const cardData = isUpgraded ? data.upgradedCard : data.card;
 
@@ -62,6 +65,8 @@ export default function UidLookup(props: { data: heroFromUid | weaponFromUid }) 
             />}
 
             {data.t == "hero" &&<LevelBar xp={data.experience.xp} />}
+
+            <CardStats better={stats.better} worse={stats.worse} same={stats.same} delta={stats.delta}/>
 
             <br></br>
 

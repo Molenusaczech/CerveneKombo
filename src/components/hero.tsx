@@ -10,17 +10,7 @@ import ShowIf from "./show";
 import { parseBonuses } from "@/tools/bonusParse";
 import { isInverted } from "@/tools/isInverted";
 
-function effectValue(value: number, isInverted: boolean) {
-
-    let sign = "+";
-
-    if (isInverted == true) sign = "";
-
-    if (value < 0) sign = "-"
-
-    return sign + Math.abs(value).toString();
-
-}
+import effectValue from "@/tools/effectValue";
 
 function Label(props: {
     value: number | string,

@@ -106,6 +106,9 @@ async function getCardStats(cid: heroCid | weaponCid, name: string) {
         worse: data.stats.worse,
         same: data.stats.same,
         instances: data.stats.instances,
+        delta: data.stats.delta,
+        sum: data.stats.sum,
+        median: data.stats.median,
         card: card,
     }
 

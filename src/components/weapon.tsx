@@ -7,18 +7,6 @@ import { weaponRarity } from "@/types/weaponRarity";
 
 import { weaponCid, weaponTypeData } from "@/data/weaponTypeData";
 
-function effectValue(value: number, isInverted: boolean) {
-
-    let sign = "+";
-
-    if (isInverted == true) sign = "";
-
-    if (value < 0) sign = "-"
-
-    return sign + Math.abs(value).toString();
-
-}
-
 function Label(props: {
     value: number | string,
     x: number,

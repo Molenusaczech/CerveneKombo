@@ -3,6 +3,8 @@ import { getCardByUid } from "@/tools/getCardByUid";
 
 
 import UidLookup from "@/components/uidLookup";
+import { getCardStats } from "@/tools/getCardStats";
+
 
 export default async function Scan({ params }: { params: { uid: string } }) {
   "use server";
@@ -10,13 +12,18 @@ export default async function Scan({ params }: { params: { uid: string } }) {
 
   const data = await getCardByUid(params.uid)
 
+
   if (!data) return (<div> Error </div>)
+
+  const stats = await getCardStats(data.card.cid, data.card.name)
+
+  if (!stats) return (<div> Error </div>)
 
   return (
     <div>
-      <UidLookup data={data} />
+      <UidLookup data={data} stats={stats} />
 
-      {/*JSON.stringify(data)*/}
+      {JSON.stringify(data)}
 
     </div>
   )

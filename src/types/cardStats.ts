@@ -6,6 +6,9 @@ type cardStats = {
     worse: number,
     same: number,
     instances: number,
+    delta: number,
+    sum: number,
+    median: number,
     card: heroRarity | weaponRarity,
 }
 
