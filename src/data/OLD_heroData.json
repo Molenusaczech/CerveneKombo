@@ -26,7 +26,8 @@
             null,
             "hit-weapon",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/antique-automaton-cz.jpg"
     },
     "MifMif": {
         "gender": "male",
@@ -54,7 +55,8 @@
             null,
             "hit-weapon",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/ape-sorcerer-cz.jpg"
     },
     "Alina": {
         "gender": "female",
@@ -83,7 +85,8 @@
             null,
             "all",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/axemaiden-cz.jpg"
     },
     "Coryphor": {
         "gender": "male",
@@ -110,7 +113,8 @@
             "add-energy",
             "heal",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/beach-shaman-cz.jpg"
     },
     "Dentist": {
         "gender": "male",
@@ -135,8 +139,9 @@
             "vampire-bite",
             "curse-weapon",
             "vampire-bite",
-            null
-        ]
+            "night-attack"
+        ],
+        "imgUrl": "/heroes/bloody-dentist-cz.jpg"
     },
     "Boneater": {
         "gender": "male",
@@ -154,7 +159,7 @@
             "bow"
         ],
         "effects": [
-            null,
+            "stop-discard",
             "crunch-weapon",
             "hit-hero",
             "crunch-weapon",
@@ -162,7 +167,8 @@
             "block",
             "hit-weapon",
             "block"
-        ]
+        ],
+        "imgUrl": "/heroes/boneater-dwarf-cz.jpg"
     },
     "Bonekicker": {
         "gender": "male",
@@ -182,13 +188,14 @@
         "effects": [
             "hit-hero",
             "block",
-            null,
+            "stop-discard",
             "heal",
             "combo",
             "crunch-weapon",
             "hit-anything",
             "crunch-weapon"
-        ]
+        ],
+        "imgUrl": "/heroes/bonekicker-dwarf-cz.jpg"
     },
     "Boneshaker": {
         "gender": "male",
@@ -213,7 +220,8 @@
             "crunch-weapon",
             "hit-hero",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/boneshaker-dwarf-cz.jpg"
     },
     "Cook": {
         "gender": "male",
@@ -239,7 +247,8 @@
             null,
             "hit-weapon",
             "crunch-weapon"
-        ]
+        ],
+        "imgUrl": "/heroes/cannibal-chef-cz.jpg"
     },
     "Clown": {
         "gender": "male",
@@ -261,11 +270,12 @@
             null,
             "hit-hero",
             "hit-weapon",
-            null,
+            "stop-discard",
             "crunch-weapon",
-            null,
+            "combo-trigger",
             "crunch-weapon"
-        ]
+        ],
+        "imgUrl": "/heroes/cannibal-clown-cz.jpg"
     },
     "Warlock": {
         "gender": "male",
@@ -284,15 +294,16 @@
             "wand"
         ],
         "effects": [
-            null,
+            "stop-discard",
             "hit-anything",
             "block",
             null,
-            null,
+            "stop-discard",
             "heal",
-            null,
+            "stop-discard",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/clan-shaman-cz.jpg"
     },
     "CoffinBot": {
         "gender": "neutral",
@@ -318,7 +329,8 @@
             null,
             "curse-weapon",
             "combo"
-        ]
+        ],
+        "imgUrl": "/heroes/coffin-bot-cz.jpg"
     },
     "Executie": {
         "gender": "male",
@@ -344,7 +356,8 @@
             "block",
             "vampire-bite",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/cute-executioner-cz.jpg"
     },
     "Maramis": {
         "gender": "male",
@@ -370,7 +383,8 @@
             null,
             "hit-hero",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/dandy-swordsman-cz.jpg"
     },
     "Puppet": {
         "gender": "neutral",
@@ -392,11 +406,12 @@
             "crunch-weapon",
             "hit-anything",
             "combo",
-            null,
+            "combo-trigger",
             "crunch-weapon",
-            null,
+            "stop-discard",
             "crunch-weapon"
-        ]
+        ],
+        "imgUrl": "/heroes/divine-puppet-cz.jpg"
     },
     "Dogbone": {
         "gender": "male",
@@ -420,9 +435,10 @@
             "crunch-weapon",
             "block",
             "crunch-weapon",
-            null,
+            "stop-discard",
             "heal"
-        ]
+        ],
+        "imgUrl": "/heroes/dogbone-cz.jpg"
     },
     "Drakosaur": {
         "gender": "male",
@@ -443,7 +459,7 @@
             "bow"
         ],
         "effects": [
-            null,
+            "combo-trigger",
             "combo",
             "combo",
             null,
@@ -451,7 +467,8 @@
             "hit-hero",
             "add-energy",
             "hit-hero-repeated"
-        ]
+        ],
+        "imgUrl": "/heroes/dragon-king-cz.jpg"
     },
     "Shepherd": {
         "gender": "male",
@@ -469,15 +486,16 @@
             "wand"
         ],
         "effects": [
-            null,
+            "combo-trigger",
             "crunch-weapon",
-            null,
+            "combo-trigger",
             "hit-weapon",
-            null,
+            "stop-discard",
             "combo",
             "hit-hero-repeated",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/dwarven-shepherd-cz.jpg"
     },
     "Dryoptas": {
         "gender": "male",
@@ -505,7 +523,8 @@
             "combo",
             "hit-hero",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/elven-hunter-cz.jpg"
     },
     "Zomgar": {
         "gender": "male",
@@ -533,7 +552,8 @@
             "hit-hero",
             "hit-weapon",
             "hit-hero"
-        ]
+        ],
+        "imgUrl": "/heroes/elvish-turncoat-cz.jpg"
     },
     "Bubbleground": {
         "gender": "male",
@@ -558,10 +578,11 @@
             "block",
             "combo",
             "hit-weapon",
-            null,
+            "combo-trigger",
             "hit-weapon",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/expert-miner-cz.jpg"
     },
     "Gizmeron": {
         "gender": "male",
@@ -582,7 +603,7 @@
             "wand"
         ],
         "effects": [
-            null,
+            "combo-trigger",
             "hit-hero-repeated",
             "heal",
             "hit-hero-repeated",
@@ -590,7 +611,8 @@
             "block",
             "all",
             "hit-hero-repeated"
-        ]
+        ],
+        "imgUrl": "/heroes/legendary-veteran-cz.jpg"
     },
     "Rachael": {
         "gender": "female",
@@ -619,7 +641,8 @@
             "hit-anything",
             "hit-weapon",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/fearless-explorer-cz.jpg"
     },
     "Brocco": {
         "gender": "male",
@@ -640,14 +663,15 @@
         ],
         "effects": [
             "hit-hero",
-            null,
+            "combo-trigger",
             "hit-hero-repeated",
             "combo",
             "hit-hero-repeated",
             null,
             "hit-hero",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/feathered-wanderer-cz.jpg"
     },
     "PyroBob": {
         "gender": "male",
@@ -675,7 +699,8 @@
             "hit-weapon",
             "hit-hero",
             "block"
-        ]
+        ],
+        "imgUrl": "/heroes/fire-imp-cz.jpg"
     },
     "Floblin": {
         "gender": "male",
@@ -703,7 +728,8 @@
             "block",
             "heal",
             "hit-hero-repeated"
-        ]
+        ],
+        "imgUrl": "/heroes/flower-imp-cz.jpg"
     },
     "Bambook": {
         "gender": "male",
@@ -728,10 +754,11 @@
             "hit-hero",
             "combo",
             "hit-hero",
-            null,
+            "combo-trigger",
             "hit-anything",
             "hit-weapon"
-        ]
+        ],
+        "imgUrl": "/heroes/furry-avenger-cz.jpg"
     },
     "Spectre": {
         "gender": "female",
@@ -756,8 +783,9 @@
             "heal",
             "vampire-bite",
             "hit-weapon",
-            null
-        ]
+            "night-attack"
+        ],
+        "imgUrl": "/heroes/ghosty-girl-cz.jpg"
     },
     "Bonefixer": {
         "gender": "male",
@@ -779,14 +807,15 @@
         ],
         "effects": [
             "hit-weapon",
-            null,
+            "combo-trigger",
             "hit-weapon",
             null,
             "hit-weapon",
             "combo",
             "hit-weapon",
-            null
-        ]
+            "combo-trigger"
+        ],
+        "imgUrl": "/heroes/gnome-engineer-cz.jpg"
     },
     "Troll": {
         "gender": "male",
@@ -813,7 +842,8 @@
             "combo",
             "hit-hero",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/green-troll-cz.jpg"
     },
     "Vikimaus": {
         "gender": "male",
@@ -840,8 +870,9 @@
             "hit-anything",
             "combo",
             "hit-weapon",
-            null
-        ]
+            "combo-trigger"
+        ],
+        "imgUrl": "/heroes/grouchy-viking-cz.jpg"
     },
     "Jirka": {
         "gender": "male",
@@ -869,7 +900,8 @@
             "block",
             "combo",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/heir-apparent-cz.jpg"
     },
     "HenKing": {
         "gender": "male",
@@ -894,8 +926,9 @@
             "vampire-bite",
             "block",
             "hit-hero-repeated",
-            null
-        ]
+            "night-attack"
+        ],
+        "imgUrl": "/heroes/henhouse-king-cz.jpg"
     },
     "Tris": {
         "gender": "female",
@@ -924,7 +957,8 @@
             "combo",
             "heal",
             "add-energy"
-        ]
+        ],
+        "imgUrl": "/heroes/forest-fairy-cz.jpg"
     },
     "Arik": {
         "gender": "male",
@@ -952,7 +986,8 @@
             "hit-hero",
             "hit-weapon",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/jungle-runner-cz.jpg"
     },
     "Herbert": {
         "gender": "male",
@@ -974,13 +1009,14 @@
         "effects": [
             "all",
             "hit-weapon",
-            null,
+            "combo-trigger",
             null,
             "block",
             null,
             "add-energy",
             "combo"
-        ]
+        ],
+        "imgUrl": "/heroes/knight–errant-cz.jpg"
     },
     "Castor": {
         "gender": "male",
@@ -1005,10 +1041,11 @@
             "combo",
             null,
             "hit-anything",
-            null,
+            "combo-trigger",
             "hit-anything",
             "combo"
-        ]
+        ],
+        "imgUrl": "/heroes/daredevil-lion-cz.jpg"
     },
     "DarkJohnny": {
         "gender": "male",
@@ -1028,15 +1065,16 @@
             "wand"
         ],
         "effects": [
-            null,
+            "combo-trigger",
             "hit-hero-repeated",
             "hit-hero",
             null,
             "hit-anything",
             "hit-hero-repeated",
-            null,
+            "combo-trigger",
             "hit-hero-repeated"
-        ]
+        ],
+        "imgUrl": "/heroes/lone-gunslinger-cz.jpg"
     },
     "Maestro": {
         "gender": "male",
@@ -1059,9 +1097,10 @@
             null,
             "hit-anything",
             "hit-hero-repeated",
-            null,
+            "night-attack",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/maestro-morti-cz.jpg"
     },
     "Noctimor": {
         "gender": "male",
@@ -1088,8 +1127,9 @@
             "hit-anything",
             "combo",
             "hit-hero",
-            null
-        ]
+            "combo-trigger"
+        ],
+        "imgUrl": "/heroes/marsh-warrior-cz.jpg"
     },
     "Solrald": {
         "gender": "male",
@@ -1116,8 +1156,9 @@
             "add-energy",
             "hit-hero-repeated",
             "hit-anything",
-            null
-        ]
+            "combo-trigger"
+        ],
+        "imgUrl": "/heroes/masked-vigilante-cz.jpg"
     },
     "MissVamp": {
         "gender": "female",
@@ -1138,11 +1179,12 @@
             "heal",
             "vampire-bite",
             "curse-weapon",
-            null,
+            "night-attack",
             null,
             "vampire-bite",
             "heal"
-        ]
+        ],
+        "imgUrl": "/heroes/miss-vampiria-cz.jpg"
     },
     "OO": {
         "gender": "neutral",
@@ -1164,12 +1206,13 @@
             "hit-weapon",
             "hit-hero",
             "hit-weapon",
-            null,
+            "combo-trigger",
             "hit-anything",
             "block",
             "hit-anything",
             "block"
-        ]
+        ],
+        "imgUrl": "/heroes/mysterious-golem-cz.jpg"
     },
     "Naftin": {
         "gender": "male",
@@ -1198,7 +1241,8 @@
             "combo",
             "add-energy",
             "hit-hero-repeated"
-        ]
+        ],
+        "imgUrl": "/heroes/oil-knight-cz.jpg"
     },
     "Gogo": {
         "gender": "male",
@@ -1225,7 +1269,8 @@
             "hit-anything",
             "combo",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/pixel-wizard-cz.jpg"
     },
     "Athyriel": {
         "gender": "female",
@@ -1249,11 +1294,12 @@
             "hit-hero-repeated",
             "add-energy",
             "hit-hero",
-            null,
+            "combo-trigger",
             null,
             "hit-hero-repeated",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/pixie-queen-cz.jpg"
     },
     "ElCider": {
         "gender": "male",
@@ -1281,7 +1327,8 @@
             null,
             "heal",
             "block"
-        ]
+        ],
+        "imgUrl": "/heroes/revered-paladin-cz.jpg"
     },
     "Scalprhino": {
         "gender": "male",
@@ -1309,7 +1356,8 @@
             "hit-weapon",
             "hit-anything",
             "block"
-        ]
+        ],
+        "imgUrl": "/heroes/rhino-fighter-cz.jpg"
     },
     "ROB5000": {
         "gender": "neutral",
@@ -1330,14 +1378,15 @@
         ],
         "effects": [
             "hit-weapon",
-            null,
+            "combo-trigger",
             "hit-anything",
             "combo",
             "hit-anything",
             null,
             "hit-anything",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/robot-battler-cz.jpg"
     },
     "Housewife": {
         "gender": "female",
@@ -1361,9 +1410,10 @@
             null,
             "hit-hero-repeated",
             null,
-            null,
+            "stop-discard",
             "hit-weapon"
-        ]
+        ],
+        "imgUrl": "/heroes/rough-housewife-cz.jpg"
     },
     "Sabertooth": {
         "gender": "male",
@@ -1387,7 +1437,8 @@
             "vampire-bite",
             "all",
             "hit-weapon"
-        ]
+        ],
+        "imgUrl": "blank.jpg"
     },
     "Junky": {
         "gender": "male",
@@ -1412,10 +1463,11 @@
             "hit-weapon",
             null,
             "hit-hero",
-            null,
+            "combo-trigger",
             "hit-weapon",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/junkyard-boss-cz.jpg"
     },
     "Cthyzmo": {
         "gender": "male",
@@ -1440,9 +1492,10 @@
             "add-energy",
             "heal",
             null,
-            null,
+            "combo-trigger",
             "block"
-        ]
+        ],
+        "imgUrl": "/heroes/slimeball-engineer-cz.jpg"
     },
     "Heretic": {
         "gender": "male",
@@ -1462,13 +1515,14 @@
         "effects": [
             "hit-hero-repeated",
             "add-energy",
-            null,
+            "stop-discard",
             "all",
             "hit-hero-repeated",
             "crunch-weapon",
             "combo",
             "add-energy"
-        ]
+        ],
+        "imgUrl": "/heroes/the-heretic-cz.jpg"
     },
     "Pollux": {
         "gender": "male",
@@ -1496,7 +1550,8 @@
             null,
             "heal",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/the-lionhearted-cz.jpg"
     },
     "Yawi": {
         "gender": "male",
@@ -1524,7 +1579,8 @@
             "heal",
             "hit-weapon",
             "heal"
-        ]
+        ],
+        "imgUrl": "/heroes/toadstool-shaman-cz.jpg"
     },
     "Whurg": {
         "gender": "male",
@@ -1551,7 +1607,8 @@
             "hit-weapon",
             "combo",
             "block"
-        ]
+        ],
+        "imgUrl": "/heroes/tusked-colossus-cz.jpg"
     },
     "Bunny": {
         "gender": "male",
@@ -1575,9 +1632,10 @@
             "hit-weapon",
             "vampire-bite",
             null,
-            null,
+            "night-attack",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/vampire-bunny-cz.jpg"
     },
     "VampHunter": {
         "gender": "male",
@@ -1601,10 +1659,11 @@
             "hit-hero",
             "heal",
             "vampire-bite",
-            null,
+            "combo-trigger",
             "vampire-bite",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/vampire-hunter-cz.jpg"
     },
     "VampPrince": {
         "gender": "male",
@@ -1628,10 +1687,11 @@
             "hit-hero",
             "hit-hero-repeated",
             "curse-weapon",
-            null,
+            "night-attack",
             "vampire-bite",
-            null
-        ]
+            "night-attack"
+        ],
+        "imgUrl": "/heroes/vampire-prince-cz.jpg"
     },
     "Vulture": {
         "gender": "male",
@@ -1650,15 +1710,16 @@
             "bow"
         ],
         "effects": [
-            null,
+            "stop-discard",
             null,
             "crunch-weapon",
             "hit-anything",
-            null,
+            "stop-discard",
             "hit-anything",
             "combo",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/vengeful-vulture-cz.jpg"
     },
     "Agron": {
         "gender": "male",
@@ -1686,7 +1747,8 @@
             "block",
             "hit-weapon",
             "block"
-        ]
+        ],
+        "imgUrl": "/heroes/village-squire-cz.jpg"
     },
     "Ninjawatt": {
         "gender": "male",
@@ -1710,10 +1772,11 @@
             "hit-hero-repeated",
             null,
             "hit-anything",
-            null,
+            "combo-trigger",
             "combo",
             "hit-hero-repeated"
-        ]
+        ],
+        "imgUrl": "/heroes/voltaic-ninja-cz.jpg"
     },
     "Darkenstein": {
         "gender": "male",
@@ -1732,12 +1795,13 @@
             "curse-weapon",
             "hit-anything",
             "hit-hero",
-            null,
+            "combo-trigger",
             "all",
             "vampire-bite",
             "curse-weapon",
-            null
-        ]
+            "night-attack"
+        ],
+        "imgUrl": "/heroes/von-darkenstein-cz.jpg"
     },
     "Timberman": {
         "gender": "male",
@@ -1764,7 +1828,8 @@
             "hit-weapon",
             "hit-hero",
             "hit-weapon"
-        ]
+        ],
+        "imgUrl": "/heroes/woodcutter-cz.jpg"
     },
     "Bukdub": {
         "gender": "male",
@@ -1792,7 +1857,8 @@
             "hit-hero-repeated",
             "hit-hero",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/woodland-brawler-cz.jpg"
     },
     "Burg": {
         "gender": "male",
@@ -1819,7 +1885,8 @@
             "block",
             "hit-weapon",
             "combo"
-        ]
+        ],
+        "imgUrl": "/heroes/woolly-hooligan-cz.jpg"
     },
     "Johan": {
         "gender": "male",
@@ -1847,7 +1914,8 @@
             null,
             "add-energy",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/fearless-rascal-cz.jpg"
     },
     "BalloonBot": {
         "gender": "neutral",
@@ -1869,11 +1937,12 @@
             "heal",
             "hit-anything",
             "heal",
-            null,
+            "fix-weapon",
             "heal",
             "combo",
             "hit-weapon"
-        ]
+        ],
+        "imgUrl": "/heroes/balloonbot-cz.jpg"
     },
     "Boilerman": {
         "gender": "male",
@@ -1891,15 +1960,16 @@
             "axe"
         ],
         "effects": [
-            null,
+            "fix-weapon",
             null,
             "hit-hero",
             "combo",
             "hit-hero",
             "block",
-            null,
+            "fix-weapon",
             "combo"
-        ]
+        ],
+        "imgUrl": "/heroes/boilerman-cz.jpg"
     },
     "CleverBot": {
         "gender": "neutral",
@@ -1920,11 +1990,12 @@
             "hit-double",
             "heal",
             "trap",
-            null,
+            "fix-weapon",
             "hit-hero-repeated",
-            null,
+            "fix-weapon",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/cleverbot-cz.jpg"
     },
     "CloudWalker": {
         "gender": "male",
@@ -1948,9 +2019,10 @@
             "combo",
             "hit-anything",
             null,
-            null,
+            "fix-weapon",
             "block"
-        ]
+        ],
+        "imgUrl": "/heroes/cloud-walker-cz.jpg"
     },
     "CrimeBot": {
         "gender": "neutral",
@@ -1976,8 +2048,9 @@
             "combo",
             "trap",
             "hit-double",
-            null
-        ]
+            "fix-weapon"
+        ],
+        "imgUrl": "/heroes/crimebot-cz.jpg"
     },
     "MurderCrow": {
         "gender": "male",
@@ -2004,7 +2077,8 @@
             "hit-hero-repeated",
             "hit-double",
             "hit-hero-repeated"
-        ]
+        ],
+        "imgUrl": "/heroes/crow-murderer-cz.jpg"
     },
     "Mongolfier": {
         "gender": "male",
@@ -2025,11 +2099,12 @@
             "block",
             "all",
             "hit-double",
-            null,
+            "fix-weapon",
             "block",
             "trap",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/de-mongolfier-cz.jpg"
     },
     "GnomeWarrior": {
         "gender": "male",
@@ -2048,14 +2123,15 @@
         ],
         "effects": [
             "hit-anything",
-            null,
+            "fix-weapon",
             "hit-hero",
             "block",
             "all",
             "block",
             "combo",
             "trap"
-        ]
+        ],
+        "imgUrl": "/heroes/gnome-warrior-cz.jpg"
     },
     "Helmsman": {
         "gender": "male",
@@ -2073,15 +2149,16 @@
             "bow"
         ],
         "effects": [
-            null,
+            "fix-weapon",
             "combo",
             "all",
             "hit-hero",
-            null,
+            "fix-weapon",
             "block",
             "combo",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/helmsman-cz.jpg"
     },
     "LadyZepplin": {
         "gender": "female",
@@ -2104,10 +2181,11 @@
             "hit-hero",
             "hit-hero-repeated",
             "add-energy",
-            null,
+            "fix-weapon",
             "hit-double",
             "trap"
-        ]
+        ],
+        "imgUrl": "/heroes/lady-zeppelin-cz.jpg"
     },
     "Pidgeon": {
         "gender": "male",
@@ -2128,12 +2206,13 @@
             "hit-double",
             "combo",
             "hit-double",
-            null,
+            "fix-weapon",
             "hit-anything",
-            null,
+            "fix-weapon",
             "hit-weapon",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/pidgeon-courier-cz.jpg"
     },
     "Penguin": {
         "gender": "male",
@@ -2153,14 +2232,15 @@
         ],
         "effects": [
             "hit-hero",
-            null,
+            "combo-trigger",
             "hit-double",
             null,
             "hit-double",
-            null,
+            "combo-trigger",
             "hit-weapon",
             "trap"
-        ]
+        ],
+        "imgUrl": "/heroes/rocket-penguin-cz.jpg"
     },
     "SheepPatrol": {
         "gender": "male",
@@ -2184,9 +2264,10 @@
             "hit-weapon",
             "hit-hero",
             "trap",
-            null,
-            null
-        ]
+            "combo-trigger",
+            "fix-weapon"
+        ],
+        "imgUrl": "/heroes/sheep-patrol-cz.jpg"
     },
     "TrophyHunter": {
         "gender": "male",
@@ -2204,7 +2285,7 @@
             "bow"
         ],
         "effects": [
-            null,
+            "fix-weapon",
             "combo",
             "add-energy",
             "trap",
@@ -2212,7 +2293,8 @@
             null,
             "hit-double",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/trophy-hunter-cz.jpg"
     },
     "BaronZepplin": {
         "gender": "male",
@@ -2230,13 +2312,14 @@
         "effects": [
             "hit-double",
             "hit-hero",
-            null,
+            "combo-trigger",
             "trap",
             "hit-double",
             "hit-hero-repeated",
             "heal",
             "combo"
-        ]
+        ],
+        "imgUrl": "/heroes/von-zepplin-cz.jpg"
     },
     "Alzak": {
         "gender": "male",
@@ -2256,14 +2339,15 @@
         ],
         "effects": [
             "hit-hero",
-            null,
+            "stop-discard",
             "vampire-bite",
             "trap",
             "block",
-            null,
+            "stop-discard",
             "vampire-bite",
             "trap"
-        ]
+        ],
+        "imgUrl": "/heroes/fighter-of-alzahrad-cz.jpg"
     },
     "Lord_BioTech": {
         "gender": "male",
@@ -2285,12 +2369,13 @@
             "all",
             "block",
             "hit-double",
-            null,
+            "fix-weapon",
             "all",
             "hit-hero-repeated",
-            null,
+            "stop-discard",
             "block"
-        ]
+        ],
+        "imgUrl": "/heroes/lord-of-biotechlandia-cz.jpg"
     },
     "Lord_Canbalandia": {
         "gender": "male",
@@ -2313,10 +2398,11 @@
             "curse-weapon",
             "crunch-weapon",
             "hit-hero",
-            null,
+            "night-attack",
             "vampire-bite",
             "crunch-weapon"
-        ]
+        ],
+        "imgUrl": "/heroes/lord-of-canbalandia-cz.jpg"
     },
     "Lord_Vampiria": {
         "gender": "male",
@@ -2341,8 +2427,9 @@
             "vampire-bite",
             "trap",
             "heal",
-            null
-        ]
+            "night-attack"
+        ],
+        "imgUrl": "/heroes/lord-of-vampiria-cz.jpg"
     },
     "Lord_Zepplandia": {
         "gender": "male",
@@ -2362,14 +2449,15 @@
         ],
         "effects": [
             "add-energy",
-            null,
+            "combo-trigger",
             "hit-double",
             "hit-hero",
             "hit-double",
             "combo",
             "curse-weapon",
-            null
-        ]
+            "fix-weapon"
+        ],
+        "imgUrl": "/heroes/lord-of-zepplandia-cz.jpg"
     },
     "WilhelmTell": {
         "gender": "male",
@@ -2395,7 +2483,8 @@
             "add-energy",
             "hit-weapon",
             "combo"
-        ]
+        ],
+        "imgUrl": "/heroes/apple-slayer-cz.jpg"
     },
     "Brumbrum": {
         "gender": "male",
@@ -2422,7 +2511,8 @@
             "hit-anything",
             "block",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/bounty-hunter-cz.jpg"
     },
     "Gladiator": {
         "gender": "male",
@@ -2450,7 +2540,8 @@
             "trap",
             "hit-hero-repeated",
             "block"
-        ]
+        ],
+        "imgUrl": "/heroes/arena-broomer-cz.jpg"
     },
     "Ester": {
         "gender": "female",
@@ -2477,7 +2568,8 @@
             null,
             "heal",
             "cumulative-attack"
-        ]
+        ],
+        "imgUrl": "/heroes/esterminator-cz.jpg"
     },
     "Wedry": {
         "gender": "male",
@@ -2503,7 +2595,8 @@
             "add-energy",
             "hit-double",
             "block"
-        ]
+        ],
+        "imgUrl": "/heroes/wedryknight-cz.jpg"
     },
     "BattleFerda": {
         "gender": "male",
@@ -2528,10 +2621,11 @@
             "hit-double",
             "hit-hero-repeated",
             "hit-double",
-            null,
+            "fix-weapon",
             "heal",
             "block"
-        ]
+        ],
+        "imgUrl": "/heroes/battle-ferda-cz.jpg"
     },
     "Overgamer_red": {
         "gender": "male",
@@ -2558,8 +2652,9 @@
             "cumulative-attack",
             "hit-hero-repeated",
             "all",
-            null
-        ]
+            "extra-coins"
+        ],
+        "imgUrl": "/heroes/red-overgamer-cz.jpg"
     },
     "FuriousScout": {
         "gender": "male",
@@ -2586,7 +2681,8 @@
             "add-energy",
             "heal",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/young-adventurer-cz.jpg"
     },
     "Boss_MifMif": {
         "gender": "male",
@@ -2610,7 +2706,8 @@
             null,
             "hit-weapon",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/monkey-magician-cz.jpg"
     },
     "Boss_PurplePotato": {
         "gender": "male",
@@ -2635,7 +2732,8 @@
             "combo",
             "hit-hero",
             "combo"
-        ]
+        ],
+        "imgUrl": "/heroes/purple-punk-potato-cz.jpg"
     },
     "Boss_Troll": {
         "gender": "male",
@@ -2658,7 +2756,8 @@
             "combo",
             "hit-hero",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/touchy-troll-cz.jpg"
     },
     "Boss_Rachael": {
         "gender": "female",
@@ -2683,7 +2782,8 @@
             "hit-anything",
             "hit-weapon",
             "hit-anything"
-        ]
+        ],
+        "imgUrl": "/heroes/evil-explorer-cz.jpg"
     },
     "Czech_Bozena": {
         "gender": "female",
@@ -2707,7 +2807,8 @@
             "combo",
             "heal",
             "hit-double"
-        ]
+        ],
+        "imgUrl": "/heroes/wo-woman-cz.jpg"
     },
     "Czech_Amos": {
         "gender": "male",
@@ -2731,7 +2832,8 @@
             "hit-hero-repeated",
             "hit-anything",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/brave-teacher-cz.jpg"
     },
     "Czech_Vaclav": {
         "gender": "male",
@@ -2758,7 +2860,8 @@
             null,
             "hit-weapon",
             "hit-hero-repeated"
-        ]
+        ],
+        "imgUrl": "/heroes/ruler-from-textbook-cz.jpg"
     },
     "Greek": {
         "gender": "male",
@@ -2783,7 +2886,8 @@
             null,
             "block",
             "hit-hero-repeated"
-        ]
+        ],
+        "imgUrl": "/heroes/valiant-hoplite-cz.jpg"
     },
     "Hungarian": {
         "gender": "male",
@@ -2809,8 +2913,9 @@
             "block",
             "combo",
             "block",
-            null
-        ]
+            "combo-trigger"
+        ],
+        "imgUrl": "/heroes/hungarian-hussar-cz.jpg"
     },
     "Xmas_fir": {
         "gender": "male",
@@ -2825,14 +2930,15 @@
         ],
         "effects": [
             "cumulative-attack",
-            null,
+            "night-attack",
             "crunch-weapon",
-            null,
+            "fix-weapon",
             "cumulative-attack",
             "combo",
             "trap",
             "combo"
-        ]
+        ],
+        "imgUrl": "blank.jpg"
     },
     "Guvnor": {
         "gender": "male",
@@ -2859,7 +2965,8 @@
             "combo",
             "cumulative-attack",
             "hit-hero-repeated"
-        ]
+        ],
+        "imgUrl": "/heroes/spinbay-governor-cz.jpg"
     },
     "Dockworker": {
         "gender": "male",
@@ -2882,10 +2989,11 @@
             "hit-hero",
             "block",
             "hit-hero",
-            null,
+            "extra-coins",
             "hit-weapon",
             null
-        ]
+        ],
+        "imgUrl": "/heroes/dockworker-cz.jpg"
     },
     "Innkeeper": {
         "gender": "male",
@@ -2907,12 +3015,13 @@
             "combo",
             null,
             "block",
-            null,
+            "extra-coins",
             "cumulative-attack",
             "heal",
-            null,
-            null
-        ]
+            "combo-trigger",
+            "extra-coins"
+        ],
+        "imgUrl": "/heroes/port-innkeeper-cz.jpg"
     },
     "RoboExchange": {
         "gender": "male",
@@ -2932,14 +3041,15 @@
         ],
         "effects": [
             "cumulative-attack",
-            null,
+            "extra-coins",
             "cumulative-attack",
             "add-energy",
             "hit-anything",
-            null,
+            "extra-coins",
             "hit-anything",
             "hit-hero"
-        ]
+        ],
+        "imgUrl": "/heroes/roboexchange-cz.jpg"
     },
     "Dancer": {
         "gender": "female",
@@ -2965,8 +3075,9 @@
             "cumulative-attack",
             "block",
             "cumulative-attack",
-            null
-        ]
+            "extra-coins"
+        ],
+        "imgUrl": "/heroes/spinbay-dancer-cz.jpg"
     },
     "Bedouin": {
         "gender": "male",
@@ -2985,13 +3096,14 @@
         ],
         "effects": [
             "hit-weapon",
-            null,
+            "extra-coins",
             "add-energy",
             "hit-hero-repeated",
             "add-energy",
             "hit-hero-repeated",
             "cumulative-attack",
             "hit-hero-repeated"
-        ]
+        ],
+        "imgUrl": "/heroes/mysterious-foreigner-cz.jpg"
     }
 }

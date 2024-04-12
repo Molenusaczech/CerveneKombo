@@ -3110,6 +3110,32 @@ const heroTypeData: heroTypes = {
             "hit-hero-repeated"
         ],
         "imgUrl": "/heroes/mysterious-foreigner-cz.jpg"
+    },
+    "Kate_M": {
+        "gender": "female",
+        "origin": "Middlemyst",
+        "cid": "Kate_M",
+        "rarity": 4,
+        "cname": {
+            "CS": "Hvězdná inženýrka",
+            "EN": "Star engineer"
+        },
+        "weapon_prof": [
+            "axe",
+            "bow",
+            "wand"
+        ],
+        "effects": [
+            "curse-weapon",
+            "fix-weapon",
+            "curse-weapon",
+            "stop-discard",
+            "curse-weapon",
+            "vampire-bite",
+            "night-attack",
+            "stop-discard"
+        ],
+        "imgUrl": "/heroes/star-engineer-cz.jpg"
     }
 } as const;
 
