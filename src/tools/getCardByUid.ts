@@ -26,6 +26,8 @@ async function getCardByUid(uid: string): Promise<heroFromUid | weaponFromUid | 
                 level: data.response.experience.level,
                 xp: data.response.experience.xp,
             },
+            realization: data.response.realization,
+            expansion: data.response.expansion,
             card: {
                 t: "hero",
                 name: data.response.iname,
@@ -84,11 +86,14 @@ async function getCardByUid(uid: string): Promise<heroFromUid | weaponFromUid | 
             t: "weapon",
             owner: data.response.owner,
             iid: data.response.iid,
+            realization: data.response.realization,
+            expansion: data.response.expansion,
             card: {
                 t: "weapon",
                 name: data.response.iname,
                 cid: data.response.cid,
                 durability: data.response.dur,
+
                 effects: data.response.effects.map((effect: any) => {
                     return {
                         value: effect.val,

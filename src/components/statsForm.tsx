@@ -14,6 +14,9 @@ import { weaponTypeData } from '@/data/weaponTypeData';
 import { heroCid } from '@/data/heroTypeData';
 import { weaponCid } from '@/data/weaponTypeData';
 
+import { ThemeProvider } from '@emotion/react';
+import theme from '@/tools/theme';
+
 export default function StatsForm() {
     "use client";
     const [name, setName] = useState<string>("");
@@ -52,29 +55,41 @@ export default function StatsForm() {
     });
 
     const cardTypeData = [...heroData, ...weaponData];
-    
+
     return (
-        <div>
-            <TextField label="Jméno Karty" variant="outlined" onChange={(change) => {
-                setName(change.target.value);
-            }} />
+        <ThemeProvider theme={theme}>
+            <div className='grid grid-cols-1 gap-2'>
 
-            <Autocomplete
-                disablePortal
-                id="combo-box-demo"
-                options={cardTypeData}
-                sx={{ width: 300 }}
-                renderInput={(params) => <TextField {...params} label="Vyberte Kartu" />}
-                onChange={(event, value) => {
-                    if (value == null) {
-                        return;
-                    }
-                    console.log(value.value);
-                    setCardType(value.value);
-                }}
-            />
+                <div className='text-center' style={{
+                    color: 'var(--text)',
+                }}>Vyhledávání hrdiny podle jména a druhu</div>
 
-            <Button variant="outlined" href={"/stats/"+cardType+"/"+name}>Vyhledat</Button>
-        </div>
+                <Autocomplete
+                    disablePortal
+                    id="combo-box-demo"
+                    options={cardTypeData}
+                    renderInput={(params) => <TextField {...params} label="Vyberte Kartu" />}
+                    onChange={(event, value) => {
+                        if (value == null) {
+                            return;
+                        }
+                        console.log(value.value);
+                        setCardType(value.value);
+                    }}
+                />
+
+                <TextField label="Jméno Karty" variant="outlined" onChange={(change) => {
+                    setName(change.target.value);
+                }} />
+
+                <Button variant="contained" href={"/stats/" + cardType + "/" + name} disabled={name == "" || cardType == null}>Vyhledat</Button>
+
+                <div className='grid grid-cols-2 gap-1'>
+                    <Button variant="outlined" href={"/stats/VampPrince/Mole"}>Příklad hrdiny</Button>
+                    <Button variant="outlined" href={"/stats/Bow_ElderDragon/LVXB"}>Příklad zbraně</Button>
+                </div>
+
+            </div >
+        </ThemeProvider>
     )
 }

@@ -110,6 +110,7 @@ async function getCardStats(cid: heroCid | weaponCid, name: string) {
         sum: data.stats.sum,
         median: data.stats.median,
         card: card,
+        lang: data.lang
     }
 
     return stats;

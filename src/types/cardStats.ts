@@ -1,4 +1,5 @@
 import { heroRarity } from "./cardRarity"
+import { langCode } from "./langTypes"
 import { weaponRarity } from "./weaponRarity"
 
 type cardStats = {
@@ -10,6 +11,7 @@ type cardStats = {
     sum: number,
     median: number,
     card: heroRarity | weaponRarity,
+    lang: langCode
 }
 
 export type { cardStats }

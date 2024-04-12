@@ -4,30 +4,15 @@ export default function LabeledVal(props: { topText: string, botText: string, co
     console.log(props.topText);
     console.log(props.botText);
     return (
-        <div style={{
-            width: "200px",
-            padding: "0"
-        }}>
+        <div className="grid grid-cols-1">
             <div style={{
                 backgroundColor: props.color,
-                padding: "5px",
-                width: "100%",
-                textAlign: "center",
-                verticalAlign: "middle",
-                borderTopLeftRadius: "5px",
-                borderTopRightRadius: "5px"
-            }}>
+            }} className="text-center p-1 rounded-t-md">
                 {props.topText}
             </div>
             <div style={{
-                padding: "5px",
-                width: "100%",
-                textAlign: "center",
-                verticalAlign: "middle",
                 backgroundColor: colorMutation(props.color, 20),
-                borderBottomLeftRadius: "5px",
-                borderBottomRightRadius: "5px"
-            }}>
+            }} className="text-center p-1 rounded-b-md">
                 {props.botText}
             </div>
         </div>
