@@ -8,7 +8,11 @@ export default async function Stats({ params }: { params: { cid: string, name: s
 
     const data = await getCardStats(decodeURIComponent(params.cid), decodeURIComponent(params.name))
 
-    if (data == null) return (<div> Error </div>)
+    if (data == null) return (
+    <div> 
+        Error - statistiky nenalezeny... Zkontroluj prosím správnost jména a druhu 
+        <br></br>Pokud jsi si jistý, že jsi zadával správně, kontaktuj prosím administrátora
+    </div>)
 
     return (
         <div>

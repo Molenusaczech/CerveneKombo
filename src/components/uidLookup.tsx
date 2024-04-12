@@ -19,7 +19,10 @@ import { cardStats } from "@/types/cardStats";
 
 import { langData } from "@/data/langs";
 
-export default function UidLookup(props: { data: heroFromUid | weaponFromUid, stats: cardStats }) {
+export default function UidLookup(props: {
+    data: heroFromUid | weaponFromUid,
+    stats: cardStats | null
+}) {
     "use client";
 
     const [isUpgraded, setIsUpgraded] = useState(false);
@@ -71,7 +74,7 @@ export default function UidLookup(props: { data: heroFromUid | weaponFromUid, st
                         color="#4fc487"
                     />}
 
-                    {stats.lang && <LabeledVal
+                    {stats && stats.lang && <LabeledVal
                         topText="Jazyk karty"
                         botText={langData[stats.lang]}
                         color="#4fc487"
@@ -93,7 +96,12 @@ export default function UidLookup(props: { data: heroFromUid | weaponFromUid, st
 
                 {data.t == "hero" && <LevelBar xp={data.experience.xp} />}
 
+                {stats && 
                 <CardStats better={stats.better} worse={stats.worse} same={stats.same} delta={stats.delta} />
+                }
+
+                {!stats && <div>Statistiky nenalezeny - Prosím kontaktuj administrátora</div>}
+
             </div>
             {/*JSON.stringify(data)*/}
 
