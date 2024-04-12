@@ -13,7 +13,7 @@ export default async function Stats({ params }: { params: { cid: string, name: s
     return (
         <div>
 
-            <Card data={data.card} />
+            <Card data={data.card} width={500} />
 
             <CardStats better={data.better} worse={data.worse} same={data.same} delta={data.delta}/>
             

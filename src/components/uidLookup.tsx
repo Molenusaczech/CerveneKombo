@@ -34,67 +34,68 @@ export default function UidLookup(props: { data: heroFromUid | weaponFromUid, st
         event: React.MouseEvent<HTMLElement>,
         newAlignment: string | null,
     ) => {
-        console.log(newAlignment);
+        //console.log(newAlignment);
         if (newAlignment != null) {
             setIsUpgraded(!isUpgraded);
         }
     };
 
     return (
-        <div>
-            {/*<h1> Home </h1>
-        <h1> Home </h1>
-    <h1> Home </h1>*/}
-            <Card data={cardData} />
-            <ToggleButtonGroup
-                value={isUpgraded ? "upgraded" : "physical"}
-                exclusive
-                onChange={handleAlignment}
-                aria-label="text alignment"
-            >
-                <ToggleButton value="physical" aria-label="Fyzická karta">
-                    Fyzická Karta
-                </ToggleButton>
-                <ToggleButton value="upgraded" aria-label="Vylepšená karta">
-                    Vylepšená Karta
-                </ToggleButton>
-            </ToggleButtonGroup>
-
-            <div className="grid grid-cols-4 gap-2">
-
-                {data.owner && <LabeledVal
-                    topText="Vlastník karty"
-                    botText={data.owner}
-                    color="#4fc487"
-                />}
-
-                {stats.lang && <LabeledVal
-                    topText="Jazyk karty"
-                    botText={langData[stats.lang]}
-                    color="#4fc487"
-                />}
-
-                {data.realization && <LabeledVal
-                    topText="Realizace"
-                    botText={data.realization}
-                    color="#4fc487"
-                />}
-
-                {data.expansion && <LabeledVal
-                    topText="Rozšíření"
-                    botText={data.expansion}
-                    color="#4fc487"
-                />}
-
+        <div className="grid grid-cols-1">
+            <div>
+                <div>
+                    <Card data={cardData} width={500} />
+                </div>
+                <div>
+                    <ToggleButtonGroup
+                        value={isUpgraded ? "upgraded" : "physical"}
+                        exclusive
+                        onChange={handleAlignment}
+                        aria-label="text alignment"
+                    >
+                        <ToggleButton value="physical" aria-label="Fyzická karta">
+                            Fyzická Karta
+                        </ToggleButton>
+                        <ToggleButton value="upgraded" aria-label="Vylepšená karta">
+                            Vylepšená Karta
+                        </ToggleButton>
+                    </ToggleButtonGroup>
+                </div>
             </div>
+            <div>
+                <div className="grid grid-cols-4 gap-2">
 
-            {data.t == "hero" && <LevelBar xp={data.experience.xp} />}
+                    {data.owner && <LabeledVal
+                        topText="Vlastník karty"
+                        botText={data.owner}
+                        color="#4fc487"
+                    />}
 
-            <CardStats better={stats.better} worse={stats.worse} same={stats.same} delta={stats.delta} />
+                    {stats.lang && <LabeledVal
+                        topText="Jazyk karty"
+                        botText={langData[stats.lang]}
+                        color="#4fc487"
+                    />}
 
-            <br></br>
+                    {data.realization && <LabeledVal
+                        topText="Realizace"
+                        botText={data.realization}
+                        color="#4fc487"
+                    />}
 
-            {JSON.stringify(data)}
+                    {data.expansion && <LabeledVal
+                        topText="Rozšíření"
+                        botText={data.expansion}
+                        color="#4fc487"
+                    />}
+
+                </div>
+
+                {data.t == "hero" && <LevelBar xp={data.experience.xp} />}
+
+                <CardStats better={stats.better} worse={stats.worse} same={stats.same} delta={stats.delta} />
+            </div>
+            {/*JSON.stringify(data)*/}
 
         </div>
     )

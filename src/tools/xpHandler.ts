@@ -51,7 +51,7 @@ function getPercentToNextLevel(xp: number) {
 
     let percantage = ((xp - prevLevelXP) / (nextLevelXP - prevLevelXP)) * 100;
 
-    console.log(prevLevelXP, xp, nextLevelXP, percantage);
+    //console.log(prevLevelXP, xp, nextLevelXP, percantage);
 
     return ((xp - prevLevelXP) / (nextLevelXP - prevLevelXP)) * 100;
 }

@@ -10,12 +10,16 @@ import { hasDurability } from "./hasDurability";
 
 async function getCardStats(cid: heroCid | weaponCid, name: string) {
 
+    console.log("Getting stats for " + name + " (" + cid + ")");
+
     let req = await fetch(encodeURI("https://scratchwars.cloud/cardapi?cid=" + cid + "&name=" + name));
 
     if (req.status != 200) {
         console.log("Error: " + req.status);
         return null;
     }
+
+    console.log("Got stats for " + name + " (" + cid + ")");
 
     let data = await req.json();
     let card: heroRarity | weaponRarity | null = null;
@@ -48,7 +52,7 @@ async function getCardStats(cid: heroCid | weaponCid, name: string) {
                     isUpgraded: false
                 });
             }
-            console.log(newBonuses);
+            //console.log(newBonuses);
         })
 
 
@@ -68,7 +72,7 @@ async function getCardStats(cid: heroCid | weaponCid, name: string) {
             secondaryHealth: data.card.h5
         }
     } else if (weaponTypeData[cid] != undefined) {
-        console.log("Weapon");
+        //console.log("Weapon");
 
         const type = weaponTypeData[cid];
         let durIndex = 0;
@@ -81,7 +85,7 @@ async function getCardStats(cid: heroCid | weaponCid, name: string) {
 
                 let durability = undefined;
 
-                console.log(type.effects[index].t);
+                //console.log(type.effects[index].t);
                 if (hasDurability(type.effects[index].t)) {
                     durability = data.card.durs[durIndex];
                     durIndex++;

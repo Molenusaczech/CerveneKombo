@@ -73,7 +73,7 @@ export default function StatsForm() {
                         if (value == null) {
                             return;
                         }
-                        console.log(value.value);
+                        //console.log(value.value);
                         setCardType(value.value);
                     }}
                 />

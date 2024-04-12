@@ -7,7 +7,7 @@ import { ThemeProvider } from "@emotion/react";
 import { createTheme } from '@mui/material/styles';
 
 const inter = Inter({ subsets: ["latin"] });
-
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "Červené kombo",
@@ -25,6 +25,7 @@ export default function RootLayout({
         backgroundColor: 'var(--bg)',
       }}>
 
+        <Analytics />
         <NavBar />
 
         {children}

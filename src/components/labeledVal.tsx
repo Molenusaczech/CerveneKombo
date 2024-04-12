@@ -1,8 +1,8 @@
 import { rgbToHex, hexToRgb, colorMutation } from "../tools/colorTools";
 
 export default function LabeledVal(props: { topText: string, botText: string, color: string } ) {
-    console.log(props.topText);
-    console.log(props.botText);
+    //console.log(props.topText);
+    //console.log(props.botText);
     return (
         <div className="grid grid-cols-1">
             <div style={{

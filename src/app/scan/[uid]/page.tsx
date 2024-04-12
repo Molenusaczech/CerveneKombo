@@ -23,7 +23,7 @@ export default async function Scan({ params }: { params: { uid: string } }) {
     <div>
       <UidLookup data={data} stats={stats} />
 
-      {JSON.stringify(data)}
+      {/*JSON.stringify(data)*/}
 
     </div>
   )
