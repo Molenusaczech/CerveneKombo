@@ -17,49 +17,7 @@ import Image from 'next/image';
 
 import Link from 'next/link';
 
-/*export default function NavBar() {
-    return (
-        <div style={{
-            backgroundColor: 'var(--prussian-blue)',
-            position: 'sticky',
-            top: 0,
-            zIndex: 100,
-            padding: '10px',
-            color: 'white',
-            display: 'flex',
-        }}>
-            <div>
-                <Image
-                    src="/combo.png"
-                    alt="logo"
-                    height={50}
-                    width={50}
-                    style={{
-                        display: "inline"
-                    }}
-                />
-                <span style={{
-                    fontSize: '24px',
-                    marginLeft: '10px',
-                    display: "inline",
-                    verticalAlign: "middle"
-                }}>Červené kombo</span>
-            </div>
 
-            <div style={{
-                display: 'flex',
-                gap: '10px',
-                height: '100%',
-                verticalAlign: 'middle',
-                paddingLeft: '20px',
-            }}>
-                <Link href="/">Domů</Link>
-                <Link href="/qr">QR Kódy</Link>
-
-            </div>
-        </div>
-    )
-}*/
 
 const pages = [
     //'Domů', 'QR Oprava'
@@ -137,9 +95,9 @@ function NavBar() {
                             }}
                         >
                             {pages.map((page) => (
-                                <Link href={page.link}>
+                                <Link href={page.link} key={page.name}>
                                     <MenuItem key={page.name} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">{page.name}</Typography>
+                                        <Typography textAlign={"center"}>{page.name}</Typography>
                                     </MenuItem>
                                 </Link>
                             ))}
@@ -166,7 +124,7 @@ function NavBar() {
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Link href={page.link}>
+                            <Link href={page.link} key={page.name}>
                                 <Button
                                     key={page.name}
                                     onClick={handleCloseNavMenu}
@@ -177,36 +135,6 @@ function NavBar() {
                             </Link>
                         ))}
                     </Box>
-
-                    {/*<Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-            </Box>*/}
                 </Toolbar>
             </Container>
         </AppBar>
