@@ -19,6 +19,9 @@ import { cardStats } from "@/types/cardStats";
 
 import { langData } from "@/data/langs";
 
+import Unique from "@/components/unique";
+import realizationMsgs from "@/data/realizationMsgs";
+
 export default function UidLookup(props: {
     data: heroFromUid | weaponFromUid,
     stats: cardStats | null
@@ -82,7 +85,7 @@ export default function UidLookup(props: {
 
                     {data.realization && <LabeledVal
                         topText="Realizace"
-                        botText={data.realization}
+                        botText={realizationMsgs[data.realization]}
                         color="#4fc487"
                     />}
 
@@ -101,6 +104,8 @@ export default function UidLookup(props: {
                 }
 
                 {!stats && <div>Statistiky nenalezeny - Prosím kontaktuj administrátora</div>}
+
+                {stats && <Unique instances={stats.instances} />}
 
             </div>
             {/*JSON.stringify(data)*/}

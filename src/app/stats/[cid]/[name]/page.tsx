@@ -1,5 +1,6 @@
 import Card from "@/components/card";
 import CardStats from "@/components/stats";
+import Unique from "@/components/unique";
 import { getCardStats } from "@/tools/getCardStats";
 
 export default async function Stats({ params }: { params: { cid: string, name: string } }) {
@@ -21,6 +22,8 @@ export default async function Stats({ params }: { params: { cid: string, name: s
 
             <CardStats better={data.better} worse={data.worse} same={data.same} delta={data.delta}/>
             
+            <Unique instances={data.instances} />
+
             {/*JSON.stringify(data)*/}
 
     

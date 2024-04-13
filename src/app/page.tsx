@@ -18,7 +18,7 @@ export default function Page() {
 
         <StatsForm />
 
-        <p className="col-span-2"> Tato stránka je v BETA verzi, všechno nemusí fungovat stoprocentně. Pokud narazíte na nějakou chybu, prosím kontaktujte mě. Problému s vyhledání podle jména u karet: Bojový Ferda, Hvězdná inženýrka jsem si vědom. Použité assety jsou majetkem společností Notre Game a Wormelen Group</p>
+        <p className="col-span-2"> Tato stránka je v BETA verzi, všechno nemusí fungovat stoprocentně. Pokud narazíte na nějakou chybu, prosím kontaktujte mě. Problému s vyhledání podle jména u Bojového Ferdy jsem si vědom, je to chyba NG, ne moje. Použité assety jsou majetkem společností Notre Game a Wormelen Group</p>
       </div>
     </div>
   )
