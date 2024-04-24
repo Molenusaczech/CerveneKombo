@@ -1,0 +1,536 @@
+{
+    "CrimeBot": {
+        "title": "Automat na zločin",
+        "cid": "CrimeBot",
+        "stats": {
+            "+6": {
+                "better": 1,
+                "worse": 10981,
+                "same": 28,
+                "instances": 1,
+                "delta": 6,
+                "lang": "CS"
+            },
+            "+5": {
+                "better": 29,
+                "worse": 10809,
+                "same": 172,
+                "instances": 1,
+                "delta": 5,
+                "lang": "CS"
+            },
+            "+4": {
+                "better": 201,
+                "worse": 10226,
+                "same": 583,
+                "instances": 1,
+                "delta": 4,
+                "lang": "CS"
+            },
+            "+3": {
+                "better": 6107,
+                "worse": 2842,
+                "same": 2061,
+                "instances": 1,
+                "delta": 0,
+                "lang": "CS"
+            },
+            "+2": {
+                "better": 3855,
+                "worse": 4903,
+                "same": 2252,
+                "instances": 1,
+                "delta": 1,
+                "lang": "CS"
+            },
+            "+1": {
+                "better": 3855,
+                "worse": 4903,
+                "same": 2252,
+                "instances": 1,
+                "delta": 1,
+                "lang": "CS"
+            },
+            "+0": {
+                "better": 6107,
+                "worse": 2842,
+                "same": 2061,
+                "instances": 1,
+                "delta": 0,
+                "lang": "CS"
+            },
+            "-1": {
+                "better": 8168,
+                "worse": 1368,
+                "same": 1474,
+                "instances": 1,
+                "delta": -1,
+                "lang": "CS"
+            },
+            "-2": {
+                "better": 9642,
+                "worse": 533,
+                "same": 835,
+                "instances": 1,
+                "delta": -2,
+                "lang": "CS"
+            },
+            "-3": {
+                "better": 10477,
+                "worse": 137,
+                "same": 396,
+                "instances": 1,
+                "delta": -3,
+                "lang": "CS"
+            },
+            "-4": {
+                "better": 10873,
+                "worse": 42,
+                "same": 95,
+                "instances": 1,
+                "delta": -4,
+                "lang": "CS"
+            },
+            "-5": {
+                "better": 10968,
+                "worse": 2,
+                "same": 40,
+                "instances": 1,
+                "delta": -5,
+                "lang": "CS"
+            }
+        }
+    },
+    "BalloonBot": {
+        "title": "Balonbot",
+        "cid": "BalloonBot",
+        "stats": {
+            "+8": {
+                "better": 7,
+                "worse": 32994,
+                "same": 29,
+                "instances": 1,
+                "delta": 8,
+                "lang": "CS"
+            },
+            "+7": {
+                "better": 13041,
+                "worse": 14751,
+                "same": 5238,
+                "instances": 1,
+                "delta": 1,
+                "lang": "CS"
+            },
+            "+6": {
+                "better": 203,
+                "worse": 32302,
+                "same": 525,
+                "instances": 1,
+                "delta": 6,
+                "lang": "CS"
+            },
+            "+5": {
+                "better": 728,
+                "worse": 31003,
+                "same": 1299,
+                "instances": 1,
+                "delta": 5,
+                "lang": "CS"
+            },
+            "+4": {
+                "better": 2027,
+                "worse": 28535,
+                "same": 2468,
+                "instances": 1,
+                "delta": 4,
+                "lang": "CS"
+            },
+            "+3": {
+                "better": 4495,
+                "worse": 24733,
+                "same": 3802,
+                "instances": 1,
+                "delta": 3,
+                "lang": "CS"
+            },
+            "+2": {
+                "better": 8297,
+                "worse": 19989,
+                "same": 4744,
+                "instances": 1,
+                "delta": 2,
+                "lang": "CS"
+            },
+            "+1": {
+                "better": 13041,
+                "worse": 14751,
+                "same": 5238,
+                "instances": 1,
+                "delta": 1,
+                "lang": "CS"
+            },
+            "+0": {
+                "better": 18279,
+                "worse": 9948,
+                "same": 4803,
+                "instances": 1,
+                "delta": 0,
+                "lang": "CS"
+            },
+            "-1": {
+                "better": 23082,
+                "worse": 6000,
+                "same": 3948,
+                "instances": 1,
+                "delta": -1,
+                "lang": "CS"
+            },
+            "-2": {
+                "better": 27030,
+                "worse": 3222,
+                "same": 2778,
+                "instances": 1,
+                "delta": -2,
+                "lang": "CS"
+            },
+            "-3": {
+                "better": 29808,
+                "worse": 1606,
+                "same": 1616,
+                "instances": 1,
+                "delta": -3,
+                "lang": "CS"
+            },
+            "-4": {
+                "better": 31424,
+                "worse": 680,
+                "same": 926,
+                "instances": 1,
+                "delta": -4,
+                "lang": "CS"
+            },
+            "-5": {
+                "better": 32350,
+                "worse": 256,
+                "same": 424,
+                "instances": 1,
+                "delta": -5,
+                "lang": "CS"
+            },
+            "-6": {
+                "better": 32774,
+                "worse": 73,
+                "same": 183,
+                "instances": 1,
+                "delta": -6,
+                "lang": "CS"
+            },
+            "-7": {
+                "better": 32957,
+                "worse": 13,
+                "same": 60,
+                "instances": 1,
+                "delta": -7,
+                "lang": "CS"
+            }
+        }
+    },
+    "Lord_BioTech": {
+        "title": "Biotechlandský lord",
+        "cid": "Lord_BioTech",
+        "stats": {
+            "+5": {
+                "better": 6,
+                "worse": 5009,
+                "same": 25,
+                "instances": 1,
+                "delta": 5,
+                "lang": "CS"
+            },
+            "+4": {
+                "better": 31,
+                "worse": 4903,
+                "same": 106,
+                "instances": 1,
+                "delta": 4,
+                "lang": "CS"
+            },
+            "+3": {
+                "better": 137,
+                "worse": 4550,
+                "same": 353,
+                "instances": 1,
+                "delta": 3,
+                "lang": "CS"
+            },
+            "+2": {
+                "better": 490,
+                "worse": 3936,
+                "same": 614,
+                "instances": 1,
+                "delta": 2,
+                "lang": "CS"
+            },
+            "+1": {
+                "better": 1104,
+                "worse": 3062,
+                "same": 874,
+                "instances": 1,
+                "delta": 1,
+                "lang": "CS"
+            },
+            "+0": {
+                "better": 1978,
+                "worse": 1950,
+                "same": 1112,
+                "instances": 1,
+                "delta": 0,
+                "lang": "CS"
+            },
+            "-1": {
+                "better": 3090,
+                "worse": 1040,
+                "same": 910,
+                "instances": 1,
+                "delta": -1,
+                "lang": "CS"
+            },
+            "-2": {
+                "better": 4000,
+                "worse": 442,
+                "same": 598,
+                "instances": 1,
+                "delta": -2,
+                "lang": "CS"
+            },
+            "-3": {
+                "better": 4598,
+                "worse": 119,
+                "same": 323,
+                "instances": 1,
+                "delta": -3,
+                "lang": "CS"
+            },
+            "-4": {
+                "better": 4921,
+                "worse": 0,
+                "same": 119,
+                "instances": 1,
+                "delta": -4,
+                "lang": "CS"
+            }
+        }
+    },
+    "Alzak": {
+        "title": "Bojovník z Alzahradu",
+        "cid": "Alzak",
+        "stats": {
+            "+7": {
+                "better": 0,
+                "worse": 2178,
+                "same": 2,
+                "instances": 1,
+                "delta": 7,
+                "lang": "CS"
+            },
+            "+5": {
+                "better": 6,
+                "worse": 2133,
+                "same": 41,
+                "instances": 1,
+                "delta": 5,
+                "lang": "CS"
+            },
+            "+4": {
+                "better": 47,
+                "worse": 2020,
+                "same": 113,
+                "instances": 1,
+                "delta": 4,
+                "lang": "CS"
+            },
+            "+3": {
+                "better": 160,
+                "worse": 1838,
+                "same": 182,
+                "instances": 1,
+                "delta": 3,
+                "lang": "CS"
+            },
+            "+2": {
+                "better": 342,
+                "worse": 1513,
+                "same": 325,
+                "instances": 1,
+                "delta": 2,
+                "lang": "CS"
+            },
+            "+1": {
+                "better": 667,
+                "worse": 1079,
+                "same": 434,
+                "instances": 1,
+                "delta": 1,
+                "lang": "CS"
+            },
+            "+0": {
+                "better": 342,
+                "worse": 1513,
+                "same": 325,
+                "instances": 1,
+                "delta": 2,
+                "lang": "CS"
+            },
+            "-1": {
+                "better": 1513,
+                "worse": 295,
+                "same": 372,
+                "instances": 1,
+                "delta": -1,
+                "lang": "CS"
+            },
+            "-2": {
+                "better": 1885,
+                "worse": 46,
+                "same": 249,
+                "instances": 1,
+                "delta": -2,
+                "lang": "CS"
+            },
+            "-3": {
+                "better": 2134,
+                "worse": 15,
+                "same": 31,
+                "instances": 1,
+                "delta": -3,
+                "lang": "CS"
+            },
+            "-4": {
+                "better": 2165,
+                "worse": 5,
+                "same": 10,
+                "instances": 1,
+                "delta": -4,
+                "lang": "CS"
+            }
+        }
+    },
+    "Noctimor": {
+        "title": "Bojovník z močálů",
+        "cid": "Noctimor",
+        "stats": {
+            "+7": {
+                "better": 7889,
+                "worse": 3492,
+                "same": 2308,
+                "instances": 1,
+                "delta": 0,
+                "lang": "CS"
+            },
+            "+6": {
+                "better": 1353,
+                "worse": 10661,
+                "same": 1675,
+                "instances": 1,
+                "delta": 3,
+                "lang": "CS"
+            },
+            "+5": {
+                "better": 133,
+                "worse": 13184,
+                "same": 372,
+                "instances": 1,
+                "delta": 5,
+                "lang": "CS"
+            },
+            "+4": {
+                "better": 505,
+                "worse": 12336,
+                "same": 848,
+                "instances": 1,
+                "delta": 4,
+                "lang": "CS"
+            },
+            "+3": {
+                "better": 1353,
+                "worse": 10661,
+                "same": 1675,
+                "instances": 1,
+                "delta": 3,
+                "lang": "CS"
+            },
+            "+2": {
+                "better": 3028,
+                "worse": 8354,
+                "same": 2307,
+                "instances": 1,
+                "delta": 2,
+                "lang": "CS"
+            },
+            "+1": {
+                "better": 5335,
+                "worse": 5800,
+                "same": 2554,
+                "instances": 1,
+                "delta": 1,
+                "lang": "CS"
+            },
+            "+0": {
+                "better": 7889,
+                "worse": 3492,
+                "same": 2308,
+                "instances": 1,
+                "delta": 0,
+                "lang": "CS"
+            },
+            "-1": {
+                "better": 10197,
+                "worse": 1777,
+                "same": 1715,
+                "instances": 1,
+                "delta": -1,
+                "lang": "CS"
+            },
+            "-2": {
+                "better": 10197,
+                "worse": 1777,
+                "same": 1715,
+                "instances": 1,
+                "delta": -1,
+                "lang": "CS"
+            },
+            "-3": {
+                "better": 12878,
+                "worse": 294,
+                "same": 517,
+                "instances": 1,
+                "delta": -3,
+                "lang": "CS"
+            },
+            "-4": {
+                "better": 13395,
+                "worse": 72,
+                "same": 222,
+                "instances": 1,
+                "delta": -4,
+                "lang": "CS"
+            },
+            "-5": {
+                "better": 13617,
+                "worse": 19,
+                "same": 53,
+                "instances": 1,
+                "delta": -5,
+                "lang": "CS"
+            },
+            "-6": {
+                "better": 13670,
+                "worse": 2,
+                "same": 17,
+                "instances": 1,
+                "delta": -6,
+                "lang": "CS"
+            }
+        }
+    }
+}

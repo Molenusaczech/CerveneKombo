@@ -1,9 +1,10 @@
 // iids from swo source code
 const fs = require('fs');
 const { type } = require('os');
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
 
 const iids = [
-    /*'xRXK5uyJer3XjIi',  // Antique Automaton
+    'xRXK5uyJer3XjIi',  // Antique Automaton
     'oKY02EsX5XflkKs',  // Ape Sorcerer
     'cTTrQtPSkVKSSJ0',  // Axemaiden
     '6LDBOfq34hskcOlTiVFfqevz',  // Beach Shaman
@@ -112,16 +113,16 @@ const iids = [
     's5sPS1T4J2jnAfFt23HsMiYy',  // Ruler from textbook
     '1yQ98CzhLG3N8KlnExyi6BOl',  // Valiant hoplite
     'YUOV20bTJyE8rl3CAYk5EJ2H',  // Hungarian hussar
-    'FXYEEfmJE7PdqpeE8FWI2rF2M',*/  // Xmas Freak-fir
+    'FXYEEfmJE7PdqpeE8FWI2rF2M',  // Xmas Freak-fir
     'XvMVzVxBP2fSyuy',  // Star Engineer
 
     // spinbay
-    /*'a4JFGwvCEvnMxJI',  // Governor of Spinbay
+    'a4JFGwvCEvnMxJI',  // Governor of Spinbay
     'DHRn6akHcOU5bwp',  // Dock Worker
     '0PikUyqw1BXfGS8',  // Port Innkeeper
     'FhQDit9pAzElz6y',  // RoboExchange
     '4HXGjYWK9chGdnx',  // Spinbay Dancer
-    'OhrYeVM06mAu5lY',  // Mysterious Bedouin*/
+    'OhrYeVM06mAu5lY',  // Mysterious Bedouin
 ]
 
 const weaponIids = [
@@ -324,6 +325,7 @@ async function getAllHeroes() {
             rarity: data.response.rarity.length,
             cname: data.response.cname,
             weapon_prof: data.response.weapon_prof,
+            expansion: data.response.expansion,
             effects: effect,/*data.response.bonuses.map((effect) => {
                 return effect.boost;
             }),*/
@@ -368,6 +370,7 @@ async function getAllWeapons() {
             cname: data.response.cname,
             cost: data.response.cost,
             type: data.response.type,
+            expansion: data.response.expansion,
             imgUrl: path,
             effects: data.response.effects.map((effect) => {
                 return {
@@ -388,4 +391,4 @@ async function getAllWeapons() {
 }
 
 getAllHeroes();
-//getAllWeapons();
+getAllWeapons();

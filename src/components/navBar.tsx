@@ -28,6 +28,10 @@ const pages = [
     {
         name: 'QR Oprava',
         link: '/qr'
+    },
+    {
+        name: 'Celkové statistiky',
+        link: '/charts'
     }
 ];
 
@@ -103,7 +107,6 @@ function NavBar() {
                             ))}
                         </Menu>
                     </Box>
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
                     <Typography
                         variant="h5"
                         noWrap
@@ -120,7 +123,7 @@ function NavBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        Červené kombo
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
