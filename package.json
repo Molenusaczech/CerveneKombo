@@ -7,11 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "getData": "node src/tools/getAllCardData.js",
-    "downloadImages": "node src/tools/imageLink.js",
-    "getNamesFromSwo": "node src/tools/swo-scraper/getSwoNames.js",
-    "getCardStats": "node src/tools/swo-scraper/getCards.js",
-    "parseStats": "node src/tools/swo-scraper/parseStats.js"
+    "getData": "node tools/getAllCardData.js",
+    "downloadImages": "node tools/imageLink.js",
+    "getNamesFromSwo": "node tools/swo-scraper/getSwoNames.js",
+    "getCardStats": "node tools/swo-scraper/getCards.js",
+    "parseStats": "node tools/swo-scraper/parseStats.js"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
