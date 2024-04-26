@@ -298,8 +298,8 @@ const weaponLinks = [
     "https://scratchwars-online.cz/cs/cards/weapons/biting-bow/"
 ]
 
-const heroData = JSON.parse(fs.readFileSync('src/data/old_heroData.json'));
-const weaponData = JSON.parse(fs.readFileSync('src/data/weaponData.json'));
+const heroData = JSON.parse(fs.readFileSync('src/data/raw/heroData.json'));
+const weaponData = JSON.parse(fs.readFileSync('src/data/raw/weaponData.json'));
 
 async function getHeroNames() {
     let names = {};
