@@ -32,6 +32,10 @@ const pages = [
     {
         name: 'Celkové statistiky',
         link: '/charts'
+    },
+    {
+        name: 'Github',
+        link: 'https://github.com/Molenusaczech/CerveneKombo'
     }
 ];
 
