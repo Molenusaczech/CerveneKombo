@@ -3012,7 +3012,10 @@
         "origin": "Middlemyst",
         "cid": "Xmas_fir",
         "rarity": 4,
-        "cname": "Štědrá Zjedle",
+        "cname": {
+            "CS": "Štědrá Zjedle",
+            "EN": "Štědrá Zjedle"
+        },
         "weapon_prof": [
             "axe",
             "bow",

@@ -1,3 +1,5 @@
+import { weaponCid } from "@/data/weaponTypeData"
+
 type effect = {
     value: number,
     isUpgraded: boolean,
@@ -6,7 +8,7 @@ type effect = {
 
 type weaponRarity = {
     t: "weapon",
-    cid: string,
+    cid: weaponCid,
     name: string,
     durability: number,
     effects: effect[], 

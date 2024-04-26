@@ -93,7 +93,7 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
 
     if (props.data == undefined) return (<></>);
 
-    let type: heroCardType = heroTypeData[props.data.cid];
+    let type: heroCardType = heroTypeData[props.data.cid] as heroCardType;
 
     if (props.data.energy.length != 4) throw new Error("data.energy must have exactly four elements")
 

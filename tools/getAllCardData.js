@@ -318,6 +318,15 @@ async function getAllHeroes() {
             return effect.special;
         });
 
+        // fixx Xmas_fir
+
+        if (typeof data.response.cname === 'string') {
+            data.response.cname = {
+                CS: data.response.cname,
+                EN : data.response.cname
+            };
+        }
+
         let curTypeData = {
             gender: data.response.gender,
             origin: data.response.origin,
@@ -339,7 +348,7 @@ async function getAllHeroes() {
 
     console.log(result);
 
-    fs.writeFileSync("src/data/heroData.json", JSON.stringify(result));
+    fs.writeFileSync("src/data/raw/heroData.json", JSON.stringify(result));
 }
 
 async function getAllWeapons() {
@@ -387,7 +396,7 @@ async function getAllWeapons() {
 
     console.log(result);
 
-    fs.writeFileSync("src/data/weaponData.json", JSON.stringify(result));
+    fs.writeFileSync("src/data/raw/weaponData.json", JSON.stringify(result));
 }
 
 getAllHeroes();
