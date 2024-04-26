@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-const cards = JSON.parse(fs.readFileSync('src/data/heroNames.json'));
-const weaponCards = JSON.parse(fs.readFileSync('src/data/weaponNames.json'));
+const cards = JSON.parse(fs.readFileSync('src/data/raw/heroNames.json'));
+const weaponCards = JSON.parse(fs.readFileSync('src/data/raw/weaponNames.json'));
 
 async function getCardStats(cid, name) {
 

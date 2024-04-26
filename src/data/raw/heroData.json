@@ -17,6 +17,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-hero",
             "hit-anything",
@@ -46,6 +47,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Anubis",
         "effects": [
             "hit-anything",
             null,
@@ -76,6 +78,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "add-energy",
             "combo",
@@ -131,6 +134,7 @@
             "sword",
             "wand"
         ],
+        "expansion": "Vampiria",
         "effects": [
             "curse-weapon",
             "combo",
@@ -158,6 +162,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Canbaland",
         "effects": [
             "stop-discard",
             "crunch-weapon",
@@ -185,6 +190,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Canbaland",
         "effects": [
             "hit-hero",
             "block",
@@ -211,6 +217,7 @@
         "weapon_prof": [
             "axe"
         ],
+        "expansion": "Canbaland",
         "effects": [
             "crunch-weapon",
             null,
@@ -238,6 +245,7 @@
             "sword",
             "axe"
         ],
+        "expansion": "Canbaland",
         "effects": [
             "hit-anything",
             "crunch-weapon",
@@ -265,6 +273,7 @@
             "sword",
             "wand"
         ],
+        "expansion": "Canbaland",
         "effects": [
             "combo",
             null,
@@ -293,6 +302,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Canbaland",
         "effects": [
             "stop-discard",
             "hit-anything",
@@ -320,6 +330,7 @@
             "sword",
             "bow"
         ],
+        "expansion": "Vampiria",
         "effects": [
             "vampire-bite",
             "combo",
@@ -347,6 +358,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Vampiria",
         "effects": [
             "curse-weapon",
             "hit-hero",
@@ -401,6 +413,7 @@
             "sword",
             "wand"
         ],
+        "expansion": "Canbaland",
         "effects": [
             "hit-anything",
             "crunch-weapon",
@@ -428,6 +441,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Canbaland",
         "effects": [
             "hit-hero-repeated",
             "heal",
@@ -458,6 +472,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Artemis",
         "effects": [
             "combo-trigger",
             "combo",
@@ -485,6 +500,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Canbaland",
         "effects": [
             "combo-trigger",
             "crunch-weapon",
@@ -514,6 +530,7 @@
             "sword",
             "bow"
         ],
+        "expansion": "Artemis",
         "effects": [
             "combo",
             null,
@@ -543,6 +560,7 @@
             "sword",
             "bow"
         ],
+        "expansion": "Anubis",
         "effects": [
             "hit-anything",
             null,
@@ -572,6 +590,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "block",
             "combo",
@@ -602,6 +621,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "combo-trigger",
             "hit-hero-repeated",
@@ -632,6 +652,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-weapon",
             null,
@@ -661,6 +682,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-hero",
             "combo-trigger",
@@ -690,6 +712,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-anything",
             null,
@@ -719,6 +742,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "all",
             null,
@@ -748,6 +772,7 @@
             "sword",
             "bow"
         ],
+        "expansion": "Artemis",
         "effects": [
             "combo",
             null,
@@ -775,6 +800,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Vampiria",
         "effects": [
             "add-energy",
             "curse-weapon",
@@ -805,6 +831,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-weapon",
             "combo-trigger",
@@ -833,6 +860,7 @@
         "weapon_prof": [
             "axe"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-hero",
             "block",
@@ -862,6 +890,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-hero-repeated",
             null,
@@ -891,6 +920,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "add-energy",
             "hit-hero",
@@ -918,6 +948,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Vampiria",
         "effects": [
             "vampire-bite",
             "curse-weapon",
@@ -948,6 +979,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "add-energy",
             null,
@@ -977,6 +1009,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-weapon",
             "hit-anything",
@@ -1006,6 +1039,7 @@
             "sword",
             "bow"
         ],
+        "expansion": "Artemis",
         "effects": [
             "all",
             "hit-weapon",
@@ -1035,6 +1069,7 @@
             "sword",
             "bow"
         ],
+        "expansion": "Artemis",
         "effects": [
             "all",
             "hit-anything",
@@ -1064,6 +1099,7 @@
             "sword",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "combo-trigger",
             "hit-hero-repeated",
@@ -1090,6 +1126,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Vampiria",
         "effects": [
             "hit-anything",
             "hit-hero-repeated",
@@ -1119,6 +1156,7 @@
             "sword",
             "bow"
         ],
+        "expansion": "Artemis",
         "effects": [
             "all",
             null,
@@ -1148,6 +1186,7 @@
             "sword",
             "axe"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-anything",
             "add-energy",
@@ -1174,6 +1213,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Vampiria",
         "effects": [
             "vampire-bite",
             "heal",
@@ -1202,6 +1242,7 @@
         "weapon_prof": [
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-weapon",
             "hit-hero",
@@ -1232,6 +1273,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-hero",
             null,
@@ -1260,6 +1302,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-hero",
             "hit-anything",
@@ -1289,6 +1332,7 @@
             "sword",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-anything",
             "hit-hero-repeated",
@@ -1318,6 +1362,7 @@
             "sword",
             "axe"
         ],
+        "expansion": "Anubis",
         "effects": [
             "add-energy",
             "heal",
@@ -1347,6 +1392,7 @@
             "sword",
             "axe"
         ],
+        "expansion": "Anubis",
         "effects": [
             "hit-anything",
             "block",
@@ -1376,6 +1422,7 @@
             "sword",
             "bow"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-weapon",
             "combo-trigger",
@@ -1403,6 +1450,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Canbaland",
         "effects": [
             "add-energy",
             "crunch-weapon",
@@ -1428,6 +1476,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Vampiria",
         "effects": [
             "curse-weapon",
             "block",
@@ -1457,6 +1506,7 @@
             "sword",
             "bow"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-weapon",
             "combo",
@@ -1485,6 +1535,7 @@
         "weapon_prof": [
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "heal",
             "hit-hero",
@@ -1512,6 +1563,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Canbalandia",
         "effects": [
             "hit-hero-repeated",
             "add-energy",
@@ -1541,6 +1593,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "all",
             "hit-hero-repeated",
@@ -1570,6 +1623,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Artemis",
         "effects": [
             "add-energy",
             "block",
@@ -1598,6 +1652,7 @@
         "weapon_prof": [
             "axe"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-hero",
             "hit-weapon",
@@ -1625,6 +1680,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Vampiria",
         "effects": [
             "hit-hero",
             "hit-hero-repeated",
@@ -1653,6 +1709,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Vampiria",
         "effects": [
             "hit-hero",
             "hit-weapon",
@@ -1681,6 +1738,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Vampiria",
         "effects": [
             "vampire-bite",
             "hit-hero-repeated",
@@ -1709,6 +1767,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Canbaland",
         "effects": [
             "stop-discard",
             null,
@@ -1738,6 +1797,7 @@
             "sword",
             "axe"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-weapon",
             "block",
@@ -1766,6 +1826,7 @@
         "weapon_prof": [
             "sword"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-weapon",
             "hit-hero-repeated",
@@ -1791,6 +1852,7 @@
             "sword",
             "axe"
         ],
+        "expansion": "Vampiria",
         "effects": [
             "curse-weapon",
             "hit-anything",
@@ -1819,6 +1881,7 @@
         "weapon_prof": [
             "axe"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-hero",
             "hit-weapon",
@@ -1848,6 +1911,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-weapon",
             null,
@@ -1876,6 +1940,7 @@
         "weapon_prof": [
             "axe"
         ],
+        "expansion": "Artemis",
         "effects": [
             "hit-hero",
             "block",
@@ -1905,6 +1970,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Anubis",
         "effects": [
             "hit-weapon",
             "block",
@@ -1932,6 +1998,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "combo",
             "heal",
@@ -1959,6 +2026,7 @@
             "sword",
             "axe"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "fix-weapon",
             null,
@@ -1985,6 +2053,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "add-energy",
             "hit-double",
@@ -2012,6 +2081,7 @@
             "sword",
             "wand"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "hit-double",
             "trap",
@@ -2040,6 +2110,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "combo",
             "trap",
@@ -2068,6 +2139,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "hit-weapon",
             "combo",
@@ -2094,6 +2166,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "trap",
             "block",
@@ -2121,6 +2194,7 @@
             "sword",
             "axe"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "hit-anything",
             "fix-weapon",
@@ -2148,6 +2222,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "fix-weapon",
             "combo",
@@ -2175,6 +2250,7 @@
             "sword",
             "bow"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "hit-double",
             "trap",
@@ -2202,6 +2278,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "hit-double",
             "combo",
@@ -2230,6 +2307,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "hit-hero",
             "combo-trigger",
@@ -2257,6 +2335,7 @@
             "sword",
             "bow"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "hit-hero",
             "trap",
@@ -2284,6 +2363,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "fix-weapon",
             "combo",
@@ -2309,6 +2389,7 @@
             "sword",
             "wand"
         ],
+        "expansion": "Zepplandia",
         "effects": [
             "hit-double",
             "hit-hero",
@@ -2337,6 +2418,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Middlemyst",
         "effects": [
             "hit-hero",
             "stop-discard",
@@ -2365,6 +2447,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Middlemyst",
         "effects": [
             "all",
             "block",
@@ -2392,6 +2475,7 @@
             "sword",
             "axe"
         ],
+        "expansion": "Middlemyst",
         "effects": [
             "trap",
             "combo",
@@ -2419,6 +2503,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Middlemyst",
         "effects": [
             "crunch-weapon",
             "hit-hero-repeated",
@@ -2447,6 +2532,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Middlemyst",
         "effects": [
             "add-energy",
             "combo-trigger",
@@ -2502,6 +2588,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Middlemyst",
         "effects": [
             "hit-hero",
             "heal",
@@ -2531,6 +2618,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Middlemyst",
         "effects": [
             "crunch-weapon",
             "trap",
@@ -2559,6 +2647,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Middlemyst",
         "effects": [
             "add-energy",
             "hit-double",
@@ -2615,6 +2704,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Middlemyst",
         "effects": [
             "all",
             "hit-hero-repeated",
@@ -2922,7 +3012,10 @@
         "origin": "Middlemyst",
         "cid": "Xmas_fir",
         "rarity": 4,
-        "cname": "Štědrá Zjedle",
+        "cname": {
+            "CS": "Štědrá Zjedle",
+            "EN": "Štědrá Zjedle"
+        },
         "weapon_prof": [
             "axe",
             "bow",
@@ -2940,6 +3033,33 @@
         ],
         "imgUrl": "blank.jpg"
     },
+    "Kate_M": {
+        "gender": "female",
+        "origin": "Middlemyst",
+        "cid": "Kate_M",
+        "rarity": 4,
+        "cname": {
+            "CS": "Hvězdná inženýrka",
+            "EN": "Star engineer"
+        },
+        "weapon_prof": [
+            "axe",
+            "bow",
+            "wand"
+        ],
+        "expansion": "Middlemyst",
+        "effects": [
+            "curse-weapon",
+            "fix-weapon",
+            "curse-weapon",
+            "stop-discard",
+            "curse-weapon",
+            "vampire-bite",
+            "night-attack",
+            "stop-discard"
+        ],
+        "imgUrl": "/heroes/star-engineer-cz.jpg"
+    },
     "Guvnor": {
         "gender": "male",
         "origin": "Spinbay",
@@ -2956,6 +3076,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Spinbay",
         "effects": [
             "cumulative-attack",
             "hit-weapon",
@@ -2983,6 +3104,7 @@
             "axe",
             "bow"
         ],
+        "expansion": "Spinbay",
         "effects": [
             "hit-hero",
             "hit-hero-repeated",
@@ -3011,6 +3133,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Spinbay",
         "effects": [
             "combo",
             null,
@@ -3039,6 +3162,7 @@
             "bow",
             "wand"
         ],
+        "expansion": "Spinbay",
         "effects": [
             "cumulative-attack",
             "extra-coins",
@@ -3067,6 +3191,7 @@
             "axe",
             "wand"
         ],
+        "expansion": "Spinbay",
         "effects": [
             "hit-hero",
             "heal",
@@ -3094,6 +3219,7 @@
             "sword",
             "bow"
         ],
+        "expansion": "Spinbay",
         "effects": [
             "hit-weapon",
             "extra-coins",

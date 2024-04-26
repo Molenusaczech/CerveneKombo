@@ -1,13 +1,17 @@
 import Card from "@/components/card";
 import CardStats from "@/components/stats";
 import Unique from "@/components/unique";
+import { heroCid } from "@/data/heroTypeData";
+import { weaponCid } from "@/data/weaponTypeData";
 import { getCardStats } from "@/tools/getCardStats";
 
 export default async function Stats({ params }: { params: { cid: string, name: string } }) {
   "use server";
   // create state
 
-    const data = await getCardStats(decodeURIComponent(params.cid), decodeURIComponent(params.name))
+  const cid: heroCid | weaponCid = decodeURIComponent(params.cid) as heroCid | weaponCid
+
+    const data = await getCardStats(cid, decodeURIComponent(params.name))
 
     if (data == null) return (
     <div> 

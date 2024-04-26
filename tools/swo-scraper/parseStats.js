@@ -92,10 +92,10 @@ const dataTemplate = {
     }
 }
 
-let data = JSON.parse(fs.readFileSync('src/data/heroStats.json'));
-const heroData = JSON.parse(fs.readFileSync('src/data/heroData.json'));
-let weaponStats = JSON.parse(fs.readFileSync('src/data/weaponStats.json'));
-const weaponData = JSON.parse(fs.readFileSync('src/data/weaponData.json'));
+let data = JSON.parse(fs.readFileSync('src/data/raw/heroStats.json'));
+const heroData = JSON.parse(fs.readFileSync('src/data/raw/heroData.json'));
+let weaponStats = JSON.parse(fs.readFileSync('src/data/raw/weaponStats.json'));
+const weaponData = JSON.parse(fs.readFileSync('src/data/raw/weaponData.json'));
 
 function effectValue(value) {
 
@@ -401,4 +401,4 @@ for (let cid in { ...data, ...weaponStats }) {
 
 }
 
-fs.writeFileSync('src/data/cardStatsFinal.json', JSON.stringify(final, null, 2));
+fs.writeFileSync('src/data/raw/cardStatsFinal.json', JSON.stringify(final, null, 2));
