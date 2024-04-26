@@ -367,7 +367,7 @@ async function getHeroNames() {
         }
 
         names[cur.cid] = cur;
-        fs.writeFileSync('src/data/heroNames.json', JSON.stringify(names, null, 4));
+        fs.writeFileSync('src/data/raw/heroNames.json', JSON.stringify(names, null, 4));
     }
 
 }
@@ -439,10 +439,10 @@ async function getWeaponNames() {
         }
 
         names[cur.cid] = cur;
-        fs.writeFileSync('src/data/weaponNames.json', JSON.stringify(names, null, 4));
+        fs.writeFileSync('src/data/raw/weaponNames.json', JSON.stringify(names, null, 4));
     }
 
 }
 
-//getHeroNames();
+getHeroNames();
 getWeaponNames();
