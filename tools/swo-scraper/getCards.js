@@ -104,8 +104,8 @@ async function getHeroes() {
         }
 
 
-        fs.writeFileSync('src/data/heroStats.json', JSON.stringify(heroes, null, 4));
-        fs.writeFileSync('src/data/heroWorkingNames.json', JSON.stringify(names, null, 4));
+        fs.writeFileSync('src/data/raw/heroStats.json', JSON.stringify(heroes, null, 4));
+        fs.writeFileSync('src/data/raw/heroWorkingNames.json', JSON.stringify(names, null, 4));
     }
 
 }
@@ -182,8 +182,8 @@ async function getWeapons() {
         }
 
 
-        fs.writeFileSync('src/data/weaponStats.json', JSON.stringify(weapons, null, 4));
-        fs.writeFileSync('src/data/weaponWorkingNames.json', JSON.stringify(names, null, 4));
+        fs.writeFileSync('src/data/raw/weaponStats.json', JSON.stringify(weapons, null, 4));
+        fs.writeFileSync('src/data/raw/weaponWorkingNames.json', JSON.stringify(names, null, 4));
     }
 
 }
