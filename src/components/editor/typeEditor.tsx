@@ -64,7 +64,7 @@ export default function TypeEditor() {
                             cid: value.value
                         })
                     } else if (curCard.t == "hero" && weaponTypeData[value.value] != undefined) {
-                        
+
                         setCurCard({
                             ...editorWeaponDefault,
                             cid: value.value
@@ -102,28 +102,83 @@ export default function TypeEditor() {
                     })
                 }}
             />}
+            <div>
+                {curCard.t == "hero" && curCard.energy.map((energy, index) => (
+                    <TextField
 
-            {curCard.t == "hero" && curCard.energy.map((energy, index) => (
-                <TextField
-                
-                    label={`Energie ${index + 1}`}
-                    value={energy.value}
-                    onChange={(e) => {
-                        setCurCard({
-                            ...curCard,
-                            energy: curCard.energy.map((energy, i) => {
-                                if (i == index) {
-                                    return {
-                                        ...energy,
-                                        value: parseInt(e.target.value)
+                        label={`Energie ${index + 1}`}
+                        value={energy.value}
+
+                        type="number"
+
+                        InputProps={{
+                            inputProps: {
+                                min: -9,
+                                max: 9
+                            }
+                        }}
+
+                        onChange={(e) => {
+                            setCurCard({
+                                ...curCard,
+                                energy: curCard.energy.map((energy, i) => {
+                                    if (i == index) {
+                                        return {
+                                            ...energy,
+                                            value: parseInt(e.target.value)
+                                        }
                                     }
-                                }
-                                return energy;
+                                    return energy;
+                                })
                             })
-                        })
-                    }}
-                />
-            ))}
+                        }}
+                    />
+                ))}
+            </div>
+            <div>
+                {curCard.t == "hero" && curCard.bonuses.map((bonus, index) => {
+                    if (type.effects[index] == null || bonus == null) {
+                        return <></>
+                    }
+
+                    return (
+                        <TextField
+                            label={`Bonus ${index + 1}`}
+                            type="number"
+                            value={bonus.value}
+                            InputProps={{
+                                inputProps: {
+                                    min: -9,
+                                    max: 9
+                                }
+                            }}
+                            onChange={(e) => {
+                                setCurCard({
+                                    ...curCard,
+                                    bonuses: curCard.bonuses.map((bonus, i) => {
+                                        if (bonus == null) {
+                                            return null
+                                        }
+                                        if (i == index) {
+                                            let value = parseInt(e.target.value)
+
+                                            if (e.target.value == "") {
+                                                value = 0
+                                            }
+
+                                            return {
+                                                ...bonus,
+                                                value: parseInt(e.target.value)
+                                            }
+                                        }
+                                        return bonus;
+                                    })
+                                })
+                            }}
+                        />
+                    );
+                })}
+            </div>
         </div>
     )
 }
