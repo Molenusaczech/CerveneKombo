@@ -105,7 +105,7 @@ export default function TypeEditor() {
             <div>
                 {curCard.t == "hero" && curCard.energy.map((energy, index) => (
                     <TextField
-
+                        key={"energy" + index}
                         label={`Energie ${index + 1}`}
                         value={energy.value}
 
@@ -143,6 +143,7 @@ export default function TypeEditor() {
 
                     return (
                         <TextField
+                            key={"bonus" + index}
                             label={`Bonus ${index + 1}`}
                             type="number"
                             value={bonus.value}
