@@ -35,7 +35,7 @@ export default function TypeEditor() {
 
     return (
         <div>
-            <Card data={curCard} />
+            <Card data={curCard} height={600}/>
             <div className="grid grid-cols-2 p-1">
                 <TextField
                     label="Název karty"
@@ -94,8 +94,8 @@ export default function TypeEditor() {
                     className="p-1"
                     InputProps={{
                         inputProps: {
-                            min: 1,
-                            max: 9
+                            min: 11,
+                            max: 99
                         }
                     }}
                     fullWidth
