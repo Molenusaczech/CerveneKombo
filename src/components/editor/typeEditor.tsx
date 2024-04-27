@@ -20,6 +20,18 @@ export default function TypeEditor() {
 
     const [curCard, setCurCard] = useState<heroRarity | weaponRarity>(editorHeroDefault)
 
+    let type = undefined;
+
+    if (curCard.t == "hero") {
+        type = heroTypeData[curCard.cid]
+    } else if (curCard.t == "weapon") {
+        type = weaponTypeData[curCard.cid]
+    }
+
+    if (type == undefined) {
+        return <div>Invalid Type</div>
+    }
+
     return (
         <div>
             <Card data={curCard} />
@@ -90,6 +102,28 @@ export default function TypeEditor() {
                     })
                 }}
             />}
+
+            {curCard.t == "hero" && curCard.energy.map((energy, index) => (
+                <TextField
+                
+                    label={`Energie ${index + 1}`}
+                    value={energy.value}
+                    onChange={(e) => {
+                        setCurCard({
+                            ...curCard,
+                            energy: curCard.energy.map((energy, i) => {
+                                if (i == index) {
+                                    return {
+                                        ...energy,
+                                        value: parseInt(e.target.value)
+                                    }
+                                }
+                                return energy;
+                            })
+                        })
+                    }}
+                />
+            ))}
         </div>
     )
 }
