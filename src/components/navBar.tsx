@@ -34,6 +34,10 @@ const pages = [
         link: '/charts'
     },
     {
+        name: 'Editor',
+        link: '/edit'
+    },
+    {
         name: 'Github',
         link: 'https://github.com/Molenusaczech/CerveneKombo'
     }
