@@ -14,6 +14,7 @@ import { editorHeroDefault, editorWeaponDefault } from "@/data/editorDefault"
 import Autocomplete from "@mui/material/Autocomplete"
 
 import autofillTypes from "@/tools/autofillTypes";
+import effectNames from "@/data/effectNames"
 
 export default function TypeEditor() {
     const types = autofillTypes();
@@ -35,55 +36,69 @@ export default function TypeEditor() {
     return (
         <div>
             <Card data={curCard} />
-
-            <TextField
-                label="Název karty"
-                value={curCard.name}
-                onChange={(e) => {
-                    setCurCard({
-                        ...curCard,
-                        name: e.target.value
-                    })
-                }}
-            />
-
-            <Autocomplete
-                disablePortal
-                id="combo-box-demo"
-                options={types}
-                value={types.find((type) => type.value == curCard.cid)}
-                renderInput={(params) => <TextField {...params} label="Vyberte Kartu" />}
-                onChange={(event, value) => {
-                    if (value == null) {
-                        return;
-                    }
-                    console.log(value.value);
-                    if (curCard.t == "weapon" && heroTypeData[value.value] != undefined) {
-                        setCurCard({
-                            ...editorHeroDefault,
-                            cid: value.value
-                        })
-                    } else if (curCard.t == "hero" && weaponTypeData[value.value] != undefined) {
-
-                        setCurCard({
-                            ...editorWeaponDefault,
-                            cid: value.value
-                        })
-                    } else {
+            <div className="grid grid-cols-2 p-1">
+                <TextField
+                    label="Název karty"
+                    fullWidth
+                    className="p-1"
+                    value={curCard.name}
+                    onChange={(e) => {
                         setCurCard({
                             ...curCard,
-                            cid: value.value
+                            name: e.target.value
                         })
-                    }
+                    }}
+                />
 
-                }}
-            />
+                <Autocomplete
+                    disablePortal
+                    id="combo-box-demo"
+                    options={types}
+                    value={types.find((type) => type.value == curCard.cid)}
+                    fullWidth
+                    className="p-1"
+                    renderInput={(params) => <TextField {...params} label="Vyberte Kartu" />}
+                    onChange={(event, value) => {
+                        if (value == null) {
+                            return;
+                        }
+                        console.log(value.value);
+                        if (curCard.t == "weapon" && heroTypeData[value.value] != undefined) {
+                            setCurCard({
+                                ...editorHeroDefault,
+                                cid: value.value
+                            })
+                        } else if (curCard.t == "hero" && weaponTypeData[value.value] != undefined) {
 
+                            setCurCard({
+                                ...editorWeaponDefault,
+                                cid: value.value
+                            })
+                        } else {
+                            setCurCard({
+                                ...curCard,
+                                cid: value.value
+                            })
+                        }
 
+                    }}
+                />
+
+            </div>
+            <div className="grid grid-cols-2 p-1">
             {curCard.t == "hero" &&
                 <TextField
                     label="Primární zdraví"
                     value={curCard.primaryHealth}
+                    type="number"
+                    className="p-1"
+                    InputProps={{
+                        inputProps: {
+                            min: 1,
+                            max: 9
+                        }
+                    }}
+                    fullWidth
                     onChange={(e) => {
                         setCurCard({
                             ...curCard,
@@ -95,6 +110,15 @@ export default function TypeEditor() {
             {curCard.t == "hero" && <TextField
                 label="Sekundární zdraví"
                 value={curCard.secondaryHealth}
+                type="number"
+                InputProps={{
+                    inputProps: {
+                        min: 1,
+                        max: 9
+                    }
+                }}
+                className="p-1"
+                fullWidth
                 onChange={(e) => {
                     setCurCard({
                         ...curCard,
@@ -102,7 +126,8 @@ export default function TypeEditor() {
                     })
                 }}
             />}
-            <div>
+            </div>
+            <div className="grid grid-cols-4 p-1">
                 {curCard.t == "hero" && curCard.energy.map((energy, index) => (
                     <TextField
                         key={"energy" + index}
@@ -110,10 +135,12 @@ export default function TypeEditor() {
                         value={energy.value}
 
                         type="number"
+                        fullWidth
+                        className="p-1"
 
                         InputProps={{
                             inputProps: {
-                                min: -9,
+                                min: 1,
                                 max: 9
                             }
                         }}
@@ -135,16 +162,21 @@ export default function TypeEditor() {
                     />
                 ))}
             </div>
-            <div>
+            <div className="grid grid-cols-2 p-1">
                 {curCard.t == "hero" && curCard.bonuses.map((bonus, index) => {
                     if (type.effects[index] == null || bonus == null) {
-                        return <></>
+                        return <div></div>
+                    }
+
+                    let label = "Bonus " + (index + 1)
+                    if (type.effects[index] != null) {
+                        label = effectNames[type.effects[index] as keyof typeof effectNames]
                     }
 
                     return (
                         <TextField
                             key={"bonus" + index}
-                            label={`Bonus ${index + 1}`}
+                            label={`Bonus ${index + 1}: ${label}`}
                             type="number"
                             value={bonus.value}
                             InputProps={{
@@ -153,6 +185,8 @@ export default function TypeEditor() {
                                     max: 9
                                 }
                             }}
+                            className="p-1"
+                            fullWidth
                             onChange={(e) => {
                                 setCurCard({
                                     ...curCard,
