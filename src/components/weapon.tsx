@@ -6,6 +6,7 @@ type labelSize = "small" | "medium" | "large";
 import { weaponRarity } from "@/types/weaponRarity";
 
 import { weaponCid, weaponTypeData } from "@/data/weaponTypeData";
+import { hasDurability } from "@/tools/hasDurability";
 
 function Label(props: {
     value: number | string,
@@ -204,7 +205,7 @@ export default function WeaponCard(props: {
 
             {/* Durs */}
 
-            {bonuses[7].durability && <Label
+            {bonuses[7].durability && hasDurability(type.effects[7].t) && <Label
                 value={bonuses[7].durability}
                 x={555}
                 y={362}
@@ -214,7 +215,7 @@ export default function WeaponCard(props: {
                 rotation={80}
             />}
 
-            {bonuses[6].durability && <Label
+            {bonuses[6].durability && hasDurability(type.effects[6].t) && <Label
                 value={bonuses[6].durability}
                 x={520}
                 y={520}
@@ -224,7 +225,7 @@ export default function WeaponCard(props: {
                 rotation={120}
             />}
 
-            {bonuses[5].durability && <Label
+            {bonuses[5].durability && hasDurability(type.effects[5].t) && <Label
                 value={bonuses[5].durability}
                 x={390}
                 y={625}
@@ -234,7 +235,7 @@ export default function WeaponCard(props: {
                 rotation={160}
             />}
 
-            {bonuses[4].durability && <Label
+            {bonuses[4].durability && hasDurability(type.effects[4].t) &&  <Label
                 value={bonuses[4].durability}
                 x={224}
                 y={622}
@@ -244,7 +245,7 @@ export default function WeaponCard(props: {
                 rotation={200}
             />}
 
-            {bonuses[3].durability && <Label
+            {bonuses[3].durability && hasDurability(type.effects[3].t) && <Label
                 value={bonuses[3].durability}
                 x={100}
                 y={517}
@@ -254,7 +255,7 @@ export default function WeaponCard(props: {
                 rotation={240}
             />}
 
-            {bonuses[2].durability && <Label
+            {bonuses[2].durability && hasDurability(type.effects[2].t) && <Label
                 value={bonuses[2].durability}
                 x={70}
                 y={352}

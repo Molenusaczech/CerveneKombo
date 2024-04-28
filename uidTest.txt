@@ -90,23 +90,23 @@
 'PiP9wO3GKJp7UiH',  // Lord of Canbalandia OK
 'lm8nxAa1gN5aphu',  // Lord of Vampiria OK
 'd2qGrKazx2EtlHg',  // Lord of Zepplandia OK
-'zgtU3hnFa0ACyokFpwGgVVUC',  // Apple Hunter 404
+'zgtU3hnFa0ACyokFpwGgVVUC',  // Apple Hunter Fixed
 'qStewuyv8Uva5fs',  // Reward Hunter Fixed
 'IzGRNA8jOyTMnNe',  // Arena Sweeper OK
 'PYnylWDa9DBOozq',  // Esterminator OK
 'NMcS2IKL8QML3lcStEpz3Mzg',  // Wedryknight OK
 '4E1H48YGAVrvGjK',  // Battle Ferda OK
 'm2TY1VAtMTH6jduzZinRJnfm',  // Red Overgamer OK
-'oYtenkABOn3beMddxMlg2rJ5',  // Young adventurer 404
-'amvUDu0LMIGxGABvDOiqOcQl',  // Monkey Magician 404
-'WjGAlChfT2OHzqe6AYthXYvt',  // Purple Punk Potato 404
-'RhR4mrOhIkryrl5crb7hdUJf',  // Touchy Troll 404
-'lViORW5reHizTAq3TS4eOap4',  // Evil Explorer 404
+'oYtenkABOn3beMddxMlg2rJ5',  // Young adventurer Fixed
+'amvUDu0LMIGxGABvDOiqOcQl',  // Monkey Magician Fixed
+'WjGAlChfT2OHzqe6AYthXYvt',  // Purple Punk Potato Fixed
+'RhR4mrOhIkryrl5crb7hdUJf',  // Touchy Troll Fixed
+'lViORW5reHizTAq3TS4eOap4',  // Evil Explorer Fixed
 'PN4Sd8IW1ptVW8gOdAKEi9Gd',  // Bo-Woman OK
-'kUMW0X59LFK8earHwOVqDsdG',  // Brave teacher 404
+'kUMW0X59LFK8earHwOVqDsdG',  // Brave teacher Fixed
 's5sPS1T4J2jnAfFt23HsMiYy',  // Ruler from textbook OK
-'1yQ98CzhLG3N8KlnExyi6BOl',  // Valiant hoplite 404
-'YUOV20bTJyE8rl3CAYk5EJ2H',  // Hungarian hussar 404
+'1yQ98CzhLG3N8KlnExyi6BOl',  // Valiant hoplite Fixed
+'YUOV20bTJyE8rl3CAYk5EJ2H',  // Hungarian hussar Fixed
 'FXYEEfmJE7PdqpeE8FWI2rF2M',  // Xmas Freak-fir 404
 // @TODO '',  // Star Engineer
 

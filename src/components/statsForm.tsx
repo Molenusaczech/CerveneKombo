@@ -16,45 +16,14 @@ import { weaponCid } from '@/data/weaponTypeData';
 
 import { ThemeProvider } from '@emotion/react';
 import theme from '@/tools/theme';
+import autofillTypes from '@/tools/autofillTypes';
 
 export default function StatsForm() {
     "use client";
     const [name, setName] = useState<string>("");
     const [cardType, setCardType] = useState<heroCid | weaponCid | null>(null);
 
-    let heroData = [];
-
-    for (const [key, value] of Object.entries(heroTypeData)) {
-        heroData.push({
-            label: value.cname.CS,
-            value: key,
-        });
-    }
-
-    heroData.sort((a, b) => {
-        if (a.label == undefined || b.label == undefined) {
-            return 0;
-        }
-        return a.label.localeCompare(b.label);
-    });
-
-    let weaponData = [];
-
-    for (const [key, value] of Object.entries(weaponTypeData)) {
-        weaponData.push({
-            label: value.cname.CS,
-            value: key,
-        });
-    }
-
-    weaponData.sort((a, b) => {
-        if (a.label == undefined || b.label == undefined) {
-            return 0;
-        }
-        return a.label.localeCompare(b.label);
-    });
-
-    const cardTypeData = [...heroData, ...weaponData];
+    const cardTypeData = autofillTypes();
 
     return (
         <ThemeProvider theme={theme}>

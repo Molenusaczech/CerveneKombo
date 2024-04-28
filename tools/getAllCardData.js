@@ -308,6 +308,11 @@ async function getAllHeroes() {
             path = `/heroes/${name}-cz.jpg`;
         }
 
+        // edge case for Xmas_fir
+        if (iids[i] === 'FXYEEfmJE7PdqpeE8FWI2rF2M') {
+            path = `/heroes/xmas-fir-cz.jpg`;
+        }
+
         let effect = data.response.bonuses.map((effect) => {
             if (effect.action !== undefined) {
                 return effect.action;
