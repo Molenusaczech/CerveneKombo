@@ -134,7 +134,7 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
                 priority
             />
 
-            <ShowIf condition={props.data.isFoil}>
+            {props.data.isFoil &&
                 <Image
                     src="/foil.png"
                     alt="Foil"
@@ -148,8 +148,7 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
                             top: "0px",
                         }
                     }
-                />
-            </ShowIf>
+                />}
 
             {/* Name */}
             <Label
@@ -179,7 +178,7 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
                 isUpgraded={bonuses[0].isUpgraded}
                 scale={scale}
             />}
-            {bonuses[1] && (
+            {bonuses[1] && type.effects[1] != null && (
                 <Label
                     size={"medium"}
                     value={bonuses[1].value}
@@ -210,7 +209,7 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
                 scale={scale}
             />}
 
-            {bonuses[3] && <Label
+            {bonuses[3] && type.effects[3] != null && <Label
                 size={"medium"}
                 value={bonuses[3].value}
                 x={206 * scale}
@@ -240,7 +239,7 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
                 scale={scale}
             />}
 
-            {bonuses[5] && <Label
+            {bonuses[5] && type.effects[5] != null && <Label
                 size={"medium"}
                 value={bonuses[5].value}
                 x={348 * scale}
@@ -268,7 +267,7 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
                 isUpgraded={bonuses[6].isUpgraded}
                 scale={scale}
             />}
-            {bonuses[7] && <Label
+            {bonuses[7] && type.effects[7] != null && <Label
                 size={"medium"}
                 value={bonuses[7].value}
                 x={487 * scale}
