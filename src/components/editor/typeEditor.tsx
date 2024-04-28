@@ -188,7 +188,9 @@ export default function TypeEditor() {
             {curCard.t == "hero" && <div className="grid grid-cols-2 p-1">
                 {curCard.bonuses.map((bonus, index) => {
                     if (type.effects[index] == null || bonus == null) {
-                        return <div></div>
+                        return <div
+                        key={"bonusNull" + index}
+                        ></div>
                     }
 
                     let label = "Bonus " + (index + 1)
@@ -242,13 +244,15 @@ export default function TypeEditor() {
             {curCard.t == "weapon" && <div className="grid grid-cols-2 p-1">
                 {curCard.effects.map((effect, index) => {
                     if (type.effects[index] == null || effect == null) {
-                        return <div></div>
+                        return <div
+                        key={"effectNull" + index}
+                        ></div>
                     }
                     let curEffect = type.effects[index] as weaponTypeEffect;
 
                     console.log(curEffect.t);
                     return (
-                        <div className="grid grid-cols-2">
+                        <div className="grid grid-cols-2" key={"effectVal"+index}>
                             <TextField
                                 key={"effect" + index}
                                 label={`Efekt ${index + 1} (${effectNames[curEffect.t]})`}
