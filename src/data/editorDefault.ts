@@ -65,7 +65,7 @@ const editorHeroDefault: heroRarity = {
 const editorWeaponDefault: weaponRarity = {
     t: "weapon",
     cid: "Bow_Elderdragon",
-    name: "Mole",
+    name: "MOLE",
     durability: 3,
     effects: [
         {

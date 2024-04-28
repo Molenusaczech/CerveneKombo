@@ -15,6 +15,8 @@ import Autocomplete from "@mui/material/Autocomplete"
 
 import autofillTypes from "@/tools/autofillTypes";
 import effectNames from "@/data/effectNames"
+import { hasDurability } from "@/tools/hasDurability"
+import { effectName, weaponTypeEffect } from "@/types/effects"
 
 export default function TypeEditor() {
     const types = autofillTypes();
@@ -29,13 +31,13 @@ export default function TypeEditor() {
         type = weaponTypeData[curCard.cid]
     }
 
-    if (type == undefined) {
+    if (type == undefined || type == null) {
         return <div>Invalid Type</div>
     }
 
     return (
         <div>
-            <Card data={curCard} height={600}/>
+            <Card data={curCard} height={600} />
             <div className="grid grid-cols-2 p-1">
                 <TextField
                     label="Název karty"
@@ -86,46 +88,67 @@ export default function TypeEditor() {
 
             </div>
             <div className="grid grid-cols-2 p-1">
-            {curCard.t == "hero" &&
-                <TextField
-                    label="Primární zdraví"
-                    value={curCard.primaryHealth}
+                {curCard.t == "hero" &&
+                    <TextField
+                        label="Primární zdraví"
+                        value={curCard.primaryHealth}
+                        type="number"
+                        className="p-1"
+                        InputProps={{
+                            inputProps: {
+                                min: 11,
+                                max: 99
+                            }
+                        }}
+                        fullWidth
+                        onChange={(e) => {
+                            setCurCard({
+                                ...curCard,
+                                primaryHealth: parseInt(e.target.value)
+                            })
+                        }}
+                    />}
+
+                {curCard.t == "hero" && <TextField
+                    label="Sekundární zdraví"
+                    value={curCard.secondaryHealth}
                     type="number"
-                    className="p-1"
                     InputProps={{
                         inputProps: {
-                            min: 11,
-                            max: 99
+                            min: 1,
+                            max: 9
                         }
                     }}
+                    className="p-1"
                     fullWidth
                     onChange={(e) => {
                         setCurCard({
                             ...curCard,
-                            primaryHealth: parseInt(e.target.value)
+                            secondaryHealth: parseInt(e.target.value)
                         })
                     }}
                 />}
 
-            {curCard.t == "hero" && <TextField
-                label="Sekundární zdraví"
-                value={curCard.secondaryHealth}
-                type="number"
-                InputProps={{
-                    inputProps: {
-                        min: 1,
-                        max: 9
-                    }
-                }}
-                className="p-1"
-                fullWidth
-                onChange={(e) => {
-                    setCurCard({
-                        ...curCard,
-                        secondaryHealth: parseInt(e.target.value)
-                    })
-                }}
-            />}
+                {curCard.t == "weapon" && <TextField
+                    label="Odolnost"
+                    value={curCard.durability}
+                    type="number"
+                    InputProps={{
+                        inputProps: {
+                            min: 1,
+                            max: 9
+                        }
+                    }}
+                    className="p-1 col-span-2"
+                    fullWidth
+                    onChange={(e) => {
+                        setCurCard({
+                            ...curCard,
+                            durability: parseInt(e.target.value)
+                        })
+                    }}
+                />}
+
             </div>
             <div className="grid grid-cols-4 p-1">
                 {curCard.t == "hero" && curCard.energy.map((energy, index) => (
@@ -162,8 +185,8 @@ export default function TypeEditor() {
                     />
                 ))}
             </div>
-            <div className="grid grid-cols-2 p-1">
-                {curCard.t == "hero" && curCard.bonuses.map((bonus, index) => {
+            {curCard.t == "hero" && <div className="grid grid-cols-2 p-1">
+                {curCard.bonuses.map((bonus, index) => {
                     if (type.effects[index] == null || bonus == null) {
                         return <div></div>
                     }
@@ -213,7 +236,84 @@ export default function TypeEditor() {
                         />
                     );
                 })}
+            </div>}
+
+
+            {curCard.t == "weapon" && <div className="grid grid-cols-2 p-1">
+                {curCard.effects.map((effect, index) => {
+                    if (type.effects[index] == null || effect == null) {
+                        return <div></div>
+                    }
+                    let curEffect = type.effects[index] as weaponTypeEffect;
+
+                    console.log(curEffect.t);
+                    return (
+                        <div className="grid grid-cols-2">
+                            <TextField
+                                key={"effect" + index}
+                                label={`Efekt ${index + 1} (${effectNames[curEffect.t]})`}
+                                value={effect.value}
+                                type="number"
+                                fullWidth
+                                className="p-1"
+                                InputProps={{
+                                    inputProps: {
+                                        min: -9,
+                                        max: 9
+                                    }
+                                }}
+                                onChange={(e) => {
+                                    setCurCard({
+                                        ...curCard,
+                                        effects: curCard.effects.map((effect, i) => {
+                                            if (i == index) {
+                                                return {
+                                                    ...effect,
+                                                    value: parseInt(e.target.value)
+                                                }
+                                            }
+                                            return effect;
+                                        })
+                                    })
+                                }}
+                            />
+
+                            {hasDurability(curEffect.t) && <TextField
+                                key={"durability" + index}
+                                label="Odolnost"
+                                value={effect.durability}
+                                type="number"
+                                fullWidth
+                                className="p-1"
+                                InputProps={{
+                                    inputProps: {
+                                        min: 1,
+                                        max: 9
+                                    }
+                                }}
+                                onChange={(e) => {
+                                    setCurCard({
+                                        ...curCard,
+                                        effects: curCard.effects.map((effect, i) => {
+                                            if (i == index) {
+                                                return {
+                                                    ...effect,
+                                                    durability: parseInt(e.target.value)
+                                                }
+                                            }
+                                            return effect;
+                                        })
+                                    })
+                                }}
+                            />}
+                            
+                        </div>
+                    )
+                }
+                )}
             </div>
+            }
+
         </div>
     )
 }
