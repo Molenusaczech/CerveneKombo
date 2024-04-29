@@ -75,7 +75,6 @@ async function getCardStats(cid: heroCid | weaponCid, name: string) {
         //console.log("Weapon");
 
         const type = weaponTypeData[cid];
-        let durIndex = 0;
 
         card = {
             t: "weapon",
@@ -86,9 +85,8 @@ async function getCardStats(cid: heroCid | weaponCid, name: string) {
                 let durability = undefined;
 
                 //console.log(type.effects[index].t);
-                if (hasDurability(type.effects[index].t)) {
-                    durability = data.card.durs[durIndex];
-                    durIndex++;
+                if (index >= 2 && data.card.durs[index - 2] != "") {
+                    durability = Number(data.card.durs[index - 2]);
                 }
 
                 return {
