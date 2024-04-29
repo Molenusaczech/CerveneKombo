@@ -9,7 +9,7 @@
     "lint": "next lint",
     "getData": "node tools/getAllCardData.js",
     "downloadImages": "node tools/imageLink.js",
-    "getNamesFromSwo": "node tools/swo-scraper/getSwoNames.js",
+    "getSwoData": "node tools/swo-scraper/getSwoData.js",
     "getCardStats": "node tools/swo-scraper/getCards.js",
     "parseStats": "node tools/swo-scraper/parseStats.js"
   },
