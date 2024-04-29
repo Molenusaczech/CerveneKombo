@@ -20,12 +20,14 @@ import Paper from '@mui/material/Paper';
 function Expanded(props: {
     data: any,
     totalHeroes: number,
-    totalWeapons: number
+    totalWeapons: number,
+    isGlobal?: boolean
 }) {
 
     const data = props.data.data;
     const heroes = props.totalHeroes;
     const weapons = props.totalWeapons;
+    const isGlobal = props.isGlobal;
     return (
         <div>
             {/*<p>{JSON.stringify(data)}</p>
@@ -36,7 +38,7 @@ function Expanded(props: {
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                     <TableHead>
                         <TableRow>
-                            <TableCell>Šance na druh</TableCell>
+                            <TableCell>{isGlobal ? "Podíl z karet" : "Šance na druh"}</TableCell>
                             <TableCell>
                                 {formatChance(data.count, data.type == "hero" ? heroes : weapons)}
                             </TableCell>
@@ -99,7 +101,6 @@ export default function TypeTable(props: {
 }) {
 
     const data = props.data;
-
     const heroCount = data.heroes;
     const weaponCount = data.weapons;
 
@@ -158,7 +159,9 @@ export default function TypeTable(props: {
     ];
 
     let tableData: typeChartData[] = Object.values(cardStats.types)
+    let isGlobal = true;
     if (data.name !== "Global") {
+        isGlobal = false;
         tableData = Object.values(cardStats.types).filter((card) => card.origin === data.name);
     }
 
@@ -172,6 +175,7 @@ export default function TypeTable(props: {
                     data={data}
                     totalHeroes={heroCount}
                     totalWeapons={weaponCount}
+                    isGlobal={isGlobal}
                 />}
                 style={{
                     overflow: "scroll"
