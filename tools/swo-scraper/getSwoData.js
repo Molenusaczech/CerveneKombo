@@ -303,6 +303,7 @@ const weaponData = JSON.parse(fs.readFileSync('src/data/raw/weaponData.json'));
 
 async function getHeroNames() {
     let names = {};
+    let statCounts = {};
 
     for (let link of links) {
         let data = await fetch(link).then(res => res.text());
@@ -336,6 +337,8 @@ async function getHeroNames() {
             }
         }
 
+        let curStatsCounts = [];
+
         cur.title = doc.querySelector('title').textContent.split(' | ')[0];
 
         for (let key in heroData) {
@@ -348,32 +351,71 @@ async function getHeroNames() {
         console.log("Starting:", cur.title, cur.cid);
 
         doc.querySelectorAll('[scope="row"]').forEach(row => {
-            row = row.parentNode;
-            let name = row.querySelector('a').textContent;
-            let delta = row.querySelector('td').textContent.replace('−', '-');
-            //console.log(name, delta);
+            row = row.parentNode.children;
+            let name = row[0].children[0].textContent;
+            let delta = row[1].textContent.replace('−', '-');
+            let isVirtual = row[0].children.length > 1 ? "virtual" : "physical";
+            //console.log(name, delta, isVirtual);
             if (cur.names[delta]) {
                 cur.names[delta].push(name);
             } else {
                 cur.names[delta] = [name];
             }
+
+            Array.from(row).forEach((values, index) => {
+                if (index > 1 && index < 16) {
+                    let value = values.textContent.replace('−', '-');
+
+                    if (curStatsCounts[index - 2]) {
+                        if (value !== "") {
+                            //curStatsCounts[index].push(value);
+
+                            if (!curStatsCounts[index - 2][isVirtual]) {
+                                curStatsCounts[index - 2][isVirtual] = {};
+                            }
+
+                            if (curStatsCounts[index - 2][isVirtual][value]) {
+                                curStatsCounts[index - 2][isVirtual][value]++;
+                            } else {
+                                curStatsCounts[index - 2][isVirtual][value] = 1;
+                            }
+
+                        }
+                    } else {
+                        curStatsCounts[index - 2] = {};
+                        if (value !== "") {
+                            //curStatsCounts[index].push(value);
+
+                            if (!curStatsCounts[index - 2][isVirtual]) {
+                                curStatsCounts[index - 2][isVirtual] = {};
+                            }
+
+                            curStatsCounts[index - 2][isVirtual][value] = 1;
+                        }
+                    }
+                }
+            });
         });
 
         console.log("Finished:", cur.title, cur.cid);
 
         if (cur.cid == "Error") {
             console.log("Error:", cur.title);
-            cur.cid = "Error-"+cur.title;
+            cur.cid = "Error-" + cur.title;
         }
 
         names[cur.cid] = cur;
+        statCounts[cur.cid] = curStatsCounts;
         fs.writeFileSync('src/data/raw/heroNames.json', JSON.stringify(names, null, 4));
+        fs.writeFileSync('src/data/raw/heroStatsCounts.json', JSON.stringify(statCounts, null, 4));
     }
 
 }
 
 async function getWeaponNames() {
     let names = {};
+    let statCounts = {};
+
 
     for (let link of weaponLinks) {
         let data = await fetch(link).then(res => res.text());
@@ -407,6 +449,8 @@ async function getWeaponNames() {
             }
         }
 
+        let curStatsCounts = [];
+
         cur.title = doc.querySelector('title').textContent.split(' | ')[0];
 
         for (let key in weaponData) {
@@ -419,27 +463,101 @@ async function getWeaponNames() {
         console.log("Starting:", cur.title, cur.cid);
 
         doc.querySelectorAll('[scope="row"]').forEach(row => {
-            row = row.parentNode;
-            let name = row.querySelector('a').textContent;
-            let delta = row.querySelector('td').textContent.replace('−', '-');
+            row = row.parentNode.children;
+            let name = row[0].children[0].textContent;
+            let delta = row[1].textContent.replace('−', '-');
+            let isVirtual = "physical";
             //console.log(name, delta);
             if (cur.names[delta]) {
                 cur.names[delta].push(name);
             } else {
                 cur.names[delta] = [name];
             }
+
+            Array.from(row).forEach((values, index) => {
+                if (index > 1 && index < 16) {
+
+                    let split = values.textContent.split(' ');
+
+                    let value = split[0].replace('−', '-');
+
+                    if (curStatsCounts[index - 2]) {
+                        if (value !== "") {
+                            //curStatsCounts[index].push(value);
+
+                            if (!curStatsCounts[index - 2][isVirtual]) {
+                                curStatsCounts[index - 2][isVirtual] = {};
+                            }
+
+                            if (curStatsCounts[index - 2][isVirtual][value]) {
+                                curStatsCounts[index - 2][isVirtual][value]++;
+                            } else {
+                                curStatsCounts[index - 2][isVirtual][value] = 1;
+                            }
+
+                        }
+                    } else {
+                        curStatsCounts[index - 2] = {};
+                        if (value !== "") {
+                            //curStatsCounts[index].push(value);
+
+                            if (!curStatsCounts[index - 2][isVirtual]) {
+                                curStatsCounts[index - 2][isVirtual] = {};
+                            }
+
+                            curStatsCounts[index - 2][isVirtual][value] = 1;
+                        }
+                    }
+
+                    if (split.length > 1) {
+                        let dur = split[1].replace('(', '').replace(')', '');
+
+                        if (curStatsCounts[index - 2]) {
+                            if (dur !== "") {
+                                //curStatsCounts[index].push(value);
+
+                                if (!curStatsCounts[index - 2]["dur"]) {
+                                    curStatsCounts[index - 2]["dur"] = {};
+                                }
+
+                                if (curStatsCounts[index - 2]["dur"][dur]) {
+                                    curStatsCounts[index - 2]["dur"][dur]++;
+                                } else {
+                                    curStatsCounts[index - 2]["dur"][dur] = 1;
+                                }
+
+                            }
+                        } else {
+                            curStatsCounts[index - 2] = {};
+                            if (dur !== "") {
+                                //curStatsCounts[index].push(value);
+
+                                if (!curStatsCounts[index - 2]["dur"]) {
+                                    curStatsCounts[index - 2]["dur"] = {};
+                                }
+
+                                curStatsCounts[index - 2]["dur"][dur] = 1;
+                            }
+                        }
+
+                    }
+                }
+            });
         });
+
 
         console.log("Finished:", cur.title, cur.cid);
 
         if (cur.cid == "Error") {
             console.log("Error:", cur.title);
-            cur.cid = "Error-"+cur.title;
+            cur.cid = "Error-" + cur.title;
             continue;
         }
 
         names[cur.cid] = cur;
+        statCounts[cur.cid] = curStatsCounts;
         fs.writeFileSync('src/data/raw/weaponNames.json', JSON.stringify(names, null, 4));
+        fs.writeFileSync('src/data/raw/weaponStatsCounts.json', JSON.stringify(statCounts, null, 4));
     }
 
 }
