@@ -12,6 +12,8 @@
   src: url('/Roboto.otf') format('truetype');
 }
 
+@import url(icons.css);
+
 :root {
   --prussian-blue: #033053ff;
   --indigo-dye: #044269ff;
@@ -21,3 +23,4 @@
   --text: #000000;
   --bg: #ffffff;
 }
+
