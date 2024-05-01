@@ -1,9 +1,10 @@
 import { effectColor, effectName } from "@/types/effects";
 
-const colorClasses: Record<effectColor, string> = {
+const colorClasses: Record<effectColor | "none", string> = {
     "stop": "R",
     "opt": "O",
-    "go": "G"
+    "go": "G",
+    "none": ""
 }
 
 const effectClasses: Record<effectName, string> = {
@@ -29,8 +30,9 @@ const effectClasses: Record<effectName, string> = {
     "extra-coins": "extra-coins"
 }
 
-export default function EffectImg(props: { effect: effectName, color: effectColor }) {
-    const { effect, color } = props;
+export default function EffectImg(props: { effect: effectName, color?: effectColor | "none" }) {
+    let { effect, color } = props;
+    color = color || "none";
     return (
         <span className={"icon-32 action-type "+effectClasses[effect]+" "+colorClasses[color]}></span>
     )
