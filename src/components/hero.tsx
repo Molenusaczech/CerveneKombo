@@ -155,7 +155,7 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
                 size={"large"}
                 value={props.data.name}
                 x={315 * scale}
-                y={18 * scale}
+                y={23 * scale}
                 isCentered
                 scale={scale}
             />
@@ -165,7 +165,7 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
                 size={"small"}
                 value={props.data.energy[0].value}
                 x={84 * scale}
-                y={630 * scale}
+                y={634 * scale}
                 isUpgraded={props.data.energy[0].isUpgraded}
                 scale={scale}
             />
@@ -195,7 +195,7 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
                 size={"small"}
                 value={props.data.energy[1].value}
                 x={223 * scale}
-                y={622 * scale}
+                y={626 * scale}
                 isUpgraded={props.data.energy[1].isUpgraded}
                 scale={scale}
             />
@@ -225,7 +225,7 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
                 size={"small"}
                 value={props.data.energy[2].value}
                 x={363 * scale}
-                y={633 * scale}
+                y={637 * scale}
                 isUpgraded={props.data.energy[2].isUpgraded}
                 scale={scale}
             />
@@ -254,7 +254,7 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
                 size={"small"}
                 value={props.data.energy[3].value}
                 x={503 * scale}
-                y={623 * scale}
+                y={627 * scale}
                 isUpgraded={props.data.energy[3].isUpgraded}
                 scale={scale}
             />
@@ -282,7 +282,7 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
                 size={"medium"}
                 value={props.data.primaryHealth}
                 x={86 * scale}
-                y={15 * scale}
+                y={20 * scale}
                 isNoOperator
                 scale={scale}
             />
@@ -290,7 +290,7 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
                 size={"medium"}
                 value={props.data.secondaryHealth}
                 x={46 * scale}
-                y={76 * scale}
+                y={81 * scale}
                 isNoOperator
                 scale={scale}
             />
