@@ -163,3 +163,33 @@ span.icon-16, span.icon-24, span.icon-32 {
 .weapon-type.weapon-type-bow {
     background-position-x: 100%;
 }
+
+/* DAYS */
+
+.days {
+    background: url("/sets/days.png") no-repeat top left;
+}
+
+.icon-24.days {
+    background-size: auto 24px;
+}
+
+.icon-32.days {
+    background-size: auto 32px;
+}
+
+.days.d0 {
+    background-position-x: 0.0%;
+}
+
+.days.d1 {
+    background-position-x: 33.3333333333%;
+}
+
+.days.d2 {
+    background-position-x: 66.6666666667%;
+}
+
+.days.d3 {
+    background-position-x: 100.0%;
+}
