@@ -11,8 +11,6 @@ import { useState } from "react";
 import theme from "@/tools/theme";
 import { ThemeProvider } from "@emotion/react";
 
-import TextField from '@mui/material/TextField';
-
 const heroData = heroTypeData;
 const weaponData = weaponTypeData;
 
@@ -21,6 +19,13 @@ import DaytimeImg from "../images/daytimeImg";
 import effectNames from "@/data/effectNames";
 import HealthImg from "../images/healtImg";
 
+const heroIndexesMap = [
+    0, 1, 2, 5, 8, 11, 3, 6, 9, 12, 4, 7, 10, 13
+]
+
+import { heroStats, weaponStats } from "@/data/statCounts";
+import bonusCountsMerge from "@/tools/types/bonusCountsMerge";
+import Chart from "react-google-charts";
 
 export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
     "use client";
@@ -29,23 +34,38 @@ export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
 
     let typeData = null;
     let type = null;
+    let curStats = null;
 
     if (heroData[props.cid]) {
         typeData = heroData[props.cid];
         type = "hero";
+        curStats = heroStats[props.cid];
     } else if (weaponData[props.cid]) {
         typeData = weaponData[props.cid];
         type = "weapon";
+        curStats = weaponStats[props.cid];
     }
 
     if (!typeData) return <div>Typ nenalezen</div>;
+
+    if (!curStats) return <div>Statistiky nenalezeny</div>;
+
+    const mappedIndex = heroIndexesMap[curEffectIndex];
+
+    let bonusCountsChartData = bonusCountsMerge(curStats[mappedIndex]);
+
+    let bonusCountsChartOptions = {
+        title: 'Počet výskytů hodnoty vybraného bonusu',
+        isStacked: true,
+        legendToggle: true,
+    }
 
     return (
         <ThemeProvider theme={theme}>
             <div>
                 <h1>{props.cid} - Statistiky</h1>
 
-                {curEffectIndex}
+                {heroIndexesMap[curEffectIndex]} <br></br>
 
                 {type === "hero" && <>
 
@@ -91,41 +111,57 @@ export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
 
 
                         {
-                        [
-                            typeData.effects[0], 
-                            typeData.effects[2],
-                            typeData.effects[4],
-                            typeData.effects[6],
-                            typeData.effects[1],
-                            typeData.effects[3],
-                            typeData.effects[5],
-                            typeData.effects[7],
-                        ].map((effect, index) => {
-                            effect = effect as effectName | null;
-                            if (effect === null) return (
-                                <Button variant="outlined" key={index} disabled>
-                                    <div key={index} className="effect">
-                                        <div className="effect__name">N/A</div>
-                                    </div>
-                                </Button>
-                            );
+                            [
+                                typeData.effects[0],
+                                typeData.effects[2],
+                                typeData.effects[4],
+                                typeData.effects[6],
+                                typeData.effects[1],
+                                typeData.effects[3],
+                                typeData.effects[5],
+                                typeData.effects[7],
+                            ].map((effect, index) => {
+                                effect = effect as effectName | null;
+                                if (effect === null) return (
+                                    <Button variant="outlined" key={index} disabled>
+                                        <div key={index} className="effect">
+                                            <div className="effect__name">N/A</div>
+                                        </div>
+                                    </Button>
+                                );
 
-                            return (
-                                <Button variant={(index + 6) === curEffectIndex ? "contained" : "outlined"} key={index} onClick={
-                                    () => {
-                                        setCurEffectIndex(index + 6);
-                                    }
-                                }>
-                                    <div key={index} className="effect">
-                                        <EffectImg effect={effect} />
-                                        <div className="effect__name">{effectNames[effect]}</div>
-                                    </div>
-                                </Button>
-                            )
-                        })}
+                                let newIndex = index + 6;
+
+                                return (
+                                    <>
+                                        <Button variant={newIndex === curEffectIndex ? "contained" : "outlined"} key={index} onClick={
+                                            () => {
+                                                setCurEffectIndex(newIndex);
+                                            }
+                                        }>
+                                            <div key={index} className="effect">
+                                                <EffectImg effect={effect} />
+                                                <div className="effect__name">{effectNames[effect]}</div>
+                                            </div>
+                                        </Button>
+                                    </>
+                                )
+
+                            })}
 
                     </div>
                 </>}
+                {JSON.stringify(bonusCountsChartData)}
+            </div>
+
+            <div>
+                <Chart
+                    chartType="ColumnChart"
+                    width="100%"
+                    height="400px"
+                    data={bonusCountsChartData}
+                    options={bonusCountsChartOptions}
+                />
             </div>
         </ThemeProvider>
     )
