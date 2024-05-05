@@ -123,6 +123,22 @@ export default function BonusStats(props: {
                             })
                             }
                         </TableRow>
+
+                        <TableRow
+                            key="islandHeroes"
+                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                        >
+                            <TableCell component="th" scope="row">
+                                Šance na setření
+                            </TableCell>
+                            {Object.keys(bonusSum).map((key: string, index: number) => {
+                                const value = bonusSum[key];
+                                return (
+                                    <TableCell align="right" key={index}>{formatChance(value, islandCards)}</TableCell>
+                                )
+                            })
+                            }
+                        </TableRow>
                     </TableBody>
                 </Table>
             </TableContainer>
