@@ -40,6 +40,7 @@ const islandMap = {
     "Spinbay": "Spinbay",
     "Middlemyst": "Middlemyst",
     "Techlandia": "BioTech",
+    "Biolandia": "BioTech",
 }
 
 export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
