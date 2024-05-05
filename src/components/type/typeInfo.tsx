@@ -23,9 +23,24 @@ const heroIndexesMap = [
     0, 1, 2, 5, 8, 11, 3, 6, 9, 12, 4, 7, 10, 13
 ]
 
+import cardStats from "@/data/cardStats";
+
 import { heroStats, weaponStats } from "@/data/statCounts";
-import bonusCountsMerge from "@/tools/types/bonusCountsMerge";
 import Chart from "react-google-charts";
+import BonusStats from "./bonusStats";
+import { islandName } from "@/types/chartData";
+
+const islandMap = {
+    "Artemis": "BioTech",
+    "Anubis": "BioTech",
+    "Canbalandia": "Canbalandia",
+    "Canbaland": "Canbalandia",
+    "Vampiria": "Vampiria",
+    "Zepplandia": "Zepplandia",
+    "Spinbay": "Spinbay",
+    "Middlemyst": "Middlemyst",
+    "Techlandia": "BioTech",
+}
 
 export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
     "use client";
@@ -35,38 +50,43 @@ export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
     let typeData = null;
     let type = null;
     let curStats = null;
+    let typeStats = cardStats.types[props.cid];
+    let island: islandName | null = null;
 
     if (heroData[props.cid]) {
         typeData = heroData[props.cid];
         type = "hero";
-        curStats = heroStats[props.cid];
+        curStats = heroStats[props.cid];;
+        island = islandMap[typeData.origin as keyof typeof islandMap] as islandName;
     } else if (weaponData[props.cid]) {
         typeData = weaponData[props.cid];
         type = "weapon";
         curStats = weaponStats[props.cid];
+        island = islandMap[typeData.expansion as keyof typeof islandMap] as islandName;
     }
 
     if (!typeData) return <div>Typ nenalezen</div>;
 
     if (!curStats) return <div>Statistiky nenalezeny</div>;
 
-    const mappedIndex = heroIndexesMap[curEffectIndex];
+    if (island === null) return <div>Ostrov nenalezen</div>;
 
-    let bonusCountsChartData = bonusCountsMerge(curStats[mappedIndex]);
+    if (type === null) return <div>Typ nenalezen</div>;
 
-    let bonusCountsChartOptions = {
-        title: 'Počet výskytů hodnoty vybraného bonusu',
-        isStacked: true,
-        legendToggle: true,
+    let mappedIndex = null;
+    if (type === "hero") {
+        mappedIndex = heroIndexesMap[curEffectIndex];
+    } else {
+        mappedIndex = curEffectIndex;
     }
+
+    console.log(island)
 
     return (
         <ThemeProvider theme={theme}>
             <div>
                 <h1>{props.cid} - Statistiky</h1>
-
-                {heroIndexesMap[curEffectIndex]} <br></br>
-
+                DISCLAIMER: Většina těchto statistik jsou založené na vypovídajícím vzorku karet z SWO, nemusí být přesné
                 {type === "hero" && <>
 
                     <div className="grid h-full w-full grid-cols-4 gap-2 p-1">
@@ -151,18 +171,14 @@ export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
 
                     </div>
                 </>}
-                {JSON.stringify(bonusCountsChartData)}
             </div>
 
-            <div>
-                <Chart
-                    chartType="ColumnChart"
-                    width="100%"
-                    height="400px"
-                    data={bonusCountsChartData}
-                    options={bonusCountsChartOptions}
-                />
-            </div>
+            <BonusStats
+                data={curStats[mappedIndex]}
+                typeStats={typeStats}
+                islandStats={cardStats.islands[island]}
+                type={type as "hero" | "weapon"}
+            />
         </ThemeProvider>
     )
 }

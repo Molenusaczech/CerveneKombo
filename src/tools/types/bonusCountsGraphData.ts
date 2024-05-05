@@ -14,7 +14,7 @@ export default function bonusCountsMerge(data: heroEffectStats | {}) {
         return Number(a) - Number(b);
     });
 
-    console.log(keys);
+    //console.log(keys);
 
     const final: (string | number)[][] = [
         ['Hodnota', 'Fyzické karty', 'Virtuální karty'],
