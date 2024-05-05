@@ -18,7 +18,7 @@ export default function BonusStats(props: {
     const type = props.type;
     const islandStats = props.islandStats;
 
-    console.log(islandStats)
+    //console.log(islandStats)
 
     let bonusCountsChartData = bonusCountsMerge(data);
 

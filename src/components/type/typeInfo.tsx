@@ -81,98 +81,98 @@ export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
         mappedIndex = curEffectIndex;
     }
 
-    console.log(island)
+    //console.log(island)
 
     return (
         <ThemeProvider theme={theme}>
-            <div>
-                <h1>{props.cid} - Statistiky</h1>
-                DISCLAIMER: Většina těchto statistik jsou založené na vypovídajícím vzorku karet z SWO, nemusí být přesné
-                {type === "hero" && <>
 
-                    <div className="grid h-full w-full grid-cols-4 gap-2 p-1">
+            <h1>{props.cid} - Statistiky</h1>
+            DISCLAIMER: Většina těchto statistik jsou založené na vypovídajícím vzorku karet z SWO, nemusí být přesné
+            {type === "hero" && <>
 
-                        <Button className="col-span-2" variant={curEffectIndex === 0 ? "contained" : "outlined"} onClick={
-                            () => {
-                                setCurEffectIndex(0);
-                            }
-                        }>
-                            <div className="effect">
-                                <HealthImg />
-                                <div className="effect__name">Základní životy</div>
-                            </div>
-                        </Button>
+                <div className="grid h-full w-full grid-cols-4 gap-2 p-1">
 
-                        <Button className="col-span-2" variant={curEffectIndex === 1 ? "contained" : "outlined"} onClick={
-                            () => {
-                                setCurEffectIndex(1);
-                            }
-                        }>
-                            <div className="effect">
-                                <HealthImg />
-                                <div className="effect__name">Týmové životy</div>
-                            </div>
-                        </Button>
+                    <Button className="col-span-2" variant={curEffectIndex === 0 ? "contained" : "outlined"} onClick={
+                        () => {
+                            setCurEffectIndex(0);
+                        }
+                    }>
+                        <div className="effect">
+                            <HealthImg />
+                            <div className="effect__name">Základní životy</div>
+                        </div>
+                    </Button>
 
-                        {["Ráno", "Poledne", "Večer", "Noc"].map((value, index) => {
-                            return (
-                                <Button variant={(index + 2) === curEffectIndex ? "contained" : "outlined"} key={index} onClick={
-                                    () => {
-                                        setCurEffectIndex(index + 2);
-                                    }
-                                }>
+                    <Button className="col-span-2" variant={curEffectIndex === 1 ? "contained" : "outlined"} onClick={
+                        () => {
+                            setCurEffectIndex(1);
+                        }
+                    }>
+                        <div className="effect">
+                            <HealthImg />
+                            <div className="effect__name">Týmové životy</div>
+                        </div>
+                    </Button>
+
+                    {["Ráno", "Poledne", "Večer", "Noc"].map((value, index) => {
+                        return (
+                            <Button variant={(index + 2) === curEffectIndex ? "contained" : "outlined"} key={index} onClick={
+                                () => {
+                                    setCurEffectIndex(index + 2);
+                                }
+                            }>
+                                <div key={index} className="effect">
+                                    <DaytimeImg time={index} />
+                                    <EffectImg effect={"add-energy"} />
+                                    <div className="effect__name">{value}</div>
+                                </div>
+                            </Button>
+                        )
+                    })}
+
+
+                    {
+                        [
+                            typeData.effects[0],
+                            typeData.effects[2],
+                            typeData.effects[4],
+                            typeData.effects[6],
+                            typeData.effects[1],
+                            typeData.effects[3],
+                            typeData.effects[5],
+                            typeData.effects[7],
+                        ].map((effect, index) => {
+                            effect = effect as effectName | null;
+                            if (effect === null) return (
+                                <Button variant="outlined" key={index} disabled>
                                     <div key={index} className="effect">
-                                        <DaytimeImg time={index} />
-                                        <EffectImg effect={"add-energy"} />
-                                        <div className="effect__name">{value}</div>
+                                        <div className="effect__name">N/A</div>
                                     </div>
                                 </Button>
-                            )
-                        })}
+                            );
 
+                            let newIndex = index + 6;
 
-                        {
-                            [
-                                typeData.effects[0],
-                                typeData.effects[2],
-                                typeData.effects[4],
-                                typeData.effects[6],
-                                typeData.effects[1],
-                                typeData.effects[3],
-                                typeData.effects[5],
-                                typeData.effects[7],
-                            ].map((effect, index) => {
-                                effect = effect as effectName | null;
-                                if (effect === null) return (
-                                    <Button variant="outlined" key={index} disabled>
+                            return (
+                                <>
+                                    <Button variant={newIndex === curEffectIndex ? "contained" : "outlined"} key={index} onClick={
+                                        () => {
+                                            setCurEffectIndex(newIndex);
+                                        }
+                                    }>
                                         <div key={index} className="effect">
-                                            <div className="effect__name">N/A</div>
+                                            <EffectImg effect={effect} />
+                                            <div className="effect__name">{effectNames[effect]}</div>
                                         </div>
                                     </Button>
-                                );
+                                </>
+                            )
 
-                                let newIndex = index + 6;
+                        })}
 
-                                return (
-                                    <>
-                                        <Button variant={newIndex === curEffectIndex ? "contained" : "outlined"} key={index} onClick={
-                                            () => {
-                                                setCurEffectIndex(newIndex);
-                                            }
-                                        }>
-                                            <div key={index} className="effect">
-                                                <EffectImg effect={effect} />
-                                                <div className="effect__name">{effectNames[effect]}</div>
-                                            </div>
-                                        </Button>
-                                    </>
-                                )
+                </div>
+            </>}
 
-                            })}
-
-                    </div>
-                </>}
-            </div>
 
             <BonusStats
                 data={curStats[mappedIndex]}

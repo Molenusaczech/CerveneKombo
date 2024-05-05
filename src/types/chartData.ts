@@ -44,6 +44,7 @@ type islandChartData = {
 
 type typeChartData = {
     name: string,
+    cid: heroCid | weaponCid,
     count: number,
     origin: islandName,
     type: "hero" | "weapon",

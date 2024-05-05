@@ -16,6 +16,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Link from "next/link";
 
 function Expanded(props: {
     data: any,
@@ -104,12 +105,21 @@ export default function TypeTable(props: {
     const heroCount = data.heroes;
     const weaponCount = data.weapons;
 
-    const columns: { name: string; selector: (row: typeChartData) => string | number; sortable: boolean; wrap?: boolean }[] = [
+    const columns: any = [
         {
             name: 'Jméno',
             selector: (row: typeChartData) => row.name,
             sortable: true,
             wrap: true,
+            cell: (row: any) => {
+                return (
+                    <Link href={`/type/${row.cid}`} passHref target="_blank">
+                        <div>
+                            {row.name}
+                        </div>
+                    </Link>
+                )
+            }
         },
         {
             name: 'Počet',
@@ -170,7 +180,6 @@ export default function TypeTable(props: {
             <DataTable
                 columns={columns}
                 data={tableData}
-                expandableRows
                 expandableRowsComponent={(data) => <Expanded
                     data={data}
                     totalHeroes={heroCount}

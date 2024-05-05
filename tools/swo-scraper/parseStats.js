@@ -323,6 +323,7 @@ for (let cid in { ...data, ...weaponStats }) {
     final.types[cid] = {
         name: card.title,
         count: 0,
+        cid: cid,
         origin: origin,
         type: cardType,
         rarities: finalStats
