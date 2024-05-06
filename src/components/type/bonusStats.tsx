@@ -20,7 +20,7 @@ export default function BonusStats(props: {
 
     //console.log(islandStats)
 
-    let bonusCountsChartData = bonusCountsMerge(data);
+    let bonusCountsChartData = bonusCountsMerge(data, type);
 
     let bonusCountsChartOptions = {
         title: 'Počet výskytů hodnoty vybraného bonusu',
@@ -28,7 +28,7 @@ export default function BonusStats(props: {
         legendToggle: true,
     }
 
-    let bonusSum = bonusCountsSum(data);
+    let bonusSum = bonusCountsSum(data, type);
 
     if (!data || Object.keys(data).length === 0) {
         return <div></div>
