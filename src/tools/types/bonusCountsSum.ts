@@ -1,8 +1,9 @@
-import { heroEffectStats } from "@/types/cardStatsCounts";
+import { heroEffectStats, weaponEffectStats } from "@/types/cardStatsCounts";
 
 export default function bonusCountsSum(
-    data: heroEffectStats | {},
-    type: "hero" | "weapon"
+    data: heroEffectStats | weaponEffectStats,
+    type: "hero" | "weapon",
+    isDurability?: boolean
 
 ): Record<string, number> {
     if (!data) return data;
@@ -12,9 +13,23 @@ export default function bonusCountsSum(
         throw new Error("Empty array in bonusCountsSum, physical not found");
     }
 
+    if (type === "hero") {
+        data = data as heroEffectStats;
+    } else {
+        data = data as weaponEffectStats;
+    }
+
+    if (type === "weapon") {
+        if (isDurability) {
+            return (data as weaponEffectStats).dur;
+        } else {
+            return data.physical;
+        }
+    } 
+
     let keys = null;
     if (type === "hero") {
-        keys = [...Object.keys(data.physical), ...Object.keys(data.virtual)].filter((value, index, self) => self.indexOf(value) === index);
+        keys = [...Object.keys(data.physical), ...Object.keys((data as heroEffectStats).virtual)].filter((value, index, self) => self.indexOf(value) === index);
     } else {
         keys = [...Object.keys(data.physical)]
     }
@@ -29,7 +44,7 @@ export default function bonusCountsSum(
 
     keys.forEach((key) => {
         if (type === "hero") {
-            final[key] = (data.physical[key] || 0) + (data.virtual[key] || 0);
+            final[key] = (data.physical[key] || 0) + ((data as heroEffectStats).virtual[key] || 0);
         } else {
             final[key] = (data.physical[key] || 0);
         }

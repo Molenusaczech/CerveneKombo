@@ -3,7 +3,7 @@
 import { heroCid, heroTypeData } from "@/data/heroTypeData";
 import { weaponCid, weaponTypeData } from "@/data/weaponTypeData";
 import EffectImg from "../images/effectImg";
-import { effectName } from "@/types/effects";
+import { effectName, weaponTypeEffect } from "@/types/effects";
 import { Button } from "@mui/material";
 
 import { useState } from "react";
@@ -23,12 +23,17 @@ const heroIndexesMap = [
     0, 1, 2, 5, 8, 11, 3, 6, 9, 12, 4, 7, 10, 13
 ]
 
+const weaponIndexesMap = [
+    0, 1, 9, 8, 7, 6, 5, 4, 3, 2
+]
+
 import cardStats from "@/data/cardStats";
 
 import { heroStats, weaponStats } from "@/data/statCounts";
 import Chart from "react-google-charts";
 import BonusStats from "./bonusStats";
 import { islandName } from "@/types/chartData";
+import { hasDurability } from "@/tools/hasDurability";
 
 const islandMap = {
     "Artemis": "BioTech",
@@ -47,6 +52,7 @@ export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
     "use client";
 
     const [curEffectIndex, setCurEffectIndex] = useState<number>(0);
+    const [isDurability, setIsDurability] = useState<boolean>(false);
 
     let typeData = null;
     let type = null;
@@ -78,7 +84,17 @@ export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
     if (type === "hero") {
         mappedIndex = heroIndexesMap[curEffectIndex];
     } else {
-        mappedIndex = curEffectIndex;
+        mappedIndex = weaponIndexesMap[curEffectIndex];
+    }
+
+    let hasDurability = false;
+
+    if (type === "weapon") {
+        hasDurability = ('dur' in curStats[mappedIndex]);
+    }
+
+    if (isDurability && !hasDurability) {
+        setIsDurability(false);
     }
 
     //console.log(island)
@@ -173,12 +189,97 @@ export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
                 </div>
             </>}
 
+            {
+                type === "weapon" && <>
+
+                    <div className="grid h-full w-full grid-cols-10 gap-2 p-1">
+
+
+                        <Button className="col-span-2" variant={(0) === curEffectIndex ? "contained" : "outlined"} key={0} onClick={
+                            () => {
+                                setCurEffectIndex(0);
+                            }
+                        }>
+                            <div key={0} className="effect">
+                                <EffectImg effect={"heal"} />
+                                <div className="effect__name">Odolnost</div>
+                            </div>
+                        </Button>
+
+                        {
+                            typeData.effects.map((effect, index) => {
+                                effect = effect as weaponTypeEffect | null;
+                                if (effect === null) return (
+                                    <Button variant="outlined" key={index} disabled className="col-span-2">
+                                        <div key={index} className="effect">
+                                            <div className="effect__name">N/A</div>
+                                        </div>
+                                    </Button>
+                                );
+
+                                let newIndex = index + 1;
+
+                                if (!effect) return (
+                                    <Button variant="outlined" key={index} disabled className="col-span-2">
+                                        <div key={index} className="effect">
+                                            <div className="effect__name">N/A</div>
+                                        </div>
+                                    </Button>
+                                );
+
+                                return (
+                                    <>
+                                        <Button className="col-span-2" variant={newIndex === curEffectIndex ? "contained" : "outlined"} key={index} onClick={
+                                            () => {
+                                                setCurEffectIndex(newIndex);
+                                            }
+                                        }>
+                                            <div key={index} className="effect">
+                                                <EffectImg effect={effect.t} color={effect.f} />
+                                                <div className="effect__name">{effectNames[effect.t]}</div>
+                                            </div>
+                                        </Button>
+                                    </>
+                                )
+
+                            })}
+
+                        <Button className="col-span-5" variant={isDurability === false ? "contained" : "outlined"} key={typeData.effects.length + 1} onClick={
+                            () => {
+                                setIsDurability(false);
+                            }
+                        }>
+                            <div key="isDurTrue" className="effect">
+                                Hodnota efektu
+                            </div>
+                        </Button>
+
+                        <Button
+                            className="col-span-5"
+                            variant={isDurability === true ? "contained" : "outlined"}
+                            key={typeData.effects.length + 2}
+                            onClick={() => {
+                                setIsDurability(true);
+                            }}
+                            disabled={!hasDurability}
+                        >
+                            <div key="isDurFalse" className="effect">
+                                Odolnost efektu
+                            </div>
+                        </Button>
+
+                    </div>
+                </>
+            }
+
+            {JSON.stringify(curStats[mappedIndex])}
 
             <BonusStats
                 data={curStats[mappedIndex]}
                 typeStats={typeStats}
                 islandStats={cardStats.islands[island]}
                 type={type as "hero" | "weapon"}
+                isDurability={isDurability}
             />
         </ThemeProvider>
     )

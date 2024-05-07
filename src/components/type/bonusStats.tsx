@@ -1,22 +1,24 @@
 import { formatChance } from "@/tools/charts/calculateChances";
 import bonusCountsMerge from "@/tools/types/bonusCountsGraphData";
 import bonusCountsSum from "@/tools/types/bonusCountsSum";
-import { heroEffectStats } from "@/types/cardStatsCounts";
+import { heroEffectStats, weaponEffectStats } from "@/types/cardStatsCounts";
 import { islandChartData, typeChartData } from "@/types/chartData";
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import Chart from "react-google-charts";
 
-export default function BonusStats(props: { 
-    data: (heroEffectStats | {}),
+export default function BonusStats(props: {
+    data: (heroEffectStats | weaponEffectStats | {}),
     typeStats: typeChartData,
     islandStats: islandChartData,
-    type: "hero" | "weapon"
+    type: "hero" | "weapon",
+    isDurability?: boolean
 }) {
 
     const data = props.data;
     const typeStats = props.typeStats;
     const type = props.type;
     const islandStats = props.islandStats;
+    const isDurability = props.isDurability;
 
     //console.log(islandStats)
 
@@ -28,7 +30,8 @@ export default function BonusStats(props: {
         legendToggle: true,
     }
 
-    let bonusSum = bonusCountsSum(data, type);
+    //let bonusSum = bonusCountsSum(data, type);
+    let bonusSum = bonusCountsSum(data as heroEffectStats | weaponEffectStats, type, isDurability);
 
     if (!data || Object.keys(data).length === 0) {
         return <div></div>
@@ -147,7 +150,7 @@ export default function BonusStats(props: {
 
                 {JSON.stringify(bonusSum)}
             </div>
-            <div>{JSON.stringify(typeStats.count )}</div>
+            <div>{JSON.stringify(typeStats.count)}</div>
         </div>
     );
 }
