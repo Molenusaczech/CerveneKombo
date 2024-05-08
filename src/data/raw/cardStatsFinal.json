@@ -481,6 +481,7 @@
     "CrimeBot": {
       "name": "Automat na zločin",
       "count": 11010,
+      "cid": "CrimeBot",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -573,6 +574,7 @@
     "BalloonBot": {
       "name": "Balonbot",
       "count": 33030,
+      "cid": "BalloonBot",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -689,6 +691,7 @@
     "Lord_BioTech": {
       "name": "Biotechlandský lord",
       "count": 5040,
+      "cid": "Lord_BioTech",
       "origin": "Middlemyst",
       "type": "hero",
       "rarities": {
@@ -769,6 +772,7 @@
     "Alzak": {
       "name": "Bojovník z Alzahradu",
       "count": 2180,
+      "cid": "Alzak",
       "origin": "Middlemyst",
       "type": "hero",
       "rarities": {
@@ -861,6 +865,7 @@
     "Noctimor": {
       "name": "Bojovník z močálů",
       "count": 13689,
+      "cid": "Noctimor",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -959,6 +964,7 @@
     "ROB5000": {
       "name": "Bojový robot",
       "count": 7118,
+      "cid": "ROB5000",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -1063,6 +1069,7 @@
     "Penguin": {
       "name": "Bombardovací tučňák",
       "count": 22020,
+      "cid": "Penguin",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -1167,6 +1174,7 @@
     "Puppet": {
       "name": "Božská loutka",
       "count": 25490,
+      "cid": "Puppet",
       "origin": "Canbalandia",
       "type": "hero",
       "rarities": {
@@ -1271,6 +1279,7 @@
     "Lord_Canbalandia": {
       "name": "Canbalandský lord",
       "count": 3600,
+      "cid": "Lord_Canbalandia",
       "origin": "Middlemyst",
       "type": "hero",
       "rarities": {
@@ -1357,6 +1366,7 @@
     "Bambook": {
       "name": "Chlupatý mstitel",
       "count": 13705,
+      "cid": "Bambook",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -1467,6 +1477,7 @@
     "CleverBot": {
       "name": "Chytrobot",
       "count": 22020,
+      "cid": "CleverBot",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -1559,6 +1570,7 @@
     "Mongolfier": {
       "name": "de Mongolfier",
       "count": 5505,
+      "cid": "Mongolfier",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -1657,6 +1669,7 @@
     "Housewife": {
       "name": "Drsná hospodyňka",
       "count": 34185,
+      "cid": "Housewife",
       "origin": "Canbalandia",
       "type": "hero",
       "rarities": {
@@ -1755,6 +1768,7 @@
     "Timberman": {
       "name": "Drvoštěp",
       "count": 38358,
+      "cid": "Timberman",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -1871,6 +1885,7 @@
     "Ninjawatt": {
       "name": "Elektronindža",
       "count": 17126,
+      "cid": "Ninjawatt",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -1987,6 +2002,7 @@
     "Zomgar": {
       "name": "Elfí přeběhlík",
       "count": 17747,
+      "cid": "Zomgar",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -2097,6 +2113,7 @@
     "Dryoptas": {
       "name": "Elfí zbojník",
       "count": 17126,
+      "cid": "Dryoptas",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -2207,6 +2224,7 @@
     "Ester": {
       "name": "Esterminátorka",
       "count": 5200,
+      "cid": "Ester",
       "origin": "Middlemyst",
       "type": "hero",
       "rarities": {
@@ -2275,6 +2293,7 @@
     "GnomeWarrior": {
       "name": "Gnómský bojovník",
       "count": 22020,
+      "cid": "GnomeWarrior",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -2379,6 +2398,7 @@
     "Guvnor": {
       "name": "Guvernér Spinbaye",
       "count": 5320,
+      "cid": "Guvnor",
       "origin": "Spinbay",
       "type": "hero",
       "rarities": {
@@ -2471,6 +2491,7 @@
     "MurderCrow": {
       "name": "Havraní asasín",
       "count": 11010,
+      "cid": "MurderCrow",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -2575,6 +2596,7 @@
     "Pidgeon": {
       "name": "Holubí posel",
       "count": 27525,
+      "cid": "Pidgeon",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -2679,6 +2701,7 @@
     "Kate_M": {
       "name": "Hvězdná inženýrka",
       "count": 81,
+      "cid": "Kate_M",
       "origin": "Middlemyst",
       "type": "hero",
       "rarities": {
@@ -2741,6 +2764,7 @@
     "Cthyzmo": {
       "name": "Inženýr chapadelník",
       "count": 10339,
+      "cid": "Cthyzmo",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -2839,6 +2863,7 @@
     "Heretic": {
       "name": "Kacíř",
       "count": 17298,
+      "cid": "Heretic",
       "origin": "Canbalandia",
       "type": "hero",
       "rarities": {
@@ -2955,6 +2980,7 @@
     "Tris": {
       "name": "Kapradinová víla",
       "count": 10355,
+      "cid": "Tris",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -3065,6 +3091,7 @@
     "Executie": {
       "name": "Katík",
       "count": 37125,
+      "cid": "Executie",
       "origin": "Vampiria",
       "type": "hero",
       "rarities": {
@@ -3175,6 +3202,7 @@
     "Clown": {
       "name": "Klaun kanibal",
       "count": 34185,
+      "cid": "Clown",
       "origin": "Canbalandia",
       "type": "hero",
       "rarities": {
@@ -3267,6 +3295,7 @@
     "Warlock": {
       "name": "Kmenový šaman",
       "count": 25550,
+      "cid": "Warlock",
       "origin": "Canbalandia",
       "type": "hero",
       "rarities": {
@@ -3365,6 +3394,7 @@
     "Helmsman": {
       "name": "Kormidelník",
       "count": 11010,
+      "cid": "Helmsman",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -3451,6 +3481,7 @@
     "Dogbone": {
       "name": "Kostipes",
       "count": 17296,
+      "cid": "Dogbone",
       "origin": "Canbalandia",
       "type": "hero",
       "rarities": {
@@ -3543,6 +3574,7 @@
     "Boilerman": {
       "name": "Kotelník",
       "count": 22020,
+      "cid": "Boilerman",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -3641,6 +3673,7 @@
     "Drakosaur": {
       "name": "Král draků",
       "count": 3715,
+      "cid": "Drakosaur",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -3733,6 +3766,7 @@
     "HenKing": {
       "name": "Král kurníku",
       "count": 37125,
+      "cid": "HenKing",
       "origin": "Vampiria",
       "type": "hero",
       "rarities": {
@@ -3849,6 +3883,7 @@
     "Athyriel": {
       "name": "Královna víl",
       "count": 17142,
+      "cid": "Athyriel",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -3953,6 +3988,7 @@
     "Junky": {
       "name": "Král smetiště",
       "count": 17126,
+      "cid": "Junky",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -4069,6 +4105,7 @@
     "Dentist": {
       "name": "Krvavý zubař",
       "count": 27965,
+      "cid": "Dentist",
       "origin": "Vampiria",
       "type": "hero",
       "rarities": {
@@ -4185,6 +4222,7 @@
     "Cook": {
       "name": "Kuchař kanibal",
       "count": 42340,
+      "cid": "Cook",
       "origin": "Canbalandia",
       "type": "hero",
       "rarities": {
@@ -4277,6 +4315,7 @@
     "Floblin": {
       "name": "Kytičkový skřítek",
       "count": 17126,
+      "cid": "Floblin",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -4393,6 +4432,7 @@
     "LadyZepplin": {
       "name": "Lady Zepplin",
       "count": 11011,
+      "cid": "LadyZepplin",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -4491,6 +4531,7 @@
     "Bukdub": {
       "name": "Lesní sekáč",
       "count": 17126,
+      "cid": "Bukdub",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -4601,6 +4642,7 @@
     "Brumbrum": {
       "name": "Lovec odměn",
       "count": 25600,
+      "cid": "Brumbrum",
       "origin": "Middlemyst",
       "type": "hero",
       "rarities": {
@@ -4717,6 +4759,7 @@
     "TrophyHunter": {
       "name": "Lovec trofejí",
       "count": 27525,
+      "cid": "TrophyHunter",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -4827,6 +4870,7 @@
     "VampHunter": {
       "name": "Lovec upírů",
       "count": 37125,
+      "cid": "VampHunter",
       "origin": "Vampiria",
       "type": "hero",
       "rarities": {
@@ -4937,6 +4981,7 @@
     "Castor": {
       "name": "Lví machr",
       "count": 7318,
+      "cid": "Castor",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -5029,6 +5074,7 @@
     "Pollux": {
       "name": "Lví srdce",
       "count": 13690,
+      "cid": "Pollux",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -5121,6 +5167,7 @@
     "Maestro": {
       "name": "Maestro morti",
       "count": 27965,
+      "cid": "Maestro",
       "origin": "Vampiria",
       "type": "hero",
       "rarities": {
@@ -5213,6 +5260,7 @@
     "Burg": {
       "name": "Mamutí chuligán",
       "count": 17110,
+      "cid": "Burg",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -5317,6 +5365,7 @@
     "Solrald": {
       "name": "Maskovaný hrdina",
       "count": 3714,
+      "cid": "Solrald",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -5421,6 +5470,7 @@
     "Yawi": {
       "name": "Mechomůrek",
       "count": 7118,
+      "cid": "Yawi",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -5525,6 +5575,7 @@
     "MissVamp": {
       "name": "Miss Vampiria",
       "count": 18807,
+      "cid": "MissVamp",
       "origin": "Vampiria",
       "type": "hero",
       "rarities": {
@@ -5623,6 +5674,7 @@
     "CloudWalker": {
       "name": "Mrakoplavec",
       "count": 33030,
+      "cid": "CloudWalker",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -5715,6 +5767,7 @@
     "Vikimaus": {
       "name": "Mrzutý viking",
       "count": 7318,
+      "cid": "Vikimaus",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -5819,6 +5872,7 @@
     "Naftin": {
       "name": "Naftový rytíř",
       "count": 3697,
+      "cid": "Naftin",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -5917,6 +5971,7 @@
     "Dockworker": {
       "name": "Námezdní nosič",
       "count": 8136,
+      "cid": "Dockworker",
       "origin": "Spinbay",
       "type": "hero",
       "rarities": {
@@ -6003,6 +6058,7 @@
     "Vulture": {
       "name": "Nasupený sup",
       "count": 25550,
+      "cid": "Vulture",
       "origin": "Canbalandia",
       "type": "hero",
       "rarities": {
@@ -6107,6 +6163,7 @@
     "Johan": {
       "name": "Nebojácný holomek",
       "count": 41014,
+      "cid": "Johan",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -6223,6 +6280,7 @@
     "Scalprhino": {
       "name": "Nosorohý mlátič",
       "count": 26275,
+      "cid": "Scalprhino",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -6333,6 +6391,7 @@
     "PyroBob": {
       "name": "Ohnivý imp",
       "count": 41046,
+      "cid": "PyroBob",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -6449,6 +6508,7 @@
     "Brocco": {
       "name": "Opeřený poutník",
       "count": 13689,
+      "cid": "Brocco",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -6553,6 +6613,7 @@
     "MifMif": {
       "name": "Opičí kouzelník",
       "count": 41030,
+      "cid": "MifMif",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -6669,6 +6730,7 @@
     "DarkJohnny": {
       "name": "Osamělý pistolník",
       "count": 7118,
+      "cid": "DarkJohnny",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -6779,6 +6841,7 @@
     "SheepPatrol": {
       "name": "Ovčí hlídka",
       "count": 33030,
+      "cid": "SheepPatrol",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -6883,6 +6946,7 @@
     "Gogo": {
       "name": "Pixelový Kúzelník",
       "count": 8648,
+      "cid": "Gogo",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -6969,6 +7033,7 @@
     "Jirka": {
       "name": "Potomek Krále",
       "count": 13692,
+      "cid": "Jirka",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -7055,6 +7120,7 @@
     "Herbert": {
       "name": "Potulný rytíř",
       "count": 13705,
+      "cid": "Herbert",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -7159,6 +7225,7 @@
     "Arik": {
       "name": "Pralesní rošťák",
       "count": 41030,
+      "cid": "Arik",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -7275,6 +7342,7 @@
     "Innkeeper": {
       "name": "Přístavní krčmář",
       "count": 9440,
+      "cid": "Innkeeper",
       "origin": "Spinbay",
       "type": "hero",
       "rarities": {
@@ -7361,6 +7429,7 @@
     "Spectre": {
       "name": "Přízračná nána",
       "count": 27965,
+      "cid": "Spectre",
       "origin": "Vampiria",
       "type": "hero",
       "rarities": {
@@ -7471,6 +7540,7 @@
     "Gizmeron": {
       "name": "Proslulý vůdce",
       "count": 3698,
+      "cid": "Gizmeron",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -7563,6 +7633,7 @@
     "CoffinBot": {
       "name": "Rakvobot",
       "count": 37125,
+      "cid": "CoffinBot",
       "origin": "Vampiria",
       "type": "hero",
       "rarities": {
@@ -7661,6 +7732,7 @@
     "RoboExchange": {
       "name": "Robosměnárna",
       "count": 8136,
+      "cid": "RoboExchange",
       "origin": "Spinbay",
       "type": "hero",
       "rarities": {
@@ -7759,6 +7831,7 @@
     "Agron": {
       "name": "Rytíř vidlák",
       "count": 17110,
+      "cid": "Agron",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -7875,6 +7948,7 @@
     "Sabertooth": {
       "name": "Šavlozubý tygr",
       "count": 18805,
+      "cid": "Sabertooth",
       "origin": "Vampiria",
       "type": "hero",
       "rarities": {
@@ -7979,6 +8053,7 @@
     "Alina": {
       "name": "Sekernice",
       "count": 13705,
+      "cid": "Alina",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -8083,6 +8158,7 @@
     "Whurg": {
       "name": "Sloní kolos",
       "count": 17110,
+      "cid": "Whurg",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -8193,6 +8269,7 @@
     "Dancer": {
       "name": "Spinbayská tanečnice",
       "count": 6728,
+      "cid": "Dancer",
       "origin": "Spinbay",
       "type": "hero",
       "rarities": {
@@ -8297,6 +8374,7 @@
     "ROB200": {
       "name": "Šrotorobot",
       "count": 26275,
+      "cid": "ROB200",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -8395,6 +8473,7 @@
     "Bedouin": {
       "name": "Tajemný cizinec",
       "count": 9440,
+      "cid": "Bedouin",
       "origin": "Spinbay",
       "type": "hero",
       "rarities": {
@@ -8499,6 +8578,7 @@
     "OO": {
       "name": "Tajemný golem",
       "count": 7134,
+      "cid": "OO",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -8603,6 +8683,7 @@
     "Shepherd": {
       "name": "Trpasličí bača",
       "count": 17295,
+      "cid": "Shepherd",
       "origin": "Canbalandia",
       "type": "hero",
       "rarities": {
@@ -8707,6 +8788,7 @@
     "Bonekicker": {
       "name": "Trpaslík kostilam",
       "count": 8840,
+      "cid": "Bonekicker",
       "origin": "Canbalandia",
       "type": "hero",
       "rarities": {
@@ -8811,6 +8893,7 @@
     "Boneshaker": {
       "name": "Trpaslík kostitřas",
       "count": 34185,
+      "cid": "Boneshaker",
       "origin": "Canbalandia",
       "type": "hero",
       "rarities": {
@@ -8903,6 +8986,7 @@
     "Boneater": {
       "name": "Trpaslík kostižer",
       "count": 25550,
+      "cid": "Boneater",
       "origin": "Canbalandia",
       "type": "hero",
       "rarities": {
@@ -9001,6 +9085,7 @@
     "Bunny": {
       "name": "Upíří králíček",
       "count": 45317,
+      "cid": "Bunny",
       "origin": "Vampiria",
       "type": "hero",
       "rarities": {
@@ -9105,6 +9190,7 @@
     "VampPrince": {
       "name": "Upíří princ",
       "count": 9163,
+      "cid": "VampPrince",
       "origin": "Vampiria",
       "type": "hero",
       "rarities": {
@@ -9215,6 +9301,7 @@
     "Lord_Vampiria": {
       "name": "Vampirijský lord",
       "count": 5040,
+      "cid": "Lord_Vampiria",
       "origin": "Middlemyst",
       "type": "hero",
       "rarities": {
@@ -9301,6 +9388,7 @@
     "Rachael": {
       "name": "Velká průzkumnice",
       "count": 38358,
+      "cid": "Rachael",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -9417,6 +9505,7 @@
     "Darkenstein": {
       "name": "von Darkenstein",
       "count": 9160,
+      "cid": "Darkenstein",
       "origin": "Vampiria",
       "type": "hero",
       "rarities": {
@@ -9521,6 +9610,7 @@
     "BaronZepplin": {
       "name": "von Zepplin",
       "count": 5505,
+      "cid": "BaronZepplin",
       "origin": "Zepplandia",
       "type": "hero",
       "rarities": {
@@ -9613,6 +9703,7 @@
     "Gladiator": {
       "name": "Vymetač arén",
       "count": 1041,
+      "cid": "Gladiator",
       "origin": "Middlemyst",
       "type": "hero",
       "rarities": {
@@ -9711,6 +9802,7 @@
     "ElCider": {
       "name": "Vznešený paladin",
       "count": 17742,
+      "cid": "ElCider",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -9809,6 +9901,7 @@
     "Troll": {
       "name": "Zelený troll",
       "count": 17110,
+      "cid": "Troll",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -9925,6 +10018,7 @@
     "Lord_Zepplandia": {
       "name": "Zepplandský lord",
       "count": 5040,
+      "cid": "Lord_Zepplandia",
       "origin": "Middlemyst",
       "type": "hero",
       "rarities": {
@@ -10017,6 +10111,7 @@
     "Bubbleground": {
       "name": "Zkušený horník",
       "count": 13705,
+      "cid": "Bubbleground",
       "origin": "BioTech",
       "type": "hero",
       "rarities": {
@@ -10121,6 +10216,7 @@
     "Bow_Bamboo": {
       "name": "Bambusový luk",
       "count": 19324,
+      "cid": "Bow_Bamboo",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -10207,6 +10303,7 @@
     "Wand_LadleMagic": {
       "name": "Běrka na čáryguláš",
       "count": 21285,
+      "cid": "Wand_LadleMagic",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -10293,6 +10390,7 @@
     "Wand_Bio": {
       "name": "Bio hůlka",
       "count": 3600,
+      "cid": "Wand_Bio",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -10385,6 +10483,7 @@
     "Wand_Microscope": {
       "name": "Blízkodalekohůl",
       "count": 26420,
+      "cid": "Wand_Microscope",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -10483,6 +10582,7 @@
     "Bow_Maze": {
       "name": "Bludistříl",
       "count": 26420,
+      "cid": "Bow_Maze",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -10581,6 +10681,7 @@
     "Axe_HockeyStick": {
       "name": "Bojová hokejka",
       "count": 8192,
+      "cid": "Axe_HockeyStick",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -10667,6 +10768,7 @@
     "Sword_Corkscrew": {
       "name": "Bojová vývrtka",
       "count": 35425,
+      "cid": "Sword_Corkscrew",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -10759,6 +10861,7 @@
     "Axe_Longhammer": {
       "name": "Bojové kladivo",
       "count": 28254,
+      "cid": "Axe_Longhammer",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -10839,6 +10942,7 @@
     "Axe_RollingPin": {
       "name": "Bojový váleček",
       "count": 35235,
+      "cid": "Axe_RollingPin",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -10937,6 +11041,7 @@
     "Wand_Storms": {
       "name": "Bouřlivec",
       "count": 12922,
+      "cid": "Wand_Storms",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -11023,6 +11128,7 @@
     "Sword_Bubbles": {
       "name": "Bublinková šavle",
       "count": 6605,
+      "cid": "Sword_Bubbles",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -11103,6 +11209,7 @@
     "Sword_Life": {
       "name": "Čepel života",
       "count": 10505,
+      "cid": "Sword_Life",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -11189,6 +11296,7 @@
     "Wand_Candlestick": {
       "name": "Černá můra",
       "count": 8190,
+      "cid": "Wand_Candlestick",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -11269,6 +11377,7 @@
     "Bow_Fluffy": {
       "name": "Chuchvaluk",
       "count": 35355,
+      "cid": "Bow_Fluffy",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -11367,6 +11476,7 @@
     "Wand_Electrum": {
       "name": "Císařská hůl",
       "count": 2730,
+      "cid": "Wand_Electrum",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -11459,6 +11569,7 @@
     "Axe_Ultrahammer": {
       "name": "Císařská megapalice",
       "count": 2730,
+      "cid": "Axe_Ultrahammer",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -11551,6 +11662,7 @@
     "Axe_Cannonball": {
       "name": "Dělopalice",
       "count": 3600,
+      "cid": "Axe_Cannonball",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -11643,6 +11755,7 @@
     "Wand_Diamond": {
       "name": "Diamantová hůlka",
       "count": 19323,
+      "cid": "Wand_Diamond",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -11735,6 +11848,7 @@
     "Axe_Crystal": {
       "name": "Diamantová sekera",
       "count": 2732,
+      "cid": "Axe_Crystal",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -11827,6 +11941,7 @@
     "Sword_DinoFang": {
       "name": "Dinotesák",
       "count": 21765,
+      "cid": "Sword_DinoFang",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -11931,6 +12046,7 @@
     "Axe_Curious": {
       "name": "Divnoseč",
       "count": 13130,
+      "cid": "Axe_Curious",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -12017,6 +12133,7 @@
     "Bow_Long": {
       "name": "Dlouhý luk",
       "count": 13130,
+      "cid": "Bow_Long",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -12103,6 +12220,7 @@
     "Wand_Healing": {
       "name": "Doktorská hůlka",
       "count": 10505,
+      "cid": "Wand_Healing",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -12201,6 +12319,7 @@
     "Wand_Dragon": {
       "name": "Dračí hůl",
       "count": 2730,
+      "cid": "Wand_Dragon",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -12293,6 +12412,7 @@
     "Bow_ElderDragon": {
       "name": "Dračí megaluk",
       "count": 2730,
+      "cid": "Bow_ElderDragon",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -12397,6 +12517,7 @@
     "Bow_Dragon": {
       "name": "Dračí ohnivrh",
       "count": 5355,
+      "cid": "Bow_Dragon",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -12483,6 +12604,7 @@
     "Sword_Dragonfang": {
       "name": "Dračizub",
       "count": 5355,
+      "cid": "Sword_Dragonfang",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -12569,6 +12691,7 @@
     "Axe_WoodenHammer": {
       "name": "Dřevěná palice",
       "count": 13130,
+      "cid": "Axe_WoodenHammer",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -12655,6 +12778,7 @@
     "Sword_Stake": {
       "name": "Dřevěný kůl",
       "count": 39010,
+      "cid": "Sword_Stake",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -12759,6 +12883,7 @@
     "Axe_WoodenClub": {
       "name": "Dřevěný kyj",
       "count": 13130,
+      "cid": "Axe_WoodenClub",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -12857,6 +12982,7 @@
     "Axe_Lumberjack": {
       "name": "Dřevorubka",
       "count": 13130,
+      "cid": "Axe_Lumberjack",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -12937,6 +13063,7 @@
     "Wand_Living": {
       "name": "Dřevovousova hůl",
       "count": 13130,
+      "cid": "Wand_Living",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -13023,6 +13150,7 @@
     "Axe_Rainbow": {
       "name": "Duhoň",
       "count": 21135,
+      "cid": "Axe_Rainbow",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -13121,6 +13249,7 @@
     "Sword_Dual": {
       "name": "Dvojmeč",
       "count": 10505,
+      "cid": "Sword_Dual",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -13207,6 +13336,7 @@
     "Sword_2H": {
       "name": "Dvouruční meč",
       "count": 10505,
+      "cid": "Sword_2H",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -13293,6 +13423,7 @@
     "Bow_Electric": {
       "name": "Elektrostříl",
       "count": 7980,
+      "cid": "Bow_Electric",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -13391,6 +13522,7 @@
     "Bow_Floral": {
       "name": "Elfí květinoluk",
       "count": 12919,
+      "cid": "Bow_Floral",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -13477,6 +13609,7 @@
     "Bow_Gourmet": {
       "name": "Fajnšmekrovka",
       "count": 19815,
+      "cid": "Bow_Gourmet",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -13563,6 +13696,7 @@
     "Axe_GrandMama": {
       "name": "Grand mama",
       "count": 33025,
+      "cid": "Axe_GrandMama",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -13655,6 +13789,7 @@
     "Axe_Halapartana": {
       "name": "Halapartána",
       "count": 28255,
+      "cid": "Axe_Halapartana",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -13747,6 +13882,7 @@
     "Wand_Mermaid": {
       "name": "Hůlka mořské panny",
       "count": 5400,
+      "cid": "Wand_Mermaid",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -13851,6 +13987,7 @@
     "Wand_Shocking": {
       "name": "Hůlka na baterky",
       "count": 13135,
+      "cid": "Wand_Shocking",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -13919,6 +14056,7 @@
     "Wand_NineColors": {
       "name": "Hůlka s náplní 9 barev",
       "count": 6605,
+      "cid": "Wand_NineColors",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -14029,6 +14167,7 @@
     "Bow_Hydra": {
       "name": "Hydra",
       "count": 10505,
+      "cid": "Bow_Hydra",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -14115,6 +14254,7 @@
     "Axe_Imbuser": {
       "name": "Imbuser",
       "count": 33025,
+      "cid": "Axe_Imbuser",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -14225,6 +14365,7 @@
     "Sword_Venom": {
       "name": "Jedovatý meč",
       "count": 31790,
+      "cid": "Sword_Venom",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -14305,6 +14446,7 @@
     "Sword_Needle": {
       "name": "Jehla",
       "count": 32035,
+      "cid": "Sword_Needle",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -14397,6 +14539,7 @@
     "Axe_HitStomp": {
       "name": "Kamenná mlátička",
       "count": 10505,
+      "cid": "Axe_HitStomp",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -14495,6 +14638,7 @@
     "Bow_Tapwater": {
       "name": "Kanáluk",
       "count": 33025,
+      "cid": "Bow_Tapwater",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -14599,6 +14743,7 @@
     "Wand_Fern": {
       "name": "Kapradinová hůl",
       "count": 28254,
+      "cid": "Wand_Fern",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -14697,6 +14842,7 @@
     "Sword_Card": {
       "name": "Kartářská dýka",
       "count": 5400,
+      "cid": "Sword_Card",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -14783,6 +14929,7 @@
     "Bow_KnuckleBone": {
       "name": "Klouboluk",
       "count": 35425,
+      "cid": "Bow_KnuckleBone",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -14881,6 +15028,7 @@
     "Axe_Girder": {
       "name": "Kolejnice",
       "count": 19323,
+      "cid": "Axe_Girder",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -14985,6 +15133,7 @@
     "Bow_Rubberband": {
       "name": "Kolíčková pistole",
       "count": 7200,
+      "cid": "Bow_Rubberband",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -15059,6 +15208,7 @@
     "Axe_Skuth": {
       "name": "Kösa",
       "count": 5355,
+      "cid": "Axe_Skuth",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -15163,6 +15313,7 @@
     "Axe_Bonebreaker": {
       "name": "Kostilamská sekera",
       "count": 28245,
+      "cid": "Axe_Bonebreaker",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -15273,6 +15424,7 @@
     "Axe_MaceBone": {
       "name": "Kostipalcát",
       "count": 7185,
+      "cid": "Axe_MaceBone",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -15371,6 +15523,7 @@
     "Sword_Skeleton": {
       "name": "Kostrostřih",
       "count": 7980,
+      "cid": "Sword_Skeleton",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -15463,6 +15616,7 @@
     "Axe_Anchor": {
       "name": "Kotvoseč",
       "count": 6605,
+      "cid": "Axe_Anchor",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -15555,6 +15709,7 @@
     "Wand_Splatter": {
       "name": "Kouzelnická plácačka",
       "count": 35425,
+      "cid": "Wand_Splatter",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -15635,6 +15790,7 @@
     "Bow_Pink": {
       "name": "Kouzelný růžostříl",
       "count": 13130,
+      "cid": "Bow_Pink",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -15721,6 +15877,7 @@
     "Axe_King": {
       "name": "Králova sekera",
       "count": 5355,
+      "cid": "Axe_King",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -15801,6 +15958,7 @@
     "Sword_Short": {
       "name": "Krátký meč",
       "count": 13130,
+      "cid": "Sword_Short",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -15893,6 +16051,7 @@
     "Bow_Smoke": {
       "name": "Křesadlová dýmovnice",
       "count": 5400,
+      "cid": "Bow_Smoke",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -15985,6 +16144,7 @@
     "Axe_LadleBlood": {
       "name": "Krevběračka",
       "count": 35205,
+      "cid": "Axe_LadleBlood",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -16083,6 +16243,7 @@
     "Wand_Weather": {
       "name": "Krutobarometr",
       "count": 33025,
+      "cid": "Wand_Weather",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -16181,6 +16342,7 @@
     "Wand_Crystal": {
       "name": "Krystaly svědomí",
       "count": 5355,
+      "cid": "Wand_Crystal",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -16261,6 +16423,7 @@
     "Sword_DaggerMagna": {
       "name": "Kudlus magnus",
       "count": 26416,
+      "cid": "Sword_DaggerMagna",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -16383,6 +16546,7 @@
     "Wand_Ice": {
       "name": "Ledová hůlka",
       "count": 32035,
+      "cid": "Wand_Ice",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -16481,6 +16645,7 @@
     "Axe_Lollipop": {
       "name": "Lízo z Mooru",
       "count": 31790,
+      "cid": "Axe_Lollipop",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -16573,6 +16738,7 @@
     "Bow_Swiftness": {
       "name": "Lučík",
       "count": 13130,
+      "cid": "Bow_Swiftness",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -16665,6 +16831,7 @@
     "Bow_Hardstone": {
       "name": "Luk kameňák",
       "count": 28254,
+      "cid": "Bow_Hardstone",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -16775,6 +16942,7 @@
     "Bow_Watermelon": {
       "name": "Luk z megamelounu",
       "count": 7115,
+      "cid": "Bow_Watermelon",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -16849,6 +17017,7 @@
     "Wand_Vacuum": {
       "name": "Luxhůlka",
       "count": 39010,
+      "cid": "Wand_Vacuum",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -16929,6 +17098,7 @@
     "Wand_Luxury": {
       "name": "Luxusní hool",
       "count": 4500,
+      "cid": "Wand_Luxury",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -17009,6 +17179,7 @@
     "Wand_Madame": {
       "name": "Madame hůlka",
       "count": 23600,
+      "cid": "Wand_Madame",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -17095,6 +17266,7 @@
     "Wand_Magnetic": {
       "name": "Magika Magnetika",
       "count": 5355,
+      "cid": "Wand_Magnetic",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -17187,6 +17359,7 @@
     "Wand_Lighthouse": {
       "name": "Majákohůl",
       "count": 33025,
+      "cid": "Wand_Lighthouse",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -17297,6 +17470,7 @@
     "Bow_Mamba": {
       "name": "Mambaluk",
       "count": 39010,
+      "cid": "Bow_Mamba",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -17389,6 +17563,7 @@
     "Wand_MeatEater": {
       "name": "Masožračka",
       "count": 6965,
+      "cid": "Wand_MeatEater",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -17475,6 +17650,7 @@
     "Axe_Wrench": {
       "name": "Mechajzna",
       "count": 26420,
+      "cid": "Axe_Wrench",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -17567,6 +17743,7 @@
     "Sword_Fate": {
       "name": "Meč osudu",
       "count": 8190,
+      "cid": "Sword_Fate",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -17683,6 +17860,7 @@
     "Sword_Fashion": {
       "name": "Meč poslední módy",
       "count": 4500,
+      "cid": "Sword_Fashion",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -17775,6 +17953,7 @@
     "Sword_Timer": {
       "name": "Meč s časovačem",
       "count": 7200,
+      "cid": "Sword_Timer",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -17873,6 +18052,7 @@
     "Sword_Relic": {
       "name": "Meč s relikviemi",
       "count": 3600,
+      "cid": "Sword_Relic",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -17959,6 +18139,7 @@
     "Sword_Unicorn": {
       "name": "Meč z jednorožce",
       "count": 6995,
+      "cid": "Sword_Unicorn",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -18045,6 +18226,7 @@
     "Sword_Grass": {
       "name": "Meč z travinokovu",
       "count": 5356,
+      "cid": "Sword_Grass",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -18131,6 +18313,7 @@
     "Sword_Minute": {
       "name": "Minutový meč",
       "count": 19815,
+      "cid": "Sword_Minute",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -18217,6 +18400,7 @@
     "Wand_Many": {
       "name": "Mnohohůlka",
       "count": 10505,
+      "cid": "Wand_Many",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -18309,6 +18493,7 @@
     "Wand_Frost": {
       "name": "Mrazící hůl",
       "count": 7980,
+      "cid": "Wand_Frost",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -18401,6 +18586,7 @@
     "Bow_Carrotwood": {
       "name": "Mrkvoluk",
       "count": 28254,
+      "cid": "Bow_Carrotwood",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -18487,6 +18673,7 @@
     "Sword_Oilry": {
       "name": "Naftový megameč",
       "count": 2730,
+      "cid": "Sword_Oilry",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -18573,6 +18760,7 @@
     "Wand_Fire": {
       "name": "Ohňová hůl",
       "count": 13130,
+      "cid": "Wand_Fire",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -18659,6 +18847,7 @@
     "Wand_Octo": {
       "name": "Oktopusácká hůl",
       "count": 5360,
+      "cid": "Wand_Octo",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -18751,6 +18940,7 @@
     "Sword_Teeth": {
       "name": "Ostrozub",
       "count": 13130,
+      "cid": "Sword_Teeth",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -18825,6 +19015,7 @@
     "Bow_Clockwork": {
       "name": "Ozubený lukostříl",
       "count": 5355,
+      "cid": "Bow_Clockwork",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -18917,6 +19108,7 @@
     "Axe_Tenderhammer": {
       "name": "Palice na maso",
       "count": 10505,
+      "cid": "Axe_Tenderhammer",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -18997,6 +19189,7 @@
     "Axe_MysticHammer": {
       "name": "Palice tajemné síly",
       "count": 5355,
+      "cid": "Axe_MysticHammer",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -19083,6 +19276,7 @@
     "Bow_Palmwood": {
       "name": "Palmový luk",
       "count": 32037,
+      "cid": "Bow_Palmwood",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -19169,6 +19363,7 @@
     "Bow_Steam": {
       "name": "Parní superluk",
       "count": 6605,
+      "cid": "Bow_Steam",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -19279,6 +19474,7 @@
     "Bow_Hunter": {
       "name": "Parojelenoluk",
       "count": 10505,
+      "cid": "Bow_Hunter",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -19377,6 +19573,7 @@
     "Wand_Pepper": {
       "name": "Pepřihůlka",
       "count": 28250,
+      "cid": "Wand_Pepper",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -19463,6 +19660,7 @@
     "Axe_Execute": {
       "name": "Popravčí sekera",
       "count": 39010,
+      "cid": "Axe_Execute",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -19555,6 +19753,7 @@
     "Axe_Postmark": {
       "name": "Poštomlat",
       "count": 19815,
+      "cid": "Axe_Postmark",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -19653,6 +19852,7 @@
     "Sword_Ruler": {
       "name": "Pravítkomeč",
       "count": 33025,
+      "cid": "Sword_Ruler",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -19745,6 +19945,7 @@
     "Wand_Pretzel": {
       "name": "Preclíková smažka",
       "count": 7200,
+      "cid": "Wand_Pretzel",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -19849,6 +20050,7 @@
     "Bow_Handcannon": {
       "name": "Příruční dělo",
       "count": 3600,
+      "cid": "Bow_Handcannon",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -19941,6 +20143,7 @@
     "Bow_Birdie": {
       "name": "Ptakostříl",
       "count": 33025,
+      "cid": "Bow_Birdie",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -20033,6 +20236,7 @@
     "Axe_Boatyard": {
       "name": "Ráhnovka",
       "count": 7200,
+      "cid": "Axe_Boatyard",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -20125,6 +20329,7 @@
     "Sword_Cancerbane": {
       "name": "Rakobijec",
       "count": 19323,
+      "cid": "Sword_Cancerbane",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -20217,6 +20422,7 @@
     "Axe_Chainsaw": {
       "name": "Řetězovka",
       "count": 39010,
+      "cid": "Axe_Chainsaw",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -20309,6 +20515,7 @@
     "Bow_Rusted": {
       "name": "Rezavý luk",
       "count": 13130,
+      "cid": "Bow_Rusted",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -20407,6 +20614,7 @@
     "Wand_Ruby": {
       "name": "Rubínová hůlka",
       "count": 13135,
+      "cid": "Wand_Ruby",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -20493,6 +20701,7 @@
     "Sword_Runed": {
       "name": "Runová šavle",
       "count": 13130,
+      "cid": "Sword_Runed",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -20573,6 +20782,7 @@
     "Wand_Souls": {
       "name": "Šamanská hůl",
       "count": 13130,
+      "cid": "Wand_Souls",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -20665,6 +20875,7 @@
     "Sword_Saber": {
       "name": "Šavle",
       "count": 28255,
+      "cid": "Sword_Saber",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -20751,6 +20962,7 @@
     "Axe_Limbtrimmer": {
       "name": "Sekec mazec",
       "count": 13130,
+      "cid": "Axe_Limbtrimmer",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -20837,6 +21049,7 @@
     "Axe_Killothon": {
       "name": "Sekyra z Killothonu",
       "count": 5400,
+      "cid": "Axe_Killothon",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -20929,6 +21142,7 @@
     "Wand_Match": {
       "name": "Sirkláda",
       "count": 35205,
+      "cid": "Wand_Match",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -21027,6 +21241,7 @@
     "Axe_Broad": {
       "name": "Široká sekera",
       "count": 10505,
+      "cid": "Axe_Broad",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -21113,6 +21328,7 @@
     "Bow_Composable": {
       "name": "Skládací lukostříl",
       "count": 13130,
+      "cid": "Bow_Composable",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -21205,6 +21421,7 @@
     "Bow_Spine": {
       "name": "Skoliózoluk",
       "count": 28245,
+      "cid": "Bow_Spine",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -21303,6 +21520,7 @@
     "Bow_Sunlight": {
       "name": "Sluneční luk",
       "count": 5355,
+      "cid": "Bow_Sunlight",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -21383,6 +21601,7 @@
     "Sword_Sun": {
       "name": "Sluneční velemeč",
       "count": 5355,
+      "cid": "Sword_Sun",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -21469,6 +21688,7 @@
     "Sword_Emerald": {
       "name": "Smaragdový meč",
       "count": 2732,
+      "cid": "Sword_Emerald",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -21549,6 +21769,7 @@
     "Axe_DeathScythe": {
       "name": "Smrtikosa",
       "count": 23600,
+      "cid": "Axe_DeathScythe",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -21641,6 +21862,7 @@
     "Bow_Handgun": {
       "name": "Soubojová pistole",
       "count": 23600,
+      "cid": "Bow_Handgun",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -21733,6 +21955,7 @@
     "Sword_Skewer": {
       "name": "Špízomeč",
       "count": 28565,
+      "cid": "Sword_Skewer",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -21825,6 +22048,7 @@
     "Bow_Silverfish": {
       "name": "Stříbřirybka",
       "count": 10505,
+      "cid": "Bow_Silverfish",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -21905,6 +22129,7 @@
     "Bow_SilverXbow": {
       "name": "Stříbrná kuše",
       "count": 31790,
+      "cid": "Bow_SilverXbow",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -22009,6 +22234,7 @@
     "Bow_Silver": {
       "name": "Stříbrný elfí luk",
       "count": 10505,
+      "cid": "Bow_Silver",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -22107,6 +22333,7 @@
     "Sword_LongSilver": {
       "name": "Stříbrný meč",
       "count": 13130,
+      "cid": "Sword_LongSilver",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -22199,6 +22426,7 @@
     "Sword_SilverBlade": {
       "name": "Stříbrostří",
       "count": 10505,
+      "cid": "Sword_SilverBlade",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -22285,6 +22513,7 @@
     "Sword_Syringe": {
       "name": "Stříkord",
       "count": 39010,
+      "cid": "Sword_Syringe",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -22371,6 +22600,7 @@
     "Axe_DeepwoodClub": {
       "name": "Strompalcát",
       "count": 32035,
+      "cid": "Axe_DeepwoodClub",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -22457,6 +22687,7 @@
     "Sword_Nimble": {
       "name": "Švihlík",
       "count": 13130,
+      "cid": "Sword_Nimble",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -22549,6 +22780,7 @@
     "Axe_Swift": {
       "name": "Švihoň",
       "count": 10505,
+      "cid": "Axe_Swift",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -22635,6 +22867,7 @@
     "Wand_Symphony": {
       "name": "Symfonitka",
       "count": 39010,
+      "cid": "Wand_Symphony",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -22727,6 +22960,7 @@
     "Sword_Dark": {
       "name": "Temný meč",
       "count": 12917,
+      "cid": "Sword_Dark",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -22831,6 +23065,7 @@
     "Axe_HeavyHammer": {
       "name": "Těžké kladivo",
       "count": 7980,
+      "cid": "Axe_HeavyHammer",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -22935,6 +23170,7 @@
     "Wand_Thorns": {
       "name": "Trnihůl",
       "count": 10510,
+      "cid": "Wand_Thorns",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -23021,6 +23257,7 @@
     "Sword_Dwarf": {
       "name": "Trpasličí meč",
       "count": 28254,
+      "cid": "Sword_Dwarf",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -23107,6 +23344,7 @@
     "Axe_Dwarf": {
       "name": "Trpasličí sekera",
       "count": 12917,
+      "cid": "Axe_Dwarf",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -23211,6 +23449,7 @@
     "Wand_DeathKnell": {
       "name": "Umíráček",
       "count": 31790,
+      "cid": "Wand_DeathKnell",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -23315,6 +23554,7 @@
     "Bow_Vampire": {
       "name": "Upíří luk",
       "count": 8190,
+      "cid": "Bow_Vampire",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -23401,6 +23641,7 @@
     "Sword_Spindle": {
       "name": "Vlnolam",
       "count": 33025,
+      "cid": "Sword_Spindle",
       "origin": "Zepplandia",
       "type": "weapon",
       "rarities": {
@@ -23487,6 +23728,7 @@
     "Wand_Opal": {
       "name": "Vulkanická hůlka",
       "count": 28260,
+      "cid": "Wand_Opal",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -23567,6 +23809,7 @@
     "Wand_Pyro": {
       "name": "Výbušná hůl",
       "count": 10510,
+      "cid": "Wand_Pyro",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -23659,6 +23902,7 @@
     "Axe_Signboard": {
       "name": "Vývěsní sekera",
       "count": 4500,
+      "cid": "Axe_Signboard",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -23739,6 +23983,7 @@
     "Bow_Frog": {
       "name": "Žabí luk",
       "count": 39010,
+      "cid": "Bow_Frog",
       "origin": "Vampiria",
       "type": "weapon",
       "rarities": {
@@ -23825,6 +24070,7 @@
     "Sword_Leftovers": {
       "name": "Zbytkomeč",
       "count": 34335,
+      "cid": "Sword_Leftovers",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {
@@ -23893,6 +24139,7 @@
     "Bow_GoldenTech": {
       "name": "Zlatý superluk",
       "count": 2730,
+      "cid": "Bow_GoldenTech",
       "origin": "BioTech",
       "type": "weapon",
       "rarities": {
@@ -23985,6 +24232,7 @@
     "Bow_Brand": {
       "name": "Značkový luk",
       "count": 4500,
+      "cid": "Bow_Brand",
       "origin": "Spinbay",
       "type": "weapon",
       "rarities": {
@@ -24083,6 +24331,7 @@
     "Bow_Toothy": {
       "name": "Zuboluk",
       "count": 21065,
+      "cid": "Bow_Toothy",
       "origin": "Canbalandia",
       "type": "weapon",
       "rarities": {

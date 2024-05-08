@@ -44,6 +44,7 @@ type islandChartData = {
 
 type typeChartData = {
     name: string,
+    cid: heroCid | weaponCid,
     count: number,
     origin: islandName,
     type: "hero" | "weapon",
@@ -60,4 +61,4 @@ type chartData = {
     }
 }
 
-export type { chartData, islandChartData, typeChartData};
+export type { chartData, islandChartData, typeChartData, islandName};
