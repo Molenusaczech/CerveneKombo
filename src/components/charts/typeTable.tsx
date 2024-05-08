@@ -35,7 +35,9 @@ export default function TypeTable(props: {
             cell: (row: any) => {
                 return (
                     <Link href={`/type/${row.cid}`} passHref target="_blank">
-                        <div>
+                        <div style={{
+                            textDecoration: "underline",
+                        }}>
                             {row.name}
                         </div>
                     </Link>
