@@ -1,4 +1,6 @@
+import ReplayView from "@/components/replay/replayView";
 import getReplayFromSwo from "@/tools/replay/getReplayFromSwo";
+
 
 export default async function PlayReplay({ params }: { params: { link: string } }) {
     "use server";
@@ -13,6 +15,8 @@ export default async function PlayReplay({ params }: { params: { link: string } 
             {JSON.stringify(replayData.events)}
 
             {/*JSON.stringify(data)*/}
+
+            <ReplayView data={replayData} />
 
         </div>
     )

@@ -7,7 +7,7 @@ function getJsonFromDeclaration(declaration: Element | undefined, index: number 
 
     if (scriptContent) {
         const json = JSON.parse(scriptContent);
-        return json;
+        return JSON.parse(json);
     }
 }
 
