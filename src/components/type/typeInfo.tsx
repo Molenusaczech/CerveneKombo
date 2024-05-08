@@ -34,6 +34,7 @@ import Chart from "react-google-charts";
 import BonusStats from "./bonusStats";
 import { islandName } from "@/types/chartData";
 import { hasDurability } from "@/tools/hasDurability";
+import TypeCountStats from "./typeCountStats";
 
 const islandMap = {
     "Artemis": "BioTech",
@@ -59,17 +60,20 @@ export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
     let curStats = null;
     let typeStats = cardStats.types[props.cid];
     let island: islandName | null = null;
+    let totalCards = cardStats.globals.cards;
 
     if (heroData[props.cid]) {
         typeData = heroData[props.cid];
         type = "hero";
         curStats = heroStats[props.cid];;
         island = islandMap[typeData.origin as keyof typeof islandMap] as islandName;
+        totalCards = cardStats.islands[island].heroes;
     } else if (weaponData[props.cid]) {
         typeData = weaponData[props.cid];
         type = "weapon";
         curStats = weaponStats[props.cid];
         island = islandMap[typeData.expansion as keyof typeof islandMap] as islandName;
+        totalCards = cardStats.islands[island].weapons;
     }
 
     if (!typeData) return <div>Typ nenalezen</div>;
@@ -102,7 +106,13 @@ export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
     return (
         <ThemeProvider theme={theme}>
 
-            <h1>{props.cid} - Statistiky</h1>
+            <h1>{typeData.cname.CS} - Statistiky</h1>
+
+            <TypeCountStats
+                data={typeStats}
+                total={totalCards}
+            />
+
             DISCLAIMER: Většina těchto statistik jsou založené na vypovídajícím vzorku karet z SWO, nemusí být přesné
             {type === "hero" && <>
 
@@ -271,8 +281,6 @@ export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
                     </div>
                 </>
             }
-
-            {JSON.stringify(curStats[mappedIndex])}
 
             <BonusStats
                 data={curStats[mappedIndex]}

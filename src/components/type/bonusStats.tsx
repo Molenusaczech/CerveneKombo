@@ -145,12 +145,6 @@ export default function BonusStats(props: {
                     </TableBody>
                 </Table>
             </TableContainer>
-
-            {JSON.stringify(data)}<div>
-
-                {JSON.stringify(bonusCountsChartData)}
-            </div>
-            <div>{JSON.stringify(typeStats.count)}</div>
         </div>
     );
 }
