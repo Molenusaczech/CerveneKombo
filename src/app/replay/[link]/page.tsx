@@ -11,9 +11,10 @@ export default async function PlayReplay({ params }: { params: { link: string } 
 
     return (
         <div>
-            {decodeURIComponent(params.link)}
-
-            {JSON.stringify(replayData.events)}
+            <div>
+                {decodeURIComponent(params.link)}
+            </div>
+            {/*JSON.stringify(replayData.events)*/}
 
             {/*JSON.stringify(data)*/}
 
