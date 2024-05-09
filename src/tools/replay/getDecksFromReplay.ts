@@ -30,17 +30,17 @@ export default function GetDecksFromReplay(replay: replay): deck[] {
 
         const hero = getHeroFromReplay(playerData.hero, replay.gameStatData);
 
-        console.log(playerData.weapons);
+        //console.log(playerData.weapons);
 
         const weapons = playerData.weapons.map((weapon) => {
-            console.log(weapon);
+            //console.log(weapon);
             const bonuses = getWeaponBonuses(weapon.attacks);
 
-            console.log(bonuses);
+            //console.log(bonuses);
 
             const weaponType = getWeaponTypeFromBonuses(bonuses);
 
-            console.log(weaponType);
+            //console.log(weaponType);
 
             const gameStatHeroData = replay.gameStatData.weapons[weapon.db_id];
 
@@ -50,6 +50,15 @@ export default function GetDecksFromReplay(replay: replay): deck[] {
                 cid: weaponType.cid,
                 durability: weapon.durability,
                 effects: weapon.attacks.map((attack: gameStateWeaponAttack) => {
+                    
+                    if (attack.durability !== null) {
+                        return {
+                            isUpgraded: false,
+                            value: attack.strength,
+                            durability: attack.durability,
+                        };
+                    }
+                    
                     return {
                         isUpgraded: false,
                         value: attack.strength,

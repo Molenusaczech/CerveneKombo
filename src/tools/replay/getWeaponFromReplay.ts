@@ -26,15 +26,15 @@ export default function getWeaponFromReplay(
 
     const bonuses = getWeaponBonuses(weapon.attacks);
 
-    console.log(bonuses);
+    //console.log(bonuses);
 
     const weaponType = getWeaponTypeFromBonuses(bonuses);
 
-    console.log(weaponType);
+    //console.log(weaponType);
 
     const gameStatWeaponData = gameStatData.weapons[weapon.db_id];
 
-    console.log(gameStatWeaponData);
+    //console.log(gameStatWeaponData);
 
     const final: weaponRarity = {
         t: "weapon",
@@ -42,6 +42,15 @@ export default function getWeaponFromReplay(
         cid: weaponType.cid,
         durability: weapon.durability,
         effects: weapon.attacks.map((attack: gameStateWeaponAttack) => {
+            
+            if (attack.durability !== null) {
+                return {
+                    isUpgraded: false,
+                    value: attack.strength,
+                    durability: attack.durability,
+                };
+            }
+            
             return {
                 isUpgraded: false,
                 value: attack.strength,

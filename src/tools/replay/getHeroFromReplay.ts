@@ -25,11 +25,11 @@ export default function getHeroFromReplay(
 
     const bonuses = getHeroBonuses(hero.bonuses);
 
-    console.log(bonuses);
+    //console.log(bonuses);
 
     const heroType = getHeroTypeFromBonuses(bonuses);
 
-    console.log(heroType);
+    //console.log(heroType);
 
     const gameStatHeroData = gameStatData.heroes[hero.db_id];
 
