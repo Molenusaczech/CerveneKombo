@@ -19,7 +19,7 @@ type gameStateWeaponAttack = {
     color: swoColor,
     durability: number | null,
     strength: number,
-    effects: effectType,
+    effect: effectType,
 }
 
 type gameStateWeapon = {
@@ -32,7 +32,7 @@ type gameStateWeapon = {
 
 type gameStatePlayer = {
     hero: gameStateHero,
-    weapon: gameStateWeapon[],
+    weapons: gameStateWeapon[],
 }
 
 type gameState = {

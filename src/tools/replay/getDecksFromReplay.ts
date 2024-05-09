@@ -7,6 +7,8 @@ import { effectType } from "@/types/replay/effectType";
 import { effectName } from "@/types/effects";
 import getHeroTypeFromBonuses from "./getHeroTypeFromBonuses";
 import getHeroFromReplay from "./getHeroFromReplay";
+import getWeaponTypeFromBonuses from "./getWeaponTypeFromBonuses";
+import { weaponRarity } from "@/types/weaponRarity";
 
 function getWeaponBonuses(
     swoEffects: gameStateWeaponAttack[]
@@ -17,7 +19,7 @@ function getWeaponBonuses(
             return null;
         }
 
-        return effectMap[effect.effects];
+        return effectMap[effect.effect];
     });
 }
 
@@ -28,12 +30,40 @@ export default function GetDecksFromReplay(replay: replay): deck[] {
 
         const hero = getHeroFromReplay(playerData.hero, replay.gameStatData);
 
-        console.log(hero);
+        console.log(playerData.weapons);
+
+        const weapons = playerData.weapons.map((weapon) => {
+            console.log(weapon);
+            const bonuses = getWeaponBonuses(weapon.attacks);
+
+            console.log(bonuses);
+
+            const weaponType = getWeaponTypeFromBonuses(bonuses);
+
+            console.log(weaponType);
+
+            const gameStatHeroData = replay.gameStatData.weapons[weapon.db_id];
+
+            const final: weaponRarity = {
+                t: "weapon",
+                name: gameStatHeroData.name,
+                cid: weaponType.cid,
+                durability: weapon.durability,
+                effects: weapon.attacks.map((attack: gameStateWeaponAttack) => {
+                    return {
+                        isUpgraded: false,
+                        value: attack.strength,
+                    };
+                }),
+            };
+
+            return final;
+        });
 
         return {
-                "hero": hero,
-                "weapons": []
-            };
+            "hero": hero,
+            "weapons": weapons
+        };
     });
 
     return final;
