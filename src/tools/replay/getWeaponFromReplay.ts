@@ -41,7 +41,17 @@ export default function getWeaponFromReplay(
         name: gameStatWeaponData.name,
         cid: weaponType.cid,
         durability: weapon.durability,
-        effects: weapon.attacks.map((attack: gameStateWeaponAttack) => {
+        effects: [
+            weapon.attacks[0],
+            weapon.attacks[8],
+            weapon.attacks[7],
+            weapon.attacks[6],
+            weapon.attacks[5],
+            weapon.attacks[4],
+            weapon.attacks[3],
+            weapon.attacks[2],
+            weapon.attacks[1],
+        ].map((attack: gameStateWeaponAttack) => {
             
             if (attack.durability !== null) {
                 return {

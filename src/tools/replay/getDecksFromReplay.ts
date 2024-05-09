@@ -9,6 +9,7 @@ import getHeroTypeFromBonuses from "./getHeroTypeFromBonuses";
 import getHeroFromReplay from "./getHeroFromReplay";
 import getWeaponTypeFromBonuses from "./getWeaponTypeFromBonuses";
 import { weaponRarity } from "@/types/weaponRarity";
+import getWeaponFromReplay from "./getWeaponFromReplay";
 
 function getWeaponBonuses(
     swoEffects: gameStateWeaponAttack[]
@@ -34,39 +35,7 @@ export default function GetDecksFromReplay(replay: replay): deck[] {
 
         const weapons = playerData.weapons.map((weapon) => {
             //console.log(weapon);
-            const bonuses = getWeaponBonuses(weapon.attacks);
-
-            //console.log(bonuses);
-
-            const weaponType = getWeaponTypeFromBonuses(bonuses);
-
-            //console.log(weaponType);
-
-            const gameStatHeroData = replay.gameStatData.weapons[weapon.db_id];
-
-            const final: weaponRarity = {
-                t: "weapon",
-                name: gameStatHeroData.name,
-                cid: weaponType.cid,
-                durability: weapon.durability,
-                effects: weapon.attacks.map((attack: gameStateWeaponAttack) => {
-                    
-                    if (attack.durability !== null) {
-                        return {
-                            isUpgraded: false,
-                            value: attack.strength,
-                            durability: attack.durability,
-                        };
-                    }
-                    
-                    return {
-                        isUpgraded: false,
-                        value: attack.strength,
-                    };
-                }),
-            };
-
-            return final;
+            return getWeaponFromReplay(weapon, replay.gameStatData);
         });
 
         return {
