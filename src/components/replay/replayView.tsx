@@ -1,11 +1,15 @@
 "use client";
 
-export default function ReplayView(
-    data: any
-) {
+import { replay } from "@/types/replay/replay";
+
+export default function ReplayView(props: {
+    data: replay
+}) {
     "use client"
 
-    console.log(data.data)
+    const data = props.data;
+
+    console.log(data)
     return (
         <div>
             

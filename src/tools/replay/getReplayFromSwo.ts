@@ -1,3 +1,7 @@
+import { gameStatData } from '@/types/replay/gameStatData';
+import { gameState } from '@/types/replay/gameState';
+import { replay } from '@/types/replay/replay';
+import { event } from '@/types/replay/event';
 import { JSDOM } from 'jsdom';
 
 function getJsonFromDeclaration(declaration: Element | undefined, index: number = 0) {
@@ -11,7 +15,7 @@ function getJsonFromDeclaration(declaration: Element | undefined, index: number 
     }
 }
 
-export default async function getReplayFromSwo(link: string) {
+export default async function getReplayFromSwo(link: string): Promise<replay> {
     const page = await fetch(decodeURIComponent(link));
 
     if (!page.ok) {
@@ -24,9 +28,9 @@ export default async function getReplayFromSwo(link: string) {
 
     const script = body?.children[body.children.length - 5];
 
-    const gameStatData = getJsonFromDeclaration(script, 1);
-    const gameState = getJsonFromDeclaration(script, 2);
-    const events = getJsonFromDeclaration(script, 3);
+    const gameStatData = getJsonFromDeclaration(script, 1) as gameStatData;
+    const gameState = getJsonFromDeclaration(script, 2) as gameState;
+    const events = getJsonFromDeclaration(script, 3) as event[];
     //console.log(gameStatData);
 
     /*const scriptContent = script?.textContent?.split("\n")[1].split("JSON.parse(")[1].split(")")[0];
