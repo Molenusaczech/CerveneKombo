@@ -21,7 +21,7 @@ export default function ReplayView(props: {
 
     const decks = GetDecksFromReplay(data);
 
-    console.log(decks);
+    //console.log(decks);
 
     const state = getReplayState(data, decks, index);
 
@@ -59,7 +59,7 @@ export default function ReplayView(props: {
 
             <Button onClick={() => setIndex(index - 1)} variant="contained" disabled={index == 0}>Previous</Button>
             Current index: {index}
-            <Button onClick={() => setIndex(index + 1)} variant="contained">Next</Button>
+            <Button onClick={() => setIndex(index + 1)} variant="contained" disabled={data.events.length <= index}>Next</Button>
 
 
             <ReplayState state={state} />

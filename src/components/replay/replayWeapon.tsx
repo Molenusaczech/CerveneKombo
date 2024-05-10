@@ -14,6 +14,7 @@ export default function ReplayWeapon(
             <Card data={weapon.card} height={200} />
             <div>{weapon.broken}</div>
             <div>{isSelected}</div>
+            <div>{weapon.cost}</div>
             <div>{JSON.stringify(weapon.stashedEffect)}</div>
         </div>
     )
