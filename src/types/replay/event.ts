@@ -1,6 +1,6 @@
 type eventType = "GAME_CREATED" | 
-"GAME_STARTED" | // done
-"TURN_STARTED" | 
+"GAME_STARTED" | 
+"TURN_STARTED" | // done
 "WEAPON_EQUIPPED" | // done
 "WEAPON_ROLLED" | // done
 "WEAPON_ROLL_CANCELLED" | //done
@@ -14,7 +14,8 @@ type eventType = "GAME_CREATED" |
 "STASHED_EFFECT_OBLITERATED" |
 "WEAPON_DESTROYED" |
 "WEAPON_NOT_DESTROYED" | 
-"WEAPON_OBLITERATED"
+"WEAPON_OBLITERATED" |
+"DISCARD_PHASE_BEGINS"
 
 type event = {
     created: number,
