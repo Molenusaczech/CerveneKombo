@@ -1,13 +1,15 @@
 import { heroRarity } from "../cardRarity"
 import { weaponRarity } from "../weaponRarity"
 import { swoColor } from "./color"
+import { effectType } from "./effectType"
 
 type brokenStatus = "BROKEN" | "NOT_BROKEN" | "FIXING" | "CURSED"
 
 type replayEffect = {
+    type: effectType
     value: number,
     durability: number | null,
-    color: swoColor,
+    color: swoColor | null,
 }
 
 type replayWeapon = {
