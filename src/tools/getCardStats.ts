@@ -85,8 +85,10 @@ async function getCardStats(cid: heroCid | weaponCid, name: string) {
                 let durability = undefined;
 
                 //console.log(type.effects[index].t);
-                if (index >= 2 && data.card.durs[index - 2] != "") {
-                    durability = Number(data.card.durs[index - 2]);
+                if (data.card.durs) {
+                    if (index >= 2 && data.card.durs[index - 2] != "") {
+                        durability = Number(data.card.durs[index - 2]);
+                    }
                 }
 
                 return {
