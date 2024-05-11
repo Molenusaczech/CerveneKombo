@@ -30,13 +30,13 @@ export default function ReplayState(props: {
             <ReplayPlayer
                 player={state.players[0]}
                 isOnTurn={state.playerTurn === 0}
-                weaponIndex={state.selectedWeaponIndex}
+                weaponIndex={state.players[state.playerTurn].selectedWeaponIndex}
             />
 
             <div className="grid grid-cols-4">
                 <div></div>
                 <div>
-                    <Card data={state.players[state.playerTurn].weapons[state.selectedWeaponIndex].card} height={200} />
+                    <Card data={state.players[state.playerTurn].weapons[state.players[state.playerTurn].selectedWeaponIndex].card} height={200} />
                 </div>
                 <div>
                     {state.rolledEffect !== null && <>
@@ -52,7 +52,7 @@ export default function ReplayState(props: {
             <ReplayPlayer
                 player={state.players[1]}
                 isOnTurn={state.playerTurn === 1}
-                weaponIndex={state.selectedWeaponIndex}
+                weaponIndex={state.players[state.playerTurn].selectedWeaponIndex}
             />
         </div>
     )

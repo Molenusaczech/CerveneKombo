@@ -26,12 +26,12 @@ type replayPlayer = {
     actions: number,
     hero: heroRarity,
     weapons: replayWeapon[],
+    selectedWeaponIndex: number,
 }
 
 type replayState = {
     players: replayPlayer[],
     playerTurn: number,
-    selectedWeaponIndex: number,
     rolledEffect: replayEffect | null,
 }
 

@@ -20,6 +20,7 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 energy: 0,
                 actions: 4,
                 hero: decks[playerIndex].hero,
+                selectedWeaponIndex: 0,
                 weapons: player.weapons.map((weapon, weaponIndex) => {
                     return {
                         card: decks[playerIndex].weapons[weaponIndex], // Cast weapon.db_id to weaponRarity
@@ -31,7 +32,6 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
             }
         }),
         playerTurn: 0,
-        selectedWeaponIndex: 0,
         rolledEffect: null,
     }
 
@@ -61,10 +61,11 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 state.players[1].actions = 4;
 
                 state.rolledEffect = null;
+                //state.playerTurn = 0;
                 break;
             case "WEAPON_EQUIPPED":
-                state.selectedWeaponIndex = event.data.weapon_index;
                 state.playerTurn = event.initiator as number;
+                state.players[state.playerTurn].selectedWeaponIndex = event.data.weapon_index;
                 state.rolledEffect = null;
                 break;
             case "WEAPON_ROLLED":
@@ -76,7 +77,7 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 }
                 state.playerTurn = event.initiator as number;
                 state.players[state.playerTurn].actions -= 1;
-                state.players[state.playerTurn].energy -= state.players[state.playerTurn].weapons[state.selectedWeaponIndex].cost;
+                state.players[state.playerTurn].energy -= state.players[state.playerTurn].weapons[state.players[state.playerTurn].selectedWeaponIndex].cost;
                 break;
             case "WEAPON_ROLL_GAIN_ENERGY":
                 state.rolledEffect = {
@@ -112,10 +113,10 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 break;
             case "DISCARD_PHASE_BEGINS":
                 state.rolledEffect = null;
-                state.selectedWeaponIndex = 0;
+                //state.players[state.playerTurn].selectedWeaponIndex = 0;
                 break;
             case "WEAPON_ROLL_STASHED":
-                state.players[state.playerTurn].weapons[state.selectedWeaponIndex].stashedEffect = state.rolledEffect;
+                state.players[state.playerTurn].weapons[state.players[state.playerTurn].selectedWeaponIndex].stashedEffect = state.rolledEffect;
                 state.rolledEffect = null;
                 break;
             case "STASHED_EFFECT_DESTROYED":
