@@ -152,6 +152,19 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 state.players[state.playerTurn].actions -= 1;
                 state.players[state.playerTurn].energy -= state.players[state.playerTurn].weapons[event.data.weapon_index].cost;
                 break;
+            case "SHIELDS_USED":
+                state.players[event.initiator as number].weapons.forEach((weapon, index) => {
+                    if (weapon.stashedEffect !== null && weapon.stashedEffect.type == "DEFENSE" && weapon.stashedEffect.value == event.data.base) {
+                        state.players[event.initiator as number].weapons[index].stashedEffect = null;
+                    }
+                })
+                state.rolledEffect = {
+                    value: event.data.total,
+                    durability: null,
+                    color: null,
+                    type: "DEFENSE",
+                }
+                break;
         }   
 
     }
