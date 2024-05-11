@@ -1487,7 +1487,7 @@
             "all",
             "hit-weapon"
         ],
-        "imgUrl": "blank.jpg"
+        "imgUrl": "/blank.jpg"
     },
     "Junky": {
         "gender": "male",

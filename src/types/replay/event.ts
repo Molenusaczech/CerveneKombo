@@ -15,7 +15,10 @@ type eventType = "GAME_CREATED" |
 "WEAPON_DESTROYED" |
 "WEAPON_NOT_DESTROYED" | 
 "WEAPON_OBLITERATED" |
-"DISCARD_PHASE_BEGINS"
+"DISCARD_PHASE_BEGINS" | // done i think so
+"WEAPON_UNSTASHED" | //done
+"ATTACK_CANCELLED" | // done
+"WEAPON_REPAIRING"
 
 type event = {
     created: number,

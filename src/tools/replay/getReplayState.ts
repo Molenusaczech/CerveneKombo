@@ -4,6 +4,7 @@ import { deck } from "../deck";
 import StarTable from "@/components/charts/starTable";
 import effectMap from "@/data/swo/effectMap";
 import { effectType } from "@/types/replay/effectType";
+import { stat } from "fs";
 
 function invertPlayerIndex(index: number): number {
     return index === 0 ? 1 : 0;
@@ -38,6 +39,16 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
         const event = replay.events[i];
 
         //state.rolledEffect = null;
+
+        // repair weapons
+
+        if (event.initiator !== null && state.playerTurn !== null && state.playerTurn !== event.initiator) {
+            state.players[event.initiator].weapons.forEach((weapon, index) => {
+                if (weapon.broken == "FIXING") {
+                    state.players[event.initiator as number].weapons[index].broken = "NOT_BROKEN";
+                }
+            })
+        }
 
         switch (event.type) {
             case "TURN_STARTED":
@@ -107,7 +118,41 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 state.players[state.playerTurn].weapons[state.selectedWeaponIndex].stashedEffect = state.rolledEffect;
                 state.rolledEffect = null;
                 break;
-        }
+            case "STASHED_EFFECT_DESTROYED":
+                state.players[event.data.target_player_index].weapons[event.data.target_weapon_index].stashedEffect = null;
+                break;
+            case "WEAPON_UNSTASHED":
+                state.players[event.initiator as number].weapons[event.data.weapon_index].stashedEffect = null;
+                break;
+            case "ATTACK_CANCELLED":
+                state.rolledEffect = null;
+                break;
+            case "WEAPON_ROLL_HEAL_OWN_HERO":
+                state.rolledEffect = {
+                    value: event.data.power,
+                    durability: null,
+                    color: null,
+                    type: "HEAL",
+                }
+                state.players[event.initiator as number].hp = event.data.new_value;
+                break;
+            case "WEAPON_DESTROYED":
+                state.players[event.data.target_player_index].weapons[event.data.target_weapon_index].broken = "BROKEN";
+                state.rolledEffect = {
+                    value: event.data.total_power,
+                    durability: null,
+                    color: null,
+                    type: event.data.effect,
+                }
+                break;
+            case "WEAPON_REPAIRING":
+                state.playerTurn = event.initiator as number;
+                state.players[state.playerTurn].weapons[event.data.weapon_index].broken = "FIXING";
+                state.rolledEffect = null;
+                state.players[state.playerTurn].actions -= 1;
+                state.players[state.playerTurn].energy -= state.players[state.playerTurn].weapons[event.data.weapon_index].cost;
+                break;
+        }   
 
     }
 

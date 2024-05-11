@@ -11,13 +11,10 @@ export default function ReplayWeapon(
     }
 ) {
     const weapon = props.weapon;
-    const isSelected = props.isSelected ? "Selected" : "Not selected";
     return (
         <div>
             <Card data={weapon.card} height={200} />
             <div>{weapon.broken}</div>
-            <div>{isSelected}</div>
-            <div>{weapon.cost}</div>
             <div>
                 {weapon.stashedEffect !== null && weapon.stashedEffect.color &&<><EffectImg
                     effect={effectMap[weapon.stashedEffect.type]}
