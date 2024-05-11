@@ -6,6 +6,7 @@ type weaponCardType = {
     cid: weaponCid,
     rarity: number,
     cost: number,
+    expansion: string,
     cname: {
         CS?: string,
         DE?: string,

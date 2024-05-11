@@ -116,7 +116,7 @@ export default function WeaponCard(props: {
             {bonuses[0] && <Label 
                 value={bonuses[0].value} 
                 x={291} 
-                y={228} 
+                y={232} 
                 size="small" 
                 isUpgraded={bonuses[0].isUpgraded} 
                 scale={scale}
@@ -126,7 +126,7 @@ export default function WeaponCard(props: {
             {bonuses[8] && <Label
                 value={bonuses[8].value}
                 x={407}
-                y={239}
+                y={243}
                 size="medium"
                 isUpgraded={bonuses[8].isUpgraded}
                 scale={scale}
@@ -136,7 +136,7 @@ export default function WeaponCard(props: {
             {bonuses[7] && <Label
                 value={bonuses[7].value}
                 x={486}
-                y={340}
+                y={344}
                 size="medium"
                 isUpgraded={bonuses[7].isUpgraded}
                 scale={scale}
@@ -146,7 +146,7 @@ export default function WeaponCard(props: {
             {bonuses[6] && <Label
                 value={bonuses[6].value}
                 x={473}
-                y={460}
+                y={464}
                 size="medium"
                 isUpgraded={bonuses[6].isUpgraded}
                 scale={scale}
@@ -156,7 +156,7 @@ export default function WeaponCard(props: {
             {bonuses[5] && <Label
                 value={bonuses[5].value}
                 x={395}
-                y={555}
+                y={559}
                 size="medium"
                 isUpgraded={bonuses[5].isUpgraded}
                 scale={scale}
@@ -166,7 +166,7 @@ export default function WeaponCard(props: {
             {bonuses[4] && <Label
                 value={bonuses[4].value}
                 x={262}
-                y={572}
+                y={576}
                 size="medium"
                 isUpgraded={bonuses[4].isUpgraded}
                 scale={scale}
@@ -176,7 +176,7 @@ export default function WeaponCard(props: {
             {bonuses[3] && <Label
                 value={bonuses[3].value}
                 x={165}
-                y={505}
+                y={509}
                 size="medium"
                 isUpgraded={bonuses[3].isUpgraded}
                 scale={scale}
@@ -186,7 +186,7 @@ export default function WeaponCard(props: {
             {bonuses[2] && <Label
                 value={bonuses[2].value}
                 x={123}
-                y={385}
+                y={389}
                 size="medium"
                 isUpgraded={bonuses[2].isUpgraded}
                 scale={scale}
@@ -196,7 +196,7 @@ export default function WeaponCard(props: {
             {bonuses[1] && <Label
                 value={bonuses[1].value}
                 x={165}
-                y={272}
+                y={276}
                 size="medium"
                 isUpgraded={bonuses[1].isUpgraded}
                 scale={scale}
@@ -208,7 +208,7 @@ export default function WeaponCard(props: {
             {bonuses[7].durability && hasDurability(type.effects[7].t) && <Label
                 value={bonuses[7].durability}
                 x={555}
-                y={362}
+                y={366}
                 size="small"
                 isUpgraded={false}
                 scale={scale}
@@ -218,7 +218,7 @@ export default function WeaponCard(props: {
             {bonuses[6].durability && hasDurability(type.effects[6].t) && <Label
                 value={bonuses[6].durability}
                 x={520}
-                y={520}
+                y={524}
                 size="small"
                 isUpgraded={false}
                 scale={scale}
@@ -228,7 +228,7 @@ export default function WeaponCard(props: {
             {bonuses[5].durability && hasDurability(type.effects[5].t) && <Label
                 value={bonuses[5].durability}
                 x={390}
-                y={625}
+                y={629}
                 size="small"
                 isUpgraded={false}
                 scale={scale}
@@ -238,7 +238,7 @@ export default function WeaponCard(props: {
             {bonuses[4].durability && hasDurability(type.effects[4].t) &&  <Label
                 value={bonuses[4].durability}
                 x={224}
-                y={622}
+                y={626}
                 size="small"
                 isUpgraded={false}
                 scale={scale}
@@ -248,7 +248,7 @@ export default function WeaponCard(props: {
             {bonuses[3].durability && hasDurability(type.effects[3].t) && <Label
                 value={bonuses[3].durability}
                 x={100}
-                y={517}
+                y={521}
                 size="small"
                 isUpgraded={false}
                 scale={scale}
@@ -258,7 +258,7 @@ export default function WeaponCard(props: {
             {bonuses[2].durability && hasDurability(type.effects[2].t) && <Label
                 value={bonuses[2].durability}
                 x={70}
-                y={352}
+                y={356}
                 size="small"
                 isUpgraded={false}
                 scale={scale}
@@ -271,7 +271,7 @@ export default function WeaponCard(props: {
             <Label
                 value={props.data.durability}
                 x={470}
-                y={201}
+                y={205}
                 size="small"
                 scale={scale}
             />

@@ -1,0 +1,195 @@
+.icon-128 {
+    width: 128px;
+    height: 128px;
+}
+
+.icon-32 {
+    width: 32px;
+    height: 32px;
+}
+
+.icon-24 {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-16 {
+    width: 16px;
+    height: 16px;
+}
+
+span.icon-16, span.icon-24, span.icon-32 {
+    display: inline-block;
+}
+
+.text-center .icon-24, .text-center .icon-32 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ACTION TYPES */
+
+.action-type {
+    background: url("/sets/iconset.png") no-repeat top left;
+}
+
+.icon-32.action-type {
+    background-size: 672px 160px;
+    background-position-x: 32px;
+}
+
+.icon-16.action-type {
+    background-size: 336px 80px;
+    background-position-x: 16px;
+}
+
+.icon-24.action-type {
+    background-size: 504px 120px;
+    background-position-x: 24px;
+}
+
+.action-type.bless, .action-type._bless {
+    background-position-x: 0.0%;
+}
+
+.action-type.combo, .action-type._combo {
+    background-position-x: calc(1% / 0.20);
+}
+
+.action-type.combo-detonator, .action-type._combo-detonator {
+    background-position-x: calc(2% / 0.20);
+}
+
+.action-type.defense, .action-type._defense {
+    background-position-x: calc(3% / 0.20);
+}
+
+.action-type.energy, .action-type._energy {
+    background-position-x: calc(4% / 0.20);
+}
+
+.action-type.heal, .action-type._heal {
+    background-position-x: calc(5% / 0.20);
+}
+
+.action-type.hero-attack, .action-type._hero-attack {
+    background-position-x: calc(6% / 0.20);
+}
+
+.action-type.permanent-attack, .action-type._permanent-attack {
+    background-position-x: calc(7% / 0.20);
+}
+
+.action-type.universal-attack, .action-type._universal-attack {
+    background-position-x: calc(8% / 0.20);
+}
+
+.action-type.weapon-attack, .action-type._weapon-attack {
+    background-position-x: calc(9% / 0.20);
+}
+
+.action-type.obliterate, .action-type._obliterate {
+    background-position-x: calc(10% / 0.20);
+}
+
+.action-type.battle-trick, .action-type._battle-trick {
+    background-position-x: calc(11% / 0.20);
+}
+
+.action-type.curse-weapon, .action-type._curse-weapon {
+    background-position-x: calc(12% / 0.20);
+}
+
+.action-type.night-attack, .action-type._night-attack {
+    background-position-x: calc(13% / 0.20);
+}
+
+.action-type.vampire-bite, .action-type._vampire-bite {
+    background-position-x: calc(14% / 0.20);
+}
+
+.action-type.health, .action-type._health {
+    background-position-x: calc(15% / 0.20);
+}
+
+.action-type.mechanics-superaction, .action-type._mechanics-superaction {
+    background-position-x: calc(16% / 0.20);
+}
+
+.action-type.zepplandian-shrapnel, .action-type._zepplandian-shrapnel, .action-type.zepplandian-shrapnel-2, .action-type._zepplandian-shrapnel-2 {
+    background-position-x: calc(17% / 0.20);
+}
+
+.action-type.trap, .action-type._trap {
+    background-position-x: calc(18% / 0.20);
+}
+
+.action-type.cumulus, .action-type._cumulus {
+    background-position-x: calc(19% / 0.20);
+}
+
+.action-type.extra-coins, .action-type._extra-coins {
+    background-position-x: calc(20% / 0.20);
+}
+
+.action-type.G {
+    background-position-y: calc(1% / 0.04);
+}
+
+.action-type.O {
+    background-position-y: calc(2% / 0.04);
+}
+
+.action-type.R {
+    background-position-y: calc(3% / 0.04);
+}
+
+.action-type._used {
+    background-position-y: calc(4% / 0.04);
+}
+
+.weapon-type.weapon-type-axe {
+    background-position-x: 75%;
+}
+
+.weapon-type.weapon-type-sword {
+    background-position-x: 50%;
+}
+
+.weapon-type.weapon-type-wand {
+    background-position-x: 25%;
+}
+
+.weapon-type.weapon-type-bow {
+    background-position-x: 100%;
+}
+
+/* DAYS */
+
+.days {
+    background: url("/sets/days.png") no-repeat top left;
+}
+
+.icon-24.days {
+    background-size: auto 24px;
+}
+
+.icon-32.days {
+    background-size: auto 32px;
+}
+
+.days.d0 {
+    background-position-x: 0.0%;
+}
+
+.days.d1 {
+    background-position-x: 33.3333333333%;
+}
+
+.days.d2 {
+    background-position-x: 66.6666666667%;
+}
+
+.days.d3 {
+    background-position-x: 100.0%;
+}
