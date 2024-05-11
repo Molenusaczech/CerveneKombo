@@ -58,8 +58,8 @@ export default function ReplayView(props: {
             </div>*/}
 
             <Button onClick={() => setIndex(index - 1)} variant="contained" disabled={index == 0}>Previous</Button>
-            Current index: {index} ({data.events[index].type})
             <Button onClick={() => setIndex(index + 1)} variant="contained" disabled={data.events.length <= index + 1}>Next</Button>
+            Current index: {index} ({data.events[index].type})
 
 
             <ReplayState state={state} />

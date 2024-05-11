@@ -18,8 +18,9 @@ export default async function PlayReplay({ params }: { params: { link: string } 
 
             {/*JSON.stringify(data)*/}
 
-            <ReplayView data={replayData} />
-
+            <div>
+                <ReplayView data={replayData} />
+            </div>
         </div>
     )
 }
