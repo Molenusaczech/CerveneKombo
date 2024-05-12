@@ -33,6 +33,10 @@ type replayState = {
     players: replayPlayer[],
     playerTurn: number,
     rolledEffect: replayEffect | null,
+    message: string | null,
+    targetPlayerIndex: number | null,
+    targetCardIndex: number | null,
+    round: number,
 }
 
 export type { replayState, replayPlayer, replayWeapon, replayEffect }

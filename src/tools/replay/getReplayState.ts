@@ -33,6 +33,10 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
         }),
         playerTurn: 0,
         rolledEffect: null,
+        message: null,
+        targetPlayerIndex: null,
+        targetCardIndex: null,
+        round: -1,
     }
 
     for (let i = 0; i <= index; i++) {
@@ -61,7 +65,7 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 state.players[1].actions = 4;
 
                 state.rolledEffect = null;
-                //state.playerTurn = 0;
+                state.round++;
                 break;
             case "WEAPON_EQUIPPED":
                 state.playerTurn = event.initiator as number;

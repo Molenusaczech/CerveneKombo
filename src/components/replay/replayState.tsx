@@ -6,6 +6,7 @@ import colorMap from "@/data/swo/colorMap";
 import effectMap from "@/data/swo/effectMap";
 import ReplayHero from "./replayHero";
 import ReplayWeapon from "./replayWeapon";
+import DaytimeVerticalImg from "../images/daytimeVerticalImg";
 
 export default function ReplayState(props: {
     state: replayState
@@ -50,6 +51,10 @@ export default function ReplayState(props: {
                                 isSelected={true}
                                 width={300}
                                 isOnTurn={true}
+                            />
+                            <DaytimeVerticalImg
+                                time={state.round}
+                                isFirst={state.playerTurn === 0}
                             />
                         </div>
                         <div>
