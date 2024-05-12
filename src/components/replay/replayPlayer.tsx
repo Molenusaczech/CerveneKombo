@@ -8,11 +8,20 @@ export default function ReplayPlayer(
         player: replayPlayer
         isOnTurn: boolean
         weaponIndex: number
+        isHeroTarget: boolean
+        weaponTarget: (number | null)
     }
 ) {
 
     const player = props.player;
     const isOnTurn = props.isOnTurn;
+
+    let weaponTarget = -1;
+
+    if (props.isHeroTarget) {
+        weaponTarget = props.weaponTarget ?? -1;
+        weaponTarget--;
+    }
 
     return (
         <div>
@@ -20,11 +29,12 @@ export default function ReplayPlayer(
             <div className="grid grid-cols-5">
                 {player.weapons.map((weapon, index) => {
                     return (
-                        <ReplayWeapon 
-                        weapon={weapon} 
-                        key={index} 
-                        isSelected={isOnTurn && index === props.weaponIndex}
-                        isOnTurn={isOnTurn}
+                        <ReplayWeapon
+                            weapon={weapon}
+                            key={index}
+                            isSelected={isOnTurn && index === props.weaponIndex}
+                            isOnTurn={isOnTurn}
+                            isTarget={index === weaponTarget}
                         />
                     )
                 })}

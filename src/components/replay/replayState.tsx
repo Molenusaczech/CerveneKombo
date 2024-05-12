@@ -37,6 +37,8 @@ export default function ReplayState(props: {
                         player={state.players[0]}
                         isOnTurn={state.playerTurn === 0}
                         weaponIndex={state.players[state.playerTurn].selectedWeaponIndex}
+                        isHeroTarget={state.targetPlayerIndex === 0}
+                        weaponTarget={state.targetCardIndex}
                     />
                 </div>
 
@@ -47,6 +49,7 @@ export default function ReplayState(props: {
                             <ReplayHero
                                 player={state.players[0]}
                                 isOnTurn={state.playerTurn === 0}
+                                isTarget={state.targetPlayerIndex === 0 && state.targetCardIndex === 0}
                             />
                         </div>
                         <div>
@@ -65,6 +68,7 @@ export default function ReplayState(props: {
                             <ReplayHero
                                 player={state.players[1]}
                                 isOnTurn={state.playerTurn === 1}
+                                isTarget={state.targetPlayerIndex === 1 && state.targetCardIndex === 0}
                             />
 
                         </div>
@@ -77,9 +81,11 @@ export default function ReplayState(props: {
                         player={state.players[1]}
                         isOnTurn={state.playerTurn === 1}
                         weaponIndex={state.players[state.playerTurn].selectedWeaponIndex}
+                        isHeroTarget={state.targetPlayerIndex === 1}
+                        weaponTarget={state.targetCardIndex}
                     />
                 </div>
-                {JSON.stringify(state.rolledEffect)}
+                {state.targetPlayerIndex} {state.targetCardIndex}
             </div>
         </>
     )

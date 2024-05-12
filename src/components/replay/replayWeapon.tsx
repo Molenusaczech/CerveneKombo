@@ -10,7 +10,8 @@ export default function ReplayWeapon(
         weapon: replayWeapon,
         isSelected: boolean,
         width?: number,
-        isOnTurn: boolean
+        isOnTurn: boolean,
+        isTarget?: boolean
     }
 ) {
     const weapon = props.weapon;
@@ -18,6 +19,8 @@ export default function ReplayWeapon(
     const weaponWidth = props.width ?? 200;
 
     const isOnTurn = props.isOnTurn;
+
+    const isTarget = props.isTarget;
 
     return (
         <div style={{
@@ -51,6 +54,18 @@ export default function ReplayWeapon(
                     position: "absolute",
                     opacity: "0.8",
                     bottom: "0",
+                }}
+            />}
+
+            {isTarget && <Image
+                src={"/aim.png"}
+                alt="target"
+                height={weaponWidth * 1.2}
+                width={weaponWidth * 1}
+                style={{
+                    position: "absolute",
+                    opacity: "0.8",
+                    bottom: "-20%",
                 }}
             />}
 

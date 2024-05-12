@@ -52,6 +52,9 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
             })
         }
 
+        state.targetCardIndex = null;
+        state.targetPlayerIndex = null;
+
         switch (event.type) {
             case "TURN_STARTED":
                 state.players[0].hp = event.data.hero_0_health;
@@ -102,6 +105,9 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 }
                 state.players[event.data.target_player_index as number].hp -= event.data.total_power;
                 
+                state.targetPlayerIndex = event.data.target_player_index;
+                state.targetCardIndex = 0;
+
                 // check combos
 
                 if (event.data.effect == "COMBO") {
@@ -139,6 +145,9 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                     type: event.data.effect,
                 }
 
+                state.targetPlayerIndex = event.data.target_player_index;
+                state.targetCardIndex = event.data.target_weapon_index + 1;
+
                 // check combos
 
                 if (event.data.effect == "COMBO") {
@@ -173,6 +182,9 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                     color: null,
                     type: event.data.effect,
                 }
+
+                state.targetPlayerIndex = event.data.target_player_index;
+                state.targetCardIndex = event.data.target_weapon_index + 1;
                 break;
             case "WEAPON_REPAIRING":
                 state.playerTurn = event.initiator as number;

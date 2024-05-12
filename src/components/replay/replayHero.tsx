@@ -2,20 +2,43 @@ import { replayPlayer } from "@/types/replay/replayState";
 import Card from "../card";
 import ProgressBar from "@ramonak/react-progress-bar";
 
+import Image from "next/image";
+
 export default function ReplayHero(props: {
     player: replayPlayer,
-    isOnTurn: boolean
+    isOnTurn: boolean,
+    isTarget?: boolean
 }) {
 
     const player = props.player;
+    const isTarget = props.isTarget;
 
     return (
         <div>
-            <Card
-                data={player.hero}
-                height={300}
-                gray={props.isOnTurn ? false : true}
-            />
+            <div style={{
+                position: "relative",
+                height: 300,
+            }}>
+                <Card
+                    data={player.hero}
+                    height={300}
+                    gray={props.isOnTurn ? false : true}
+                />
+
+                {isTarget && <Image
+                    src={"/aim.png"}
+                    alt="target"
+                    height={300 * 1}
+                    width={300 * 0.7}
+                    style={{
+                        position: "absolute",
+                        opacity: "0.8",
+                        bottom: "0%",
+                    }}
+                />
+                }
+            </div>
+
             <div>
                 <ProgressBar
                     completed={(player.hp / player.max_hp) * 100}
