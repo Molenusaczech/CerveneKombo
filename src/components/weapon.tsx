@@ -76,7 +76,8 @@ function Label(props: {
 export default function WeaponCard(props: { 
     data: weaponRarity | undefined, 
     width?: number, 
-    height?: number 
+    height?: number,
+    gray?: boolean
 }) {
 
     if (props.data == undefined) return (<></>);
@@ -84,6 +85,8 @@ export default function WeaponCard(props: {
     let type = weaponTypeData[props.data.cid];
 
     let bonuses = props.data.effects;
+
+    const gray = props.gray ?? false;
 
     let scale = 1;
 
@@ -109,6 +112,9 @@ export default function WeaponCard(props: {
                 width={640 * scale}
                 height={735 * scale}
                 priority
+                style={{
+                    filter: gray ? "grayscale(100%)" : "none"
+                }}
             />
 
             {/*Main Nums*/}

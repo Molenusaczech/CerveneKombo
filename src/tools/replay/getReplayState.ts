@@ -121,6 +121,24 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 break;
             case "STASHED_EFFECT_DESTROYED":
                 state.players[event.data.target_player_index].weapons[event.data.target_weapon_index].stashedEffect = null;
+                
+                state.rolledEffect = {
+                    value: event.data.total_power,
+                    durability: null,
+                    color: null,
+                    type: event.data.effect,
+                }
+
+                // check combos
+
+                if (event.data.effect == "COMBO") {
+                    state.players[invertPlayerIndex(event.data.target_player_index)].weapons.forEach((weapon, index) => {
+                        if (weapon.stashedEffect !== null && weapon.stashedEffect.type == "COMBO") {
+                            state.players[invertPlayerIndex(event.data.target_player_index)].weapons[index].stashedEffect = null;
+                        }
+                    })
+                }
+
                 break;
             case "WEAPON_UNSTASHED":
                 state.players[event.initiator as number].weapons[event.data.weapon_index].stashedEffect = null;

@@ -39,17 +39,24 @@ export default function ReplayState(props: {
 
                     <div className="grid grid-cols-3">
                         <div>
-                            <ReplayHero player={state.players[0]} />
+                            <ReplayHero
+                                player={state.players[0]}
+                                isOnTurn={state.playerTurn === 0}
+                            />
                         </div>
                         <div>
                             <ReplayWeapon
                                 weapon={selectedWeapon}
                                 isSelected={true}
                                 width={300}
+                                isOnTurn={true}
                             />
                         </div>
                         <div>
-                            <ReplayHero player={state.players[1]} />
+                            <ReplayHero
+                                player={state.players[1]}
+                                isOnTurn={state.playerTurn === 1}
+                            />
 
                         </div>
                     </div>

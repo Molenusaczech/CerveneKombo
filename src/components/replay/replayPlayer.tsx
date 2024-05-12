@@ -24,13 +24,11 @@ export default function ReplayPlayer(
                         weapon={weapon} 
                         key={index} 
                         isSelected={isOnTurn && index === props.weaponIndex}
+                        isOnTurn={isOnTurn}
                         />
                     )
                 })}
 
-            </div>
-            <div>
-                <div>{props.isOnTurn ? "Na tahu" : "Není na tahu"}</div>
             </div>
         </div>
     )

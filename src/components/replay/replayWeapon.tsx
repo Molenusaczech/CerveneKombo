@@ -9,12 +9,15 @@ export default function ReplayWeapon(
     props: {
         weapon: replayWeapon,
         isSelected: boolean,
-        width?: number
+        width?: number,
+        isOnTurn: boolean
     }
 ) {
     const weapon = props.weapon;
 
     const weaponWidth = props.width ?? 200;
+
+    const isOnTurn = props.isOnTurn;
 
     return (
         <div style={{
@@ -25,7 +28,7 @@ export default function ReplayWeapon(
             <div style={{
                 opacity: weapon.stashedEffect !== null ? "0.5" : "1"
             }}>
-                <Card data={weapon.card} width={weaponWidth} />
+                <Card data={weapon.card} width={weaponWidth} gray={!isOnTurn}/>
             </div>
             {weapon.broken == "BROKEN" && <Image
                 src={"/broken.png"}

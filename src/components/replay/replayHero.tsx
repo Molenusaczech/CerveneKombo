@@ -3,14 +3,19 @@ import Card from "../card";
 import ProgressBar from "@ramonak/react-progress-bar";
 
 export default function ReplayHero(props: {
-    player: replayPlayer
+    player: replayPlayer,
+    isOnTurn: boolean
 }) {
 
     const player = props.player;
 
     return (
         <div>
-            <Card data={player.hero} height={300} />
+            <Card
+                data={player.hero}
+                height={300}
+                gray={props.isOnTurn ? false : true}
+            />
             <div>
                 <ProgressBar
                     completed={(player.hp / player.max_hp) * 100}
