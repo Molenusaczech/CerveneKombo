@@ -42,8 +42,6 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
     for (let i = 0; i <= index; i++) {
         const event = replay.events[i];
 
-        //state.rolledEffect = null;
-
         // repair weapons
 
         if (event.initiator !== null && state.playerTurn !== null && state.playerTurn !== event.initiator) {
@@ -120,7 +118,15 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 //state.players[state.playerTurn].selectedWeaponIndex = 0;
                 break;
             case "WEAPON_ROLL_STASHED":
-                state.players[state.playerTurn].weapons[state.players[state.playerTurn].selectedWeaponIndex].stashedEffect = state.rolledEffect;
+                if (state.rolledEffect === null) {
+                    throw new Error("No rolled effect");
+                }
+                state.players[state.playerTurn].weapons[state.players[state.playerTurn].selectedWeaponIndex].stashedEffect = {
+                    value: state.rolledEffect?.value,
+                    durability: state.rolledEffect?.durability,
+                    color: state.rolledEffect?.color,
+                    type: state.rolledEffect?.type,
+                };
                 state.rolledEffect = null;
                 break;
             case "STASHED_EFFECT_DESTROYED":

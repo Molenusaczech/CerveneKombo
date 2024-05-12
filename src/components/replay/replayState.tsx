@@ -18,12 +18,16 @@ export default function ReplayState(props: {
         ...state.players[state.playerTurn].weapons[state.players[state.playerTurn].selectedWeaponIndex]
     }
 
-    if (state.rolledEffect !== null) selectedWeapon.stashedEffect = {
-        value: state.rolledEffect.value,
-        durability: state.rolledEffect.durability,
-        type: state.rolledEffect.type,
-        color: state.rolledEffect.color,
-    };
+    if (state.rolledEffect !== null) {
+        selectedWeapon.stashedEffect = {
+            value: state.rolledEffect.value,
+            durability: state.rolledEffect.durability,
+            type: state.rolledEffect.type,
+            color: state.rolledEffect.color,
+        }
+    } else {
+        selectedWeapon.stashedEffect = null;
+    }
 
     return (
         <>
@@ -75,6 +79,7 @@ export default function ReplayState(props: {
                         weaponIndex={state.players[state.playerTurn].selectedWeaponIndex}
                     />
                 </div>
+                {JSON.stringify(state.rolledEffect)}
             </div>
         </>
     )
