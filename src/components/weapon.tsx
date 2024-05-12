@@ -113,7 +113,7 @@ export default function WeaponCard(props: {
                 height={735 * scale}
                 priority
                 style={{
-                    filter: gray ? "grayscale(100%)" : "none"
+                    filter: gray ? "grayscale(75%)" : "none"
                 }}
             />
 
