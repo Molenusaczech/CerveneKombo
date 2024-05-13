@@ -3,7 +3,7 @@ import { weaponRarity } from "../weaponRarity"
 import { swoColor } from "./color"
 import { effectType } from "./effectType"
 
-type brokenStatus = "BROKEN" | "NOT_BROKEN" | "FIXING" | "CURSED"
+type brokenStatus = "BROKEN" | "NOT_BROKEN" | "FIXING" | "CURSED" | "UNCURSING"
 
 type replayEffect = {
     type: effectType

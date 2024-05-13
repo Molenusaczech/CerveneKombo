@@ -13,13 +13,19 @@ type eventType = "GAME_CREATED" |
 "STASHED_EFFECT_DESTROYED" |  // done
 "STASHED_EFFECT_OBLITERATED" |
 "WEAPON_DESTROYED" | // done
-"WEAPON_NOT_DESTROYED" | 
-"WEAPON_OBLITERATED" |
+"WEAPON_NOT_DESTROYED" |  // done
+"WEAPON_OBLITERATED" | // done
 "DISCARD_PHASE_BEGINS" | // done i think so
 "WEAPON_UNSTASHED" | //done
 "ATTACK_CANCELLED" | // done
 "WEAPON_REPAIRING" | // done
-"SHIELDS_USED" //done 
+"SHIELDS_USED" | //done 
+"HERO_WAS_DRAINED" |//done
+"WEAPON_NOT_CURSED" |//done
+"WEAPON_CURSED" | //done
+"STASHED_EFFECT_OBLITERATED" | //done
+"ATTACK_TRAPPED" |
+"COUNTER_ATTACK_USED"
 
 type event = {
     created: number,

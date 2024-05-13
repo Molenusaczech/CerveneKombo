@@ -108,6 +108,10 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                     state.players[event.data.target_player_index as number].hp -= event.data.total_power;
                 }
 
+                if (event.data.effect == "NIGHT_ATTACK" && i !== index) {
+                    state.players[invertPlayerIndex(event.data.target_player_index)].energy -= event.data.cost;
+                }
+
                 state.targetPlayerIndex = event.data.target_player_index;
                 state.targetCardIndex = 0;
 
@@ -164,7 +168,8 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
 
                 break;
             case "WEAPON_UNSTASHED":
-                state.players[event.initiator as number].weapons[event.data.weapon_index].stashedEffect = null;
+                state.playerTurn = event.initiator as number;
+                state.players[state.playerTurn].weapons[event.data.weapon_index].stashedEffect = null;
                 break;
             case "ATTACK_CANCELLED":
                 state.rolledEffect = null;
@@ -211,6 +216,127 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                     color: null,
                     type: "DEFENSE",
                 }
+                break;
+            case "HERO_WAS_DRAINED":
+                state.rolledEffect = {
+                    value: event.data.total_power,
+                    durability: null,
+                    color: null,
+                    type: event.data.effect,
+                }
+
+                if (i !== index) {
+                    state.players[event.data.target_player_index as number].hp -= event.data.total_power;
+                    state.players[invertPlayerIndex(event.data.target_player_index)].energy += event.data.total_power;
+                }
+
+                state.targetPlayerIndex = event.data.target_player_index;
+                state.targetCardIndex = 0;
+                break;
+            case "WEAPON_NOT_CURSED":
+                state.rolledEffect = {
+                    value: event.data.total_power,
+                    durability: null,
+                    color: null,
+                    type: event.data.effect,
+                };
+
+                state.targetPlayerIndex = event.data.target_player_index;
+                state.targetCardIndex = event.data.target_weapon_index + 1;
+                break;
+            case "WEAPON_NOT_DESTROYED":
+                state.rolledEffect = {
+                    value: event.data.total_power,
+                    durability: null,
+                    color: null,
+                    type: event.data.effect,
+                };
+
+                state.targetPlayerIndex = event.data.target_player_index;
+                state.targetCardIndex = event.data.target_weapon_index + 1;
+                break;
+            case "WEAPON_NOT_DESTROYED":
+                state.rolledEffect = {
+                    value: event.data.total_power,
+                    durability: null,
+                    color: null,
+                    type: event.data.effect,
+                };
+
+                state.targetPlayerIndex = event.data.target_player_index;
+                state.targetCardIndex = event.data.target_weapon_index + 1;
+                break;
+            case "WEAPON_CURSED":
+
+                if (i !== index) {
+                    state.players[event.data.target_player_index].weapons[event.data.target_weapon_index].broken = "CURSED";
+                }
+
+                state.rolledEffect = {
+                    value: event.data.total_power,
+                    durability: null,
+                    color: null,
+                    type: event.data.effect,
+                };
+
+                state.targetPlayerIndex = event.data.target_player_index;
+                state.targetCardIndex = event.data.target_weapon_index + 1;
+                break;
+            case "WEAPON_OBLITERATED":
+                if (i !== index) {
+                    state.players[event.data.target_player_index].weapons[event.data.target_weapon_index].broken = "BROKEN";
+                    state.players[invertPlayerIndex(event.data.target_player_index)].hp += event.data.total_power;
+                }
+
+                state.rolledEffect = {
+                    value: event.data.total_power,
+                    durability: null,
+                    color: null,
+                    type: event.data.effect,
+                };
+
+                state.targetPlayerIndex = event.data.target_player_index;
+                state.targetCardIndex = event.data.target_weapon_index + 1;
+                break;
+            case "STASHED_EFFECT_OBLITERATED":
+                if (i !== index) {
+                    state.players[event.data.target_player_index].weapons[event.data.target_weapon_index].stashedEffect = null;
+                    state.players[invertPlayerIndex(event.data.target_player_index)].hp += event.data.total_power;
+                }
+
+                state.rolledEffect = {
+                    value: event.data.total_power,
+                    durability: null,
+                    color: null,
+                    type: event.data.effect,
+                };
+
+                state.targetPlayerIndex = event.data.target_player_index;
+                state.targetCardIndex = event.data.target_weapon_index + 1;
+                break;
+            case "COUNTER_ATTACK_USED":
+                state.rolledEffect = {
+                    value: event.data.total_power,
+                    durability: null,
+                    color: null,
+                    type: event.data.effect,
+                }
+
+                if (i !== index) {
+                    state.players[invertPlayerIndex(event.initiator as number)].hp -= event.data.total_power;
+                }
+
+                state.targetPlayerIndex = event.data.target_player_index;
+                state.targetCardIndex = 0;
+
+                // remove traps
+
+                state.players[event.initiator as number].weapons.forEach((weapon, index) => {
+                    if (weapon.stashedEffect !== null && weapon.stashedEffect.type == "TRAP") {
+                        state.players[event.initiator as number].weapons[index].stashedEffect = null;
+                    }
+                })
+
                 break;
         }
 

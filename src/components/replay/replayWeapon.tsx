@@ -69,6 +69,31 @@ export default function ReplayWeapon(
                 }}
             />}
 
+            {weapon.broken == "CURSED" && <Image
+                src={"/cursed.png"}
+                alt="cursed"
+                height={weaponWidth * 1.1}
+                width={weaponWidth * 1}
+                style={{
+                    position: "absolute",
+                    opacity: "1",
+                    bottom: "0",
+                }}
+            />}
+
+            {weapon.broken == "UNCURSING" && <Image
+                src={"/uncursing.png"}
+                alt="uncursing"
+                height={weaponWidth * 1.1}
+                width={weaponWidth * 1}
+
+                style={{
+                    position: "absolute",
+                    opacity: "1",
+                    bottom: "0",
+                }}
+            />}
+
             <div>
                 {weapon.stashedEffect !== null && weapon.stashedEffect &&
                     <div style={{
