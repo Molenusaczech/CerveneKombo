@@ -8,8 +8,8 @@ type gameStatHero = {
 
 type gameStatWeapon = {
     family_name: {
-        CZ?: string,
-        EN?: string,
+        cs?: string,
+        en?: string,
     },
     name: string,
     plus_minus: number,

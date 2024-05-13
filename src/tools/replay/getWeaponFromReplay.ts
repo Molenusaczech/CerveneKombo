@@ -5,6 +5,9 @@ import { effectName } from "@/types/effects";
 import effectMap from "@/data/swo/effectMap";
 import getWeaponTypeFromBonuses from "./getWeaponTypeFromBonuses";
 
+import { weaponTypeData } from "@/data/weaponTypeData";
+import { weaponCardType } from "@/types/weaponType";
+
 function getWeaponBonuses(
     swoEffects: gameStateWeaponAttack[]
 ): (effectName | null)[] {
@@ -24,17 +27,23 @@ export default function getWeaponFromReplay(
 ): weaponRarity {
     
 
-    const bonuses = getWeaponBonuses(weapon.attacks);
+    //const bonuses = getWeaponBonuses(weapon.attacks);
 
     //console.log(bonuses);
 
-    const weaponType = getWeaponTypeFromBonuses(bonuses);
+    //const weaponType = getWeaponTypeFromBonuses(bonuses);
 
     //console.log(weaponType);
 
     const gameStatWeaponData = gameStatData.weapons[weapon.db_id];
 
-    //console.log(gameStatWeaponData);
+    const weaponType = Object.values(weaponTypeData).filter((weaponType: weaponCardType) => {
+        //console.log(weaponType.cname.CS);
+        //console.log(gameStatData.weapons[weapon.db_id].family_name.cs);
+        return gameStatData.weapons[weapon.db_id].family_name.cs === weaponType.cname.CS;
+    })[0];
+
+    //console.log(weaponType);
 
     const final: weaponRarity = {
         t: "weapon",
