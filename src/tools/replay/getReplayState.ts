@@ -44,9 +44,13 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
 
         // repair weapons
 
+        if (event.type == "TURN_STARTED") {
+            event.initiator = 0;
+        }
+
         if (event.initiator !== null && state.playerTurn !== null && state.playerTurn !== event.initiator) {
             state.players[event.initiator].weapons.forEach((weapon, index) => {
-                if (weapon.broken == "FIXING") {
+                if (weapon.broken == "FIXING" || weapon.broken == "UNCURSING") {
                     state.players[event.initiator as number].weapons[index].broken = "NOT_BROKEN";
                 }
             })
@@ -67,6 +71,7 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
 
                 state.rolledEffect = null;
                 state.round++;
+                state.playerTurn = 0;
                 break;
             case "WEAPON_EQUIPPED":
                 state.playerTurn = event.initiator as number;
@@ -338,6 +343,14 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 })
 
                 break;
+            case "WEAPON_UNCURSING":
+                state.playerTurn = event.initiator as number;
+                state.players[state.playerTurn].hp -= 5;
+                state.players[state.playerTurn].weapons.forEach((weapon, index) => {
+                    if (weapon.broken == "CURSED") {
+                        state.players[state.playerTurn].weapons[index].broken = "UNCURSING";
+                    }
+                })
         }
 
     }
