@@ -103,8 +103,11 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                     color: null,
                     type: event.data.effect,
                 }
-                state.players[event.data.target_player_index as number].hp -= event.data.total_power;
-                
+
+                if (i !== index) {
+                    state.players[event.data.target_player_index as number].hp -= event.data.total_power;
+                }
+
                 state.targetPlayerIndex = event.data.target_player_index;
                 state.targetCardIndex = 0;
 
@@ -117,7 +120,7 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                         }
                     })
                 }
-                
+
                 break;
             case "DISCARD_PHASE_BEGINS":
                 state.rolledEffect = null;
@@ -136,8 +139,9 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 state.rolledEffect = null;
                 break;
             case "STASHED_EFFECT_DESTROYED":
-                state.players[event.data.target_player_index].weapons[event.data.target_weapon_index].stashedEffect = null;
-                
+                if (i !== index) {
+                    state.players[event.data.target_player_index].weapons[event.data.target_weapon_index].stashedEffect = null;
+                }
                 state.rolledEffect = {
                     value: event.data.total_power,
                     durability: null,
@@ -175,7 +179,9 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 state.players[event.initiator as number].hp = event.data.new_value;
                 break;
             case "WEAPON_DESTROYED":
-                state.players[event.data.target_player_index].weapons[event.data.target_weapon_index].broken = "BROKEN";
+                if (i !== index) {
+                    state.players[event.data.target_player_index].weapons[event.data.target_weapon_index].broken = "BROKEN";
+                }
                 state.rolledEffect = {
                     value: event.data.total_power,
                     durability: null,
@@ -206,7 +212,7 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                     type: "DEFENSE",
                 }
                 break;
-        }   
+        }
 
     }
 
