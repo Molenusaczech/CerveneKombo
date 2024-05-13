@@ -351,6 +351,18 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                         state.players[state.playerTurn].weapons[index].broken = "UNCURSING";
                     }
                 })
+                break;
+            case "MECHANIC_REPAIRING":
+                if (i !== index) state.players[event.data.self_player_index].weapons[event.data.target_weapon_index].broken = "FIXING";
+                state.rolledEffect = {
+                    value: event.data.total_power,
+                    durability: null,
+                    color: null,
+                    type: "MECHANICS_SUPERACTION",
+                };
+                state.targetPlayerIndex = event.data.self_player_index;
+                state.targetCardIndex = event.data.target_weapon_index + 1;
+                break;
         }
 
     }

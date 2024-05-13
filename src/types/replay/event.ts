@@ -26,7 +26,8 @@ type eventType = "GAME_CREATED" |
 "STASHED_EFFECT_OBLITERATED" | //done
 "ATTACK_TRAPPED" |
 "COUNTER_ATTACK_USED" |
-"WEAPON_UNCURSING"
+"WEAPON_UNCURSING" |
+"MECHANIC_REPAIRING"
 
 type event = {
     created: number,
