@@ -117,6 +117,14 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                     state.players[invertPlayerIndex(event.data.target_player_index)].energy -= event.data.cost;
                 }
 
+                if (event.data.effect == "CUMULUS" && i !== index) {
+                    state.players[invertPlayerIndex(event.data.target_player_index)].weapons.forEach((weapon, index) => {
+                        if (weapon.stashedEffect !== null && weapon.stashedEffect.type == "CUMULUS") {
+                            state.players[invertPlayerIndex(event.data.target_player_index)].weapons[index].stashedEffect = null;
+                        }
+                    })
+                }
+
                 state.targetPlayerIndex = event.data.target_player_index;
                 state.targetCardIndex = 0;
 
@@ -362,6 +370,25 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 };
                 state.targetPlayerIndex = event.data.self_player_index;
                 state.targetCardIndex = event.data.target_weapon_index + 1;
+                break;
+            case "USED_BATTLE_TRICK":
+                state.rolledEffect = {
+                    value: event.data.hp_lost,
+                    durability: null,
+                    color: null,
+                    type: "BATTLE_TRICK",
+                }
+
+                state.playerTurn = event.initiator as number;
+
+                state.targetPlayerIndex = event.data.target_player_index;
+                state.targetCardIndex = 0;
+
+                if (i !== index) {
+                    state.players[state.playerTurn].hp += event.data.hp_lost;
+                    state.players[state.playerTurn].actions += 1;
+                    state.players[state.playerTurn].energy += state.players[state.playerTurn].weapons[state.players[state.playerTurn].selectedWeaponIndex].cost;
+                }
                 break;
         }
 

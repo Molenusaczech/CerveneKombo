@@ -10,6 +10,7 @@ type replayEffect = {
     value: number,
     durability: number | null,
     color: swoColor | null,
+    charge?: number | null,
 }
 
 type replayWeapon = {
