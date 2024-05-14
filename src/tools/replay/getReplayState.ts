@@ -169,6 +169,16 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 state.targetPlayerIndex = event.data.target_player_index;
                 state.targetCardIndex = event.data.target_weapon_index + 1;
 
+                // check cumulus
+
+                if (event.data.effect == "CUMULUS" && i !== index) {
+                    state.players[invertPlayerIndex(event.data.target_player_index)].weapons.forEach((weapon, index) => {
+                        if (weapon.stashedEffect !== null && weapon.stashedEffect.type == "CUMULUS") {
+                            state.players[invertPlayerIndex(event.data.target_player_index)].weapons[index].stashedEffect = null;
+                        }
+                    })
+                }
+
                 // check combos
 
                 if (event.data.effect == "COMBO") {
@@ -209,6 +219,27 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
 
                 state.targetPlayerIndex = event.data.target_player_index;
                 state.targetCardIndex = event.data.target_weapon_index + 1;
+
+                // check cumulus
+
+                if (event.data.effect == "CUMULUS" && i !== index) {
+                    state.players[invertPlayerIndex(event.data.target_player_index)].weapons.forEach((weapon, index) => {
+                        if (weapon.stashedEffect !== null && weapon.stashedEffect.type == "CUMULUS") {
+                            state.players[invertPlayerIndex(event.data.target_player_index)].weapons[index].stashedEffect = null;
+                        }
+                    })
+                }
+
+                // check combos
+
+                if (event.data.effect == "COMBO") {
+                    state.players[invertPlayerIndex(event.data.target_player_index)].weapons.forEach((weapon, index) => {
+                        if (weapon.stashedEffect !== null && weapon.stashedEffect.type == "COMBO") {
+                            state.players[invertPlayerIndex(event.data.target_player_index)].weapons[index].stashedEffect = null;
+                        }
+                    })
+                }
+
                 break;
             case "WEAPON_REPAIRING":
                 state.playerTurn = event.initiator as number;
