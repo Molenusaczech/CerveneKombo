@@ -6,9 +6,8 @@ import effectMap from "@/data/swo/effectMap";
 import { effectType } from "@/types/replay/effectType";
 import { stat } from "fs";
 
-function invertPlayerIndex(index: number): number {
-    return index === 0 ? 1 : 0;
-}
+import  invertPlayerIndex  from "./invertPlayerIndex";
+import getShieldIndexes from "./getShieldIndexes";
 
 export default function getReplayState(replay: replay, decks: deck[], index: number): replayState {
 
@@ -249,11 +248,17 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
                 state.players[state.playerTurn].energy -= state.players[state.playerTurn].weapons[event.data.weapon_index].cost;
                 break;
             case "SHIELDS_USED":
-                state.players[event.initiator as number].weapons.forEach((weapon, index) => {
+
+                getShieldIndexes(replay, state, i, event.data.base)?.forEach((shieldIndex) => {
+                    console.log(shieldIndex);
+                    state.players[event.initiator as number].weapons[shieldIndex].stashedEffect = null;
+                })
+
+                /*state.players[event.initiator as number].weapons.forEach((weapon, index) => {
                     if (weapon.stashedEffect !== null && weapon.stashedEffect.type == "DEFENSE" && weapon.stashedEffect.value == event.data.base) {
                         state.players[event.initiator as number].weapons[index].stashedEffect = null;
                     }
-                })
+                })*/
                 state.rolledEffect = {
                     value: event.data.total,
                     durability: null,

@@ -29,7 +29,8 @@ type eventType = "GAME_CREATED" |
 "WEAPON_UNCURSING" |
 "MECHANIC_REPAIRING" |
 "USED_BATTLE_TRICK" |
-"SUDDEN_DEATH"
+"SUDDEN_DEATH" |
+"STASHED_EFFECT_CURSED"
 
 type event = {
     created: number,
