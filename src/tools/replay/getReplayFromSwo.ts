@@ -3,6 +3,7 @@ import { gameState } from '@/types/replay/gameState';
 import { replay } from '@/types/replay/replay';
 import { event } from '@/types/replay/event';
 import { JSDOM } from 'jsdom';
+import spectateLinkChecker from './spectateLinkChecker';
 
 function getJsonFromDeclaration(declaration: Element | undefined, index: number = 0) {
     const scriptContent = declaration?.textContent?.split("\n")[index].split("JSON.parse(")[1].split(")")[0];
@@ -16,6 +17,11 @@ function getJsonFromDeclaration(declaration: Element | undefined, index: number 
 }
 
 export default async function getReplayFromSwo(link: string): Promise<replay> {
+    
+    if (!spectateLinkChecker(decodeURIComponent(link))) {
+        throw new Error("This is not a valid link");
+    }
+    
     const page = await fetch(decodeURIComponent(link));
 
     if (!page.ok) {

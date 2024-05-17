@@ -85,7 +85,6 @@ export default function ReplayState(props: {
                         weaponTarget={state.targetCardIndex}
                     />
                 </div>
-                {state.playerTurn}
             </div>
         </>
     )

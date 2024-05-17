@@ -26,7 +26,7 @@ export default function ReplayView(props: {
     const state = getReplayState(data, decks, index);
 
     return (
-        <>
+        <div className="p-1">
             {/*<div className="grid grid-cols-6">
 
                 <Card data={decks[0].hero} height={400} />
@@ -57,12 +57,13 @@ export default function ReplayView(props: {
 
             </div>*/}
 
-            <Button onClick={() => setIndex(index - 1)} variant="contained" disabled={index == 0}>Previous</Button>
-            <Button onClick={() => setIndex(index + 1)} variant="contained" disabled={data.events.length <= index + 1}>Next</Button>
-            Current index: {index} ({data.events[index].type})
+            <Button onClick={() => setIndex(index - 1)} variant="contained" disabled={index == 0}>⬅️</Button>
+            <Button onClick={() => setIndex(index + 1)} variant="contained" disabled={data.events.length <= index + 1}>➡️</Button>
+            Aktuální akce: {index}. ({data.events[index].type})
 
-
-            <ReplayState state={state} />
-        </>
+            <div className="p-2">
+                <ReplayState state={state} />
+            </div>
+        </div>
     )
 }
