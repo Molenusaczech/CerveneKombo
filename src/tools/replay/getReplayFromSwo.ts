@@ -48,6 +48,8 @@ export default async function getReplayFromSwo(link: string): Promise<replay> {
         console.log(json);
     }*/
 
+    console.log("Got replay data for link ", link)
+
     return {
         gameStatData: gameStatData,
         gameState: gameState,

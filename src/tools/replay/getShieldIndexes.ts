@@ -40,7 +40,7 @@ export default function getShieldIndexes(
         }
     });
 
-    console.log(shields);
+    //console.log(shields);
 
     /*if (shields.filter(s => s == total).length === 1) {
         return [shields.indexOf(total)];
@@ -95,7 +95,7 @@ export default function getShieldIndexes(
         };
     });
 
-    console.log(permutations);
+    //console.log(permutations);
 
     // clean up duplicates and sort them
 
@@ -108,7 +108,7 @@ export default function getShieldIndexes(
         }
     });
 
-    console.log(finalPermutations);
+    //console.log(finalPermutations);
 
     if (finalPermutations.length == 0) {
         throw new Error("No valid shield combination found, this is 99% a bug in the code, please report it.");
@@ -136,7 +136,7 @@ export default function getShieldIndexes(
 
         if (curEvent.initiator == invertPlayerIndex(state.playerTurn)) {
             if (curEvent.type === "WEAPON_EQUIPPED") {
-                console.log("WEAPON_EQUIPPED", curEvent.data.weapon_index, i);
+                //console.log("WEAPON_EQUIPPED", curEvent.data.weapon_index, i);
                 const weaponIndex = curEvent.data.weapon_index
 
                 if (possibleShields[weaponIndex] === 0) {
@@ -160,7 +160,7 @@ export default function getShieldIndexes(
         }
     }
 
-    console.log(possibleShields);
+    //console.log(possibleShields);
 
     const validPermutations: number[][] = [];
     const validPermutationsIndexes: number[] = [];
@@ -179,17 +179,17 @@ export default function getShieldIndexes(
     });
 
     if (validPermutations.length === 1) {
-        console.log("only one valid permutation");
-        console.log(validPermutations[0]);
+        //console.log("only one valid permutation");
+        //console.log(validPermutations[0]);
         return validPermutations[0];
     }
 
     if (validPermutations.length === 0) {
-        console.log("no valid permutations");
-        console.log(permutations);
+        //console.log("no valid permutations");
+        //console.log(permutations);
         return permutations[0];
     }
 
-    console.log(validPermutations);
+    //console.log(validPermutations);
     return validPermutations[indexOfMax(validPermutationsIndexes)];
 }

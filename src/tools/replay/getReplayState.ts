@@ -250,7 +250,7 @@ export default function getReplayState(replay: replay, decks: deck[], index: num
             case "SHIELDS_USED":
 
                 getShieldIndexes(replay, state, i, event.data.base)?.forEach((shieldIndex) => {
-                    console.log(shieldIndex);
+                    //console.log(shieldIndex);
                     state.players[event.initiator as number].weapons[shieldIndex].stashedEffect = null;
                 })
 

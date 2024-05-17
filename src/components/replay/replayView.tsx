@@ -17,7 +17,7 @@ export default function ReplayView(props: {
 
     const data = props.data;
 
-    console.log(data)
+    //console.log(data)
 
     const decks = GetDecksFromReplay(data);
 
