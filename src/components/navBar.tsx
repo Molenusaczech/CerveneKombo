@@ -38,6 +38,10 @@ const pages = [
         link: '/edit'
     },
     {
+        name: 'Replay',
+        link: '/replay'
+    },
+    {
         name: 'Github',
         link: 'https://github.com/Molenusaczech/CerveneKombo'
     }

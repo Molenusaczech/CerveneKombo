@@ -89,7 +89,12 @@ function Label(props: {
 
 // Positioning based of https://gitlab.com/OndrejSkalicka/scratch-wars-online/-/blob/master/swo/render/hero.py?ref_type=heads
 
-export default function HeroCard(props: { data: heroRarity | undefined, width?: number, height?: number }) {
+export default function HeroCard(props: {
+    data: heroRarity | undefined,
+    width?: number,
+    height?: number
+    gray?: boolean
+}) {
 
     if (props.data == undefined) return (<></>);
 
@@ -116,6 +121,8 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
 
     if (props.width && props.height) throw new Error("You can't set both width and height")
 
+    const gray = props.gray ?? false;
+
     return (
         <div style={
             {
@@ -132,6 +139,9 @@ export default function HeroCard(props: { data: heroRarity | undefined, width?: 
                 width={640 * scale}
                 height={894 * scale}
                 priority
+                style={{
+                    filter: gray ? "grayscale(100%)" : "none"
+                }}
             />
 
             {props.data.isFoil &&
