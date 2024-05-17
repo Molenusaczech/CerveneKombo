@@ -63,7 +63,7 @@ export default function ReplayHero(props: {
             </div>
             <div>
                 <ProgressBar
-                    completed={(player.energy / 10) * 100}
+                    completed={(player.energy / 12) * 100}
                     bgColor="#28a745"
                     height="20px"
                     customLabel={player.energy + "/12 Energie"}
