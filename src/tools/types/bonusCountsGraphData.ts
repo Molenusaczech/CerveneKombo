@@ -23,8 +23,9 @@ export default function bonusCountsMerge(
                 throw new Error("Empty array in bonusCountsMerge, dur not found");
             }
             keys = [...Object.keys(data.dur || {})].filter((value, index, self) => self.indexOf(value) === index);
+        } else {
+            keys = [...Object.keys(data.physical)]
         }
-        keys = [...Object.keys(data.physical)]
     }
 
     keys.sort((a, b) => {
