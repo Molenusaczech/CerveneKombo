@@ -1,4 +1,5 @@
 import Card from "@/components/card";
+import CrossStats from "@/components/crossStats/crossStats";
 import CardStats from "@/components/stats";
 import Unique from "@/components/unique";
 import { heroCid } from "@/data/heroTypeData";
@@ -29,6 +30,8 @@ export default async function Stats({ params }: { params: { cid: string, name: s
             <Unique instances={data.instances} />
 
             {/*JSON.stringify(data)*/}
+
+            <CrossStats card={data.card} delta={data.delta} />
 
     
         </div>
