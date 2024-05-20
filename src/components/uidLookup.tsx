@@ -21,6 +21,7 @@ import { langData } from "@/data/langs";
 
 import Unique from "@/components/unique";
 import realizationMsgs from "@/data/realizationMsgs";
+import CrossStats from "./crossStats/crossStats";
 
 export default function UidLookup(props: {
     data: heroFromUid | weaponFromUid,
@@ -106,6 +107,8 @@ export default function UidLookup(props: {
                 {!stats && <div>Statistiky nenalezeny - Prosím kontaktuj administrátora</div>}
 
                 {stats && <Unique instances={stats.instances} />}
+
+                {stats && cardData && <CrossStats card={cardData} delta={stats.delta} />}
 
             </div>
             {/*JSON.stringify(data)*/}
