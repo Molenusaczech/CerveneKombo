@@ -11,6 +11,7 @@ import { Paper } from "@mui/material";
 import { heroTypeData } from "@/data/heroTypeData";
 import effectNames from "@/data/effectNames";
 import { effectName, weaponTypeEffect } from "@/types/effects";
+import { colorNames } from "@/data/colorNames";
 
 export default function CrossStats(props: {
     card: heroRarity | weaponRarity
@@ -94,7 +95,7 @@ export default function CrossStats(props: {
                 <div className="grid grid-cols-3">
                     {[0, 8, 7, 6, 5, 4, 3, 2, 1].map((mappedIndex, index) => {
                         const effectName = effectNames[(typeData.typeData.effects[index] as weaponTypeEffect).t as effectName];
-                        const effectColor = (typeData.typeData.effects[index] as weaponTypeEffect).f;
+                        const effectColor = colorNames[(typeData.typeData.effects[index] as weaponTypeEffect).f];
 
                         return (
                             <BonusChart
