@@ -35,6 +35,7 @@ import BonusStats from "./bonusStats";
 import { islandName } from "@/types/chartData";
 import { hasDurability } from "@/tools/hasDurability";
 import TypeCountStats from "./typeCountStats";
+import getTypeData from "@/tools/types/getTypeData";
 
 const islandMap = {
     "Artemis": "BioTech",
@@ -55,26 +56,12 @@ export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
     const [curEffectIndex, setCurEffectIndex] = useState<number>(0);
     const [isDurability, setIsDurability] = useState<boolean>(false);
 
-    let typeData = null;
-    let type = null;
-    let curStats = null;
-    let typeStats = cardStats.types[props.cid];
-    let island: islandName | null = null;
-    let totalCards = cardStats.globals.cards;
 
-    if (heroData[props.cid]) {
-        typeData = heroData[props.cid];
-        type = "hero";
-        curStats = heroStats[props.cid];;
-        island = islandMap[typeData.origin as keyof typeof islandMap] as islandName;
-        totalCards = cardStats.islands[island].heroes;
-    } else if (weaponData[props.cid]) {
-        typeData = weaponData[props.cid];
-        type = "weapon";
-        curStats = weaponStats[props.cid];
-        island = islandMap[typeData.expansion as keyof typeof islandMap] as islandName;
-        totalCards = cardStats.islands[island].weapons;
-    }
+    let allTypeData = getTypeData(props.cid);
+
+    if (!allTypeData) return <div>Chyba</div>;
+
+    let { typeData, type, curStats, island, totalCards, typeStats } = allTypeData;
 
     if (!typeData) return <div>Typ nenalezen</div>;
 
