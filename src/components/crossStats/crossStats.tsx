@@ -98,11 +98,13 @@ export default function CrossStats(props: {
                         const effectColor = colorNames[(typeData.typeData.effects[index] as weaponTypeEffect).f];
 
                         return (
+                            <div key={index}>
                             <BonusChart
                                 value={card.effects[index].value}
                                 data={typeData.curStats[mappedIndex+1]}
                                 title={`Effekt ${effectName} (${effectColor})`}
                             />
+                            </div>
                         )
                     })
                     }
