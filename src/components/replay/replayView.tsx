@@ -5,7 +5,7 @@ import { replay } from "@/types/replay/replay";
 import Card from "../card";
 import getReplayState from "@/tools/replay/getReplayState";
 import ReplayState from "./replayState";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@mui/material";
 
 export default function ReplayView(props: {
@@ -24,6 +24,32 @@ export default function ReplayView(props: {
     //console.log(decks);
 
     const state = getReplayState(data, decks, index);
+
+    useEffect(() => {
+        const handleKeyDown = (event: any) => {
+            switch (event.key) {
+                case 'ArrowRight':
+                    //console.log(data.events.length, index);
+                    setIndex((prevIndex) => {
+                        //console.log(prevIndex, prevIndex + 1);
+                        return prevIndex + 1 < data.events.length ? prevIndex + 1 : prevIndex;
+                    });
+                    break;
+                case 'ArrowLeft':
+                    setIndex((prevIndex) => prevIndex > 0 ? prevIndex - 1 : 0);
+                    break;
+                default:
+                    break;
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+
+        // Cleanup function to remove the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
 
     return (
         <div className="p-1">
