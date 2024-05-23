@@ -2,11 +2,13 @@
 
 import prisma from "../db/client";
 
+import crypto from "crypto";
+
 async function createToken(id: number) {
     const token = await prisma.token.create({
         data: {
             userId: id,
-            token: crypto.randomUUID()
+            token: crypto.randomBytes(32).toString('hex')
         }
     });
 
