@@ -1,0 +1,48 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Token {
+  id        Int      @id @default(autoincrement())
+  token     String   @unique
+  createdAt DateTime @default(now())
+  User      User?    @relation(fields: [userId], references: [id])
+  userId    Int?
+}
+
+model User {
+  id              Int               @id @default(autoincrement())
+  discordId       String            @unique
+  globalName      String
+  avatar          String
+  appId           String?
+  wonCompetitions wonCompetitions[]
+  tokens          Token[]
+}
+
+model Competition {
+  id          Int               @id @default(autoincrement())
+  name        String
+  description String
+  prize       String
+  winnerCount Int
+  startDate   DateTime
+  winners     wonCompetitions[]
+}
+
+model wonCompetitions {
+  userId        Int
+  competitionId Int
+  user          User        @relation(fields: [userId], references: [id])
+  competition   Competition @relation(fields: [competitionId], references: [id])
+
+  @@id([userId, competitionId])
+}
