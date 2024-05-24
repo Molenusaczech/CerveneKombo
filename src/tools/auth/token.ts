@@ -35,12 +35,7 @@ async function getUserFromToken(token: string) {
         return null;
     }
 
-    return {
-        userId: user.userId,
-        globalName: user.User.globalName,
-        avatar: user.User.avatar,
-        appId: user.User.appId
-    }
+    return user.User;
 }
 
 export { createToken, getUserFromToken };

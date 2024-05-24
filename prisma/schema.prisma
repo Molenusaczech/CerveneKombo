@@ -24,6 +24,8 @@ model User {
   globalName      String
   avatar          String
   appId           String?
+  isAdmin        Boolean           @default(false)
+  isOrg         Boolean           @default(false)
   wonCompetitions wonCompetitions[]
   tokens          Token[]
 }

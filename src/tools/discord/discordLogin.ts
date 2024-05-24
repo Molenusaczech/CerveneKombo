@@ -51,21 +51,21 @@ async function discordLogin(code: string) {
 
     console.log(token);
 
-    const verifyToken = await getUserFromToken(token);
+    const UserFromToken = await getUserFromToken(token);
 
-    if (verifyToken == null) {
+    if (UserFromToken == null) {
         console.error("Error verifying token");
         return;
     }
 
-    console.log(verifyToken);
+    console.log(UserFromToken);
 
     return {
         token: token,
-        userId: verifyToken.userId,
-        globalName: verifyToken.globalName,
-        avatar: verifyToken.avatar,
-        appId: verifyToken.appId
+        userId: UserFromToken.id,
+        globalName: UserFromToken.globalName,
+        avatar: UserFromToken.avatar,
+        appId: UserFromToken.appId
     };
 
 

@@ -20,7 +20,7 @@ export default function discordRedirect() {
             localStorage.setItem("token", token?.token);
 
             if (token.appId == null) {
-                window.location.href = "/connectApp";
+                window.location.href = "/account/connectApp";
             } else {
                 window.location.href = "/";
             }

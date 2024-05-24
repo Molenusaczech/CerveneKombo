@@ -42,6 +42,10 @@ const pages = [
         link: '/replay'
     },
     {
+        name: "Účet",
+        link: '/account'
+    },
+    {
         name: 'Github',
         link: 'https://github.com/Molenusaczech/CerveneKombo'
     }
