@@ -2,6 +2,7 @@
 import AppForm from "@/components/auth/appForm";
 import { getUserFromToken } from "@/tools/auth/token";
 import { dbUser } from "@/types/auth/user";
+import getDiscordUrl from "@/tools/discord/getDiscordUrl";
 import { Button } from "@mui/material";
 import { useEffect, useState } from "react";
 
@@ -11,6 +12,7 @@ export default function Account() {
 
     const [user, setUser] = useState<dbUser | null>(null);
     const [loading, setLoading] = useState(true);
+    const [discordUrl, setDiscordUrl] = useState("");
 
     
     useEffect(() => {
@@ -19,10 +21,20 @@ export default function Account() {
             getUserFromToken(token).then((user) => {
                 setLoading(false);
                 setUser(user);
+
+                if (!user) {
+                    window.localStorage.removeItem("token");
+                    alert("Přihlášení neplatné, přihlašte se znovu");
+                }
             });
         } else {
             setLoading(false);
         }
+
+        getDiscordUrl().then((url) => {
+            setDiscordUrl(url);
+        });
+
     }, []);
 
     return (
@@ -60,7 +72,7 @@ export default function Account() {
                 
                 {!user && !loading && <div>
                     Nejste přihlášený
-                    <Button variant="contained" href="/">Přihlásit</Button>
+                    <Button variant="contained" href={discordUrl}>Přihlásit</Button>
                 </div>}
 
             {loading && <div>

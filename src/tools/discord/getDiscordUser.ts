@@ -1,6 +1,7 @@
 "use server";
 
 import discordAccount from "@/types/discord/discordAccount";
+import getDiscordUrl from "./getDiscordUrl";
 
 async function getDiscordUser(code: string): Promise<discordAccount | null> {
     "use server";
@@ -10,7 +11,7 @@ async function getDiscordUser(code: string): Promise<discordAccount | null> {
     const params = new URLSearchParams();
     params.append("grant_type", "authorization_code");
     params.append("code", code);
-    params.append("redirect_uri", "http://localhost:3000/discordRedirect");
+    params.append("redirect_uri", process.env.WEBSITE_URL+"/discordRedirect");
     params.append("client_id", process.env.DISCORD_CLIENT_ID || "");
     params.append("client_secret", process.env.DISCORD_CLIENT_SECRET || "");
 
