@@ -1,6 +1,6 @@
 "use client";
 import AppForm from "@/components/auth/appForm";
-import { getUserFromToken } from "@/tools/auth/token";
+import { deleteToken, getUserFromToken } from "@/tools/auth/token";
 import { dbUser } from "@/types/auth/user";
 import getDiscordUrl from "@/tools/discord/getDiscordUrl";
 import { Button } from "@mui/material";
@@ -65,7 +65,12 @@ export default function Account() {
                     </div>
 
                     <div>
-                        <Button variant="contained" href="/account/logout">Odhlásit</Button>
+                        <Button variant="contained" onClick={async () => {
+                            window.localStorage.removeItem("token");
+                            deleteToken(window.localStorage.getItem("token") || "");
+                            window.location.reload();
+                        
+                        }}>Odhlásit</Button>
                     </div>
 
                 </div>}  

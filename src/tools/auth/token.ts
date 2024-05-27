@@ -38,4 +38,20 @@ async function getUserFromToken(token: string) {
     return user.User;
 }
 
-export { createToken, getUserFromToken };
+async function deleteToken(token: string) {
+
+    if (token == "") {
+        return;
+    }
+
+    await prisma.token.delete({
+        where: {
+            token: token
+        }
+    });
+
+    return;
+
+}
+
+export { createToken, getUserFromToken, deleteToken };
