@@ -1,8 +1,9 @@
 "use client";
 
 import autofillTypes from "@/tools/autofillTypes";
+import { createQuest } from "@/tools/quests/createQuest";
 import { quest, condition } from "@/types/quests/quest";
-import { Autocomplete, Button, MenuItem, Select, TextField } from "@mui/material";
+import { Autocomplete, Button, Checkbox, MenuItem, Select, TextField } from "@mui/material";
 import { useState } from "react";
 
 export default function NewQuest() {
@@ -13,6 +14,7 @@ export default function NewQuest() {
         cardCid: "VampPrince",
         winnerCount: 1,
         conditions: [],
+        hasToOwn: false,
     });
 
     console.log(curQuest);
@@ -48,6 +50,11 @@ export default function NewQuest() {
                     type="number"
                     onChange={(e) => setCurQuest({ ...curQuest, winnerCount: parseInt(e.target.value) })}
                 />
+
+                <Checkbox
+                    checked={curQuest.hasToOwn}
+                    onChange={(e) => setCurQuest({ ...curQuest, hasToOwn: e.target.checked })}
+                /> Musí být vlastníkem v app
             </div>
 
             <div>
@@ -183,6 +190,16 @@ export default function NewQuest() {
                         }]
                     })
                 }}>Přidat podmínku</Button>
+            </div>
+
+            <div>
+                <Button variant="contained" onClick={async () => {
+                    if (!confirm("Opravdu vytvořit quest?")) {
+                        return;
+                    }
+                    console.log(curQuest);
+                    createQuest(curQuest);
+                }}>Vytvořit quest</Button>
             </div>
 
             <div>

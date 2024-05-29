@@ -14,6 +14,7 @@ type quest = {
     description: string,
     prize: string,
     winnerCount: number,
+    hasToOwn: boolean,
     conditions: condition[],
 }
 
