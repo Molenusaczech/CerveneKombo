@@ -24,11 +24,9 @@ export async function GET(request: Request, { params }: { params: { cid: string,
   const font = await fontRq.arrayBuffer();
 
 
-  if (data == null) return (
-    <div>
-      Error - statistiky nenalezeny... Zkontroluj prosím správnost jména a druhu
-      <br></br>Pokud jsi si jistý, že jsi zadával správně, kontaktuj prosím administrátora
-    </div>)
+  if (data == null) {
+    return new Response("Card not found", { status: 404 });
+  }
 
   if (data.card.t == "hero") {
     return new ImageResponse(
