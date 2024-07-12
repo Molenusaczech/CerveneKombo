@@ -77,7 +77,9 @@ export default function WeaponCard(props: {
     data: weaponRarity | undefined, 
     width?: number, 
     height?: number,
-    gray?: boolean
+    gray?: boolean,
+    useImg?: boolean,
+    imgRootLink?: string
 }) {
 
     if (props.data == undefined) return (<></>);
@@ -102,11 +104,20 @@ export default function WeaponCard(props: {
                 position: "relative",
                 width: 640 * scale + "px",
                 height: 735 * scale + "px",
+                display: "flex"
             }
         }>
 
 
-            <Image
+            {props.useImg ? <img
+                src={props.imgRootLink+type.imgUrl}
+                alt={props.data.name + " card"}
+                width={640 * scale}
+                height={735 * scale}
+                style={{
+                    filter: gray ? "grayscale(75%)" : "none"
+                }}
+            /> : <Image
                 src={type.imgUrl}
                 alt={props.data.name + " card"}
                 width={640 * scale}
@@ -115,7 +126,7 @@ export default function WeaponCard(props: {
                 style={{
                     filter: gray ? "grayscale(75%)" : "none"
                 }}
-            />
+            />}
 
             {/*Main Nums*/}
 

@@ -5,6 +5,16 @@ import Unique from "@/components/unique";
 import { heroCid } from "@/data/heroTypeData";
 import { weaponCid } from "@/data/weaponTypeData";
 import { getCardStats } from "@/tools/getCardStats";
+import type { Metadata } from "next";
+
+export async function generateMetadata(
+    { params }: { params: { cid: string, name: string } }
+    ): Promise<Metadata> {
+    return {
+        title: "Statistiky karty " + decodeURIComponent(params.name),
+        description: "Statistiky karty " + decodeURIComponent(params.name),
+    };
+}
 
 export default async function Stats({ params }: { params: { cid: string, name: string } }) {
   "use server";
