@@ -16,7 +16,8 @@ export async function GET(request: Request, { params }: { params: { cid: string,
 
   const cid: heroCid | weaponCid = decodeURIComponent(params.cid) as heroCid | weaponCid
 
-  const data = await getCardStats(cid, decodeURIComponent(params.name))
+  const name = decodeURIComponent(params.name).replace(/.png/g, "")
+  const data = await getCardStats(cid, decodeURIComponent(name))
   const rootUrl = request.url.split('/image/')[0]
 
   const fontRq = await fetch(rootUrl+'/ScratchChizz.otf');

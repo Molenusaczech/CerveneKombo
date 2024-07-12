@@ -15,7 +15,9 @@ export async function generateMetadata(
 
     const cid = decodeURIComponent(params.cid) as heroCid | weaponCid
 
-    const data = await getCardStats(cid, decodeURIComponent(params.name))
+    const name = decodeURIComponent(params.name)
+
+    const data = await getCardStats(cid, decodeURIComponent(name))
 
     const type = getTypeData(cid)
 
@@ -25,7 +27,7 @@ export async function generateMetadata(
         openGraph: {
             title: "Statistiky karty nenalezeny",
             description: "Statistiky karty nenalezeny",
-            url: "https://cervenekombo.vercel.app/stats/" + params.cid + "/" + params.name,
+            url: "https://cervenekombo.vercel.app/stats/" + cid + "/" + name,
             siteName: "Červené kombo",
             locale: "cs_CZ",
             type: "website",
@@ -33,21 +35,21 @@ export async function generateMetadata(
     })
 
     return {
-        title: "Červené kombo - "+decodeURIComponent(params.name) + " (" + type?.typeData.cname.CS + ")",
-        description: "Statistiky karty " + decodeURIComponent(params.name),
+        title: "Červené kombo - "+name + " (" + type?.typeData.cname.CS + ")",
+        description: "Statistiky karty " + name,
         openGraph: {
-            title: decodeURIComponent(params.name) + " - " + type?.typeData.cname.CS,
+            title: name + " - " + type?.typeData.cname.CS,
             description: statsDescription(data),
-            url: "https://cervenekombo.vercel.app/stats/" + params.cid + "/" + params.name,
+            url: "https://cervenekombo.vercel.app/stats/" + cid + "/" + name,
             siteName: "Červené kombo",
             locale: "cs_CZ",
             type: "website",
             images: [
                 {
-                    url: "https://cervenekombo.vercel.app/image/" + params.cid + "/" + params.name,
+                    url: "https://cervenekombo.vercel.app/image/" + cid + "/" + name+".png",
                     width: 640,
                     height: 894,
-                    alt: decodeURIComponent(params.name) + " - " + type?.typeData.cname.CS
+                    alt: name + " - " + type?.typeData.cname.CS
                 }
             ]
         }
