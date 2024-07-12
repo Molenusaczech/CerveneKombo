@@ -5,7 +5,11 @@ import { weaponFromUid } from "@/types/weaponFromUid";
 async function getCardByUid(uid: string): Promise<heroFromUid | weaponFromUid | null> {
     "use server";
     console.log("Fetching card with uid: " + uid);
-    let req = await fetch("https://www.scratchwars.cloud/public/api/card/" + uid);
+    let req = await fetch("https://www.scratchwars.cloud/public/api/card/" + uid, {
+        next: {
+            revalidate: 600,
+        }
+    });
 
     if (req.status != 200) {
         console.log("Error: " + req.status);
