@@ -18,8 +18,8 @@ export default function UidForm() {
         <div className='grid grid-cols-1 gap-2'>
             <div className='text-center' style={{
                 color: 'var(--text)',
-            }}>Vyhledávání hrdiny podle UID (QR Kódu)</div>
-            <TextField label="QR kód hrdiny" variant="outlined" onChange={(change) => {
+            }}>Vyhledávání karty podle UID (QR Kódu)</div>
+            <TextField label="QR kód karty" variant="outlined" onChange={(change) => {
                 setUid(change.target.value);
             }}/>
 

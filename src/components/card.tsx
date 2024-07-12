@@ -8,7 +8,9 @@ export default function Card(props: {
     data: heroRarity | weaponRarity | undefined,
     height?: number,
     width?: number,
-    gray?: boolean
+    gray?: boolean,
+    useImg?: boolean,
+    imgRootLink?: string
 }) {
 
     if (props.data == undefined) return (<></>);
@@ -19,6 +21,8 @@ export default function Card(props: {
             height={props.height}
             width={props.width}
             gray={props.gray}
+            useImg={props.useImg}
+            imgRootLink={props.imgRootLink}
         />
     } else {
         return <WeaponCard
@@ -26,6 +30,8 @@ export default function Card(props: {
             height={props.height}
             width={props.width}
             gray={props.gray}
+            useImg={props.useImg}
+            imgRootLink={props.imgRootLink}
         />
     }
 }

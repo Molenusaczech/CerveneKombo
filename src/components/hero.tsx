@@ -11,6 +11,7 @@ import { parseBonuses } from "@/tools/bonusParse";
 import { isInverted } from "@/tools/isInverted";
 
 import effectValue from "@/tools/effectValue";
+import { getURL } from "next/dist/shared/lib/utils";
 
 function Label(props: {
     value: number | string,
@@ -93,7 +94,9 @@ export default function HeroCard(props: {
     data: heroRarity | undefined,
     width?: number,
     height?: number
-    gray?: boolean
+    gray?: boolean,
+    useImg?: boolean,
+    imgRootLink?: string
 }) {
 
     if (props.data == undefined) return (<></>);
@@ -129,11 +132,20 @@ export default function HeroCard(props: {
                 position: "relative",
                 width: 640 * scale + "px",
                 height: 894 * scale + "px",
+                display: "flex",
             }
         }>
 
 
-            <Image
+            {props.useImg ? <img
+                src={props.imgRootLink+type.imgUrl}
+                alt={props.data.name + " card"}
+                width={640 * scale}
+                height={894 * scale}
+                style={{
+                    filter: gray ? "grayscale(100%)" : "none"
+                }}
+            /> : <Image
                 src={type.imgUrl}
                 alt={props.data.name + " card"}
                 width={640 * scale}
@@ -142,7 +154,7 @@ export default function HeroCard(props: {
                 style={{
                     filter: gray ? "grayscale(100%)" : "none"
                 }}
-            />
+            />}
 
             {props.data.isFoil &&
                 <Image

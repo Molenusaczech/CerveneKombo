@@ -12,7 +12,11 @@ async function getCardStats(cid: heroCid | weaponCid, name: string) {
 
     console.log("Getting stats for " + name + " (" + cid + ")");
 
-    let req = await fetch(encodeURI("https://scratchwars.cloud/cardapi?cid=" + cid + "&name=" + name));
+    let req = await fetch(encodeURI("https://scratchwars.cloud/cardapi?cid=" + cid + "&name=" + name), {
+        next: {
+            revalidate: 3600 * 24, // revalidate every 24 hours
+        }
+    });
 
     if (req.status != 200) {
         console.log("Error: " + req.status);
