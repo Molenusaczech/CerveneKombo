@@ -2,7 +2,7 @@ import MultiProgress from 'react-multi-progress'
 
 import calcPercent from '@/tools/calcPercent';
 import RarityBar from './rarityBar';
-import DeltaText from './delta';
+import { DeltaText } from './delta';
 
 export default function CardStats(props: {
     better: number,

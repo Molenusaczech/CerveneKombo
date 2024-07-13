@@ -31,7 +31,7 @@ export default function StatsForm() {
 
                 <div className='text-center' style={{
                     color: 'var(--text)',
-                }}>Vyhledávání hrdiny podle jména a druhu</div>
+                }}>Vyhledávání karty podle jména a druhu</div>
 
                 <Autocomplete
                     disablePortal
