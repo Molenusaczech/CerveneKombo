@@ -11,7 +11,15 @@ import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
   title: "Červené kombo",
-  description: "Statistika nuda je, má však cené údaje.",
+  description: "Vaše go-to stránka na všechny statistiky Scratch Wars kartiček",
+  openGraph: {
+    title: "Červené kombo",
+    description: "Vaše go-to stránka na všechny statistiky Scratch Wars kartiček",
+    url: "https://cervenekombo.vercel.app",
+    siteName: "Červené kombo",
+    locale: "cs_CZ",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

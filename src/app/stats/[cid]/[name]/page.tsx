@@ -4,10 +4,12 @@ import CardStats from "@/components/stats";
 import Unique from "@/components/unique";
 import { heroCid } from "@/data/heroTypeData";
 import { weaponCid } from "@/data/weaponTypeData";
-import { statsDescription } from "@/tools/embed/embedDescription";
+import { statsDescription } from "@/tools/metadata/embedDescription";
 import { getCardStats } from "@/tools/getCardStats";
 import getTypeData from "@/tools/types/getTypeData";
 import type { Metadata } from "next";
+import statsMetadada from "@/tools/metadata/statsMetadata";
+import statsNotFoundMetadata from "@/tools/metadata/statsNotFoundMetadata";
 
 export async function generateMetadata(
     { params }: { params: { cid: string, name: string } }
@@ -19,41 +21,9 @@ export async function generateMetadata(
 
     const data = await getCardStats(cid, decodeURIComponent(name))
 
-    const type = getTypeData(cid)
+    if (data == null) return statsNotFoundMetadata(name, cid)
 
-    if (data == null) return ({
-        title: "Červené kombo - Statistiky karty nenalezeny",
-        description: "Statistiky karty nenalezeny",
-        openGraph: {
-            title: "Statistiky karty nenalezeny",
-            description: "Statistiky karty nenalezeny",
-            url: "https://cervenekombo.vercel.app/stats/" + cid + "/" + name,
-            siteName: "Červené kombo",
-            locale: "cs_CZ",
-            type: "website",
-        }
-    })
-
-    return {
-        title: "Červené kombo - "+name + " (" + type?.typeData.cname.CS + ")",
-        description: "Statistiky karty " + name,
-        openGraph: {
-            title: name + " - " + type?.typeData.cname.CS,
-            description: statsDescription(data),
-            url: "https://cervenekombo.vercel.app/stats/" + cid + "/" + name,
-            siteName: "Červené kombo",
-            locale: "cs_CZ",
-            type: "website",
-            images: [
-                {
-                    url: "https://cervenekombo.vercel.app/image/" + cid + "/" + name+".png",
-                    width: 640,
-                    height: 894,
-                    alt: name + " - " + type?.typeData.cname.CS
-                }
-            ]
-        }
-    };
+    return statsMetadada(data)
 }
 
 export default async function Stats({ params }: { params: { cid: string, name: string } }) {
