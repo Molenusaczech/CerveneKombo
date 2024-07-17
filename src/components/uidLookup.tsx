@@ -22,6 +22,7 @@ import { langData } from "@/data/langs";
 import Unique from "@/components/unique";
 import realizationMsgs from "@/data/realizationMsgs";
 import CrossStats from "./crossStats/crossStats";
+import { Button } from "@mui/material";
 
 export default function UidLookup(props: {
     data: heroFromUid | weaponFromUid,
@@ -107,6 +108,8 @@ export default function UidLookup(props: {
                 {!stats && <div>Statistiky nenalezeny - Prosím kontaktuj administrátora</div>}
 
                 {stats && <Unique instances={stats.instances} />}
+
+                <Button variant="contained" href={`/image/${encodeURIComponent(data.card.cid)}/${encodeURIComponent(data.card.name)}.png`}>Stáhnout obrázek karty</Button>
 
                 {stats && cardData && <CrossStats card={cardData} delta={stats.delta} />}
 
