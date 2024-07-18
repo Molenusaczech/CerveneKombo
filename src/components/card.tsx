@@ -10,7 +10,8 @@ export default function Card(props: {
     width?: number,
     gray?: boolean,
     useImg?: boolean,
-    imgRootLink?: string
+    imgRootLink?: string,
+    cropped?: boolean
 }) {
 
     if (props.data == undefined) return (<></>);
@@ -32,6 +33,7 @@ export default function Card(props: {
             gray={props.gray}
             useImg={props.useImg}
             imgRootLink={props.imgRootLink}
+            cropped={props.cropped}
         />
     }
 }

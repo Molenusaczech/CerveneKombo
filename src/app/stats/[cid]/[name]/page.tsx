@@ -10,6 +10,7 @@ import getTypeData from "@/tools/types/getTypeData";
 import type { Metadata } from "next";
 import statsMetadada from "@/tools/metadata/statsMetadata";
 import statsNotFoundMetadata from "@/tools/metadata/statsNotFoundMetadata";
+import { Button } from "@mui/material";
 
 export async function generateMetadata(
     { params }: { params: { cid: string, name: string } }
@@ -45,9 +46,13 @@ export default async function Stats({ params }: { params: { cid: string, name: s
 
             <Card data={data.card} width={500} />
 
+
             <CardStats better={data.better} worse={data.worse} same={data.same} delta={data.delta} />
 
             <Unique instances={data.instances} />
+            <div>
+                <Button variant="contained" href={`/image/${encodeURIComponent(cid)}/${encodeURIComponent(data.card.name)}.png`}>Stáhnout obrázek karty</Button>
+            </div>
 
             {/*JSON.stringify(data)*/}
 
