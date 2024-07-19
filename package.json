@@ -12,7 +12,8 @@
     "getSwoData": "node tools/swo-scraper/getSwoData.js",
     "getCardStats": "node tools/swo-scraper/getCards.js",
     "parseStats": "node tools/swo-scraper/parseStats.js",
-    "getTournamentData": "bun tools/tournament/getTournamentData.ts"
+    "getTournamentData": "bun tools/tournament/getTournamentData.ts",
+    "getGameData": "bun tools/tournament/getGameData.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
