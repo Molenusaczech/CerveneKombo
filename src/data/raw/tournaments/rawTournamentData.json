@@ -5,7 +5,7 @@
         "link": "https://scratchwars-online.cz/cs/tournaments/swo-ligovy-turnaj-16-7-2024-168/",
         "matches": [
             {
-                "id": "90018",
+                "id": 90018,
                 "link": "/cs/battles/90018/spectate/01e42f7f27b24eb289594a4f6913d397/",
                 "players": [
                     "luky#1830",
@@ -14,7 +14,7 @@
                 "winner": 1
             },
             {
-                "id": "90019",
+                "id": 90019,
                 "link": "/cs/battles/90019/spectate/cc232d68b48c40009dd5110236903591/",
                 "players": [
                     "BranulYk#2045",
@@ -23,7 +23,7 @@
                 "winner": 1
             },
             {
-                "id": "90021",
+                "id": 90021,
                 "link": "/cs/battles/90021/spectate/2889a5c577ad4d5898e72b8559494796/",
                 "players": [
                     "ondra#24",
@@ -32,7 +32,7 @@
                 "winner": 1
             },
             {
-                "id": "90022",
+                "id": 90022,
                 "link": "/cs/battles/90022/spectate/fe80c5ada645410ea1d7238c522540ac/",
                 "players": [
                     "Vojta#1988",
@@ -41,7 +41,7 @@
                 "winner": 1
             },
             {
-                "id": "90023",
+                "id": 90023,
                 "link": "/cs/battles/90023/spectate/c214b5e690104f40bfca30b64917ee96/",
                 "players": [
                     "peterko#4704",
@@ -50,7 +50,7 @@
                 "winner": 2
             },
             {
-                "id": "90024",
+                "id": 90024,
                 "link": "/cs/battles/90024/spectate/139e897da18a4f28a53587aface72ed9/",
                 "players": [
                     "Mole 06#34",
@@ -59,7 +59,7 @@
                 "winner": 1
             },
             {
-                "id": "90027",
+                "id": 90027,
                 "link": "/cs/battles/90027/spectate/1edf537ea66a4702a619f5950f2c1bf0/",
                 "players": [
                     "luky#1830",
@@ -68,7 +68,7 @@
                 "winner": 2
             },
             {
-                "id": "90028",
+                "id": 90028,
                 "link": "/cs/battles/90028/spectate/c5d50e8d76fb463a8b837a50eb345313/",
                 "players": [
                     "Fredka#886",
@@ -77,7 +77,7 @@
                 "winner": 1
             },
             {
-                "id": "90029",
+                "id": 90029,
                 "link": "/cs/battles/90029/spectate/ea9609b739614befa547f73f8cdcd9d5/",
                 "players": [
                     "Bon Bic#2163",
@@ -86,7 +86,7 @@
                 "winner": 1
             },
             {
-                "id": "90030",
+                "id": 90030,
                 "link": "/cs/battles/90030/spectate/193b55e1592c44218b7243510f3fc12d/",
                 "players": [
                     "pepascratch#1205",
@@ -95,7 +95,7 @@
                 "winner": 2
             },
             {
-                "id": "90031",
+                "id": 90031,
                 "link": "/cs/battles/90031/spectate/962fcf21cffa4c8780b9ac2f59dc2c80/",
                 "players": [
                     "Petr Vagner#4695",
@@ -104,7 +104,7 @@
                 "winner": 2
             },
             {
-                "id": "90032",
+                "id": 90032,
                 "link": "/cs/battles/90032/spectate/31d0ae7ddf1f47a09f185b84d0bd43ff/",
                 "players": [
                     "Šmakoun Dejv#3203",
@@ -113,7 +113,7 @@
                 "winner": 1
             },
             {
-                "id": "90033",
+                "id": 90033,
                 "link": "/cs/battles/90033/spectate/139948891a264f3f93bbea56f7360590/",
                 "players": [
                     "maty_hrazdira#866",
@@ -122,7 +122,7 @@
                 "winner": 1
             },
             {
-                "id": "90034",
+                "id": 90034,
                 "link": "/cs/battles/90034/spectate/c034bb7a98d347e3b88198d354cd2b92/",
                 "players": [
                     "Tadeáš#1779",
@@ -131,7 +131,7 @@
                 "winner": 2
             },
             {
-                "id": "90035",
+                "id": 90035,
                 "link": "/cs/battles/90035/spectate/f70d26e6452744729520be9ce2ec61f0/",
                 "players": [
                     "Petr Vagner#4695",
@@ -140,7 +140,7 @@
                 "winner": 2
             },
             {
-                "id": "90036",
+                "id": 90036,
                 "link": "/cs/battles/90036/spectate/6d6d99ee538b4a58bd435b2fc294b089/",
                 "players": [
                     "peterko#4704",
@@ -149,7 +149,7 @@
                 "winner": 2
             },
             {
-                "id": "90037",
+                "id": 90037,
                 "link": "/cs/battles/90037/spectate/dd1954c1baea45719169e9a289c787c1/",
                 "players": [
                     "ondra#24",
@@ -158,7 +158,7 @@
                 "winner": 2
             },
             {
-                "id": "90038",
+                "id": 90038,
                 "link": "/cs/battles/90038/spectate/733f876a00c84d1b92232046b06a5e1a/",
                 "players": [
                     "Malina Cheeffe#4673",
@@ -167,7 +167,7 @@
                 "winner": 2
             },
             {
-                "id": "90039",
+                "id": 90039,
                 "link": "/cs/battles/90039/spectate/a730d2b22008466d96dfe105b5c7aabe/",
                 "players": [
                     "BranulYk#2045",
@@ -176,7 +176,7 @@
                 "winner": 1
             },
             {
-                "id": "90050",
+                "id": 90050,
                 "link": "/cs/battles/90050/spectate/cb437c7c3496444ea29f6d79b9300d8f/",
                 "players": [
                     "Tadeáš#1779",
@@ -185,7 +185,7 @@
                 "winner": 1
             },
             {
-                "id": "90051",
+                "id": 90051,
                 "link": "/cs/battles/90051/spectate/b3e4fd37db8945129ac1a02686340f29/",
                 "players": [
                     "Mole 06#34",
@@ -194,7 +194,7 @@
                 "winner": 2
             },
             {
-                "id": "90052",
+                "id": 90052,
                 "link": "/cs/battles/90052/spectate/1d7bc613e2b34ccaa296b06712d39462/",
                 "players": [
                     "Fredka#886",
@@ -203,7 +203,7 @@
                 "winner": 1
             },
             {
-                "id": "90054",
+                "id": 90054,
                 "link": "/cs/battles/90054/spectate/157bda48ae8d4d3f987ef209ddf8c780/",
                 "players": [
                     "pepascratch#1205",
@@ -212,7 +212,7 @@
                 "winner": 1
             },
             {
-                "id": "90055",
+                "id": 90055,
                 "link": "/cs/battles/90055/spectate/9e3baf41edd94ba38a29a83b77c60830/",
                 "players": [
                     "Scratch knight sk#2007",
@@ -221,7 +221,7 @@
                 "winner": 1
             },
             {
-                "id": "90056",
+                "id": 90056,
                 "link": "/cs/battles/90056/spectate/80c12df524ed4a86834e53516b10a2fa/",
                 "players": [
                     "Šmakoun Dejv#3203",
@@ -230,7 +230,7 @@
                 "winner": 2
             },
             {
-                "id": "90057",
+                "id": 90057,
                 "link": "/cs/battles/90057/spectate/66fd374a5cde48b0ac5242cc67eba356/",
                 "players": [
                     "Mole 06#34",
@@ -239,7 +239,7 @@
                 "winner": 1
             },
             {
-                "id": "90058",
+                "id": 90058,
                 "link": "/cs/battles/90058/spectate/921d8690cff5430ba982c797fb9c4b08/",
                 "players": [
                     "Petr Vagner#4695",
@@ -248,7 +248,7 @@
                 "winner": 2
             },
             {
-                "id": "90059",
+                "id": 90059,
                 "link": "/cs/battles/90059/spectate/ccb7d8440f6641789c2ad0292d716d51/",
                 "players": [
                     "Malina Cheeffe#4673",
@@ -257,7 +257,7 @@
                 "winner": 2
             },
             {
-                "id": "90060",
+                "id": 90060,
                 "link": "/cs/battles/90060/spectate/c6acb2da807f4009812f84f6014174a5/",
                 "players": [
                     "Bon Bic#2163",
@@ -266,7 +266,7 @@
                 "winner": 1
             },
             {
-                "id": "90061",
+                "id": 90061,
                 "link": "/cs/battles/90061/spectate/346a26acd9534dbe915be4a3907de315/",
                 "players": [
                     "Vojta#1988",
@@ -275,7 +275,7 @@
                 "winner": 1
             },
             {
-                "id": "90062",
+                "id": 90062,
                 "link": "/cs/battles/90062/spectate/8df1fde336af4c64aee4396b9688e089/",
                 "players": [
                     "maty_hrazdira#866",
@@ -284,7 +284,7 @@
                 "winner": 2
             },
             {
-                "id": "90063",
+                "id": 90063,
                 "link": "/cs/battles/90063/spectate/02e6b79dbb0b43e8bb1b8ee748b84d8e/",
                 "players": [
                     "BranulYk#2045",
@@ -293,7 +293,7 @@
                 "winner": 1
             },
             {
-                "id": "90064",
+                "id": 90064,
                 "link": "/cs/battles/90064/spectate/e36a327aa3184ca1a24c356bbcaabef5/",
                 "players": [
                     "peterko#4704",
@@ -302,7 +302,7 @@
                 "winner": 2
             },
             {
-                "id": "90065",
+                "id": 90065,
                 "link": "/cs/battles/90065/spectate/e81211377baf46c1af4fbe34e5ff86fc/",
                 "players": [
                     "Fredka#886",
@@ -311,7 +311,7 @@
                 "winner": 2
             },
             {
-                "id": "90066",
+                "id": 90066,
                 "link": "/cs/battles/90066/spectate/6a14f57d1e614191a15fdfc08ad8cb6d/",
                 "players": [
                     "Petr Vagner#4695",
@@ -320,7 +320,7 @@
                 "winner": 2
             },
             {
-                "id": "90067",
+                "id": 90067,
                 "link": "/cs/battles/90067/spectate/b71a3370d96843fcabe0e2f99f14614e/",
                 "players": [
                     "Šmakoun Dejv#3203",
@@ -329,7 +329,7 @@
                 "winner": 2
             },
             {
-                "id": "90069",
+                "id": 90069,
                 "link": "/cs/battles/90069/spectate/94cd76dd0544402dadfd2ce82550af5a/",
                 "players": [
                     "Scratch knight sk#2007",
@@ -338,7 +338,7 @@
                 "winner": 1
             },
             {
-                "id": "90070",
+                "id": 90070,
                 "link": "/cs/battles/90070/spectate/cecd03f83c8c4c74b08049c61b479336/",
                 "players": [
                     "Jaran12#4644",
@@ -347,7 +347,7 @@
                 "winner": 1
             },
             {
-                "id": "90071",
+                "id": 90071,
                 "link": "/cs/battles/90071/spectate/749330d474fa4d1398f0292fa3864212/",
                 "players": [
                     "Bon Bic#2163",
@@ -356,7 +356,7 @@
                 "winner": 1
             },
             {
-                "id": "90080",
+                "id": 90080,
                 "link": "/cs/battles/90080/spectate/1f2ec5e183664c31a80439ef78641bcd/",
                 "players": [
                     "Mole 06#34",
@@ -365,7 +365,7 @@
                 "winner": 1
             },
             {
-                "id": "90081",
+                "id": 90081,
                 "link": "/cs/battles/90081/spectate/486fb685a16049ddbb296460327412db/",
                 "players": [
                     "luky#1830",
@@ -374,7 +374,7 @@
                 "winner": 2
             },
             {
-                "id": "90082",
+                "id": 90082,
                 "link": "/cs/battles/90082/spectate/9537c415f78640cf8021723910508cba/",
                 "players": [
                     "Petr Vagner#4695",
@@ -383,7 +383,7 @@
                 "winner": 1
             },
             {
-                "id": "90083",
+                "id": 90083,
                 "link": "/cs/battles/90083/spectate/efabf4ce72634684a2a5e3600ee84717/",
                 "players": [
                     "Šmakoun Dejv#3203",
@@ -392,7 +392,7 @@
                 "winner": 1
             },
             {
-                "id": "90084",
+                "id": 90084,
                 "link": "/cs/battles/90084/spectate/5bde134237d34f4686f612c2269f5811/",
                 "players": [
                     "Tadeáš#1779",
@@ -401,7 +401,7 @@
                 "winner": 2
             },
             {
-                "id": "90085",
+                "id": 90085,
                 "link": "/cs/battles/90085/spectate/19c948eac66c4232a03875b7849a2c43/",
                 "players": [
                     "Jaran12#4644",
@@ -410,7 +410,7 @@
                 "winner": 2
             },
             {
-                "id": "90086",
+                "id": 90086,
                 "link": "/cs/battles/90086/spectate/8e92a5a529024df19f14bf0f08d3d60e/",
                 "players": [
                     "Vojta#1988",
@@ -419,7 +419,7 @@
                 "winner": 1
             },
             {
-                "id": "90087",
+                "id": 90087,
                 "link": "/cs/battles/90087/spectate/d78649ab98324a54b986e86f98d0a889/",
                 "players": [
                     "Bon Bic#2163",
@@ -428,7 +428,7 @@
                 "winner": 2
             },
             {
-                "id": "90088",
+                "id": 90088,
                 "link": "/cs/battles/90088/spectate/ee2161bde51f4bec9b9d7f8fe37c9fc0/",
                 "players": [
                     "maty_hrazdira#866",
@@ -437,7 +437,7 @@
                 "winner": 1
             },
             {
-                "id": "90089",
+                "id": 90089,
                 "link": "/cs/battles/90089/spectate/f0bb9aa310c04c6986b3957d4f2c95bd/",
                 "players": [
                     "ondra#24",
@@ -446,7 +446,7 @@
                 "winner": 1
             },
             {
-                "id": "90091",
+                "id": 90091,
                 "link": "/cs/battles/90091/spectate/e8cf0d2288a44d9094c9040d3e66b9b0/",
                 "players": [
                     "luky#1830",
@@ -455,7 +455,7 @@
                 "winner": 2
             },
             {
-                "id": "90092",
+                "id": 90092,
                 "link": "/cs/battles/90092/spectate/803352faf6db4e74a82b93d3928b7a94/",
                 "players": [
                     "Mole 06#34",
@@ -464,7 +464,7 @@
                 "winner": 1
             },
             {
-                "id": "90093",
+                "id": 90093,
                 "link": "/cs/battles/90093/spectate/848d907e705c4f02aed07ce5397f4b1c/",
                 "players": [
                     "Malina Cheeffe#4673",
@@ -473,7 +473,7 @@
                 "winner": 2
             },
             {
-                "id": "90095",
+                "id": 90095,
                 "link": "/cs/battles/90095/spectate/c6691f02ce0e47c9837401fa3e842b34/",
                 "players": [
                     "Bon Bic#2163",
@@ -482,7 +482,7 @@
                 "winner": 2
             },
             {
-                "id": "90096",
+                "id": 90096,
                 "link": "/cs/battles/90096/spectate/b9672d89ffe6420f9398ae34a7f9d027/",
                 "players": [
                     "Jaran12#4644",
@@ -491,7 +491,7 @@
                 "winner": 1
             },
             {
-                "id": "90098",
+                "id": 90098,
                 "link": "/cs/battles/90098/spectate/25d0344bc0e7454aa77130e0e7526dc6/",
                 "players": [
                     "Samuelito#4054",
@@ -500,7 +500,7 @@
                 "winner": 1
             },
             {
-                "id": "90099",
+                "id": 90099,
                 "link": "/cs/battles/90099/spectate/2c5c806321f348cc80be527d2546fc6d/",
                 "players": [
                     "Tadeáš#1779",
@@ -509,7 +509,7 @@
                 "winner": 1
             },
             {
-                "id": "90100",
+                "id": 90100,
                 "link": "/cs/battles/90100/spectate/622304c546b144d0ad682e0804ecf200/",
                 "players": [
                     "Petr Vagner#4695",
@@ -518,7 +518,7 @@
                 "winner": 2
             },
             {
-                "id": "90101",
+                "id": 90101,
                 "link": "/cs/battles/90101/spectate/5d9a0192e604486ebf34708cf19a875b/",
                 "players": [
                     "pepascratch#1205",
@@ -527,7 +527,7 @@
                 "winner": 2
             },
             {
-                "id": "90102",
+                "id": 90102,
                 "link": "/cs/battles/90102/spectate/8ff6b359599a42749ad2b5b1b6ea08fa/",
                 "players": [
                     "Fredka#886",
@@ -536,7 +536,7 @@
                 "winner": 2
             },
             {
-                "id": "90103",
+                "id": 90103,
                 "link": "/cs/battles/90103/spectate/3688e4de90cd4285b3d23b51424b3293/",
                 "players": [
                     "maty_hrazdira#866",
@@ -545,7 +545,7 @@
                 "winner": 1
             },
             {
-                "id": "90110",
+                "id": 90110,
                 "link": "/cs/battles/90110/spectate/9cda949f68544fafb55e14e2f7bb96cd/",
                 "players": [
                     "pepascratch#1205",
@@ -554,7 +554,7 @@
                 "winner": 2
             },
             {
-                "id": "90111",
+                "id": 90111,
                 "link": "/cs/battles/90111/spectate/dca3ad772198461292c52e8a4e5d8f99/",
                 "players": [
                     "Mole 06#34",
@@ -563,7 +563,7 @@
                 "winner": 1
             },
             {
-                "id": "90113",
+                "id": 90113,
                 "link": "/cs/battles/90113/spectate/1e0f0295d84646d481e4cc877fc7f78a/",
                 "players": [
                     "BranulYk#2045",
@@ -572,7 +572,7 @@
                 "winner": 1
             },
             {
-                "id": "90115",
+                "id": 90115,
                 "link": "/cs/battles/90115/spectate/5107fa97ce9c419d8947c97d80ef2994/",
                 "players": [
                     "Samuelito#4054",
@@ -581,7 +581,7 @@
                 "winner": 1
             },
             {
-                "id": "90116",
+                "id": 90116,
                 "link": "/cs/battles/90116/spectate/42a263c4fccc49b5aa88ebb86f559681/",
                 "players": [
                     "Scratch knight sk#2007",
@@ -590,7 +590,7 @@
                 "winner": 2
             },
             {
-                "id": "90117",
+                "id": 90117,
                 "link": "/cs/battles/90117/spectate/05f18126b08542abac7ba9f425749aaf/",
                 "players": [
                     "Šmakoun Dejv#3203",
@@ -599,7 +599,7 @@
                 "winner": 2
             },
             {
-                "id": "90118",
+                "id": 90118,
                 "link": "/cs/battles/90118/spectate/3993f235d70243d09b851e1c2991d620/",
                 "players": [
                     "pepascratch#1205",
@@ -608,7 +608,7 @@
                 "winner": 2
             },
             {
-                "id": "90119",
+                "id": 90119,
                 "link": "/cs/battles/90119/spectate/6350ec3189b84e1aaeaebcd642a63363/",
                 "players": [
                     "Petr Vagner#4695",
@@ -617,7 +617,7 @@
                 "winner": 1
             },
             {
-                "id": "90120",
+                "id": 90120,
                 "link": "/cs/battles/90120/spectate/31ec7c15e6734e288e139cd436157037/",
                 "players": [
                     "Tadeáš#1779",
@@ -626,7 +626,7 @@
                 "winner": 2
             },
             {
-                "id": "90122",
+                "id": 90122,
                 "link": "/cs/battles/90122/spectate/612a95020583439688eedbe6218e59c2/",
                 "players": [
                     "Petr Vagner#4695",
@@ -635,7 +635,7 @@
                 "winner": 1
             },
             {
-                "id": "90123",
+                "id": 90123,
                 "link": "/cs/battles/90123/spectate/71c51e5202064523bf39dfb5ac04f077/",
                 "players": [
                     "Jaran12#4644",
@@ -644,7 +644,7 @@
                 "winner": 2
             },
             {
-                "id": "90124",
+                "id": 90124,
                 "link": "/cs/battles/90124/spectate/b55a14cabdb84204a48d60e2adf0a7e7/",
                 "players": [
                     "ondra#24",
@@ -653,7 +653,7 @@
                 "winner": 1
             },
             {
-                "id": "90125",
+                "id": 90125,
                 "link": "/cs/battles/90125/spectate/6a2e9cbb33bf464284a286f14aba7897/",
                 "players": [
                     "Šmakoun Dejv#3203",
@@ -662,7 +662,7 @@
                 "winner": 1
             },
             {
-                "id": "90126",
+                "id": 90126,
                 "link": "/cs/battles/90126/spectate/02bff6beec2f4746b9c4aa9ce2cbd2d8/",
                 "players": [
                     "BranulYk#2045",
@@ -671,7 +671,7 @@
                 "winner": 1
             },
             {
-                "id": "90127",
+                "id": 90127,
                 "link": "/cs/battles/90127/spectate/5c3405097b234a3f8230591c14609444/",
                 "players": [
                     "Tadeáš#1779",
@@ -680,7 +680,7 @@
                 "winner": 2
             },
             {
-                "id": "90128",
+                "id": 90128,
                 "link": "/cs/battles/90128/spectate/8a274f7b413f4cff9cbe2e1fea966d3c/",
                 "players": [
                     "Fredka#886",
@@ -689,7 +689,7 @@
                 "winner": 1
             },
             {
-                "id": "90135",
+                "id": 90135,
                 "link": "/cs/battles/90135/spectate/c6dba4de87844a9c8a0c2f1bafb53b0a/",
                 "players": [
                     "luky#1830",
@@ -698,7 +698,7 @@
                 "winner": 1
             },
             {
-                "id": "90136",
+                "id": 90136,
                 "link": "/cs/battles/90136/spectate/a1cc9068ec0b454599a30c68fe978504/",
                 "players": [
                     "BranulYk#2045",
@@ -707,7 +707,7 @@
                 "winner": 1
             },
             {
-                "id": "90137",
+                "id": 90137,
                 "link": "/cs/battles/90137/spectate/a607ad5e1c4241c1a47ea4eaebc58758/",
                 "players": [
                     "Samuelito#4054",
@@ -716,7 +716,7 @@
                 "winner": 2
             },
             {
-                "id": "90138",
+                "id": 90138,
                 "link": "/cs/battles/90138/spectate/22714af835c54b6084e16d5088a059ab/",
                 "players": [
                     "peterko#4704",
@@ -725,7 +725,7 @@
                 "winner": 2
             },
             {
-                "id": "90139",
+                "id": 90139,
                 "link": "/cs/battles/90139/spectate/7093a9b7438b46039d432cc4edf7a97e/",
                 "players": [
                     "Jaran12#4644",
@@ -734,7 +734,7 @@
                 "winner": 0
             },
             {
-                "id": "90140",
+                "id": 90140,
                 "link": "/cs/battles/90140/spectate/f9e5a40f7812485bab5cbc8204332f92/",
                 "players": [
                     "ondra#24",
@@ -743,7 +743,7 @@
                 "winner": 1
             },
             {
-                "id": "90141",
+                "id": 90141,
                 "link": "/cs/battles/90141/spectate/a2a1a90119494e8e867e585f3d339ccf/",
                 "players": [
                     "Petr Vagner#4695",
@@ -752,7 +752,7 @@
                 "winner": 1
             },
             {
-                "id": "90142",
+                "id": 90142,
                 "link": "/cs/battles/90142/spectate/d7918d715b2a41688d395a7f892485a0/",
                 "players": [
                     "Samuelito#4054",
@@ -761,7 +761,7 @@
                 "winner": 2
             },
             {
-                "id": "90143",
+                "id": 90143,
                 "link": "/cs/battles/90143/spectate/5a018a64d9834d9da301bf7240ef1d5b/",
                 "players": [
                     "Mole 06#34",
@@ -770,7 +770,7 @@
                 "winner": 1
             },
             {
-                "id": "90144",
+                "id": 90144,
                 "link": "/cs/battles/90144/spectate/f3dd1fad50e14f5081dd57988231e860/",
                 "players": [
                     "BranulYk#2045",
@@ -779,7 +779,7 @@
                 "winner": 1
             },
             {
-                "id": "90147",
+                "id": 90147,
                 "link": "/cs/battles/90147/spectate/6a0764bfc5614bcd99bfd54997f255da/",
                 "players": [
                     "Malina Cheeffe#4673",
@@ -788,7 +788,7 @@
                 "winner": 2
             },
             {
-                "id": "90148",
+                "id": 90148,
                 "link": "/cs/battles/90148/spectate/1a04133552a34cb2bf33930850271de2/",
                 "players": [
                     "peterko#4704",
@@ -797,7 +797,7 @@
                 "winner": 2
             },
             {
-                "id": "90149",
+                "id": 90149,
                 "link": "/cs/battles/90149/spectate/6dfd8ed687184029bdb44a66dc67c33c/",
                 "players": [
                     "Vojta#1988",
@@ -806,7 +806,7 @@
                 "winner": 1
             },
             {
-                "id": "90150",
+                "id": 90150,
                 "link": "/cs/battles/90150/spectate/91104a6b103348b48f24d8c581a4459f/",
                 "players": [
                     "luky#1830",
@@ -815,7 +815,7 @@
                 "winner": 1
             },
             {
-                "id": "90151",
+                "id": 90151,
                 "link": "/cs/battles/90151/spectate/7c1edcbdaebf4e0e99d36a0c63aca6c8/",
                 "players": [
                     "maty_hrazdira#866",
@@ -824,7 +824,7 @@
                 "winner": 1
             },
             {
-                "id": "90153",
+                "id": 90153,
                 "link": "/cs/battles/90153/spectate/ec36c226b79542fcbdcb19b1d797c4c2/",
                 "players": [
                     "Vojta#1988",
@@ -833,7 +833,7 @@
                 "winner": 2
             },
             {
-                "id": "90154",
+                "id": 90154,
                 "link": "/cs/battles/90154/spectate/7d5baf5445074fd48e6109104f1e66af/",
                 "players": [
                     "Tadeáš#1779",
@@ -842,7 +842,7 @@
                 "winner": 1
             },
             {
-                "id": "90155",
+                "id": 90155,
                 "link": "/cs/battles/90155/spectate/839ab8d1fd3044d08ae6e5cdbc5449c1/",
                 "players": [
                     "Jaran12#4644",
