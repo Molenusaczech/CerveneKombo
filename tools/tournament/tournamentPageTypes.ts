@@ -3,6 +3,7 @@ type Match = {
     link: string | null;
     players: string[];
     winner: number;
+    timestamp: number;
 };
 
 type Tournament = {

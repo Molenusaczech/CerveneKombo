@@ -62,11 +62,13 @@ async function scrapeTournament(url: string) {
                 id: -1,
                 link: null,
                 players: [],
-                winner: 0
+                winner: 0,
+                timestamp: 0
             }
 
             match.id = Number(href.split("/")[3]);
             match.link = href;
+            match.timestamp = Number(cells[3].dataset.order) || -1;
 
             [1, 2].forEach(playerIndex => {
 
