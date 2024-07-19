@@ -11,7 +11,8 @@
     "downloadImages": "node tools/imageLink.js",
     "getSwoData": "node tools/swo-scraper/getSwoData.js",
     "getCardStats": "node tools/swo-scraper/getCards.js",
-    "parseStats": "node tools/swo-scraper/parseStats.js"
+    "parseStats": "node tools/swo-scraper/parseStats.js",
+    "getTournamentData": "node tools/tournament/getTournamentData.js"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -20,7 +21,6 @@
     "@mui/material": "^5.15.14",
     "@ramonak/react-progress-bar": "^5.2.0",
     "@vercel/analytics": "^1.2.2",
-    "jsdom": "^24.0.0",
     "next": "14.1.4",
     "react": "^18",
     "react-data-table-component": "^7.6.2",
