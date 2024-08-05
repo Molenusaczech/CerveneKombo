@@ -4,7 +4,7 @@ import GetDecksFromReplay from "@/tools/replay/getDecksFromReplay";
 import { Match } from "./tournamentPageTypes";
 
 async function getMatchData(match: Match) {
-    const link = match.link;
+    const link = "http://scratchwars-online.cz"+match.link;
 
     if (!link) {
         return;
@@ -19,6 +19,7 @@ async function getMatchData(match: Match) {
     }
 
     console.log(decks[0].hero.cid, decks[1].hero.cid);
+    console.log(replay.events)
 }
 
 getMatchData({
