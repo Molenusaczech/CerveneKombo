@@ -1,409 +1,2136 @@
-[
-    {
-        "id": "swo-ligovy-442024-157",
-        "name": "🏆 SWO Ligový 4.4.2024 🏆 Standard",
-        "link": "https://scratchwars-online.cz/cs/tournaments/swo-ligovy-442024-157/",
-        "standings": [
-            {
-                "name": "Hospodín#1745",
-                "deck": {
-                    "hero": "Gizmeron",
-                    "weapons": [
-                        "Axe_Crystal",
-                        "Wand_Diamond",
-                        "Sword_SilverBlade",
-                        "Wand_Healing",
-                        "Wand_Dragon"
-                    ]
+{
+    "tournaments": [
+        {
+            "id": "swo-ligovy-442024-157",
+            "name": "🏆 SWO Ligový 4.4.2024 🏆 Standard",
+            "link": "https://scratchwars-online.cz/cs/tournaments/swo-ligovy-442024-157/",
+            "standings": [
+                {
+                    "name": "Hospodín#1745",
+                    "deck": {
+                        "hero": {
+                            "t": "hero",
+                            "name": "Zlatobrad XII.",
+                            "cid": "Gizmeron",
+                            "isFoil": false,
+                            "primaryHealth": 22,
+                            "secondaryHealth": 0,
+                            "energy": [
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 4,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 5,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                }
+                            ],
+                            "bonuses": [
+                                {
+                                    "value": 1,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 1,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 1,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                }
+                            ]
+                        },
+                        "weapons": [
+                            {
+                                "t": "weapon",
+                                "name": "KTKK",
+                                "cid": "Axe_Crystal",
+                                "durability": 3,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "HHQL",
+                                "cid": "Wand_Diamond",
+                                "durability": 4,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "DIGI",
+                                "cid": "Sword_SilverBlade",
+                                "durability": 1,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1,
+                                        "durability": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "JYZX",
+                                "cid": "Wand_Healing",
+                                "durability": 2,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "CCFQ",
+                                "cid": "Wand_Dragon",
+                                "durability": 5,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "vali Lord#1732",
+                    "deck": {
+                        "hero": {
+                            "t": "hero",
+                            "name": "Monomion Leo",
+                            "cid": "Pollux",
+                            "isFoil": false,
+                            "primaryHealth": 23,
+                            "secondaryHealth": 0,
+                            "energy": [
+                                {
+                                    "value": 5,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 4,
+                                    "isUpgraded": false
+                                }
+                            ],
+                            "bonuses": [
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 1,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 1,
+                                    "isUpgraded": false
+                                },
+                                null,
+                                {
+                                    "value": 1,
+                                    "isUpgraded": false
+                                },
+                                null
+                            ]
+                        },
+                        "weapons": [
+                            {
+                                "t": "weapon",
+                                "name": "XXFH",
+                                "cid": "Axe_Crystal",
+                                "durability": 4,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "HVVN",
+                                "cid": "Wand_Diamond",
+                                "durability": 5,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "CWYR",
+                                "cid": "Wand_Dragon",
+                                "durability": 5,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "KMNQ",
+                                "cid": "Axe_WoodenClub",
+                                "durability": 4,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "RDBG",
+                                "cid": "Wand_Ruby",
+                                "durability": 3,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "VFerda#39",
+                    "deck": {
+                        "hero": {
+                            "t": "hero",
+                            "name": "Igutus Leo",
+                            "cid": "Pollux",
+                            "isFoil": false,
+                            "primaryHealth": 22,
+                            "secondaryHealth": 0,
+                            "energy": [
+                                {
+                                    "value": 5,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 4,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 4,
+                                    "isUpgraded": false
+                                }
+                            ],
+                            "bonuses": [
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                null,
+                                {
+                                    "value": 1,
+                                    "isUpgraded": false
+                                },
+                                null
+                            ]
+                        },
+                        "weapons": [
+                            {
+                                "t": "weapon",
+                                "name": "NKGJ",
+                                "cid": "Axe_Crystal",
+                                "durability": 4,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "CTLK",
+                                "cid": "Wand_Dragon",
+                                "durability": 4,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "CVGY",
+                                "cid": "Axe_DeepwoodClub",
+                                "durability": 2,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "GVPK",
+                                "cid": "Wand_Ruby",
+                                "durability": 2,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "KBMG",
+                                "cid": "Wand_Healing",
+                                "durability": 4,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Mole 06#34",
+                    "deck": {
+                        "hero": {
+                            "t": "hero",
+                            "name": "Lupipsis Leo",
+                            "cid": "Pollux",
+                            "isFoil": false,
+                            "primaryHealth": 22,
+                            "secondaryHealth": 0,
+                            "energy": [
+                                {
+                                    "value": 5,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 4,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 4,
+                                    "isUpgraded": false
+                                }
+                            ],
+                            "bonuses": [
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 1,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                null,
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                null
+                            ]
+                        },
+                        "weapons": [
+                            {
+                                "t": "weapon",
+                                "name": "LGYW",
+                                "cid": "Axe_Crystal",
+                                "durability": 3,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "VIRT",
+                                "cid": "Wand_Dragon",
+                                "durability": 3,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "QTZC",
+                                "cid": "Axe_WoodenClub",
+                                "durability": 5,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 6
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "DRFD",
+                                "cid": "Axe_WoodenHammer",
+                                "durability": 2,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "ZJLF",
+                                "cid": "Wand_Diamond",
+                                "durability": 5,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "Scratch knight sk#2007",
+                    "deck": {
+                        "hero": {
+                            "t": "hero",
+                            "name": "Xanoceps Rex",
+                            "cid": "Drakosaur",
+                            "isFoil": false,
+                            "primaryHealth": 23,
+                            "secondaryHealth": 0,
+                            "energy": [
+                                {
+                                    "value": 5,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                }
+                            ],
+                            "bonuses": [
+                                {
+                                    "value": 1,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                null,
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                }
+                            ]
+                        },
+                        "weapons": [
+                            {
+                                "t": "weapon",
+                                "name": "QBDP",
+                                "cid": "Sword_Nimble",
+                                "durability": 2,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "DIGI",
+                                "cid": "Axe_Skuth",
+                                "durability": 4,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 6,
+                                        "durability": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "PPJH",
+                                "cid": "Axe_WoodenClub",
+                                "durability": 4,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "FVYP",
+                                "cid": "Bow_GoldenTech",
+                                "durability": 4,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "DIGI",
+                                "cid": "Axe_Crystal",
+                                "durability": 4,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "JozefHunter87#2247",
+                    "deck": {
+                        "hero": {
+                            "t": "hero",
+                            "name": "Gogo Bleskostroj",
+                            "cid": "Gogo",
+                            "isFoil": false,
+                            "primaryHealth": 22,
+                            "secondaryHealth": 0,
+                            "energy": [
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 5,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                }
+                            ],
+                            "bonuses": [
+                                {
+                                    "value": 1,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 1,
+                                    "isUpgraded": false
+                                },
+                                null,
+                                {
+                                    "value": 3,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 2,
+                                    "isUpgraded": false
+                                },
+                                {
+                                    "value": 4,
+                                    "isUpgraded": false
+                                },
+                                null
+                            ]
+                        },
+                        "weapons": [
+                            {
+                                "t": "weapon",
+                                "name": "DIGI",
+                                "cid": "Sword_Dragonfang",
+                                "durability": 4,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4,
+                                        "durability": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5,
+                                        "durability": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "DIGI",
+                                "cid": "Bow_Bamboo",
+                                "durability": 2,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "DIGI",
+                                "cid": "Wand_Diamond",
+                                "durability": 4,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 6
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "VIRT",
+                                "cid": "Bow_Hardstone",
+                                "durability": 3,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3,
+                                        "durability": 5
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 6
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    }
+                                ]
+                            },
+                            {
+                                "t": "weapon",
+                                "name": "DIGI",
+                                "cid": "Axe_King",
+                                "durability": 4,
+                                "effects": [
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 3
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 5,
+                                        "durability": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 4
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    },
+                                    {
+                                        "isUpgraded": false,
+                                        "value": 2
+                                    }
+                                ]
+                            }
+                        ]
+                    }
                 }
-            },
-            {
-                "name": "vali Lord#1732",
-                "deck": {
-                    "hero": "Pollux",
-                    "weapons": [
-                        "Axe_Crystal",
-                        "Wand_Diamond",
-                        "Wand_Dragon",
-                        "Axe_WoodenClub",
-                        "Wand_Ruby"
-                    ]
+            ],
+            "matches": [
+                {
+                    "id": 87871,
+                    "link": "/cs/battles/87871/spectate/7414cda58ed24212b0dd676561d8d8d5/",
+                    "players": [
+                        "Scratch knight sk#2007",
+                        "vali Lord#1732"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712246659
+                },
+                {
+                    "id": 87872,
+                    "link": "/cs/battles/87872/spectate/61108a1bd35a4ba080e3c9cf436a2ff2/",
+                    "players": [
+                        "Scratch knight sk#2007",
+                        "vali Lord#1732"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712246875
+                },
+                {
+                    "id": 87874,
+                    "link": "/cs/battles/87874/spectate/a28847725ab6456080c2100298043303/",
+                    "players": [
+                        "Hospodín#1745",
+                        "JozefHunter87#2247"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712246893
+                },
+                {
+                    "id": 87878,
+                    "link": "/cs/battles/87878/spectate/19d20fda5170470f9bb4e97d5d5a1a3d/",
+                    "players": [
+                        "JozefHunter87#2247",
+                        "Hospodín#1745"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712247404
+                },
+                {
+                    "id": 87882,
+                    "link": "/cs/battles/87882/spectate/0e98ec3339574576adff1cc94b24588a/",
+                    "players": [
+                        "vali Lord#1732",
+                        "VFerda#39"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712248036
+                },
+                {
+                    "id": 87883,
+                    "link": "/cs/battles/87883/spectate/c521da89f2fe48a69e2b3f6db8ffc029/",
+                    "players": [
+                        "Mole 06#34",
+                        "Hospodín#1745"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712248218
+                },
+                {
+                    "id": 87884,
+                    "link": "/cs/battles/87884/spectate/6d79eac5313e480dbbd29ef0582915a6/",
+                    "players": [
+                        "JozefHunter87#2247",
+                        "Scratch knight sk#2007"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712248150
+                },
+                {
+                    "id": 87885,
+                    "link": "/cs/battles/87885/spectate/9da35d5c999142748bc082669456c7bf/",
+                    "players": [
+                        "VFerda#39",
+                        "vali Lord#1732"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712248194
+                },
+                {
+                    "id": 87886,
+                    "link": "/cs/battles/87886/spectate/31dfaef2b2144bafbf918a985c134b66/",
+                    "players": [
+                        "JozefHunter87#2247",
+                        "Scratch knight sk#2007"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712248386
+                },
+                {
+                    "id": 87887,
+                    "link": "/cs/battles/87887/spectate/b23edc73a807431eb04e2fdc375c3457/",
+                    "players": [
+                        "vali Lord#1732",
+                        "VFerda#39"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712248277
+                },
+                {
+                    "id": 87888,
+                    "link": "/cs/battles/87888/spectate/20d2f2dc1d6a4c8a9c057d18b39eaaf6/",
+                    "players": [
+                        "Mole 06#34",
+                        "Hospodín#1745"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712248461
+                },
+                {
+                    "id": 87889,
+                    "link": "/cs/battles/87889/spectate/9a65d95e8efd4841a493027c871c22a2/",
+                    "players": [
+                        "Hospodín#1745",
+                        "Mole 06#34"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712248576
+                },
+                {
+                    "id": 87893,
+                    "link": "/cs/battles/87893/spectate/817af342900542769562cfc7a473ee1d/",
+                    "players": [
+                        "vali Lord#1732",
+                        "Mole 06#34"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712248764
+                },
+                {
+                    "id": 87894,
+                    "link": "/cs/battles/87894/spectate/dee9c18df7804b989b4cdb353b1dbf47/",
+                    "players": [
+                        "VFerda#39",
+                        "JozefHunter87#2247"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712248811
+                },
+                {
+                    "id": 87896,
+                    "link": "/cs/battles/87896/spectate/35eff94922104f588d89726fc108cac0/",
+                    "players": [
+                        "Hospodín#1745",
+                        "Scratch knight sk#2007"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712249038
+                },
+                {
+                    "id": 87897,
+                    "link": "/cs/battles/87897/spectate/0ccb615980bb4091ad63b8c9edfe9e34/",
+                    "players": [
+                        "Mole 06#34",
+                        "vali Lord#1732"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712248868
+                },
+                {
+                    "id": 87898,
+                    "link": "/cs/battles/87898/spectate/9d19671f9dc749b5942ec6d6292cc4de/",
+                    "players": [
+                        "JozefHunter87#2247",
+                        "VFerda#39"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712249016
+                },
+                {
+                    "id": 87899,
+                    "link": "/cs/battles/87899/spectate/82cc33a774344643b27b9b06de842d6c/",
+                    "players": [
+                        "Scratch knight sk#2007",
+                        "Hospodín#1745"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712249193
+                },
+                {
+                    "id": 87903,
+                    "link": "/cs/battles/87903/spectate/20ae092145244e9abe48955bbd447073/",
+                    "players": [
+                        "Scratch knight sk#2007",
+                        "VFerda#39"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712249540
+                },
+                {
+                    "id": 87904,
+                    "link": "/cs/battles/87904/spectate/d6256dc0c8a14e66bdae0c08ea6097ba/",
+                    "players": [
+                        "Mole 06#34",
+                        "JozefHunter87#2247"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712249384
+                },
+                {
+                    "id": 87906,
+                    "link": "/cs/battles/87906/spectate/e29ec8c9823d4fc78ddf5c2fff7de315/",
+                    "players": [
+                        "JozefHunter87#2247",
+                        "Mole 06#34"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712249578
+                },
+                {
+                    "id": 87907,
+                    "link": "/cs/battles/87907/spectate/8643aeee0f044306ab99f0f8c114470e/",
+                    "players": [
+                        "VFerda#39",
+                        "Scratch knight sk#2007"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712249631
+                },
+                {
+                    "id": 87908,
+                    "link": "/cs/battles/87908/spectate/1c5086782fae42e5b2727c01f1290876/",
+                    "players": [
+                        "vali Lord#1732",
+                        "Hospodín#1745"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712249742
+                },
+                {
+                    "id": 87909,
+                    "link": "/cs/battles/87909/spectate/f784f9c270b34edeb4093605c461077b/",
+                    "players": [
+                        "Scratch knight sk#2007",
+                        "VFerda#39"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712249707
+                },
+                {
+                    "id": 87910,
+                    "link": "/cs/battles/87910/spectate/611f7107678b454a9006981179bc82ab/",
+                    "players": [
+                        "vali Lord#1732",
+                        "Hospodín#1745"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712250134
+                },
+                {
+                    "id": 87914,
+                    "link": "/cs/battles/87914/spectate/1ccfbce9576643cba1c87e9b722ded80/",
+                    "players": [
+                        "Scratch knight sk#2007",
+                        "Mole 06#34"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712250340
+                },
+                {
+                    "id": 87916,
+                    "link": "/cs/battles/87916/spectate/8cf182ba9a864896bbb9cc514468ff01/",
+                    "players": [
+                        "Hospodín#1745",
+                        "VFerda#39"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712250465
+                },
+                {
+                    "id": 87917,
+                    "link": "/cs/battles/87917/spectate/133b4f0d56aa452999a00517d26695e6/",
+                    "players": [
+                        "vali Lord#1732",
+                        "JozefHunter87#2247"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712250560
+                },
+                {
+                    "id": 87918,
+                    "link": "/cs/battles/87918/spectate/6b8a731dbdd246fd9246fc108849088b/",
+                    "players": [
+                        "Mole 06#34",
+                        "Scratch knight sk#2007"
+                    ],
+                    "winner": 1,
+                    "timestamp": 1712250471
+                },
+                {
+                    "id": 87919,
+                    "link": "/cs/battles/87919/spectate/0f51aedf691a456e9bc8ba9f9d11ca16/",
+                    "players": [
+                        "VFerda#39",
+                        "Hospodín#1745"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712250765
+                },
+                {
+                    "id": 87920,
+                    "link": "/cs/battles/87920/spectate/07d8d639fa394ef9a908c75232fd442e/",
+                    "players": [
+                        "Scratch knight sk#2007",
+                        "Mole 06#34"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712250591
+                },
+                {
+                    "id": 87921,
+                    "link": "/cs/battles/87921/spectate/437bda5fc99d468faf590b2ddca0d213/",
+                    "players": [
+                        "JozefHunter87#2247",
+                        "vali Lord#1732"
+                    ],
+                    "winner": 2,
+                    "timestamp": 1712250907
                 }
-            },
-            {
-                "name": "VFerda#39",
-                "deck": {
-                    "hero": "Pollux",
-                    "weapons": [
-                        "Axe_Crystal",
-                        "Wand_Dragon",
-                        "Axe_DeepwoodClub",
-                        "Wand_Ruby",
-                        "Wand_Healing"
-                    ]
-                }
-            },
-            {
-                "name": "Mole 06#34",
-                "deck": {
-                    "hero": "Pollux",
-                    "weapons": [
-                        "Axe_Crystal",
-                        "Wand_Dragon",
-                        "Axe_WoodenClub",
-                        "Axe_WoodenHammer",
-                        "Wand_Diamond"
-                    ]
-                }
-            },
-            {
-                "name": "Scratch knight sk#2007",
-                "deck": {
-                    "hero": "Drakosaur",
-                    "weapons": [
-                        "Sword_Nimble",
-                        "Axe_Skuth",
-                        "Axe_WoodenClub",
-                        "Bow_GoldenTech",
-                        "Axe_Crystal"
-                    ]
-                }
-            },
-            {
-                "name": "JozefHunter87#2247",
-                "deck": {
-                    "hero": "Gogo",
-                    "weapons": [
-                        "Sword_Dragonfang",
-                        "Bow_Bamboo",
-                        "Wand_Diamond",
-                        "Bow_Hardstone",
-                        "Axe_King"
-                    ]
-                }
-            }
-        ],
-        "matches": [
-            {
-                "id": 87871,
-                "link": "/cs/battles/87871/spectate/7414cda58ed24212b0dd676561d8d8d5/",
-                "players": [
-                    "Scratch knight sk#2007",
-                    "vali Lord#1732"
-                ],
-                "winner": 2,
-                "timestamp": 1712246659
-            },
-            {
-                "id": 87872,
-                "link": "/cs/battles/87872/spectate/61108a1bd35a4ba080e3c9cf436a2ff2/",
-                "players": [
-                    "Scratch knight sk#2007",
-                    "vali Lord#1732"
-                ],
-                "winner": 2,
-                "timestamp": 1712246875
-            },
-            {
-                "id": 87874,
-                "link": "/cs/battles/87874/spectate/a28847725ab6456080c2100298043303/",
-                "players": [
-                    "Hospodín#1745",
-                    "JozefHunter87#2247"
-                ],
-                "winner": 1,
-                "timestamp": 1712246893
-            },
-            {
-                "id": 87878,
-                "link": "/cs/battles/87878/spectate/19d20fda5170470f9bb4e97d5d5a1a3d/",
-                "players": [
-                    "JozefHunter87#2247",
-                    "Hospodín#1745"
-                ],
-                "winner": 2,
-                "timestamp": 1712247404
-            },
-            {
-                "id": 87882,
-                "link": "/cs/battles/87882/spectate/0e98ec3339574576adff1cc94b24588a/",
-                "players": [
-                    "vali Lord#1732",
-                    "VFerda#39"
-                ],
-                "winner": 1,
-                "timestamp": 1712248036
-            },
-            {
-                "id": 87883,
-                "link": "/cs/battles/87883/spectate/c521da89f2fe48a69e2b3f6db8ffc029/",
-                "players": [
-                    "Mole 06#34",
-                    "Hospodín#1745"
-                ],
-                "winner": 2,
-                "timestamp": 1712248218
-            },
-            {
-                "id": 87884,
-                "link": "/cs/battles/87884/spectate/6d79eac5313e480dbbd29ef0582915a6/",
-                "players": [
-                    "JozefHunter87#2247",
-                    "Scratch knight sk#2007"
-                ],
-                "winner": 2,
-                "timestamp": 1712248150
-            },
-            {
-                "id": 87885,
-                "link": "/cs/battles/87885/spectate/9da35d5c999142748bc082669456c7bf/",
-                "players": [
-                    "VFerda#39",
-                    "vali Lord#1732"
-                ],
-                "winner": 1,
-                "timestamp": 1712248194
-            },
-            {
-                "id": 87886,
-                "link": "/cs/battles/87886/spectate/31dfaef2b2144bafbf918a985c134b66/",
-                "players": [
-                    "JozefHunter87#2247",
-                    "Scratch knight sk#2007"
-                ],
-                "winner": 2,
-                "timestamp": 1712248386
-            },
-            {
-                "id": 87887,
-                "link": "/cs/battles/87887/spectate/b23edc73a807431eb04e2fdc375c3457/",
-                "players": [
-                    "vali Lord#1732",
-                    "VFerda#39"
-                ],
-                "winner": 1,
-                "timestamp": 1712248277
-            },
-            {
-                "id": 87888,
-                "link": "/cs/battles/87888/spectate/20d2f2dc1d6a4c8a9c057d18b39eaaf6/",
-                "players": [
-                    "Mole 06#34",
-                    "Hospodín#1745"
-                ],
-                "winner": 1,
-                "timestamp": 1712248461
-            },
-            {
-                "id": 87889,
-                "link": "/cs/battles/87889/spectate/9a65d95e8efd4841a493027c871c22a2/",
-                "players": [
-                    "Hospodín#1745",
-                    "Mole 06#34"
-                ],
-                "winner": 1,
-                "timestamp": 1712248576
-            },
-            {
-                "id": 87893,
-                "link": "/cs/battles/87893/spectate/817af342900542769562cfc7a473ee1d/",
-                "players": [
-                    "vali Lord#1732",
-                    "Mole 06#34"
-                ],
-                "winner": 1,
-                "timestamp": 1712248764
-            },
-            {
-                "id": 87894,
-                "link": "/cs/battles/87894/spectate/dee9c18df7804b989b4cdb353b1dbf47/",
-                "players": [
-                    "VFerda#39",
-                    "JozefHunter87#2247"
-                ],
-                "winner": 1,
-                "timestamp": 1712248811
-            },
-            {
-                "id": 87896,
-                "link": "/cs/battles/87896/spectate/35eff94922104f588d89726fc108cac0/",
-                "players": [
-                    "Hospodín#1745",
-                    "Scratch knight sk#2007"
-                ],
-                "winner": 1,
-                "timestamp": 1712249038
-            },
-            {
-                "id": 87897,
-                "link": "/cs/battles/87897/spectate/0ccb615980bb4091ad63b8c9edfe9e34/",
-                "players": [
-                    "Mole 06#34",
-                    "vali Lord#1732"
-                ],
-                "winner": 2,
-                "timestamp": 1712248868
-            },
-            {
-                "id": 87898,
-                "link": "/cs/battles/87898/spectate/9d19671f9dc749b5942ec6d6292cc4de/",
-                "players": [
-                    "JozefHunter87#2247",
-                    "VFerda#39"
-                ],
-                "winner": 2,
-                "timestamp": 1712249016
-            },
-            {
-                "id": 87899,
-                "link": "/cs/battles/87899/spectate/82cc33a774344643b27b9b06de842d6c/",
-                "players": [
-                    "Scratch knight sk#2007",
-                    "Hospodín#1745"
-                ],
-                "winner": 2,
-                "timestamp": 1712249193
-            },
-            {
-                "id": 87903,
-                "link": "/cs/battles/87903/spectate/20ae092145244e9abe48955bbd447073/",
-                "players": [
-                    "Scratch knight sk#2007",
-                    "VFerda#39"
-                ],
-                "winner": 1,
-                "timestamp": 1712249540
-            },
-            {
-                "id": 87904,
-                "link": "/cs/battles/87904/spectate/d6256dc0c8a14e66bdae0c08ea6097ba/",
-                "players": [
-                    "Mole 06#34",
-                    "JozefHunter87#2247"
-                ],
-                "winner": 1,
-                "timestamp": 1712249384
-            },
-            {
-                "id": 87906,
-                "link": "/cs/battles/87906/spectate/e29ec8c9823d4fc78ddf5c2fff7de315/",
-                "players": [
-                    "JozefHunter87#2247",
-                    "Mole 06#34"
-                ],
-                "winner": 2,
-                "timestamp": 1712249578
-            },
-            {
-                "id": 87907,
-                "link": "/cs/battles/87907/spectate/8643aeee0f044306ab99f0f8c114470e/",
-                "players": [
-                    "VFerda#39",
-                    "Scratch knight sk#2007"
-                ],
-                "winner": 1,
-                "timestamp": 1712249631
-            },
-            {
-                "id": 87908,
-                "link": "/cs/battles/87908/spectate/1c5086782fae42e5b2727c01f1290876/",
-                "players": [
-                    "vali Lord#1732",
-                    "Hospodín#1745"
-                ],
-                "winner": 2,
-                "timestamp": 1712249742
-            },
-            {
-                "id": 87909,
-                "link": "/cs/battles/87909/spectate/f784f9c270b34edeb4093605c461077b/",
-                "players": [
-                    "Scratch knight sk#2007",
-                    "VFerda#39"
-                ],
-                "winner": 2,
-                "timestamp": 1712249707
-            },
-            {
-                "id": 87910,
-                "link": "/cs/battles/87910/spectate/611f7107678b454a9006981179bc82ab/",
-                "players": [
-                    "vali Lord#1732",
-                    "Hospodín#1745"
-                ],
-                "winner": 2,
-                "timestamp": 1712250134
-            },
-            {
-                "id": 87914,
-                "link": "/cs/battles/87914/spectate/1ccfbce9576643cba1c87e9b722ded80/",
-                "players": [
-                    "Scratch knight sk#2007",
-                    "Mole 06#34"
-                ],
-                "winner": 1,
-                "timestamp": 1712250340
-            },
-            {
-                "id": 87916,
-                "link": "/cs/battles/87916/spectate/8cf182ba9a864896bbb9cc514468ff01/",
-                "players": [
-                    "Hospodín#1745",
-                    "VFerda#39"
-                ],
-                "winner": 1,
-                "timestamp": 1712250465
-            },
-            {
-                "id": 87917,
-                "link": "/cs/battles/87917/spectate/133b4f0d56aa452999a00517d26695e6/",
-                "players": [
-                    "vali Lord#1732",
-                    "JozefHunter87#2247"
-                ],
-                "winner": 1,
-                "timestamp": 1712250560
-            },
-            {
-                "id": 87918,
-                "link": "/cs/battles/87918/spectate/6b8a731dbdd246fd9246fc108849088b/",
-                "players": [
-                    "Mole 06#34",
-                    "Scratch knight sk#2007"
-                ],
-                "winner": 1,
-                "timestamp": 1712250471
-            },
-            {
-                "id": 87919,
-                "link": "/cs/battles/87919/spectate/0f51aedf691a456e9bc8ba9f9d11ca16/",
-                "players": [
-                    "VFerda#39",
-                    "Hospodín#1745"
-                ],
-                "winner": 2,
-                "timestamp": 1712250765
-            },
-            {
-                "id": 87920,
-                "link": "/cs/battles/87920/spectate/07d8d639fa394ef9a908c75232fd442e/",
-                "players": [
-                    "Scratch knight sk#2007",
-                    "Mole 06#34"
-                ],
-                "winner": 2,
-                "timestamp": 1712250591
-            },
-            {
-                "id": 87921,
-                "link": "/cs/battles/87921/spectate/437bda5fc99d468faf590b2ddca0d213/",
-                "players": [
-                    "JozefHunter87#2247",
-                    "vali Lord#1732"
-                ],
-                "winner": 2,
-                "timestamp": 1712250907
-            }
-        ]
-    }
-]
+            ]
+        }
+    ],
+    "heroes": {},
+    "weapons": {},
+    "players": {}
+}

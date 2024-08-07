@@ -1,5 +1,7 @@
 import { heroCid } from "@/data/heroTypeData";
 import { weaponCid } from "@/data/weaponTypeData";
+import { heroRarity } from "@/types/cardRarity";
+import { weaponRarity } from "@/types/weaponRarity";
 
 type Match = {
     id: number;
@@ -35,14 +37,21 @@ type HeroStats = {
     weapons: Record<weaponCid, WeaponStats>;
 }
 
-type PlayerDeck = {
+type SimplifiedDeck = {
+    t: "s";
     hero: heroCid;
     weapons: weaponCid[];
 }
 
+type PlayerDeck = {
+    t: "f";
+    hero: heroRarity;
+    weapons: weaponRarity[];
+}
+
 type StandingPlayer = {
     name: string;
-    deck: PlayerDeck | null;
+    deck: PlayerDeck | SimplifiedDeck | null;
 }
 
 type Player = {

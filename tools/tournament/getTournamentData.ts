@@ -1,40 +1,41 @@
 //const jsdom = require("jsdom")
 import jsdom from "jsdom";
 const { JSDOM } = jsdom
-//const fs = require("fs")
-import fs from "fs";
 global.DOMParser = new JSDOM().window.DOMParser
 
-import { Match, StandingPlayer, Tournament } from "./tournamentPageTypes";
+import { Match, StandingPlayer, Tournament, TournamentData } from "./tournamentPageTypes";
 import getChallongeStandings from "./challongeStandings";
 import { heroCid } from "@/data/heroTypeData";
 import { weaponCid } from "@/data/weaponTypeData";
 import getReplayFromSwo from "@/tools/replay/getReplayFromSwo";
 import GetDecksFromReplay from "@/tools/replay/getDecksFromReplay";
+import { addTournament } from "./tournamentDataStore";
 
-const data: Tournament[] = [];
 
 async function scrapeTournament(url: string) {
     console.log("Scraping tournament: " + url);
-    let page = await fetch(url).then(res => res.text());
+    // Get the tournament page
+    let page = await fetch(url, {
+        cache: "force-cache" // Static data
+    }).then(res => res.text());
 
+    // Initialize DOM parser
     let parser = new DOMParser();
     let doc = parser.parseFromString(page, "text/html");
 
+    // Get the table with matches
     const table = doc.querySelectorAll("table")[2];
     const tbody = table.querySelector("tbody");
     if (!tbody) {
         return;
     }
-    const rows = tbody.querySelectorAll("tr");
 
     // Check if the tournament has a name
     if (!doc.querySelector("h1")) {
         return;
     }
 
-    // Initialize tournament data
-
+    // Get standings
     const standings = await getChallongeStandings(doc.querySelector("iframe")?.getAttribute("src") || "");
 
     const players: StandingPlayer[] = standings.map(player => {
@@ -44,34 +45,37 @@ async function scrapeTournament(url: string) {
         }
     });
 
+    // Initialize tournament data
     let tournamentData: Tournament = {
         id: url.split("/")[5],
         name: doc.querySelector("h1")?.textContent?.trim() || "",
         link: url,
         standings: players,
-        matches: [] as Match[]
+        matches: []
     }
 
+    // Get all matches
+    const rows = tbody.querySelectorAll("tr");
+
     for (let i = 0; i < rows.length; i++) {
+        // Get data from each match
         const row = rows[i];
-
         const cells = row.querySelectorAll("td");
-
-        //console.log(cells.length);
-
         const link = cells[0].querySelector("a");
 
         if (link) {
             const href = link.getAttribute("href");
             console.log(href);
 
+            // Skip if no link
             if (!href) {
                 return;
             }
-            0
+
 
             // 0 = draw, 1 = player1, 2 = player2
 
+            // Set fallback match data
             let match: Match = {
                 id: -1,
                 link: null,
@@ -80,10 +84,12 @@ async function scrapeTournament(url: string) {
                 timestamp: 0
             }
 
+            // Get match data
             match.id = Number(href.split("/")[3]);
             match.link = href;
             match.timestamp = Number(cells[3].dataset.order) || -1;
 
+            // Get players
             [1, 2].forEach(playerIndex => {
 
                 let name = cells[playerIndex].childNodes[0]?.textContent?.trim() || '';
@@ -97,7 +103,6 @@ async function scrapeTournament(url: string) {
                     name = name.replace("🏆", "");
                     name = name.trim();
                 }
-                console.log(name + id + isWinner);
 
                 match.players.push(name + id);
             });
@@ -105,55 +110,60 @@ async function scrapeTournament(url: string) {
             tournamentData.matches.push(match);
 
             // Get decks if not already in standings
-
             const player1 = tournamentData.standings.find(player => player.name === match.players[0]);
-            const player1Index = tournamentData.standings.findIndex(player => player.name === match.players[0]);
             const player2 = tournamentData.standings.find(player => player.name === match.players[1]);
-            const player2Index = tournamentData.standings.findIndex(player => player.name === match.players[1]);
 
+            // Skip if players are not in standings
             if (!player1 || !player2) {
                 continue;
             }
 
-            console.log(player1.deck === null, player2.deck === null);
+            // Skip if both players already have decks
             if (player1.deck && player2.deck) {
                 continue;
             }
 
+            // Get decks from replay
             console.log("Getting decks for match " + match.id);
             const replay = await getReplayFromSwo("http://scratchwars-online.cz" + href);
             const decks = GetDecksFromReplay(replay);
 
+            // Skip if no decks found
             if (!decks) {
                 continue;
             }
 
+            // Set decks if not already set
             if (!player1.deck) {
-                tournamentData.standings[player1Index].deck = {
-                    hero: decks[0].hero.cid,
-                    weapons: decks[0].weapons.map(weapon => weapon.cid)
+                player1.deck = {
+                    t: "f",
+                    hero: decks[0].hero,
+                    weapons: decks[0].weapons
                 };
                 console.log("Found deck for " + player1.name + " " + decks[0].hero.cid);
-
             }
-
             if (!player2.deck) {
-                tournamentData.standings[player2Index].deck = {
-                    hero: decks[1].hero.cid,
-                    weapons: decks[1].weapons.map(weapon => weapon.cid)
+                player2.deck = {
+                    t: "f",
+                    hero: decks[1].hero,
+                    weapons: decks[1].weapons
                 };
                 console.log("Found deck for " + player2.name + " " + decks[1].hero.cid);
             }
         }
     };
 
+    // Sort matches by id
     tournamentData.matches.sort((a: Match, b: Match) => {
         return a.id - b.id;
     });
 
+    // Parse the tournament stats
+
+
+
     // Push tournament to array
-    data.push(tournamentData);
-    fs.writeFileSync("src/data/raw/tournaments/rawTournamentData.json", JSON.stringify(data, null, 4));
+    addTournament(tournamentData);
     console.log("Tournament scraped: " + tournamentData.name);
 }
 
