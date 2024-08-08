@@ -9,7 +9,7 @@ import { heroCid } from "@/data/heroTypeData";
 import { weaponCid } from "@/data/weaponTypeData";
 import getReplayFromSwo from "@/tools/replay/getReplayFromSwo";
 import GetDecksFromReplay from "@/tools/replay/getDecksFromReplay";
-import { addTournament } from "./tournamentDataStore";
+import { addTournament, playerMatch, playerStanding } from "./tournamentDataStore";
 
 
 async function scrapeTournament(url: string) {
@@ -160,6 +160,15 @@ async function scrapeTournament(url: string) {
 
     // Parse the tournament stats
 
+    // Add the placement to each player
+    tournamentData.standings.forEach((player, index) => {
+        playerStanding(player.name, index);
+    });
+
+    // Add matches to player stats
+    tournamentData.matches.forEach(match => {
+        playerMatch(match.players[0], match.players[1], match.winner);
+    });
 
 
     // Push tournament to array
