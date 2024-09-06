@@ -33,8 +33,9 @@ type WeaponStats = {
 type HeroStats = {
     plays: number;
     wins: number;
-    effects: CardEffectCountStats[];
+    effects: Record<string, CardEffectCountStats>[];
     weapons: Record<weaponCid, WeaponStats>;
+    matchups: Record<heroCid, CardEffectCountStats>;
 }
 
 type SimplifiedDeck = {
@@ -74,4 +75,11 @@ type TournamentData = {
     players: Record<string, Player>;
 }
 
-export type { Match, Tournament, StandingPlayer, TournamentData };
+export type { 
+    Match, 
+    Tournament, 
+    StandingPlayer, 
+    TournamentData,
+    PlayerDeck,
+    SimplifiedDeck
+};

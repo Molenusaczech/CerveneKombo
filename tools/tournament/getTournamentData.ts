@@ -9,7 +9,7 @@ import { heroCid } from "@/data/heroTypeData";
 import { weaponCid } from "@/data/weaponTypeData";
 import getReplayFromSwo from "@/tools/replay/getReplayFromSwo";
 import GetDecksFromReplay from "@/tools/replay/getDecksFromReplay";
-import { addTournament, playerMatch, playerStanding } from "./tournamentDataStore";
+import { addTournament, deckMatchup, playerMatch, playerStanding } from "./tournamentDataStore";
 
 
 async function scrapeTournament(url: string) {
@@ -165,9 +165,22 @@ async function scrapeTournament(url: string) {
         playerStanding(player.name, index);
     });
 
-    // Add matches to player stats
+    // Add matches to stats
     tournamentData.matches.forEach(match => {
+
+        // Player stats
         playerMatch(match.players[0], match.players[1], match.winner);
+
+
+        let player1Deck = tournamentData.standings.find(player => player.name === match.players[0])?.deck;
+        let player2Deck = tournamentData.standings.find(player => player.name === match.players[1])?.deck;
+
+        if (!player1Deck || !player2Deck || player1Deck.t === "s" || player2Deck.t === "s") {
+            return;
+        }
+
+        // Card stats
+        deckMatchup(player1Deck, player2Deck, match.winner);
     });
 
 
