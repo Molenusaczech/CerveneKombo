@@ -13,7 +13,6 @@ import Card from "../card";
 import { Skeleton } from "@mui/material";
 import HeroSkeleton from "../heroSkeleton";
 import effectValue from "@/tools/effectValue";
-import BonusChart from "../crossStats/bonusChart";
 import getTypeData from "@/tools/types/getTypeData";
 import betterSameWorse from "@/tools/types/betterSameWorse";
 import rarityCardCounts from "@/tools/types/rarityCountCard";
@@ -27,6 +26,7 @@ import { weaponFromUid } from "@/types/weaponFromUid";
 import { LookupLongCard, LookupSmallCard } from "../lookup/lookupCard";
 import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
 import { useEffect, useState } from "react";
+import { langData } from "@/data/langs";
 
 type Checked = DropdownMenuCheckboxItemProps["checked"]
 
@@ -72,7 +72,7 @@ export function CardData(props: {
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <h1 className="text-3xl font-bold">
-              {card && card.name}
+              {card && <div>{card.name} {stats && langData[stats.lang]}</div>}
               {!card && <div>Načítání karty</div>}
             </h1>
             <div className="flex flex-row align-middle space-x-3">

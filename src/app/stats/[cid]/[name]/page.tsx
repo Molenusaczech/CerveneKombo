@@ -1,12 +1,5 @@
 "use client";
 
-import Card from "@/components/card";
-import CrossStats from "@/components/crossStats/crossStats";
-import CardStats from "@/components/stats";
-import Unique from "@/components/unique";
-import { heroCid } from "@/data/heroTypeData";
-import { weaponCid } from "@/data/weaponTypeData";
-import { statsDescription } from "@/tools/metadata/embedDescription";
 import { getCardStats } from "@/tools/getCardStats";
 import getTypeData from "@/tools/types/getTypeData";
 import type { Metadata } from "next";

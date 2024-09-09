@@ -1,6 +1,5 @@
 "use client";
 import { getCardByUid } from "@/tools/getCardByUid";
-import UidLookup from "@/components/uidLookup";
 import { getCardStats } from "@/tools/getCardStats";
 import { Metadata } from "next";
 import statsNotFoundMetadata from "@/tools/metadata/statsNotFoundMetadata";
