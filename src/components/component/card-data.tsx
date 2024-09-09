@@ -64,9 +64,9 @@ export function CardData(props: {
         <div className="flex justify-center">
           {data?.card && <Card
             data={isUpgraded ? scan?.upgradedCard : data.card}
-            width={screenWidth < 400 ? screenWidth : 400}
+            width={screenWidth < 500 ? screenWidth : 500}
           />}
-          {!data?.card && <HeroSkeleton width={screenWidth < 400 ? screenWidth : 400} />}
+          {!data?.card && <HeroSkeleton width={screenWidth < 500 ? screenWidth : 500} />}
 
         </div>
         <div className="space-y-6">
@@ -109,13 +109,13 @@ export function CardData(props: {
             </div>
           </div>
           <div className="grid grid-cols-3 gap-4">
-            <LookupSmallCard title="Horších karet">
+            <LookupSmallCard title="Horších karet" className="shadow-xl shadow-green-300">
               <div className="text-2xl font-bold">{stats?.worse}</div>
             </LookupSmallCard>
-            <LookupSmallCard title="Stejných karet">
+            <LookupSmallCard title="Stejných karet" className="shadow-xl shadow-grey-300">
               <div className="text-2xl font-bold">{stats?.same}</div>
             </LookupSmallCard>
-            <LookupSmallCard title="Lepších karet">
+            <LookupSmallCard title="Lepších karet" className="shadow-xl shadow-red-300">
               <div className="text-2xl font-bold">{stats?.better}</div>
             </LookupSmallCard>
           </div>
