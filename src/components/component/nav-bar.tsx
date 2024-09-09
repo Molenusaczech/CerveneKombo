@@ -56,24 +56,6 @@ export function NavBar() {
   "use client;"
   return (
     <header className="flex h-16 w-full shrink-0 items-center px-4 md:px-6 bg-red-500 text-white">
-      <Link href="/" className="mr-6 flex items-center gap-2 text-lg font-semibold text-white" prefetch={false}>
-      <Image src="/combo.png" alt="Kombo" width={40} height={36} className='pr-1' />
-        <span>Červené kombo</span>
-      </Link>
-      <NavigationMenu className="hidden lg:flex">
-        <NavigationMenuList>
-          {pages.map((curPage, index) => {
-            return (<NavigationMenuLink asChild key={index}>
-            <Link
-              href={curPage.link}
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium transition-colors hover:bg-red-600 focus:bg-red-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-red-600 text-white"
-              prefetch={false}
-            >
-              {curPage.name}
-            </Link>
-          </NavigationMenuLink>)})}
-        </NavigationMenuList>
-      </NavigationMenu>
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="outline" size="icon" className="lg:hidden">
@@ -92,6 +74,24 @@ export function NavBar() {
           </nav>
         </SheetContent>
       </Sheet>
+      <Link href="/" className="mr-6 flex items-center gap-2 text-lg font-semibold text-white" prefetch={false}>
+      <Image src="/combo.png" alt="Kombo" width={40} height={36} className='pr-1' />
+        <span>Červené kombo</span>
+      </Link>
+      <NavigationMenu className="hidden lg:flex">
+        <NavigationMenuList>
+          {pages.map((curPage, index) => {
+            return (<NavigationMenuLink asChild key={index}>
+            <Link
+              href={curPage.link}
+              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium transition-colors hover:bg-red-600 focus:bg-red-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-red-600 text-white"
+              prefetch={false}
+            >
+              {curPage.name}
+            </Link>
+          </NavigationMenuLink>)})}
+        </NavigationMenuList>
+      </NavigationMenu>
     </header>
   )
 }

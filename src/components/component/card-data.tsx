@@ -26,7 +26,7 @@ import { heroFromUid } from "@/types/heroFromUid";
 import { weaponFromUid } from "@/types/weaponFromUid";
 import { LookupLongCard, LookupSmallCard } from "../lookup/lookupCard";
 import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Checked = DropdownMenuCheckboxItemProps["checked"]
 
@@ -38,20 +38,15 @@ export function CardData(props: {
   const data = props.data;
   const scan = props.scan;
 
-  let deltaGraphData = null;
+  let screenWidth = 1080;
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      screenWidth = window.innerWidth;
+    }
+  }, [])
 
   const [isUpgraded, setIsUpgraded] = useState<Checked>(false)
-
-  if (data) {
-
-    let typeData = getTypeData(data.card.cid);
-
-    if (!typeData) {
-      return <div>Chyba - typeData nenalezena</div>
-    }
-
-    deltaGraphData = betterSameWorse(rarityCardCounts(typeData.typeStats), data.delta);
-  }
 
   let card;
 
@@ -67,11 +62,11 @@ export function CardData(props: {
     <div className="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex justify-center">
-          {data?.card &&  <Card
+          {data?.card && <Card
             data={isUpgraded ? scan?.upgradedCard : data.card}
-            height={600}
+            width={screenWidth < 400 ? screenWidth : 400}
           />}
-          {!data?.card && <HeroSkeleton height={600} />}
+          {!data?.card && <HeroSkeleton width={screenWidth < 400 ? screenWidth : 400} />}
 
         </div>
         <div className="space-y-6">
@@ -99,14 +94,14 @@ export function CardData(props: {
                   }}>Stáhnout obrázek</DropdownMenuItem>}
                   {scan?.upgradedCard && <>
                     <DropdownMenuSeparator />
-                  <DropdownMenuCheckboxItem
-                    checked={isUpgraded}
-                    onCheckedChange={(val) => {
-                      setIsUpgraded(val)
-                    }}
-                  >
-                    Zobrazit vylepšenou kartu
-                  </DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem
+                      checked={isUpgraded}
+                      onCheckedChange={(val) => {
+                        setIsUpgraded(val)
+                      }}
+                    >
+                      Zobrazit vylepšenou kartu
+                    </DropdownMenuCheckboxItem>
                   </>}
                 </DropdownMenuContent>
               </DropdownMenu>
@@ -179,11 +174,6 @@ export function CardData(props: {
             className="min-h-[150px]"
           />
         </div>
-      </div>
-      <div className="mt-8">
-        <Button variant="outline" className="w-full">
-          More Options
-        </Button>
       </div>
     </div>
   )
