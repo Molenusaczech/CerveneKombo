@@ -38,11 +38,13 @@ export function CardData(props: {
   const data = props.data;
   const scan = props.scan;
 
-  let screenWidth = 1080;
+  const [cardWidth, setCardWidth] = useState<number>(500)
 
   useEffect(() => {
     if (typeof window !== undefined) {
-      screenWidth = window.innerWidth;
+      let screenWidth = document.body.clientWidth;
+      setCardWidth(screenWidth < 500 ? screenWidth : 500)
+      console.log(cardWidth)
     }
   }, [])
 
@@ -57,16 +59,16 @@ export function CardData(props: {
   }
 
   const stats = data;
-
+  
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex justify-center">
           {data?.card && <Card
             data={isUpgraded ? scan?.upgradedCard : data.card}
-            width={screenWidth < 500 ? screenWidth : 500}
+            width={cardWidth}
           />}
-          {!data?.card && <HeroSkeleton width={screenWidth < 500 ? screenWidth : 500} />}
+          {!data?.card && <HeroSkeleton width={cardWidth} />}
 
         </div>
         <div className="space-y-6">
