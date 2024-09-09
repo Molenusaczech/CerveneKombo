@@ -1,3 +1,4 @@
+"use server";
 import { heroCid } from "@/data/heroTypeData";
 import { bonus, heroRarity } from "@/types/cardRarity";
 import { cardStats } from "@/types/cardStats";

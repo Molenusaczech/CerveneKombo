@@ -1,3 +1,5 @@
+"use client";
+
 import Card from "@/components/card";
 import CrossStats from "@/components/crossStats/crossStats";
 import CardStats from "@/components/stats";
@@ -10,8 +12,11 @@ import getTypeData from "@/tools/types/getTypeData";
 import type { Metadata } from "next";
 import statsMetadada from "@/tools/metadata/statsMetadata";
 import statsNotFoundMetadata from "@/tools/metadata/statsNotFoundMetadata";
+import { CardData } from "@/components/component/card-data";
+import { useEffect, useState } from "react";
+import { cardStats } from "@/types/cardStats";
 
-export async function generateMetadata(
+/*export async function generateMetadata(
     { params }: { params: { cid: string, name: string } }
 ): Promise<Metadata> {
 
@@ -24,35 +29,30 @@ export async function generateMetadata(
     if (data == null) return statsNotFoundMetadata(name, cid)
 
     return statsMetadada(data)
-}
+}*/
 
-export default async function Stats({ params }: { params: { cid: string, name: string } }) {
-    "use server";
+export default function Stats({ params }: { params: { cid: string, name: string } }) {
+    "use client";
     // create state
 
-    const cid: heroCid | weaponCid = decodeURIComponent(params.cid) as heroCid | weaponCid
+    const [curCardStats, setCurCardStats] = useState<cardStats | null>(null)
+    const [isError, setIsError] = useState<boolean>(false);
 
-    const data = await getCardStats(cid, decodeURIComponent(params.name))
-
-    if (data == null) return (
-        <div>
-            Error - statistiky nenalezeny... Zkontroluj prosím správnost jména a druhu
-            <br></br>Pokud jsi si jistý, že jsi zadával správně, kontaktuj prosím administrátora
-        </div>)
+    useEffect(() => {
+        getCardStats(params.cid, params.name).then((resp) => {
+            console.log(resp);
+            setCurCardStats(resp);
+        })
+    }, [])
 
     return (
         <div>
 
-            <Card data={data.card} width={500} />
+            <CardData data={curCardStats} scan={null} />
 
-            <CardStats better={data.better} worse={data.worse} same={data.same} delta={data.delta} />
-
-            <Unique instances={data.instances} />
-
-            {/*JSON.stringify(data)*/}
-
-            <CrossStats card={data.card} delta={data.delta} />
-
+            <div>
+                {JSON.stringify(curCardStats)}
+            </div>
 
         </div>
     )

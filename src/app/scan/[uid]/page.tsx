@@ -1,14 +1,17 @@
-
+"use client";
 import { getCardByUid } from "@/tools/getCardByUid";
-
-
 import UidLookup from "@/components/uidLookup";
 import { getCardStats } from "@/tools/getCardStats";
 import { Metadata } from "next";
 import statsNotFoundMetadata from "@/tools/metadata/statsNotFoundMetadata";
 import statsMetadada from "@/tools/metadata/statsMetadata";
+import { cardStats } from "@/types/cardStats";
+import { useEffect, useState } from "react";
+import { heroFromUid } from "@/types/heroFromUid";
+import { weaponFromUid } from "@/types/weaponFromUid";
+import { CardData } from "@/components/component/card-data";
 
-export async function generateMetadata(
+/*export async function generateMetadata(
   { params }: { params: { uid: string } }
 ): Promise<Metadata> {
 
@@ -33,27 +36,37 @@ export async function generateMetadata(
 
   return statsMetadada(stats)
 
-}
+}*/
 
-export default async function Scan({ params }: { params: { uid: string } }) {
-  "use server";
+export default function Scan({ params }: { params: { uid: string } }) {
+  "use client";
   // create state
 
-  const data = await getCardByUid(params.uid)
+  const [curScan, setCurScan] = useState<heroFromUid | weaponFromUid | null>(null)
+  const [curCardStats, setCurCardStats] = useState<cardStats | null>(null)
+  const [isError, setIsError] = useState<boolean>(false);
 
+  useEffect(() => {
 
-  if (!data) return (<div> Error - karta podle QR kódu nenalezena </div>)
+    getCardByUid(params.uid).then((uidResp) => {
 
-  const stats = await getCardStats(data.card.cid, data.card.name)
+      if (uidResp) {
 
-  //if (!stats) return (<div> Error </div>)
+        setCurScan(uidResp)
+        getCardStats(uidResp?.card.cid, uidResp?.card.name).then((resp) => {
+          console.log(resp);
+          setCurCardStats(resp);
+        })
+      }
+    })
+  }, [])
 
   return (
     <div>
-      <UidLookup data={data} stats={stats} />
 
-      {/*JSON.stringify(data)*/}
+      <CardData data={curCardStats} scan={curScan} />
 
     </div>
   )
+
 }

@@ -9,11 +9,12 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Paper, Typography } from "@mui/material";
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "../ui/chart";
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
 export default function BonusChart(props: {
     value: number | undefined,
-    data: heroEffectStats | weaponEffectStats,
-    title: string
+    data: heroEffectStats | weaponEffectStats
 }
 ) {
     "use client"
@@ -39,21 +40,34 @@ export default function BonusChart(props: {
         final.push([key, data.physical[key]])
     });
 
+    let finalStats = betterSameWorse(final, value);
+
+    // remove the header
+    finalStats.shift();
+
+    const chartConfig = {} satisfies ChartConfig
+
     return (
-        <div>
-            <Chart
-                width={'100%'}
-                height={'400px'}
-                chartType="ColumnChart"
-                loader={<div>Loading Chart</div>}
-                data={betterSameWorse(final, value)}
-                options={{
-                    title: props.title,
-                    isStacked: true,
-                    colors: ['#22c55e', '#9ca3af', '#ef4444'],
-                }}
+        <ChartContainer config={chartConfig}>
+          <BarChart accessibilityLayer data={finalStats}>
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="0"
+              tickLine={false}
+              tickMargin={10}
+              axisLine={false}
+              tickFormatter={(value) => value}
             />
-        </div>
+            <ChartTooltip content={<ChartTooltipContent hideLabel />} />
+            <Bar
+              dataKey="1"
+              stackId="a"
+              fill="#22c55e"
+              radius={[4, 4, 0, 0]}
+              name={"Karet"}
+            />
+          </BarChart>
+        </ChartContainer>
     )
 
 }
