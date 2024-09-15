@@ -27,6 +27,9 @@ import { LookupLongCard, LookupSmallCard } from "../lookup/lookupCard";
 import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu";
 import { useEffect, useState } from "react";
 import { langData } from "@/data/langs";
+import { getLevel, getPercentToNextLevel, getXPForLevel } from "@/tools/xpHandler";
+import { Progress } from "../ui/progress";
+import realizationMsgs from "@/data/realizationMsgs";
 
 type Checked = DropdownMenuCheckboxItemProps["checked"]
 
@@ -59,7 +62,16 @@ export function CardData(props: {
   }
 
   const stats = data;
-  
+
+  let level: number | null = null;
+  let xp: number | null = null;
+
+  if (scan && scan.t === "hero" && scan.experience.level) {
+    xp = scan.experience.xp;
+    level = getLevel(xp);
+    console.log(xp, level);
+  }
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -135,12 +147,27 @@ export function CardData(props: {
             <div className="text-2xl font-bold">{scan.owner}</div>
           </LookupLongCard>}
 
+          {level !== null && xp !== null && <LookupLongCard
+            title={level !== 31 ? "Level "+level : "Maximální level"}
+            rightTitle={level !== 31 ? xp + "/" + getXPForLevel(level + 1)+"XP" : +xp+"XP"}
+          >
+            <Progress value={getPercentToNextLevel(xp)} />
+          </LookupLongCard>}
+
+          {scan?.realization && <LookupLongCard
+            title="Realizace karty"
+            rightTitle=""
+          >
+            <div className="text-2xl font-bold">{realizationMsgs[scan.realization]}</div>
+          </LookupLongCard>}
+
           {stats && card && <LookupLongCard
             title="Rozložení průměrů"
             rightTitle=""
           >
             <DeltaChart cid={card.cid} delta={stats.delta} />
           </LookupLongCard>}
+
 
         </div>
       </div>
