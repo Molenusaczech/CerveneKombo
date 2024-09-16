@@ -31,8 +31,10 @@ export default function Stats({ params }: { params: { cid: string, name: string 
     const [curCardStats, setCurCardStats] = useState<cardStats | null>(null)
     const [isError, setIsError] = useState<boolean>(false);
 
+    const name = decodeURIComponent(params.name)
+
     useEffect(() => {
-        getCardStats(params.cid, params.name).then((resp) => {
+        getCardStats(params.cid, name).then((resp) => {
             console.log(resp);
             setCurCardStats(resp);
         })
@@ -42,10 +44,6 @@ export default function Stats({ params }: { params: { cid: string, name: string 
         <div>
 
             <CardData data={curCardStats} scan={null} />
-
-            <div>
-                {JSON.stringify(curCardStats)}
-            </div>
 
         </div>
     )

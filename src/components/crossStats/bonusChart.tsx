@@ -13,61 +13,64 @@ import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
 export default function BonusChart(props: {
-    value: number | undefined,
-    data: heroEffectStats | weaponEffectStats
+  value: number | undefined,
+  data: heroEffectStats | weaponEffectStats,
+  title?: string
 }
 ) {
-    "use client"
+  "use client"
 
-    if (!props.data.physical) {
-        return <div></div>
-    }
+  if (!props.data.physical) {
+    return <div></div>
+  }
 
-    if (!props.value) {
-        return <div>Chyba - value nenalezena</div>
-    }
+  if (!props.value) {
+    return <div>Chyba - value nenalezena</div>
+  }
 
 
 
-    let value = props.value
-    let data = props.data
+  let value = props.value
+  let data = props.data
 
-    let final: [string, (number | string)][] = [
-        ['Bonus', 'Hodnota'],
-    ]
+  let final: [string, (number | string)][] = [
+    ['Bonus', 'Hodnota'],
+  ]
 
-    Object.keys(data.physical).sort((a, b) => Number(a) - Number(b)).forEach((key) => {
-        final.push([key, data.physical[key]])
-    });
+  Object.keys(data.physical).sort((a, b) => Number(a) - Number(b)).forEach((key) => {
+    final.push([key, data.physical[key]])
+  });
 
-    let finalStats = betterSameWorse(final, value);
+  let finalStats = betterSameWorse(final, value);
 
-    // remove the header
-    finalStats.shift();
+  // remove the header
+  finalStats.shift();
 
-    const chartConfig = {} satisfies ChartConfig
+  const chartConfig = {} satisfies ChartConfig
 
-    return (
-        <ChartContainer config={chartConfig}>
-          <BarChart accessibilityLayer data={finalStats}>
-            <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="0"
-              tickLine={false}
-              tickMargin={10}
-              axisLine={false}
-              tickFormatter={(value) => value}
-            />
-            <ChartTooltip content={<ChartTooltipContent hideLabel />} />
-            <Bar
-              dataKey="1"
-              stackId="a"
-              fill="#22c55e"
-              radius={[4, 4, 0, 0]}
-              name={"Karet"}
-            />
-          </BarChart>
-        </ChartContainer>
-    )
+  return (
+    <div>
+      <ChartContainer config={chartConfig}>
+        <BarChart accessibilityLayer data={finalStats}>
+          <CartesianGrid vertical={false} />
+          <XAxis
+            dataKey="0"
+            tickLine={false}
+            tickMargin={10}
+            axisLine={false}
+            tickFormatter={(value) => value}
+          />
+          <ChartTooltip content={<ChartTooltipContent hideLabel />} />
+          <Bar
+            dataKey="1"
+            stackId="a"
+            fill="#22c55e"
+            radius={[4, 4, 0, 0]}
+            name={"Karet"}
+          />
+        </BarChart>
+      </ChartContainer>
+    </div>
+  )
 
 }

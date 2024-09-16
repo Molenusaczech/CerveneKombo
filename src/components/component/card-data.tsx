@@ -31,6 +31,8 @@ import { getLevel, getPercentToNextLevel, getXPForLevel } from "@/tools/xpHandle
 import { Progress } from "../ui/progress";
 import realizationMsgs from "@/data/realizationMsgs";
 
+import CrossStats from "../crossStats/crossStats";
+
 type Checked = DropdownMenuCheckboxItemProps["checked"]
 
 export function CardData(props: {
@@ -148,17 +150,24 @@ export function CardData(props: {
           </LookupLongCard>}
 
           {level !== null && xp !== null && <LookupLongCard
-            title={level !== 31 ? "Level "+level : "Maximální level"}
-            rightTitle={level !== 31 ? xp + "/" + getXPForLevel(level + 1)+"XP" : +xp+"XP"}
+            title={level !== 31 ? "Level " + level : "Maximální level"}
+            rightTitle={level !== 31 ? xp + "/" + getXPForLevel(level + 1) + "XP" : +xp + "XP"}
           >
             <Progress value={getPercentToNextLevel(xp)} />
           </LookupLongCard>}
 
           {scan?.realization && <LookupLongCard
-            title="Realizace karty"
+            title="Realizace"
             rightTitle=""
           >
             <div className="text-2xl font-bold">{realizationMsgs[scan.realization]}</div>
+          </LookupLongCard>}
+
+          {scan?.expansion && <LookupLongCard
+            title="Rozšíření"
+            rightTitle=""
+          >
+            <div className="text-2xl font-bold">{scan.expansion}</div>
           </LookupLongCard>}
 
           {stats && card && <LookupLongCard
@@ -173,37 +182,9 @@ export function CardData(props: {
       </div>
 
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-
-        <div>
-          <h3 className="text-lg font-bold mb-2 text-center">Main HP</h3>
-
-        </div>
-        <div>
-          <h3 className="text-lg font-bold mb-2 text-center">Alternative HP</h3>
-          <LineChart
-            data={[{ value: 80 }, { value: 85 }, { value: 90 }, { value: 95 }, { value: 100 }]}
-            className="min-h-[150px]"
-          />
-        </div>
-
       </div>
 
-      <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div>
-          <h3 className="text-lg font-bold mb-2">Stat 1</h3>
-          <LineChart
-            data={[{ value: 10 }, { value: 12 }, { value: 14 }, { value: 16 }, { value: 18 }]}
-            className="min-h-[150px]"
-          />
-        </div>
-        <div>
-          <h3 className="text-lg font-bold mb-2">Stat 2</h3>
-          <LineChart
-            data={[{ value: 5 }, { value: 7 }, { value: 9 }, { value: 11 }, { value: 13 }]}
-            className="min-h-[150px]"
-          />
-        </div>
-      </div>
+      {/*card && data?.delta && <CrossStats card={card} delta={data?.delta} />*/}
     </div>
   )
 }
