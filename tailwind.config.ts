@@ -3,10 +3,12 @@ import type { Config } from "tailwindcss";
 const config: Config = {
     darkMode: ["class"],
     content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+		'./pages/**/*.{ts,tsx}',
+		'./components/**/*.{ts,tsx}',
+		'./@/components/**/*.{ts,tsx}',
+		'./app/**/*.{ts,tsx}',
+		'./src/**/*.{ts,tsx}',
+		],
   theme: {
   	extend: {
   		backgroundImage: {
@@ -65,6 +67,6 @@ const config: Config = {
   plugins: [require("tailwindcss-animate")],
   corePlugins: {
     preflight: false,
-  }
+  },
 };
 export default config;

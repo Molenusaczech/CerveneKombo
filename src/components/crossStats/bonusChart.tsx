@@ -46,10 +46,14 @@ export default function BonusChart(props: {
   // remove the header
   finalStats.shift();
 
-  const chartConfig = {} satisfies ChartConfig
+  // make it so it doesnt maintain aspect ratio
+  const chartConfig = {
+    
+  } satisfies ChartConfig
 
   return (
     <div>
+      {props.title && <div className="text-sm text-muted-foreground">{props.title}</div>}
       <ChartContainer config={chartConfig}>
         <BarChart accessibilityLayer data={finalStats}>
           <CartesianGrid vertical={false} />
@@ -62,12 +66,26 @@ export default function BonusChart(props: {
           />
           <ChartTooltip content={<ChartTooltipContent hideLabel />} />
           <Bar
-            dataKey="1"
-            stackId="a"
-            fill="#22c55e"
-            radius={[4, 4, 0, 0]}
-            name={"Karet"}
-          />
+              dataKey="1"
+              stackId="a"
+              fill="#22c55e"
+              radius={[4, 4, 0, 0]}
+              name={"Horších"}
+            />
+            <Bar
+              dataKey="2"
+              stackId="a"
+              fill="#9ca3af"
+              radius={[4, 4, 0, 0]}
+              name={"Stejných"}
+            />
+            <Bar
+              dataKey="3"
+              stackId="a"
+              fill="#ef4444"
+              radius={[4, 4, 0, 0]}
+              name={"Lepších"}
+            />
         </BarChart>
       </ChartContainer>
     </div>

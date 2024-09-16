@@ -18,7 +18,7 @@ import betterSameWorse from "@/tools/types/betterSameWorse";
 import rarityCardCounts from "@/tools/types/rarityCountCard";
 import Chart from "react-google-charts";
 import { DeltaChart } from "../crossStats/deltaChart";
-import { Ellipsis, EllipsisVertical } from "lucide-react";
+import { ChevronDown, ChevronUp, Ellipsis, EllipsisVertical } from "lucide-react";
 import { DropdownMenu, DropdownMenuCheckboxItem, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { Badge } from "../ui/badge";
 import { heroFromUid } from "@/types/heroFromUid";
@@ -44,6 +44,7 @@ export function CardData(props: {
   const scan = props.scan;
 
   const [cardWidth, setCardWidth] = useState<number>(500)
+  const [showFullStats, setShowFullStats] = useState<boolean>(false);
 
   useEffect(() => {
     if (typeof window !== undefined) {
@@ -184,7 +185,27 @@ export function CardData(props: {
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
       </div>
 
-      {/*card && data?.delta && <CrossStats card={card} delta={data?.delta} />*/}
+
+
+      {card && data?.delta && showFullStats && <div>
+
+      <CrossStats card={card} delta={data?.delta} />
+      </div>}
+
+      <div className="flex justify-center mt-8">
+        {!showFullStats && <Button onClick={() => {
+          setShowFullStats(true)
+        }}>
+          <ChevronDown className="mr-2 h-4 w-4" /> Zobrazit detailní statistiky
+        </Button>}
+
+        {showFullStats && <Button onClick={() => {
+          setShowFullStats(false)
+        }}>
+          <ChevronUp className="mr-2 h-4 w-4" /> Skrýt detailní statistiky
+        </Button>}
+      </div>
+
     </div>
   )
 }

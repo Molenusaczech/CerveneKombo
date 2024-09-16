@@ -32,7 +32,7 @@ export default function CrossStats(props: {
     return (
         <div>
             {card.t == "hero" && <div>
-                <div className="grid grid-cols-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <BonusChart
                         value={card.primaryHealth}
                         data={typeData.curStats[0]}
@@ -44,32 +44,38 @@ export default function CrossStats(props: {
                         title="Týmové životy"
                     />
                 </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {[0, 1, 2, 3].map((index) => {
                     return (
-                    <div className="grid grid-cols-3" key={index}>
+                        <>
                         <BonusChart
                             value={card.energy[index].value}
                             data={typeData.curStats[2+index*3]}
                             title={`Energie ${index+1}. doba`}
+                            key={index*3}
                         />
                         <BonusChart
                             value={card.bonuses[index*2]?.value}
                             data={typeData.curStats[3+index*3]}
                             title={`Effekt ${effectNames[typeData.typeData.effects[index*2] as effectName]}`}
+                            key={index*3+1}
                         />
 
                         <BonusChart
                             value={card.bonuses[index*2+1]?.value}
                             data={typeData.curStats[4+index*3]}
                             title={`Effekt ${effectNames[typeData.typeData.effects[index*2+1] as effectName]}`}
+                            key={index*3+2}
                         />
-                    </div>
+                        </>
                 )})}
+                </div>
             </div>}
 
             {card.t == "weapon" && <div>
 
-                <div>
+                <div className="grid grid-cols-1 md:grid-cols-3">
+                    <div></div>
                     <BonusChart
                         value={card.durability}
                         data={typeData.curStats[0]}
@@ -77,7 +83,7 @@ export default function CrossStats(props: {
                     />
                 </div>
 
-                <div className="grid grid-cols-3">
+                <div className="grid grid-cols-1 md:grid-cols-3">
                     {[0, 8, 7, 6, 5, 4, 3, 2, 1].map((mappedIndex, index) => {
                         const effectName = effectNames[(typeData.typeData.effects[index] as weaponTypeEffect).t as effectName];
                         const effectColor = colorNames[(typeData.typeData.effects[index] as weaponTypeEffect).f];

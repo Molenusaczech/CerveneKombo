@@ -35,6 +35,11 @@ export default function Stats({ params }: { params: { cid: string, name: string 
 
     useEffect(() => {
         getCardStats(params.cid, name).then((resp) => {
+
+            if (!resp) {
+                setIsError(true);
+            }
+
             console.log(resp);
             setCurCardStats(resp);
         })
