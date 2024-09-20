@@ -157,7 +157,7 @@ function TestimonialCard({
         <p className="text-sm text-gray-500">{role}</p>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-center text-gray-700">"{quote}"</p>
+        <p className="text-center text-gray-700">&quot;{quote}&quot;</p>
         {link && (
           <Link href={link}>
             <Button variant="outline" className="mt-4 w-full">
