@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { heroFromUid } from "@/types/heroFromUid";
 import { weaponFromUid } from "@/types/weaponFromUid";
 import { CardData } from "@/components/component/card-data";
+import LookupFAB from "@/components/lookup/lookupFAB";
 
 /*export async function generateMetadata(
   { params }: { params: { uid: string } }
@@ -63,6 +64,7 @@ export default function Scan({ params }: { params: { uid: string } }) {
   return (
     <div>
 
+      <LookupFAB />
       <CardData data={curCardStats} scan={curScan} />
 
     </div>

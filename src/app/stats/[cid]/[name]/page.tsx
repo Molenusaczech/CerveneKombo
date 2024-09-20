@@ -8,6 +8,7 @@ import statsNotFoundMetadata from "@/tools/metadata/statsNotFoundMetadata";
 import { CardData } from "@/components/component/card-data";
 import { useEffect, useState } from "react";
 import { cardStats } from "@/types/cardStats";
+import LookupFAB from "@/components/lookup/lookupFAB";
 
 /*export async function generateMetadata(
     { params }: { params: { cid: string, name: string } }
@@ -47,7 +48,8 @@ export default function Stats({ params }: { params: { cid: string, name: string 
 
     return (
         <div>
-
+            
+            <LookupFAB />
             <CardData data={curCardStats} scan={null} />
 
         </div>

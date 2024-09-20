@@ -27,28 +27,32 @@ import Image from 'next/image';
 const pages = [
   //'Domů', 'QR Oprava'
   {
-      name: 'Domů',
-      link: '/'
+    name: 'Domů',
+    link: '/'
   },
   {
-      name: 'QR Oprava',
-      link: '/qr'
+    name: "Vyhledávání",
+    link: "/lookup"
   },
   {
-      name: 'Celkové statistiky',
-      link: '/charts'
+    name: 'QR Oprava',
+    link: '/qr'
   },
   {
-      name: 'Editor',
-      link: '/edit'
+    name: 'Celkové statistiky',
+    link: '/charts'
   },
   {
-      name: 'Replay',
-      link: '/replay'
+    name: 'Editor',
+    link: '/edit'
   },
   {
-      name: 'Github',
-      link: 'https://github.com/Molenusaczech/CerveneKombo'
+    name: 'Replay',
+    link: '/replay'
+  },
+  {
+    name: 'Github',
+    link: 'https://github.com/Molenusaczech/CerveneKombo'
   }
 ];
 
@@ -66,30 +70,32 @@ export function NavBar() {
         <SheetContent side="left">
           <nav className="grid gap-2 py-6">
             {pages.map((curPage, index) => {
-            return (
-            <Link href={curPage.link} key={index} className="flex w-full items-center py-2 text-lg font-semibold text-black" prefetch={false}>
-              {curPage.name}
-            </Link>
-         )})}
+              return (
+                <Link href={curPage.link} key={index} className="flex w-full items-center py-2 text-lg font-semibold text-black" prefetch={false}>
+                  {curPage.name}
+                </Link>
+              )
+            })}
           </nav>
         </SheetContent>
       </Sheet>
       <Link href="/" className="mr-6 flex items-center gap-2 text-lg font-semibold text-white" prefetch={false}>
-      <Image src="/combo.png" alt="Kombo" width={40} height={36} className='pr-1' />
+        <Image src="/combo.png" alt="Kombo" width={40} height={36} className='pr-1' />
         <span>Červené kombo</span>
       </Link>
       <NavigationMenu className="hidden lg:flex">
         <NavigationMenuList>
           {pages.map((curPage, index) => {
             return (<NavigationMenuLink asChild key={index}>
-            <Link
-              href={curPage.link}
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium transition-colors hover:bg-red-600 focus:bg-red-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-red-600 text-white"
-              prefetch={false}
-            >
-              {curPage.name}
-            </Link>
-          </NavigationMenuLink>)})}
+              <Link
+                href={curPage.link}
+                className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium transition-colors hover:bg-red-600 focus:bg-red-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-red-600 text-white"
+                prefetch={false}
+              >
+                {curPage.name}
+              </Link>
+            </NavigationMenuLink>)
+          })}
         </NavigationMenuList>
       </NavigationMenu>
     </header>

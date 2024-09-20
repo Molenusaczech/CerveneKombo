@@ -82,6 +82,8 @@ export function CardData(props: {
           {data?.card && <Card
             data={isUpgraded ? scan?.upgradedCard : data.card}
             width={cardWidth}
+            xOff={0}
+            yOff={-4}
           />}
           {!data?.card && <HeroSkeleton width={cardWidth} />}
 

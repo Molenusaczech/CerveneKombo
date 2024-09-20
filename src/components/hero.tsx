@@ -96,7 +96,9 @@ export default function HeroCard(props: {
     height?: number
     gray?: boolean,
     useImg?: boolean,
-    imgRootLink?: string
+    imgRootLink?: string,
+    xOff?: number,
+    yOff?: number
 }) {
 
     if (props.data == undefined) return (<></>);
@@ -126,6 +128,9 @@ export default function HeroCard(props: {
 
     const gray = props.gray ?? false;
 
+    const xOff = props.xOff ?? 0;
+    const yOff = props.yOff ?? 0;
+
     return (
         <div style={
             {
@@ -138,7 +143,7 @@ export default function HeroCard(props: {
 
 
             {props.useImg ? <img
-                src={props.imgRootLink+type.imgUrl}
+                src={props.imgRootLink + type.imgUrl}
                 alt={props.data.name + " card"}
                 width={640 * scale}
                 height={894 * scale}
@@ -176,8 +181,8 @@ export default function HeroCard(props: {
             <Label
                 size={"large"}
                 value={props.data.name}
-                x={315 * scale}
-                y={23 * scale}
+                x={(315 + xOff) * scale}
+                y={(23 + yOff) * scale}
                 isCentered
                 scale={scale}
             />
@@ -186,16 +191,16 @@ export default function HeroCard(props: {
             <Label
                 size={"small"}
                 value={props.data.energy[0].value}
-                x={84 * scale}
-                y={634 * scale}
+                x={(84 + xOff) * scale}
+                y={(634 + yOff) * scale}
                 isUpgraded={props.data.energy[0].isUpgraded}
                 scale={scale}
             />
             {bonuses[0] && <Label
                 size={"medium"}
                 value={bonuses[0].value}
-                x={68 * scale}
-                y={685 * scale}
+                x={(68 + xOff) * scale}
+                y={(685 + yOff) * scale}
                 isInverted={isInverted(type.effects[0])}
                 isUpgraded={bonuses[0].isUpgraded}
                 scale={scale}
@@ -204,8 +209,8 @@ export default function HeroCard(props: {
                 <Label
                     size={"medium"}
                     value={bonuses[1].value}
-                    x={68 * scale}
-                    y={746 * scale}
+                    x={(68 + xOff) * scale}
+                    y={(746 + yOff) * scale}
                     isInverted={isInverted(type.effects[1])}
                     isUpgraded={bonuses[1].isUpgraded}
                     scale={scale}
@@ -216,16 +221,16 @@ export default function HeroCard(props: {
             <Label
                 size={"small"}
                 value={props.data.energy[1].value}
-                x={223 * scale}
-                y={626 * scale}
+                x={(223 + xOff) * scale}
+                y={(626 + yOff) * scale}
                 isUpgraded={props.data.energy[1].isUpgraded}
                 scale={scale}
             />
             {bonuses[2] && <Label
                 size={"medium"}
                 value={bonuses[2].value}
-                x={206 * scale}
-                y={675 * scale}
+                x={(206 + xOff) * scale}
+                y={(675 + yOff) * scale}
                 isInverted={isInverted(type.effects[2])}
                 isUpgraded={bonuses[2].isUpgraded}
                 scale={scale}
@@ -234,8 +239,8 @@ export default function HeroCard(props: {
             {bonuses[3] && type.effects[3] != null && <Label
                 size={"medium"}
                 value={bonuses[3].value}
-                x={206 * scale}
-                y={739 * scale}
+                x={(206 + xOff) * scale}
+                y={(739 + yOff) * scale}
                 isInverted={isInverted(type.effects[3])}
                 isUpgraded={bonuses[3].isUpgraded}
                 scale={scale}
@@ -246,16 +251,16 @@ export default function HeroCard(props: {
             <Label
                 size={"small"}
                 value={props.data.energy[2].value}
-                x={363 * scale}
-                y={637 * scale}
+                x={(363 + xOff) * scale}
+                y={(637 + yOff) * scale}
                 isUpgraded={props.data.energy[2].isUpgraded}
                 scale={scale}
             />
             {bonuses[4] && <Label
                 size={"medium"}
                 value={bonuses[4].value}
-                x={348 * scale}
-                y={686 * scale}
+                x={(348 + xOff) * scale}
+                y={(686 + yOff) * scale}
                 isUpgraded={bonuses[4].isUpgraded}
                 isInverted={isInverted(type.effects[4])}
                 scale={scale}
@@ -264,8 +269,8 @@ export default function HeroCard(props: {
             {bonuses[5] && type.effects[5] != null && <Label
                 size={"medium"}
                 value={bonuses[5].value}
-                x={348 * scale}
-                y={747 * scale}
+                x={(348 + xOff) * scale}
+                y={(747 + yOff) * scale}
                 isInverted={isInverted(type.effects[5])}
                 isUpgraded={bonuses[5].isUpgraded}
                 scale={scale}
@@ -275,16 +280,16 @@ export default function HeroCard(props: {
             <Label
                 size={"small"}
                 value={props.data.energy[3].value}
-                x={503 * scale}
-                y={627 * scale}
+                x={(503 + xOff) * scale}
+                y={(627 + yOff) * scale}
                 isUpgraded={props.data.energy[3].isUpgraded}
                 scale={scale}
             />
             {bonuses[6] && <Label
                 size={"medium"}
                 value={bonuses[6].value}
-                x={487 * scale}
-                y={677 * scale}
+                x={(487 + xOff) * scale}
+                y={(677 + yOff) * scale}
                 isInverted={isInverted(type.effects[6])}
                 isUpgraded={bonuses[6].isUpgraded}
                 scale={scale}
@@ -292,8 +297,8 @@ export default function HeroCard(props: {
             {bonuses[7] && type.effects[7] != null && <Label
                 size={"medium"}
                 value={bonuses[7].value}
-                x={487 * scale}
-                y={738 * scale}
+                x={(487 + xOff) * scale}
+                y={(738 + yOff) * scale}
                 isInverted={isInverted(type.effects[7])}
                 isUpgraded={bonuses[7].isUpgraded}
                 scale={scale}
@@ -303,16 +308,16 @@ export default function HeroCard(props: {
             <Label
                 size={"medium"}
                 value={props.data.primaryHealth}
-                x={86 * scale}
-                y={20 * scale}
+                x={(86 + xOff) * scale}
+                y={(20 + yOff) * scale}
                 isNoOperator
                 scale={scale}
             />
             <Label
                 size={"medium"}
                 value={props.data.secondaryHealth}
-                x={46 * scale}
-                y={81 * scale}
+                x={(46 + xOff) * scale}
+                y={(81 + yOff) * scale}
                 isNoOperator
                 scale={scale}
             />

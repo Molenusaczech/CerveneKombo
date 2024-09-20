@@ -64,9 +64,6 @@ const config: Config = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
-  corePlugins: {
-    preflight: false,
-  },
+  plugins: [require("tailwindcss-animate")]
 };
 export default config;
