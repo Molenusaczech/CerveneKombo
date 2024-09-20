@@ -53,7 +53,7 @@ export function CardLookupForm() {
             />
           </div>
           {name !== "" && value !== "" ?
-            <Link className={buttonVariants({ variant: "default" }) + " w-full"} href={"/stats/" + uid + "/" + name}>Vyhledat podle jména a druhu</Link>
+            <Link className={buttonVariants({ variant: "default" }) + " w-full"} href={"/stats/" + value + "/" + name}>Vyhledat podle jména a druhu</Link>
             :
             <Button className="w-full" disabled>
               Vyplň druh a jméno karty
