@@ -37,7 +37,7 @@ export default function TypeEditor() {
 
     return (
         <div>
-            <Card data={curCard} height={600} />
+            <Card data={curCard} height={600} yOff={-4} />
             <div className="grid grid-cols-2 p-1">
                 <TextField
                     label="Název karty"

@@ -49,7 +49,7 @@ export function CardData(props: {
   useEffect(() => {
     if (typeof window !== undefined) {
       let screenWidth = document.body.clientWidth;
-      setCardWidth(screenWidth < 500 ? screenWidth : 500)
+      setCardWidth(screenWidth < 500 ? screenWidth - 50 : 500)
       console.log(cardWidth)
     }
   }, [])

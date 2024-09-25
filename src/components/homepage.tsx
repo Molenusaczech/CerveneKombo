@@ -15,31 +15,31 @@ export function Homepage() {
           Sada užitečných nástrojů pro hráče Scratch Wars
         </p>
       </header>
-      
+
       <main className="container mx-auto px-4 py-8">
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <FeatureCard 
+          <FeatureCard
             icon={<Search className="h-8 w-8 text-red-500" />}
             title="Vyhledávání karet"
             description="Najděte podle jména a typu nebo UID karty spoustu zajímavých informací a statistik o vaší konkrétní kartě."
             link="/lookup"
             buttonText="Vyhledat kartu"
           />
-          <FeatureCard 
+          <FeatureCard
             icon={<Camera className="h-8 w-8 text-red-500" />}
             title="SWO Replaye"
             description="Přehrajte si pomocí diváckého odkazu z SWO zpětně celý zápas a zjistěte, co bylo rozhodující."
             link="/replay"
             buttonText="Přehrát zápas"
           />
-          <FeatureCard 
+          <FeatureCard
             icon={<BarChart2 className="h-8 w-8 text-red-500" />}
             title="Statistiky druhů"
             description="Zjistěte veškeré statistiky o druzích karet jako například rozložení průměrů nebo rozsahy hodnot pro jednotlivé statistiky"
             link="/charts"
             buttonText="Zobrazit statistiky"
           />
-          <FeatureCard 
+          <FeatureCard
             icon={<Github className="h-8 w-8 text-red-500" />}
             title="Open source"
             description="Veškerý zdrojový kód je dostupný na GitHubu."
@@ -54,7 +54,7 @@ export function Homepage() {
             Červené kombo je web pro milovníky karetní hry Scratch Wars a statistiky. Mým cílem je poskytnout důležité a zajímavé informace všem hráčům Scratch Wars. Ať už se Scratch Wars začínáte nebo hrajete úplně od začátku, tak na Červeném kombu najdete něco pro Vás.
           </p>
           <p className="text-gray-700 mb-4">
-           Původně bylo červené kombo jen velice jednoduchá stránka na vyhledávání karet, kterou jsem vytvořil za jeden víkend z frustrace, že jsou některé informace o kartách velice složitě dostupné nebo dokonce kompletně nedostupné. Po vydání jeho první verze jsem dostal spoustu zpětné vazby a díky ní jsem přidal další užitečné funkce.
+            Původně bylo červené kombo jen velice jednoduchá stránka na vyhledávání karet, kterou jsem vytvořil za jeden víkend z frustrace, že jsou některé informace o kartách velice složitě dostupné nebo dokonce kompletně nedostupné. Po vydání jeho první verze jsem dostal spoustu zpětné vazby a díky ní jsem přidal další užitečné funkce.
           </p>
           <p className="text-gray-700">
             V současné době využijí červené kombo každý měsíc desítky uživatelů a doufám, že pomocí jejich zpětné vazby a nápadů uděláme Červené kombo ještě lepší. Pokud budete mít nějaký nápad na zlepšení stránky, nebojte se mi napsat.
@@ -65,10 +65,10 @@ export function Homepage() {
           <h2 className="text-3xl font-bold text-red-600 mb-8 text-center">Co o Červeném kombu říkají ostatní?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TestimonialCard
-              name="Tady někdo bude"
-              role="Zatím nikdo"
-              image="/placeholder.svg?height=100&width=100"
-              quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus nec."
+              name="Kulishka"
+              role="Admin SW Discordu, Content Creator"
+              image="/reviews/kulishka.png"
+              quote="Let's Go, Ano prosím 😄 Něco napíšu"
             />
             <TestimonialCard
               name="Sterakdary"
@@ -88,7 +88,7 @@ export function Homepage() {
 
         <section className="text-center">
           <h2 className="text-2xl font-bold text-red-500 mb-4">Připraven dozvědět se něco nového o svých kartách?</h2>
-          <Link href="/register">
+          <Link href="/lookup/">
             <Button className="bg-red-500 hover:bg-red-700 text-white">
               Vyhledat kartu
             </Button>
@@ -140,8 +140,8 @@ interface TestimonialCardProps {
   link?: string;
 }
 
-function TestimonialCard({ 
-  name, 
+function TestimonialCard({
+  name,
   role, image, quote, link }: TestimonialCardProps) {
   return (
     <Card className="flex flex-col h-full">
