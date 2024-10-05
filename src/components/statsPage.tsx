@@ -80,10 +80,10 @@ export function StatsPage() {
           </CardHeader>
           <CardContent>
             <div className="h-64 flex items-center justify-center">
-              
-            
-            <HeroVsWeaponChart heroes={curIsland.heroes} weapons={curIsland.weapons} />
-              
+
+
+              <HeroVsWeaponChart heroes={curIsland.heroes} weapons={curIsland.weapons} />
+
             </div>
             <Table>
               <TableHeader>
@@ -282,22 +282,29 @@ export function StatsPage() {
                       <TableCell
                         title={(card.count / (card.type === "hero" ? curIsland.heroes : curIsland.weapons) * 100) + "%"}
                       >{(card.count / (card.type === "hero" ? curIsland.heroes : curIsland.weapons) * 100).toFixed(4)}%</TableCell>
-                      {deltas.map((delta) => (
-                        <TableCell 
-                        key={delta}
-                        title={(card.rarities[delta]?.val ? card.rarities[delta]?.val : 0) / (card.type === "hero" ? curIsland.heroes : curIsland.weapons) * 100 + "%"}
-                        >
-                          {card.rarities[delta]?.val ? (
-                            <>
-                              {card.rarities[delta]?.isDerived && !card.rarities[delta].isExact ? "<" : ""}
-                              {card.rarities[delta]?.isDerived && card.rarities[delta].isExact && "("}{card.rarities[delta]?.val}{card.rarities[delta]?.isDerived && card.rarities[delta].isExact && ")"}
-                              {card.rarities[delta]?.isLimit ? "!" : ""}
-                            </>
-                          ) : (
-                            ''
-                          )}
-                        </TableCell>
-                      ))}
+                      {deltas.map((delta) => {
+
+                        if (!delta) return null;
+                        const rarity = card.rarities[delta];
+                        if (!rarity?.val) return null;
+                        
+                        return (
+                          <TableCell
+                            key={delta}
+                            title={(rarity.val ? rarity.val : 0) / (card.type === "hero" ? curIsland.heroes : curIsland.weapons) * 100 + "%"}
+                          >
+                            {rarity.val ? (
+                              <>
+                                {rarity.isDerived && !rarity.isExact ? "<" : ""}
+                                {rarity.isDerived && rarity.isExact && "("}{rarity.val}{rarity.isDerived && rarity.isExact && ")"}
+                                {rarity.isLimit ? "!" : ""}
+                              </>
+                            ) : (
+                              ''
+                            )}
+                          </TableCell>
+                        )
+                      })}
                     </TableRow>
                   ))}
               </TableBody>

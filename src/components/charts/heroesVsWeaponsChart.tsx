@@ -20,7 +20,7 @@ function HeroVsWeaponChart(
                 <Tooltip />
                 <Pie data={data} dataKey="cards" nameKey="name" cx="50%" cy="50%" outerRadius={100} fill="#3366cc">
                     {data.map((entry, index) => (
-                        <Cell fill={COLORS[index % COLORS.length]}/>
+                        <Cell key={index} fill={COLORS[index % COLORS.length]}/>
                     ))}
                 </Pie>
             </PieChart>

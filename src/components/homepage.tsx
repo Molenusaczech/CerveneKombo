@@ -68,7 +68,8 @@ export function Homepage() {
               name="Kulishka"
               role="Admin SW Discordu, Content Creator"
               image="/reviews/kulishka.png"
-              quote="Let's Go, Ano prosím 😄 Něco napíšu"
+              quote="Mole přesně pochopil problémy mnoha členů komunity a vytvořil všestranný nástroj, který efektivně řeší hned několik problémů. O obnovení vyhledavače rarity karet prosilo mnoho hráčů. Mole vzal celou věc do svých rukou a vyřešil ji velmi dobře.
+ČK nenabízí jen vhled do statistik, přichází i s nástroji, které mi při tvorbě obsahu na sociální sítě šetří čas a nabízí další možnosti - například replaye soubojů."
             />
             <TestimonialCard
               name="Sterakdary"
