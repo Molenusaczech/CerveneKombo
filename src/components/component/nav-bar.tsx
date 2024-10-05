@@ -24,6 +24,15 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import Image from 'next/image';
 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
 const pages = [
   //'Domů', 'QR Oprava'
   {
@@ -35,16 +44,8 @@ const pages = [
     link: "/lookup"
   },
   {
-    name: 'QR Oprava',
-    link: '/qr'
-  },
-  {
     name: 'Celkové statistiky',
     link: '/charts'
-  },
-  {
-    name: 'Editor',
-    link: '/edit'
   },
   {
     name: 'Replay',
@@ -55,6 +56,17 @@ const pages = [
     link: 'https://github.com/Molenusaczech/CerveneKombo'
   }
 ];
+
+const depracedPages = [
+  {
+    name: 'QR Oprava',
+    link: '/qr'
+  },
+  {
+    name: 'Editor',
+    link: '/edit'
+  },
+]
 
 export function NavBar() {
   "use client;"
@@ -96,6 +108,26 @@ export function NavBar() {
               </Link>
             </NavigationMenuLink>)
           })}
+
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium transition-colors hover:bg-red-600 focus:bg-red-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-red-600 text-white"
+            >
+              Zastaralé nástroje
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              {depracedPages.map((page, index) => {
+                return (
+                <DropdownMenuItem key={index}>
+                  <NavigationMenuLink>
+                    <Link href={page.link} className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium transition-colors hover:bg-red-600 focus:bg-red-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-red-600 text-white" prefetch={false}>
+                      {page.name}
+                    </Link>
+                  </NavigationMenuLink>
+                </DropdownMenuItem>)
+              })}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </NavigationMenuList>
       </NavigationMenu>
     </header>
