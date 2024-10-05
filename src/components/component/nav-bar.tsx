@@ -88,6 +88,23 @@ export function NavBar() {
                 </Link>
               )
             })}
+            <DropdownMenu>
+              <DropdownMenuTrigger
+                className="flex w-full items-center py-2 text-lg font-semibold text-black"
+              >
+                Zastaralé nástroje
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                {depracedPages.map((page, index) => {
+                  return (
+                    <DropdownMenuItem key={index}>
+                        <Link href={page.link} className="flex w-full items-center py-2 text-lg font-semibold text-black" prefetch={false}>
+                          {page.name}
+                        </Link>
+                    </DropdownMenuItem>)
+                })}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </nav>
         </SheetContent>
       </Sheet>
@@ -118,13 +135,13 @@ export function NavBar() {
             <DropdownMenuContent>
               {depracedPages.map((page, index) => {
                 return (
-                <DropdownMenuItem key={index}>
-                  <NavigationMenuLink>
-                    <Link href={page.link} className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium transition-colors hover:bg-red-600 focus:bg-red-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-red-600 text-white" prefetch={false}>
-                      {page.name}
-                    </Link>
-                  </NavigationMenuLink>
-                </DropdownMenuItem>)
+                  <DropdownMenuItem key={index}>
+                    <NavigationMenuLink>
+                      <Link href={page.link} className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium transition-colors hover:bg-red-600 focus:bg-red-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-red-600 text-white" prefetch={false}>
+                        {page.name}
+                      </Link>
+                    </NavigationMenuLink>
+                  </DropdownMenuItem>)
               })}
             </DropdownMenuContent>
           </DropdownMenu>
