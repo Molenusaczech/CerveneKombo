@@ -31,7 +31,7 @@ export default function ReplayWeapon(
             <div style={{
                 opacity: weapon.stashedEffect !== null ? "0.5" : "1"
             }}>
-                <Card data={weapon.card} width={weaponWidth} gray={!isOnTurn}/>
+                <Card data={weapon.card} width={weaponWidth} gray={!isOnTurn} yOff={-4}/>
             </div>
             {weapon.broken == "BROKEN" && <Image
                 src={"/broken.png"}
