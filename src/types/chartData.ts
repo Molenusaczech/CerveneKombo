@@ -61,4 +61,4 @@ type chartData = {
     }
 }
 
-export type { chartData, islandChartData, typeChartData, islandName};
+export type { chartData, islandChartData, typeChartData, islandName, starCounts};

@@ -11,7 +11,8 @@ export default function Card(props: {
     gray?: boolean,
     useImg?: boolean,
     imgRootLink?: string,
-    cropped?: boolean
+    xOff?: number,
+    yOff?: number
 }) {
 
     if (props.data == undefined) return (<></>);
@@ -24,6 +25,8 @@ export default function Card(props: {
             gray={props.gray}
             useImg={props.useImg}
             imgRootLink={props.imgRootLink}
+            xOff={props.xOff}
+            yOff={props.yOff}
         />
     } else {
         return <WeaponCard
@@ -33,7 +36,8 @@ export default function Card(props: {
             gray={props.gray}
             useImg={props.useImg}
             imgRootLink={props.imgRootLink}
-            cropped={props.cropped}
+            xOff={props.xOff}
+            yOff={props.yOff}
         />
     }
 }

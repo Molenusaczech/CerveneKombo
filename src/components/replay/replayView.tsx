@@ -6,7 +6,7 @@ import Card from "../card";
 import getReplayState from "@/tools/replay/getReplayState";
 import ReplayState from "./replayState";
 import { useEffect, useState } from "react";
-import { Button } from "@mui/material";
+import { Button } from "@/components/ui/button";
 
 export default function ReplayView(props: {
     data: replay
@@ -83,8 +83,8 @@ export default function ReplayView(props: {
 
             </div>*/}
 
-            <Button onClick={() => setIndex(index - 1)} variant="contained" disabled={index == 0}>⬅️</Button>
-            <Button onClick={() => setIndex(index + 1)} variant="contained" disabled={data.events.length <= index + 1}>➡️</Button>
+            <Button onClick={() => setIndex(index - 1)} variant="default" disabled={index == 0}>⬅️</Button>
+            <Button onClick={() => setIndex(index + 1)} variant="default" disabled={data.events.length <= index + 1}>➡️</Button>
             Aktuální akce: {index}. ({data.events[index].type})
 
             <div className="p-2">

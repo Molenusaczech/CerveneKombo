@@ -81,7 +81,8 @@ export default function WeaponCard(props: {
     gray?: boolean,
     useImg?: boolean,
     imgRootLink?: string,
-    cropped?: boolean
+    xOff?: number,
+    yOff?: number
 }) {
 
     if (props.data == undefined) return (<></>);
@@ -100,27 +101,13 @@ export default function WeaponCard(props: {
 
     if (props.width && props.height) throw new Error("You can't set both width and height")
 
-    let maskStyle = {};
-    let moveStyle = {};
+    const xOff = props.xOff ?? 0;
+    const yOff = props.yOff ?? 0;
 
     let heightMultiplier = 1;
     let widthMultiplier = 1;
 
-    if (props.cropped) {
-        maskStyle = {
-            maskImage: props.useImg ? 'url('+props.imgRootLink+'/weaponMask.png)' : 'url("weaponMask.png")',
-            width: 640 * scale + "px",
-            height: 735 * scale + "px",
-            maskRepeat: "no-repeat"
-        }
 
-        moveStyle = {
-            transform: " translate(-7%, -26%)",
-        }
-
-        heightMultiplier *= 0.76;
-        widthMultiplier *= 0.86;
-    }
     return (
         <div style={
             {
@@ -131,40 +118,35 @@ export default function WeaponCard(props: {
             }
         }>
             <div style={{
-                display: "flex",
-                ...moveStyle
+                display: "flex"
             }}>
 
-                <div style={{
-                    display: "flex",
-                    ...maskStyle
-                }}>
-                    {props.useImg ? <img
-                        src={props.imgRootLink + type.imgUrl}
-                        alt={props.data.name + " card"}
-                        width={640 * scale}
-                        height={735 * scale}
-                        style={{
-                            filter: gray ? "grayscale(75%)" : "none"
-                        }}
-                    /> : <Image
-                        src={type.imgUrl}
-                        alt={props.data.name + " card"}
-                        width={640 * scale}
-                        height={735 * scale}
-                        priority
-                        style={{
-                            filter: gray ? "grayscale(75%)" : "none"
-                        }}
-                    />}
-                </div>
+
+                {props.useImg ? <img
+                    src={props.imgRootLink + type.imgUrl}
+                    alt={props.data.name + " card"}
+                    width={640 * scale}
+                    height={735 * scale}
+                    style={{
+                        filter: gray ? "grayscale(75%)" : "none"
+                    }}
+                /> : <Image
+                    src={type.imgUrl}
+                    alt={props.data.name + " card"}
+                    width={640 * scale}
+                    height={735 * scale}
+                    priority
+                    style={{
+                        filter: gray ? "grayscale(75%)" : "none"
+                    }}
+                />}
 
                 {/*Main Nums*/}
 
                 {bonuses[0] && <Label
                     value={bonuses[0].value}
-                    x={291}
-                    y={232}
+                    x={xOff + 291}
+                    y={yOff + 232}
                     size="small"
                     isUpgraded={bonuses[0].isUpgraded}
                     scale={scale}
@@ -173,8 +155,8 @@ export default function WeaponCard(props: {
 
                 {bonuses[8] && <Label
                     value={bonuses[8].value}
-                    x={407}
-                    y={243}
+                    x={xOff + 407}
+                    y={yOff + 243}
                     size="medium"
                     isUpgraded={bonuses[8].isUpgraded}
                     scale={scale}
@@ -183,8 +165,8 @@ export default function WeaponCard(props: {
 
                 {bonuses[7] && <Label
                     value={bonuses[7].value}
-                    x={486}
-                    y={344}
+                    x={xOff + 486}
+                    y={yOff + 344}
                     size="medium"
                     isUpgraded={bonuses[7].isUpgraded}
                     scale={scale}
@@ -193,8 +175,8 @@ export default function WeaponCard(props: {
 
                 {bonuses[6] && <Label
                     value={bonuses[6].value}
-                    x={473}
-                    y={464}
+                    x={xOff + 473}
+                    y={yOff + 464}
                     size="medium"
                     isUpgraded={bonuses[6].isUpgraded}
                     scale={scale}
@@ -203,8 +185,8 @@ export default function WeaponCard(props: {
 
                 {bonuses[5] && <Label
                     value={bonuses[5].value}
-                    x={395}
-                    y={559}
+                    x={xOff + 395}
+                    y={yOff + 559}
                     size="medium"
                     isUpgraded={bonuses[5].isUpgraded}
                     scale={scale}
@@ -213,8 +195,8 @@ export default function WeaponCard(props: {
 
                 {bonuses[4] && <Label
                     value={bonuses[4].value}
-                    x={262}
-                    y={576}
+                    x={xOff + 262}
+                    y={yOff + 576}
                     size="medium"
                     isUpgraded={bonuses[4].isUpgraded}
                     scale={scale}
@@ -223,8 +205,8 @@ export default function WeaponCard(props: {
 
                 {bonuses[3] && <Label
                     value={bonuses[3].value}
-                    x={165}
-                    y={509}
+                    x={xOff + 165}
+                    y={yOff + 509}
                     size="medium"
                     isUpgraded={bonuses[3].isUpgraded}
                     scale={scale}
@@ -233,8 +215,8 @@ export default function WeaponCard(props: {
 
                 {bonuses[2] && <Label
                     value={bonuses[2].value}
-                    x={123}
-                    y={389}
+                    x={xOff + 123}
+                    y={yOff + 389}
                     size="medium"
                     isUpgraded={bonuses[2].isUpgraded}
                     scale={scale}
@@ -243,8 +225,8 @@ export default function WeaponCard(props: {
 
                 {bonuses[1] && <Label
                     value={bonuses[1].value}
-                    x={165}
-                    y={276}
+                    x={xOff + 165}
+                    y={yOff + 276}
                     size="medium"
                     isUpgraded={bonuses[1].isUpgraded}
                     scale={scale}
@@ -255,8 +237,8 @@ export default function WeaponCard(props: {
 
                 {bonuses[7].durability && hasDurability(type.effects[7].t) && <Label
                     value={bonuses[7].durability}
-                    x={555}
-                    y={366}
+                    x={xOff + 555}
+                    y={yOff + 366}
                     size="small"
                     isUpgraded={false}
                     scale={scale}
@@ -265,8 +247,8 @@ export default function WeaponCard(props: {
 
                 {bonuses[6].durability && hasDurability(type.effects[6].t) && <Label
                     value={bonuses[6].durability}
-                    x={520}
-                    y={524}
+                    x={xOff + 520}
+                    y={yOff + 524}
                     size="small"
                     isUpgraded={false}
                     scale={scale}
@@ -275,8 +257,8 @@ export default function WeaponCard(props: {
 
                 {bonuses[5].durability && hasDurability(type.effects[5].t) && <Label
                     value={bonuses[5].durability}
-                    x={390}
-                    y={629}
+                    x={xOff + 390}
+                    y={yOff + 629}
                     size="small"
                     isUpgraded={false}
                     scale={scale}
@@ -285,8 +267,8 @@ export default function WeaponCard(props: {
 
                 {bonuses[4].durability && hasDurability(type.effects[4].t) && <Label
                     value={bonuses[4].durability}
-                    x={224}
-                    y={626}
+                    x={xOff + 224}
+                    y={yOff + 626}
                     size="small"
                     isUpgraded={false}
                     scale={scale}
@@ -295,8 +277,8 @@ export default function WeaponCard(props: {
 
                 {bonuses[3].durability && hasDurability(type.effects[3].t) && <Label
                     value={bonuses[3].durability}
-                    x={100}
-                    y={521}
+                    x={xOff + 100}
+                    y={yOff + 521}
                     size="small"
                     isUpgraded={false}
                     scale={scale}
@@ -305,8 +287,8 @@ export default function WeaponCard(props: {
 
                 {bonuses[2].durability && hasDurability(type.effects[2].t) && <Label
                     value={bonuses[2].durability}
-                    x={70}
-                    y={356}
+                    x={xOff + 70}
+                    y={yOff + 356}
                     size="small"
                     isUpgraded={false}
                     scale={scale}
@@ -318,8 +300,8 @@ export default function WeaponCard(props: {
 
                 <Label
                     value={props.data.durability}
-                    x={470}
-                    y={205}
+                    x={xOff + 470}
+                    y={yOff + 205}
                     size="small"
                     scale={scale}
                 />
@@ -328,13 +310,14 @@ export default function WeaponCard(props: {
 
                 <Label
                     value={props.data.name}
-                    x={133}
-                    y={224}
+                    x={xOff + 133}
+                    y={yOff + 224}
                     size="extraSmall"
                     scale={scale}
                     font="Roboto"
                     rotation={30}
                 />
+
             </div>
         </div>
     )
