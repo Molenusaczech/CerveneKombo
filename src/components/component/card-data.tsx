@@ -128,13 +128,13 @@ export function CardData(props: {
             </div>
           </div>
           <div className="grid grid-cols-3 gap-4">
-            <LookupSmallCard title="Horších karet" className="shadow-xl shadow-green-300">
+            <LookupSmallCard title="Horších karet" className="shadow-xl shadow-green-300 dark:shadow-green-400">
               <div className="text-2xl font-bold">{stats?.worse}</div>
             </LookupSmallCard>
-            <LookupSmallCard title="Stejných karet" className="shadow-xl shadow-grey-300">
+            <LookupSmallCard title="Stejných karet" className="shadow-xl shadow-grey-300 dark:shadow-white">
               <div className="text-2xl font-bold">{stats?.same}</div>
             </LookupSmallCard>
-            <LookupSmallCard title="Lepších karet" className="shadow-xl shadow-red-300">
+            <LookupSmallCard title="Lepších karet" className="shadow-xl shadow-red-300 dark:shadow-red-400">
               <div className="text-2xl font-bold">{stats?.better}</div>
             </LookupSmallCard>
           </div>

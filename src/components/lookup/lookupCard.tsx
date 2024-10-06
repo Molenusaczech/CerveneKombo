@@ -1,5 +1,6 @@
 import { title } from "process";
 import { ReactChild, ReactChildren, ReactElement } from "react";
+import { Card } from "@/components/ui/card";
 
 function LookupSmallCard(props: {
     title: string,
@@ -8,10 +9,10 @@ function LookupSmallCard(props: {
 }) {
     const className = props.className ?? "";
     return (
-        <div className={"bg-card p-4 rounded-lg shadow-md "+className}>
+        <Card className={"bg-card p-4 rounded-lg shadow-md "+className}>
             <div className="text-sm text-muted-foreground">{props.title}</div>
             {props.children}
-        </div>
+        </Card>
     )
 }
 
@@ -23,7 +24,7 @@ function LookupLongCard(props: {
 }) {
     const className = props.className ?? "";
     return (
-        <div className={"bg-card p-4 rounded-lg shadow-md "+className}>
+        <Card className={"bg-card p-4 rounded-lg shadow-md "+className}>
             <div className="flex items-center justify-between">
                 <div className="text-muted-foreground">{props.title}</div>
                 <div className="text-primary font-semibold">{props.rightTitle}</div>
@@ -31,7 +32,7 @@ function LookupLongCard(props: {
             <div>
                 {props.children}
             </div>
-        </div>
+        </Card>
     )
 }
 

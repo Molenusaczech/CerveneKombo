@@ -5,13 +5,17 @@ import { Button } from "@/components/ui/button"
 import { Search, Layers, BarChart2, Share2, Star, Github, Camera } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { useTheme } from "next-themes"
 
 export function Homepage() {
+
+  const { theme, setTheme } = useTheme()
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-red-100 to-white">
+    <div className="bg-gradient-to-b from-red-100 to-white dark:from-red-950 dark:to-gray-900">
       <header className="p-6 md:p-12">
         <h1 className="text-4xl md:text-6xl font-bold text-center text-red-600 mb-4">Červené kombo</h1>
-        <p className="text-xl md:text-2xl text-center text-gray-700 mb-8">
+        <p className="text-xl md:text-2xl text-center mb-8 light:text-gray-700">
           Sada užitečných nástrojů pro hráče Scratch Wars
         </p>
       </header>
@@ -48,18 +52,18 @@ export function Homepage() {
           />
         </section>
 
-        <section className="bg-white rounded-lg shadow-lg p-8 mb-12">
+        <Card className="rounded-lg shadow-lg p-8 mb-12">
           <h2 className="text-3xl font-bold text-red-600 mb-4">O Červeném Kombu</h2>
-          <p className="text-gray-700 mb-4">
+          <p className="mb-4 light:text-gray-700">
             Červené kombo je web pro milovníky karetní hry Scratch Wars a statistiky. Mým cílem je poskytnout důležité a zajímavé informace všem hráčům Scratch Wars. Ať už se Scratch Wars začínáte nebo hrajete úplně od začátku, tak na Červeném kombu najdete něco pro Vás.
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className="mb-4 light:text-gray-700">
             Původně bylo červené kombo jen velice jednoduchá stránka na vyhledávání karet, kterou jsem vytvořil za jeden víkend z frustrace, že jsou některé informace o kartách velice složitě dostupné nebo dokonce kompletně nedostupné. Po vydání jeho první verze jsem dostal spoustu zpětné vazby a díky ní jsem přidal další užitečné funkce.
           </p>
-          <p className="text-gray-700">
+          <p className=" light:text-gray-700">
             V současné době využijí červené kombo každý měsíc desítky uživatelů a doufám, že pomocí jejich zpětné vazby a nápadů uděláme Červené kombo ještě lepší. Pokud budete mít nějaký nápad na zlepšení stránky, nebojte se mi napsat.
           </p>
-        </section>
+        </Card>
 
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-red-600 mb-8 text-center">Co o Červeném kombu říkají ostatní?</h2>
@@ -97,7 +101,7 @@ export function Homepage() {
         </section>
       </main>
 
-      <footer className="mt-16 py-6 bg-gray-100 text-center text-gray-600">
+      <footer className="mt-16 py-6 light:bg-gray-100 text-center light:text-gray-600">
         <p>With ❤️ by Mole - Některé použité assety jsou majetkem společností Notre Game a Wormelen Group</p>
       </footer>
     </div>
@@ -120,7 +124,7 @@ function FeatureCard({ icon, title, description, link, buttonText }: FeatureCard
         <CardTitle className="mt-4 text-xl font-semibold">{title}</CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-center text-gray-600">{description}</p>
+        <p className="text-center">{description}</p>
       </CardContent>
       <CardFooter className="pt-0">
         <Link href={link} className="w-full">
@@ -155,10 +159,10 @@ function TestimonialCard({
           className="rounded-full"
         />
         <CardTitle className="mt-4 text-xl font-semibold">{name}</CardTitle>
-        <p className="text-sm text-gray-500">{role}</p>
+        <p className="text-sm">{role}</p>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-center text-gray-700">&quot;{quote}&quot;</p>
+        <p className="text-center">&quot;{quote}&quot;</p>
         {link && (
           <Link href={link}>
             <Button variant="outline" className="mt-4 w-full">

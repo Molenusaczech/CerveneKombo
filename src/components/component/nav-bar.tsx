@@ -32,6 +32,9 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { ModeToggle } from "../theme-toggle";
+import { use } from "react";
+import { useTheme } from "next-themes";
 
 const pages = [
   //'Domů', 'QR Oprava'
@@ -71,7 +74,7 @@ const depracedPages = [
 export function NavBar() {
   "use client;"
   return (
-    <header className="flex h-16 w-full shrink-0 items-center px-4 md:px-6 bg-red-500 text-white">
+    <header className="flex h-16 w-full shrink-0 items-center px-4 md:px-6 bg-red-500 dark:bg-red-950 text-white">
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="outline" size="icon" className="lg:hidden">
@@ -83,14 +86,14 @@ export function NavBar() {
           <nav className="grid gap-2 py-6">
             {pages.map((curPage, index) => {
               return (
-                <Link href={curPage.link} key={index} className="flex w-full items-center py-2 text-lg font-semibold text-black" prefetch={false}>
+                <Link href={curPage.link} key={index} className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
                   {curPage.name}
                 </Link>
               )
             })}
             <DropdownMenu>
               <DropdownMenuTrigger
-                className="flex w-full items-center py-2 text-lg font-semibold text-black"
+                className="flex w-full items-center py-2 text-lg font-semibold"
               >
                 Zastaralé nástroje
               </DropdownMenuTrigger>
@@ -98,13 +101,14 @@ export function NavBar() {
                 {depracedPages.map((page, index) => {
                   return (
                     <DropdownMenuItem key={index}>
-                        <Link href={page.link} className="flex w-full items-center py-2 text-lg font-semibold text-black" prefetch={false}>
-                          {page.name}
-                        </Link>
+                      <Link href={page.link} className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+                        {page.name}
+                      </Link>
                     </DropdownMenuItem>)
                 })}
               </DropdownMenuContent>
             </DropdownMenu>
+            <ModeToggle />
           </nav>
         </SheetContent>
       </Sheet>
@@ -118,7 +122,7 @@ export function NavBar() {
             return (<NavigationMenuLink asChild key={index}>
               <Link
                 href={curPage.link}
-                className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium transition-colors hover:bg-red-600 focus:bg-red-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-red-600 text-white"
+                className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium transition-colors hover:bg-red-600 focus:bg-red-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-red-600 text-white dark:bg-red-950"
                 prefetch={false}
               >
                 {curPage.name}
@@ -128,7 +132,7 @@ export function NavBar() {
 
           <DropdownMenu>
             <DropdownMenuTrigger
-              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium transition-colors hover:bg-red-600 focus:bg-red-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-red-600 text-white"
+              className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-red-500 px-4 py-2 text-sm font-medium transition-colors hover:bg-red-600 focus:bg-red-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-red-600 text-white dark:bg-red-950"
             >
               Zastaralé nástroje
             </DropdownMenuTrigger>
@@ -145,6 +149,9 @@ export function NavBar() {
               })}
             </DropdownMenuContent>
           </DropdownMenu>
+          <div className="self-end">
+            <ModeToggle />
+          </div>
         </NavigationMenuList>
       </NavigationMenu>
     </header>
@@ -152,6 +159,9 @@ export function NavBar() {
 }
 
 function MenuIcon(props: any) {
+
+  const { theme, setTheme } = useTheme();
+
   return (
     <svg
       {...props}
@@ -160,7 +170,7 @@ function MenuIcon(props: any) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="black"
+      stroke={theme === 'dark' ? 'white' : 'black'}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
