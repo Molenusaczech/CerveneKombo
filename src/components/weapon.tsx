@@ -7,6 +7,7 @@ import { weaponRarity } from "@/types/weaponRarity";
 
 import { weaponCid, weaponTypeData } from "@/data/weaponTypeData";
 import { hasDurability } from "@/tools/hasDurability";
+import { url } from "inspector";
 
 function Label(props: {
     value: number | string,
@@ -103,213 +104,221 @@ export default function WeaponCard(props: {
     const xOff = props.xOff ?? 0;
     const yOff = props.yOff ?? 0;
 
+    let heightMultiplier = 1;
+    let widthMultiplier = 1;
+
+
     return (
         <div style={
             {
                 position: "relative",
-                width: 640 * scale + "px",
-                height: 735 * scale + "px",
+                width: 640 * scale * widthMultiplier + "px",
+                height: 735 * scale * heightMultiplier + "px",
                 display: "flex"
             }
         }>
+            <div style={{
+                display: "flex"
+            }}>
 
 
-            {props.useImg ? <img
-                src={props.imgRootLink + type.imgUrl}
-                alt={props.data.name + " card"}
-                width={640 * scale}
-                height={735 * scale}
-                style={{
-                    filter: gray ? "grayscale(75%)" : "none"
-                }}
-            /> : <Image
-                src={type.imgUrl}
-                alt={props.data.name + " card"}
-                width={640 * scale}
-                height={735 * scale}
-                priority
-                style={{
-                    filter: gray ? "grayscale(75%)" : "none"
-                }}
-            />}
+                {props.useImg ? <img
+                    src={props.imgRootLink + type.imgUrl}
+                    alt={props.data.name + " card"}
+                    width={640 * scale}
+                    height={735 * scale}
+                    style={{
+                        filter: gray ? "grayscale(75%)" : "none"
+                    }}
+                /> : <Image
+                    src={type.imgUrl}
+                    alt={props.data.name + " card"}
+                    width={640 * scale}
+                    height={735 * scale}
+                    priority
+                    style={{
+                        filter: gray ? "grayscale(75%)" : "none"
+                    }}
+                />}
 
-            {/*Main Nums*/}
+                {/*Main Nums*/}
 
-            {bonuses[0] && <Label
-                value={bonuses[0].value}
-                x={xOff+291}
-                y={yOff+232}
-                size="small"
-                isUpgraded={bonuses[0].isUpgraded}
-                scale={scale}
-                rotation={350}
-            />}
+                {bonuses[0] && <Label
+                    value={bonuses[0].value}
+                    x={xOff + 291}
+                    y={yOff + 232}
+                    size="small"
+                    isUpgraded={bonuses[0].isUpgraded}
+                    scale={scale}
+                    rotation={350}
+                />}
 
-            {bonuses[8] && <Label
-                value={bonuses[8].value}
-                x={xOff+407}
-                y={yOff+243}
-                size="medium"
-                isUpgraded={bonuses[8].isUpgraded}
-                scale={scale}
-                rotation={30}
-            />}
+                {bonuses[8] && <Label
+                    value={bonuses[8].value}
+                    x={xOff + 407}
+                    y={yOff + 243}
+                    size="medium"
+                    isUpgraded={bonuses[8].isUpgraded}
+                    scale={scale}
+                    rotation={30}
+                />}
 
-            {bonuses[7] && <Label
-                value={bonuses[7].value}
-                x={xOff+486}
-                y={yOff+344}
-                size="medium"
-                isUpgraded={bonuses[7].isUpgraded}
-                scale={scale}
-                rotation={70}
-            />}
+                {bonuses[7] && <Label
+                    value={bonuses[7].value}
+                    x={xOff + 486}
+                    y={yOff + 344}
+                    size="medium"
+                    isUpgraded={bonuses[7].isUpgraded}
+                    scale={scale}
+                    rotation={70}
+                />}
 
-            {bonuses[6] && <Label
-                value={bonuses[6].value}
-                x={xOff+473}
-                y={yOff+464}
-                size="medium"
-                isUpgraded={bonuses[6].isUpgraded}
-                scale={scale}
-                rotation={110}
-            />}
+                {bonuses[6] && <Label
+                    value={bonuses[6].value}
+                    x={xOff + 473}
+                    y={yOff + 464}
+                    size="medium"
+                    isUpgraded={bonuses[6].isUpgraded}
+                    scale={scale}
+                    rotation={110}
+                />}
 
-            {bonuses[5] && <Label
-                value={bonuses[5].value}
-                x={xOff+395}
-                y={yOff+559}
-                size="medium"
-                isUpgraded={bonuses[5].isUpgraded}
-                scale={scale}
-                rotation={150}
-            />}
+                {bonuses[5] && <Label
+                    value={bonuses[5].value}
+                    x={xOff + 395}
+                    y={yOff + 559}
+                    size="medium"
+                    isUpgraded={bonuses[5].isUpgraded}
+                    scale={scale}
+                    rotation={150}
+                />}
 
-            {bonuses[4] && <Label
-                value={bonuses[4].value}
-                x={xOff+262}
-                y={yOff+576}
-                size="medium"
-                isUpgraded={bonuses[4].isUpgraded}
-                scale={scale}
-                rotation={190}
-            />}
+                {bonuses[4] && <Label
+                    value={bonuses[4].value}
+                    x={xOff + 262}
+                    y={yOff + 576}
+                    size="medium"
+                    isUpgraded={bonuses[4].isUpgraded}
+                    scale={scale}
+                    rotation={190}
+                />}
 
-            {bonuses[3] && <Label
-                value={bonuses[3].value}
-                x={xOff+165}
-                y={yOff+509}
-                size="medium"
-                isUpgraded={bonuses[3].isUpgraded}
-                scale={scale}
-                rotation={230}
-            />}
+                {bonuses[3] && <Label
+                    value={bonuses[3].value}
+                    x={xOff + 165}
+                    y={yOff + 509}
+                    size="medium"
+                    isUpgraded={bonuses[3].isUpgraded}
+                    scale={scale}
+                    rotation={230}
+                />}
 
-            {bonuses[2] && <Label
-                value={bonuses[2].value}
-                x={xOff+123}
-                y={yOff+389}
-                size="medium"
-                isUpgraded={bonuses[2].isUpgraded}
-                scale={scale}
-                rotation={270}
-            />}
+                {bonuses[2] && <Label
+                    value={bonuses[2].value}
+                    x={xOff + 123}
+                    y={yOff + 389}
+                    size="medium"
+                    isUpgraded={bonuses[2].isUpgraded}
+                    scale={scale}
+                    rotation={270}
+                />}
 
-            {bonuses[1] && <Label
-                value={bonuses[1].value}
-                x={xOff+165}
-                y={yOff+276}
-                size="medium"
-                isUpgraded={bonuses[1].isUpgraded}
-                scale={scale}
-                rotation={310}
-            />}
+                {bonuses[1] && <Label
+                    value={bonuses[1].value}
+                    x={xOff + 165}
+                    y={yOff + 276}
+                    size="medium"
+                    isUpgraded={bonuses[1].isUpgraded}
+                    scale={scale}
+                    rotation={310}
+                />}
 
-            {/* Durs */}
+                {/* Durs */}
 
-            {bonuses[7].durability && hasDurability(type.effects[7].t) && <Label
-                value={bonuses[7].durability}
-                x={xOff+555}
-                y={yOff+366}
-                size="small"
-                isUpgraded={false}
-                scale={scale}
-                rotation={80}
-            />}
+                {bonuses[7].durability && hasDurability(type.effects[7].t) && <Label
+                    value={bonuses[7].durability}
+                    x={xOff + 555}
+                    y={yOff + 366}
+                    size="small"
+                    isUpgraded={false}
+                    scale={scale}
+                    rotation={80}
+                />}
 
-            {bonuses[6].durability && hasDurability(type.effects[6].t) && <Label
-                value={bonuses[6].durability}
-                x={xOff+520}
-                y={yOff+524}
-                size="small"
-                isUpgraded={false}
-                scale={scale}
-                rotation={120}
-            />}
+                {bonuses[6].durability && hasDurability(type.effects[6].t) && <Label
+                    value={bonuses[6].durability}
+                    x={xOff + 520}
+                    y={yOff + 524}
+                    size="small"
+                    isUpgraded={false}
+                    scale={scale}
+                    rotation={120}
+                />}
 
-            {bonuses[5].durability && hasDurability(type.effects[5].t) && <Label
-                value={bonuses[5].durability}
-                x={xOff+390}
-                y={yOff+629}
-                size="small"
-                isUpgraded={false}
-                scale={scale}
-                rotation={160}
-            />}
+                {bonuses[5].durability && hasDurability(type.effects[5].t) && <Label
+                    value={bonuses[5].durability}
+                    x={xOff + 390}
+                    y={yOff + 629}
+                    size="small"
+                    isUpgraded={false}
+                    scale={scale}
+                    rotation={160}
+                />}
 
-            {bonuses[4].durability && hasDurability(type.effects[4].t) && <Label
-                value={bonuses[4].durability}
-                x={xOff+224}
-                y={yOff+626}
-                size="small"
-                isUpgraded={false}
-                scale={scale}
-                rotation={200}
-            />}
+                {bonuses[4].durability && hasDurability(type.effects[4].t) && <Label
+                    value={bonuses[4].durability}
+                    x={xOff + 224}
+                    y={yOff + 626}
+                    size="small"
+                    isUpgraded={false}
+                    scale={scale}
+                    rotation={200}
+                />}
 
-            {bonuses[3].durability && hasDurability(type.effects[3].t) && <Label
-                value={bonuses[3].durability}
-                x={xOff+100}
-                y={yOff+521}
-                size="small"
-                isUpgraded={false}
-                scale={scale}
-                rotation={240}
-            />}
+                {bonuses[3].durability && hasDurability(type.effects[3].t) && <Label
+                    value={bonuses[3].durability}
+                    x={xOff + 100}
+                    y={yOff + 521}
+                    size="small"
+                    isUpgraded={false}
+                    scale={scale}
+                    rotation={240}
+                />}
 
-            {bonuses[2].durability && hasDurability(type.effects[2].t) && <Label
-                value={bonuses[2].durability}
-                x={xOff+70}
-                y={yOff+356}
-                size="small"
-                isUpgraded={false}
-                scale={scale}
-                rotation={280}
-            />}
+                {bonuses[2].durability && hasDurability(type.effects[2].t) && <Label
+                    value={bonuses[2].durability}
+                    x={xOff + 70}
+                    y={yOff + 356}
+                    size="small"
+                    isUpgraded={false}
+                    scale={scale}
+                    rotation={280}
+                />}
 
 
-            {/* weapon durability */}
+                {/* weapon durability */}
 
-            <Label
-                value={props.data.durability}
-                x={xOff+470}
-                y={yOff+205}
-                size="small"
-                scale={scale}
-            />
+                <Label
+                    value={props.data.durability}
+                    x={xOff + 470}
+                    y={yOff + 205}
+                    size="small"
+                    scale={scale}
+                />
 
-            {/* weapon name */}
+                {/* weapon name */}
 
-            <Label
-                value={props.data.name}
-                x={xOff+133}
-                y={yOff+224}
-                size="extraSmall"
-                scale={scale}
-                font="Roboto"
-                rotation={30}
-            />
+                <Label
+                    value={props.data.name}
+                    x={xOff + 133}
+                    y={yOff + 224}
+                    size="extraSmall"
+                    scale={scale}
+                    font="Roboto"
+                    rotation={30}
+                />
 
+            </div>
         </div>
     )
 }
