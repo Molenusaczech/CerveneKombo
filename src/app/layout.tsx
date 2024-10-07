@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Červené kombo",
     description: "Vaše go-to stránka na všechny statistiky Scratch Wars kartiček",
-    url: "https://cervenekombo.vercel.app",
+    url: "https://ck.mole.lol",
     siteName: "Červené kombo",
     locale: "cs_CZ",
     type: "website",
