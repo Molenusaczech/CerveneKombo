@@ -28,7 +28,7 @@ export async function generateMetadata(
   const { typeData, type, curStats, island, totalCards, typeStats } = cardType;
 
   return {
-    title: "Červené kombo",
+    title: "Červené kombo - " + typeData.cname.CS,
     description: "Detail typu karty",
     openGraph: {
       title: typeData.cname.CS + " - Detaily typu karty",
