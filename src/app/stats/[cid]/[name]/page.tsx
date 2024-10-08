@@ -1,4 +1,4 @@
-"use client";
+"use server";
 
 import { getCardStats } from "@/tools/getCardStats";
 import getTypeData from "@/tools/types/getTypeData";
@@ -9,8 +9,11 @@ import { CardData } from "@/components/component/card-data";
 import { useEffect, useState } from "react";
 import { cardStats } from "@/types/cardStats";
 import LookupFAB from "@/components/lookup/lookupFAB";
+import StatsLookup from "@/components/lookup/statsLookup";
+import { heroCid } from "@/data/heroTypeData";
+import { weaponCid } from "@/data/weaponTypeData";
 
-/*export async function generateMetadata(
+export async function generateMetadata(
     { params }: { params: { cid: string, name: string } }
 ): Promise<Metadata> {
 
@@ -23,36 +26,12 @@ import LookupFAB from "@/components/lookup/lookupFAB";
     if (data == null) return statsNotFoundMetadata(name, cid)
 
     return statsMetadada(data)
-}*/
+}
 
-export default function Stats({ params }: { params: { cid: string, name: string } }) {
-    "use client";
-    // create state
-
-    const [curCardStats, setCurCardStats] = useState<cardStats | null>(null)
-    const [isError, setIsError] = useState<boolean>(false);
-
-    const name = decodeURIComponent(params.name)
-
-    useEffect(() => {
-        getCardStats(params.cid, name).then((resp) => {
-
-            if (!resp) {
-                setIsError(true);
-            }
-
-            console.log(resp);
-            setCurCardStats(resp);
-        })
-    }, [])
-
+export default async function Stats({ params }: { params: { cid: string, name: string } }) {
+    
     return (
-        <div>
-            
-            <LookupFAB />
-            <CardData data={curCardStats} scan={null} />
-
-        </div>
+        <StatsLookup params={params} />
     )
 
 }

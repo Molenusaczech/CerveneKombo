@@ -16,13 +16,13 @@ export default function statsMetadada(data: cardStats): Metadata {
         openGraph: {
             title: name + " - " + type?.typeData.cname.CS,
             description: statsDescription(data),
-            url: "https://cervenekombo.vercel.app/stats/" + cid + "/" + name,
+            url: "https://ck.mole.lol/stats/" + cid + "/" + name,
             siteName: "Červené kombo",
             locale: "cs_CZ",
             type: "website",
             images: [
                 {
-                    url: "https://cervenekombo.vercel.app/image/" + cid + "/" + name+".png",
+                    url: "https://ck.mole.lol/image/" + cid + "/" + name+".png",
                     width: 640,
                     height: 894,
                     alt: name + " - " + type?.typeData.cname.CS
