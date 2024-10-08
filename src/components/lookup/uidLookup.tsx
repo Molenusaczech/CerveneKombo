@@ -10,6 +10,7 @@ import { heroFromUid } from "@/types/heroFromUid";
 import { weaponFromUid } from "@/types/weaponFromUid";
 import { CardData } from "@/components/component/card-data";
 import LookupFAB from "@/components/lookup/lookupFAB";
+import LookupError from "./lookupError";
 
 export default function UidLookup({ params }: { params: { uid: string } }) {
   "use client";
@@ -23,23 +24,29 @@ export default function UidLookup({ params }: { params: { uid: string } }) {
 
     getCardByUid(params.uid).then((uidResp) => {
 
-      if (uidResp) {
+      if (!uidResp) {
+        setIsError(true);
+        return;
+      }
 
         setCurScan(uidResp)
         getCardStats(uidResp?.card.cid, uidResp?.card.name).then((resp) => {
           console.log(resp);
           setCurCardStats(resp);
         })
-      }
+      
     })
-  }, [])
+  }, [params.uid])
 
   return (
     <div>
 
       <LookupFAB />
-      <CardData data={curCardStats} scan={curScan} />
-
+      {!isError && <CardData data={curCardStats} scan={curScan} />}
+      {isError && <LookupError
+        searchType="uid"
+        uid={params.uid}
+      />}
     </div>
   )
 

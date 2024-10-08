@@ -9,6 +9,7 @@ import { CardData } from "@/components/component/card-data";
 import { useEffect, useState } from "react";
 import { cardStats } from "@/types/cardStats";
 import LookupFAB from "@/components/lookup/lookupFAB";
+import LookupError from "./lookupError";
 
 export default function Stats({ params }: { params: { cid: string, name: string } }) {
     "use client";
@@ -35,8 +36,9 @@ export default function Stats({ params }: { params: { cid: string, name: string 
         <div>
             
             <LookupFAB />
-            <CardData data={curCardStats} scan={null} />
+            {!isError && <CardData data={curCardStats} scan={null} />}
 
+            {isError && <LookupError searchType="stats" cid={params.cid} name={name} />}
         </div>
     )
 
