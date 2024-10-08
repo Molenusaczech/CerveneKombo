@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Check, ChevronsUpDown } from "lucide-react"
 
 import { cn } from "@/lib/utils"
@@ -15,12 +15,8 @@ import { CardCidSelect } from "./cardCidSelect"
 import Link from "next/link"
 import { redirect } from "next/navigation"
 import { red } from "@mui/material/colors"
-
-const types = [
-  { value: "character", label: "Character" },
-  { value: "event", label: "Event" },
-  { value: "stage", label: "Stage" },
-]
+import { useKeyboardShortcut } from "@/lib/keyboardShortcuts"
+import { Router } from "next/router"
 
 export function CardLookupForm() {
   "use client";
@@ -29,7 +25,16 @@ export function CardLookupForm() {
   const [name, setName] = useState("")
   const [uid, setUid] = useState("")
 
-  let buttonLink;
+  useKeyboardShortcut(["enter"], () => {
+    console.log("Enter")
+    console.log(name)
+    console.log(value)
+    if (name !== "" && value !== "") {
+      window.location.href = "/stats/" + value + "/" + name
+    } else if (uid !== "") {
+      window.location.href = "/scan/" + uid
+    }
+  })
 
   return (
     <div className="w-full max-w-md mx-auto space-y-6">
