@@ -24,7 +24,7 @@ export default function BonusChart(props: {
     return <div></div>
   }
 
-  if (!props.value) {
+  if (props.value == undefined) {
     return <div>Chyba - value nenalezena</div>
   }
 
