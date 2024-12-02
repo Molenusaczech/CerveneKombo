@@ -14,7 +14,7 @@ export default function statsNotFoundMetadata(name: string, cid: heroCid | weapo
         openGraph: {
             title: "Statistiky karty nenalezeny",
             description: "Karta "+name+" ("+type?.typeData.cname.CS+") nenalezena",
-            url: "https://cervenekombo.vercel.app/stats/" + cid + "/" + name,
+            url: "https://ck.mole.lol/stats/" + cid + "/" + name,
             siteName: "Červené kombo",
             locale: "cs_CZ",
             type: "website",

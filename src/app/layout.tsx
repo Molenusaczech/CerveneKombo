@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import NavBar from "@/components/navBar";
-import { ThemeProvider } from "@emotion/react";
-
 import { createTheme } from '@mui/material/styles';
 
 const inter = Inter({ subsets: ["latin"] });
 import { Analytics } from "@vercel/analytics/react"
+import { NavBar } from "@/components/component/nav-bar";
+import "./globals.css";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Červené kombo",
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Červené kombo",
     description: "Vaše go-to stránka na všechny statistiky Scratch Wars kartiček",
-    url: "https://cervenekombo.vercel.app",
+    url: "https://ck.mole.lol",
     siteName: "Červené kombo",
     locale: "cs_CZ",
     type: "website",
@@ -29,15 +28,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} style={{
-        backgroundColor: 'var(--bg)',
-      }}>
+      <body className={inter.className}>
 
-        <Analytics />
-        <NavBar />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
 
-        {children}
+          <Analytics />
+          <NavBar />
 
+          {children}
+
+        </ThemeProvider>
       </body>
     </html>
   );

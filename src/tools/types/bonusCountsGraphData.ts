@@ -1,7 +1,9 @@
 import { heroEffectStats, weaponEffectStats } from "@/types/cardStatsCounts";
 
 export default function bonusCountsMerge(
-    data: heroEffectStats | weaponEffectStats | {}, type: "hero" | "weapon", isDurability?: boolean) {
+    data: heroEffectStats | weaponEffectStats | {}, 
+    type: "hero" | "weapon", isDurability?: boolean
+) {
     if (!data) return data;
 
     if (!('physical' in data)) {
@@ -38,11 +40,9 @@ export default function bonusCountsMerge(
 
     if (type == "hero") {
         final = [
-            ['Hodnota', 'Fyzické karty', 'Virtuální karty'],
         ]
     } else {
         final = [
-            ['Hodnota', 'Fyzické karty'],
         ]
     }
 

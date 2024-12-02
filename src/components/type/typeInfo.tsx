@@ -137,7 +137,6 @@ export default function TypeInfo(props: { cid: heroCid | weaponCid }) {
                                 <div key={index} className="effect">
                                     <DaytimeImg time={index} />
                                     <EffectImg effect={"add-energy"} />
-                                    <div className="effect__name">{value}</div>
                                 </div>
                             </Button>
                         )

@@ -3,12 +3,15 @@ import Card from "../card";
 import ProgressBar from "@ramonak/react-progress-bar";
 
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export default function ReplayHero(props: {
     player: replayPlayer,
     isOnTurn: boolean,
     isTarget?: boolean
 }) {
+
+    const {theme, setTheme} = useTheme();
 
     const player = props.player;
     const isTarget = props.isTarget;
@@ -45,7 +48,7 @@ export default function ReplayHero(props: {
                     bgColor="#dc3545"
                     height="20px"
                     customLabel={player.hp + "/" + player.max_hp + " Životy"}
-                    labelColor="black"
+                    labelColor={theme === "dark" ? "white" : "black"}
                     labelSize="1rem"
                     labelAlignment="outside"
                 />
@@ -56,7 +59,7 @@ export default function ReplayHero(props: {
                     bgColor="#ffc107"
                     height="20px"
                     customLabel={player.actions + "/4 Akce"}
-                    labelColor="black"
+                    labelColor={theme === "dark" ? "white" : "black"}
                     labelSize="1rem"
                     labelAlignment="outside"
                 />
@@ -67,7 +70,7 @@ export default function ReplayHero(props: {
                     bgColor="#28a745"
                     height="20px"
                     customLabel={player.energy + "/12 Energie"}
-                    labelColor="black"
+                    labelColor={theme === "dark" ? "white" : "black"}
                     labelSize="1rem"
                     labelAlignment="outside"
                 />
